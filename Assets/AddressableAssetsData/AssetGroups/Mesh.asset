@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Mesh
+  m_EditorClassIdentifier: 
+  m_GroupName: Mesh
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5e53545c16e73774ea6c40d3e968de54
+  m_SerializeEntries:
+  - m_GUID: b8d6275e5b346224bb74632a2bf87a4d
+    m_Address: Assets/Art/Mesh/Circle06.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b61fc48dbb1b213409ee271b599f6ff5
+    m_Address: Assets/Art/Mesh/Circle08.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b74e300f25317024b9d21c6daded9373
+    m_Address: Assets/Art/Mesh/Circle16.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7124be2be4f9f24cb40d87fc9dc26d3
+    m_Address: Assets/Art/Mesh/Circle32.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcb4b71cd01d9574c97d90d7340acb08
+    m_Address: Assets/Art/Mesh/Ring32.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95c897acbc902b24f987a7800c37d04c
+    m_Address: Assets/Art/Mesh/Square.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c07bb5d33b58ae04cb924f7944dab55b, type: 2}
+    - {fileID: 11400000, guid: 91347f0782b6bc94c9e7738db85de081, type: 2}

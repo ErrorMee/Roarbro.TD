@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class #SCRIPTNAME#Info : ConfigInfo<#SCRIPTNAME#Config>
+{
+    public #SCRIPTNAME#Info(#SCRIPTNAME#Config config)
+    {
+        this.config = config;
+    }
+}

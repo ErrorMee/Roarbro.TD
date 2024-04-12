@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b3d78034dd2c943ae891c867e4e62d, type: 3}
+  m_Name: WindowConfigs
+  m_EditorClassIdentifier: 
+  showDel: 1
+  showAdd: 0
+  showUse: 0
+  showIdx: 1
+  showId: 0
+  showName: 0
+  pageRow: 15
+  pageColumn: 1
+  pageCrt: 1
+  key: 
+  all:
+  - use: 1
+    id: 1
+    name: 0
+    sortUp: 1
+    layer: 3
+    show: 0
+    depends: 
+    bg: 0
+  - use: 1
+    id: 2
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 1
+    depends: 
+    bg: 0
+  - use: 1
+    id: 3
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 1
+    depends: 
+    bg: 0
+  - use: 1
+    id: 4
+    name: 0
+    sortUp: 1
+    layer: 1
+    show: 2
+    depends: 
+    bg: 0
+  - use: 1
+    id: 6
+    name: 0
+    sortUp: 1
+    layer: 1
+    show: 2
+    depends: 
+    bg: 40
+  - use: 1
+    id: 7
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 1
+    depends: 
+    bg: 0
+  - use: 1
+    id: 8
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 1
+    depends: 
+    bg: 0
+  - use: 1
+    id: 14
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 3
+    depends: 
+    bg: 0
+  - use: 1
+    id: 17
+    name: 0
+    sortUp: 1
+    layer: 1
+    show: 2
+    depends: 0e00
+    bg: 40
+  - use: 1
+    id: 9
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 1
+    depends: 
+    bg: 40
+  - use: 1
+    id: 31
+    name: 0
+    sortUp: 1
+    layer: 1
+    show: 3
+    depends: 
+    bg: 0
+  - use: 1
+    id: 32
+    name: 0
+    sortUp: 1
+    layer: 1
+    show: 3
+    depends: 
+    bg: 0

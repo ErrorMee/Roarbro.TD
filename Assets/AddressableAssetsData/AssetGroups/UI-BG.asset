@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI-BG
+  m_EditorClassIdentifier: 
+  m_GroupName: UI-BG
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1e45df98223de0a48b696477b0970efa
+  m_SerializeEntries:
+  - m_GUID: 45fce9a0669a2a24fa3c6dc0aeee27e7
+    m_Address: Assets/Art/UI/BG/BlurBokeh.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfdbfc23053dc714fb7c1675ad653a3b
+    m_Address: Assets/Art/UI/BG/BlurBokeh.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c9323c547a1ae24a95e79930066e205
+    m_Address: Assets/Art/UI/BG/BlurGaussian.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c28016e8358ff6146a4332b4a564faf0
+    m_Address: Assets/Art/UI/BG/BlurGaussian.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: daa814a8d953e43398ff8b4195380640
+    m_Address: Assets/Art/UI/BG/BlurRadial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f222c3aca1eb348a6af194bc42ad283c
+    m_Address: Assets/Art/UI/BG/BlurRadial.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad9b1f13f00bbfe4aafa13fb4eb09ecb
+    m_Address: Assets/Art/UI/BG/ColorBlit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 240dba5efb9fc294194a76e9c0cee45d
+    m_Address: Assets/Art/UI/BG/ColorBlit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c8d640d402ce16498b613ecafe81a76
+    m_Address: Assets/Art/UI/BG/SDF_BG_Black.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa575504f0e4fa94bba83c0922ebc1c2
+    m_Address: Assets/Art/UI/BG/SDF_BG_Black.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-BG
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 39fa3a797a2696c49ae6c89c303cffff, type: 2}
+    - {fileID: 11400000, guid: c325b877cac6f7f4895efe011d82653a, type: 2}

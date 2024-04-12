@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Font
+  m_EditorClassIdentifier: 
+  m_GroupName: Font
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 64660b9e8a8781b4c949f655503e2d25
+  m_SerializeEntries:
+  - m_GUID: 30cb8442c8ff6fc458cdd2f80e5add61
+    m_Address: Assets/Art/Font/Chinese.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af4cb08216631e34d900c06b94bbb3a8
+    m_Address: Assets/Art/Font/Chinese.TTF
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1905ca836e052f4fabd4b8a976997c2
+    m_Address: Assets/Art/Font/ChineseCharacter.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1d49403b022ad04ba4af9a5e1368120
+    m_Address: Assets/Art/Font/English.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c16eb7d7c3953489db00312b8b09df4b
+    m_Address: Assets/Art/Font/English.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ad9143af6e8f5834e8290b4129a83b74, type: 2}
+    - {fileID: 11400000, guid: c66b103253e161545b293a22d4f9fa38, type: 2}

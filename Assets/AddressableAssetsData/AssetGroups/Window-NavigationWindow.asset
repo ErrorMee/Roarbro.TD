@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Window-NavigationWindow
+  m_EditorClassIdentifier: 
+  m_GroupName: Window-NavigationWindow
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b1a776453452b0143abe6bd110f90972
+  m_SerializeEntries:
+  - m_GUID: 0cd8db6737936414b92bc96851c070da
+    m_Address: Assets/Art/Window/NavigationWindow/NavigationWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-NavigationWindow
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 783d757bf1f56cd4a882e61b8722f5df, type: 2}
+    - {fileID: 11400000, guid: e16adc0e4450ea548bfb802bcb3d023b, type: 2}

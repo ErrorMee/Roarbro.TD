@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Shader
+  m_EditorClassIdentifier: 
+  m_GroupName: Shader
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 39d1a09da919d2d46a16a16d45e1d756
+  m_SerializeEntries:
+  - m_GUID: 58444fb291a5bc5499e26596e5993395
+    m_Address: Assets/Art/Shader/SDF_UI_Area.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09085f619ba430c418d5aba2f7394464
+    m_Address: Assets/Art/Shader/SDF_UI_Ascii01.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d90b02e5f77a21d4b93606922be8a900
+    m_Address: Assets/Art/Shader/SDF_UI_Helmet.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a98291194cb9e443aeb44f0c9efceea
+    m_Address: Assets/Art/Shader/SDF_UI_Icon.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a471189d82fafab40b5916ed7e30d0b2
+    m_Address: Assets/Art/Shader/SDF_UI_JoyStick.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a10543f4f1127454ab3514689d039359
+    m_Address: Assets/Art/Shader/SDF_UI_Truchet.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 857544ccbdd550a4396e9a5b15dfd1ee, type: 2}
+    - {fileID: 11400000, guid: f9bbc27bbe7dd1e41aac574a259a518f, type: 2}

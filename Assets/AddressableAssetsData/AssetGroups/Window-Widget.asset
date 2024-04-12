@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Window-Widget
+  m_EditorClassIdentifier: 
+  m_GroupName: Window-Widget
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 79f06f6e914f6524682fb6c9a10404f7
+  m_SerializeEntries:
+  - m_GUID: d08b46278b5526846b2f99517f6141d6
+    m_Address: Assets/Art/Window/Widget/Attr.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3341b4b1a95cb0a4180bbaba397a4efb
+    m_Address: Assets/Art/Window/Widget/Btn.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
+    m_Address: Assets/Art/Window/Widget/Frame.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c59b74db983e4687b77a7482780a45b
+    m_Address: Assets/Art/Window/Widget/Img.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e16d5f75aa4fe540ba7b11cc3766df4
+    m_Address: Assets/Art/Window/Widget/IntSwitch.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aba550acfbc07284789b5dde9c64f2e2
+    m_Address: Assets/Art/Window/Widget/Lable.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a66a42e918b8440ceb8213fab3ea8bc2
+    m_Address: Assets/Art/Window/Widget/Language.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c1cee8ad0bdba24e8d5664632d44515
+    m_Address: Assets/Art/Window/Widget/ListView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89a102cd1cedd99459437708c0029882
+    m_Address: Assets/Art/Window/Widget/ScrollFocus.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fbebe34413822847b5de08df8b80c36
+    m_Address: Assets/Art/Window/Widget/ScrollFocusCell.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a051b285d933a544ac2cde5f57a102e
+    m_Address: Assets/Art/Window/Widget/ScrollFocusCell.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c6b0e001abeb2948acb04b78873604d
+    m_Address: Assets/Art/Window/Widget/ScrollHorizontal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dc2ae3e45a15c6428e289cfd4d20a6a
+    m_Address: Assets/Art/Window/Widget/ScrollVertical.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98b8c4848f0cbea438963ad825a76a71
+    m_Address: Assets/Art/Window/Widget/Txt.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1c47cbbb14a9964d8e807d5de71fabc
+    m_Address: Assets/Art/Window/Widget/TxtBtn.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a5f35e1c9b849664db7f52b2517aff81, type: 2}
+    - {fileID: 11400000, guid: 5dd38226d03f91b468a6199ac01c0602, type: 2}

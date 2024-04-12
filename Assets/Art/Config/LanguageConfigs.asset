@@ -1,0 +1,498 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269a70e8061250b40892ecddca2a3dac, type: 3}
+  m_Name: LanguageConfigs
+  m_EditorClassIdentifier: 
+  showDel: 1
+  showAdd: 0
+  showUse: 0
+  showIdx: 0
+  showId: 1
+  showName: 0
+  pageRow: 10
+  pageColumn: 1
+  pageCrt: 4
+  key: 
+  all:
+  - use: 1
+    id: 10001
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u666E\u901A"
+    - N
+    - N
+    - N
+  - use: 1
+    id: 10002
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u7A00\u6709"
+    - R
+    - R
+    - R
+  - use: 1
+    id: 10003
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u7F55\u89C1"
+    - SR
+    - SR
+    - SR
+  - use: 1
+    id: 10004
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u4F20\u8BF4"
+    - SSR
+    - SSR
+    - SSR
+  - use: 1
+    id: 10005
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u795E\u8BDD"
+    - UR
+    - UR
+    - UR
+  - use: 1
+    id: 10006
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u53F2\u8BD7"
+    - ER
+    - ER
+    - ER
+  - use: 1
+    id: 10020
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8BED\u79CD"
+    - "\u8A9E\u7A2E"
+    - Language
+    - "\u8A00\u8A9E"
+  - use: 1
+    id: 10021
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u6587\u672C"
+    - "\u6587\u5B57"
+    - Text
+    - "\u30C6\u30AD\u30B9\u30C8"
+  - use: 1
+    id: 10022
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u9000\u51FA"
+    - "\u9000\u51FA"
+    - Quit
+    - "\u3084\u3081\u308B"
+  - use: 1
+    id: 10023
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u7EE7\u7EED"
+    - "\u7E7C\u7E8C"
+    - Continue
+    - "\u7D9A\u304F"
+  - use: 1
+    id: 10024
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u968F\u673A"
+    - "\u96A8\u6A5F"
+    - Random
+    - "\u30E9\u30F3\u30C0\u30E0"
+  - use: 1
+    id: 10025
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u672A\u89E3\u9501"
+    - "\u672A\u89E3\u9396"
+    - Not unlocked
+    - "\u958B\u3044\u3066\u3044\u307E\u305B\u3093"
+  - use: 1
+    id: 10026
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u9009\u9879"
+    - "\u9078\u9805"
+    - Options
+    - "\u30AA\u30D7\u30B7\u30E7\u30F3"
+  - use: 1
+    id: 10027
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u786E\u5B9A\u9000\u51FA\u5417?"
+    - "\u78BA\u5B9A\u9000\u51FA\u55CE?"
+    - Are you sure to quit?
+    - "\u672C\u5F53\u306B\u9000\u51FA\u3057\u307E\u3059\u304B?"
+  - use: 1
+    id: 10028
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8D26\u53F7"
+    - "\u5E33\u865F"
+    - Account
+    - "\u30A2\u30AB\u30A6\u30F3\u30C8"
+  - use: 1
+    id: 10029
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u653E\u5F03"
+    - "\u653E\u68C4"
+    - Give up
+    - "\u3042\u304D\u3089\u3081\u308B"
+  - use: 1
+    id: 10030
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u53D6\u6D88"
+    - "\u53D6\u6D88"
+    - Cancel
+    - "\u30AD\u30E3\u30F3\u30BB\u30EB"
+  - use: 1
+    id: 10031
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u786E\u8BA4"
+    - "\u78BA\u8A8D"
+    - Confirm
+    - "\u78BA\u8A8D"
+  - use: 1
+    id: 10032
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10033
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5F00\u59CB"
+    - "\u958B \u59CB"
+    - Start
+    - "\u30B9\u30BF\u30FC\u30C8"
+  - use: 1
+    id: 10034
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u4F24\u5BB3"
+    - "\u50B7\u5BB3"
+    - Damage
+    - "\u50B7\u5BB3"
+  - use: 1
+    id: 10035
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5220\u9664"
+    - "\u5220\u9664"
+    - Delete
+    - "\u524A\u9664"
+  - use: 1
+    id: 10036
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5B58\u6863"
+    - "\u5B58\u6A94"
+    - Archive
+    - "\u30A2\u30FC\u30AB\u30A4\u30D6"
+  - use: 1
+    id: 10038
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u9009\u62E9\u5173\u5361"
+    - "\u9078\u64C7\u95DC\u5361"
+    - Select a level
+    - "\u30EC\u30D9\u30EB\u306E\u9078\u629E"
+  - use: 1
+    id: 10039
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10040
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8DEF\u7EBF\u957F\u5EA6"
+    - "\u8DEF\u7DDA\u9577\u5EA6"
+    - Route length
+    - "\u305B\u3093\u308D\u3061\u3087\u3046"
+  - use: 1
+    id: 10041
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8D77\u70B9"
+    - "\u8D77\u9EDE"
+    - Start
+    - "\u958B\u59CB\u70B9"
+  - use: 1
+    id: 10042
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u7EC8\u70B9"
+    - "\u7D42\u9EDE"
+    - End
+    - "\u7D42\u70B9"
+  - use: 1
+    id: 10044
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10045
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10046
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u65B0\u6E38\u620F"
+    - "\u65B0\u904A\u6232"
+    - New Game
+    - "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+  - use: 1
+    id: 10047
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u786E\u5B9A\u6E05\u9664\u5B58\u6863\u5417?"
+    - "\u78BA\u5B9A\u6E05\u9664\u5B58\u6A94\u55CE?"
+    - Are you sure to clear the archive?
+    - "\u30A2\u30FC\u30AB\u30A4\u30D6\u3092\u30AF\u30EA\u30A2\u3057\u3066\u3082\u3088\u308D\u3057\u3044\u3067\u3059\u304B?"
+  - use: 1
+    id: 10048
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5730\u5F62"
+    - "\u5730\u5F62"
+    - Terrain
+    - "\u5730\u5F62"
+  - use: 1
+    id: 10049
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8DEF\u7EBF"
+    - "\u8DEF\u7DDA"
+    - Path
+    - "\u30D1\u30B9"
+  - use: 1
+    id: 10050
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5168\u90E8"
+    - "\u5168\u90E8"
+    - All
+    - "\u3059\u3079\u3066"
+  - use: 1
+    id: 10051
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u6C34\u57DF"
+    - "\u6C34\u57DF"
+    - Water
+    - "\u6C34\u57DF"
+  - use: 1
+    id: 10052
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8349\u5730"
+    - "\u8349\u5730"
+    - Grass
+    - "\u829D\u751F"
+  - use: 1
+    id: 10053
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8DEF\u9762"
+    - "\u8DEF\u9762"
+    - Road
+    - "\u307B\u305D\u3046"
+  - use: 1
+    id: 10054
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5730\u57FA"
+    - "\u5730\u57FA"
+    - Ground
+    - "\u3058\u3070\u3093"
+  - use: 1
+    id: 10055
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u8BBE\u7F6E\u957F\u5EA6"
+    - "\u8A2D\u5B9A\u9577\u5EA6"
+    - Set length
+    - "\u9577\u3055\u306E\u8A2D\u5B9A"
+  - use: 1
+    id: 10056
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10057
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5728\u8FB9\u7F18\u8BBE\u7F6E\u8D77\u70B9\u548C\u7EC8\u70B9"
+    - "\u5728\u908A\u7DE3\u8A2D\u5B9A\u8D77\u9EDE\u548C\u7D42\u9EDE"
+    - Set start and end points at the edge
+    - "\u30A8\u30C3\u30B8\u306B\u958B\u59CB\u70B9\u3068\u7D42\u4E86\u70B9\u3092\u8A2D\u5B9A\u3059\u308B"
+  - use: 1
+    id: 10058
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5728\u8FB9\u7F18\u8BBE\u7F6E\u8D77\u70B9"
+    - "\u5728\u908A\u7DE3\u8A2D\u5B9A\u8D77\u9EDE"
+    - Set start point at the edge
+    - "\u30A8\u30C3\u30B8\u306B\u958B\u59CB\u70B9\u3092\u8A2D\u5B9A\u3059\u308B"
+  - use: 1
+    id: 10059
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u5728\u8FB9\u7F18\u8BBE\u7F6E\u7EC8\u70B9"
+    - "\u5728\u908A\u7DE3\u8A2D\u5B9A\u7D42\u9EDE"
+    - Set end point at the edge
+    - "\u30A8\u30C3\u30B8\u306B\u7D42\u4E86\u70B9\u3092\u8A2D\u5B9A\u3059\u308B"
+  - use: 1
+    id: 10060
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+  - use: 1
+    id: 10061
+    name: 0
+    sortUp: 1
+    desc: 
+    values:
+    - "\u7F16\u8F91\u5730\u5F62"
+    - "\u7DE8\u8F2F\u5730\u5F62"
+    - Edit terrain
+    - "\u5730\u5F62\u3092\u7DE8\u96C6"
+  types:
+  - type: 40
+    tag: "\u7B80\u4F53\u4E2D\u6587"
+    code: c
+  - type: 41
+    tag: "\u7E41\u4F53\u4E2D\u6587"
+    code: h
+  - type: 10
+    tag: English
+    code: e
+  - type: 22
+    tag: "\u65E5\u672C\u8A9E"
+    code: j

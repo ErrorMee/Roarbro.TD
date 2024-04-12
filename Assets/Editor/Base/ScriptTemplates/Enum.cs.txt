@@ -1,0 +1,8 @@
+
+/// <summary>
+/// Range(0,256)
+/// </summary>
+public enum #SCRIPTNAME#Enum : byte
+{
+    None = 100,
+}

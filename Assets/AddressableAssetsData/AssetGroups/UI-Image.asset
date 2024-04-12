@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI-Image
+  m_EditorClassIdentifier: 
+  m_GroupName: UI-Image
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ec413e7ff6b4c4b4f9836e7f09ac028a
+  m_SerializeEntries:
+  - m_GUID: a6a43c2d93f6079438e2bf21b0bbf867
+    m_Address: Assets/Art/UI/Image/SDF_UI_Area.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7ef73bbfb235ea4da2fad996b5f2544
+    m_Address: Assets/Art/UI/Image/SDF_UI_Ascii01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1947d78b9c96884cbabc36a9f7ad083
+    m_Address: Assets/Art/UI/Image/SDF_UI_Helmet.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fefec85f82d98c847abbe08bf987ed04
+    m_Address: Assets/Art/UI/Image/SDF_UI_Icon.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fb9d81a1a34f574ba31ba3a1559c461
+    m_Address: Assets/Art/UI/Image/SDF_UI_JoyStick.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cdde21a4c7c65c4596dc4746034aab2
+    m_Address: Assets/Art/UI/Image/SDF_UI_Truchet.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 55f8380aa54b14f438c5a2de93ca09f0, type: 2}
+    - {fileID: 11400000, guid: 1d57b0983d2211e4a91f58841aac760e, type: 2}

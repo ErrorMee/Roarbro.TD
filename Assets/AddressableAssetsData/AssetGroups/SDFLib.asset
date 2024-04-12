@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SDFLib
+  m_EditorClassIdentifier: 
+  m_GroupName: SDFLib
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 306f37eae90a64c42a37cdd8dd8b67a1
+  m_SerializeEntries:
+  - m_GUID: 7910601501dc2324fb8774f2083d4405
+    m_Address: Assets/Art/SDFLib/Blend.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8e82da9a60a5d147b9835385b9e93f2
+    m_Address: Assets/Art/SDFLib/Math.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ba19de6fd964f447a66c8daa046c751
+    m_Address: Assets/Art/SDFLib/Noise.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2ab2971c82f62b4a955653c5c4fe452
+    m_Address: Assets/Art/SDFLib/SDF.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e48bbfc098d98b548a1b5600c302eb60
+    m_Address: Assets/Art/SDFLib/SDF2D.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d36c91d0789c938489000d14fc7464a3
+    m_Address: Assets/Art/SDFLib/SDFImage.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e8ac988480fe428dbc05d5479a59ba0
+    m_Address: Assets/Art/SDFLib/SDFUnit.hlsl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SDFLib
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8a09b26544350264ba0cd68a1d70d14f, type: 2}
+    - {fileID: 11400000, guid: ac9db91b685bfb34fa7fae8c9ef2c885, type: 2}

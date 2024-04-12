@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Unit
+  m_EditorClassIdentifier: 
+  m_GroupName: Unit
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9faf9e5c612895a408a84288f0cde614
+  m_SerializeEntries:
+  - m_GUID: 65ac586788375a641b2b7bf3315206e2
+    m_Address: Assets/Art/Unit/SDF_Unit_Boss.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22b807947ad66a849a9057aeef8741a5
+    m_Address: Assets/Art/Unit/SDF_Unit_Boss.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78989c70ef4a1408c809c60db3e45d73
+    m_Address: Assets/Art/Unit/SDF_Unit_Tile.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ffc2f13b5a0c441d8b5da0f4dbbe8f8
+    m_Address: Assets/Art/Unit/SDF_Unit_Tile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1a998dada5fffe449a59223862626c0
+    m_Address: Assets/Art/Unit/SDF_Unit_TileAlpha.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0423c0d772af4b94e829751c91040968
+    m_Address: Assets/Art/Unit/SDF_Unit_TileAlpha.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfacaca977a164b4c88c5a8c66f3f850
+    m_Address: Assets/Art/Unit/TileUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
+    m_Address: Assets/Art/Unit/TileUnitSelect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b62466283712a433d83a6a3389678e09, type: 2}
+    - {fileID: 11400000, guid: 4e92a64b3a5d549d19ce7949eb79ab8e, type: 2}

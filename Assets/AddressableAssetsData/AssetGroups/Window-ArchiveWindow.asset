@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Window-ArchiveWindow
+  m_EditorClassIdentifier: 
+  m_GroupName: Window-ArchiveWindow
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 435b1fe2d2ab75d4db0e5392bb8cc592
+  m_SerializeEntries:
+  - m_GUID: cf8842d1ba4ec444e93c0168dc1ab583
+    m_Address: Assets/Art/Window/ArchiveWindow/ArchiveWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-ArchiveWindow
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 168a714bb27bb4544a448d13d85a220e, type: 2}
+    - {fileID: 11400000, guid: 1f337229aa29fca47b34333a68c68905, type: 2}
