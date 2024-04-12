@@ -85,7 +85,7 @@ Shader "SDF/UI/Icon"
                     sd = opUnion(sdBox(sdPos - float2(-0.1, 0), 0.12), sd) - roundness;
                     sd = opUnion(sdSegment(opSymX(sdPos), float2(0.34, 0.25), float2(0.3, 0.22)) - 0.062, sd);
                     sd = opUnion(sdSegment(opSymX(sdPos), float2(0.36, 0), float2(0.33, 0)) - 0.062, sd);
-                    return endWithOnionOutGlow(f.color, sd, f);
+                    return sdClipRect(endWithOnionOutGlow(f.color, sd, f), f.os.xy);
                 }
 
                 if (id == 8) // Gear
@@ -105,7 +105,7 @@ Shader "SDF/UI/Icon"
                     sd = opUnion(sd, opOnion(sdCircle(opSymY(sdPos) + float2(0.43, 0), 0.62 - roundness), roundness));
                     sd = opUnion(sd, sdSegment(sdPos, float2(-0.3, 0), float2(0.3, 0)) - roundness);
                     sd = opIntersection(sd, sdCircle(sdPos, 0.4));
-                    return endWithOnionOutGlow(f.color, sd, f);
+                    return sdClipRect(endWithOnionOutGlow(f.color, sd, f), f.os.xy);
                 }
 
                 if (id == 10) // People
