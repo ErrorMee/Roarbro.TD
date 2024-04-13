@@ -8,7 +8,7 @@ using System;
 [RequireComponent(typeof(CanvasGroup))]
 public class CanvasModel : SingletonBehaviour<CanvasModel>
 {
-    public static Vector2 designSize = new(1792, 828);
+    public static Vector2 designSize = new(828, 1792);
     public static Vector2 designHalfSize = designSize * 0.5f;
     [ReadOnlyProperty]
     public float designWHRate;

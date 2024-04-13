@@ -100,8 +100,8 @@ public class SingletonBehaviour<T> : FrameMono where T : FrameMono
                     if (Application.isPlaying)
                     {
                         Debug.LogWarning("SingletonBehaviour: " + typeof(T).Name + " is null");
-                        GameObject singletonObject = new() { name = typeof(T).Name };
-                        instance = singletonObject.AddComponent<T>();
+                        //GameObject singletonObject = new() { name = typeof(T).Name };
+                        //instance = singletonObject.AddComponent<T>();
                     }
                     return null;
                 }
