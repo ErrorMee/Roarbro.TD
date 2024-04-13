@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-TerrainEditWindow
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b005c70ac6ae7124294c331a071c9310
-    m_Address: Assets/Art/Window/TerrainEditWindow/terrainScroll.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-TerrainEditWindow
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
   m_SchemaSet:

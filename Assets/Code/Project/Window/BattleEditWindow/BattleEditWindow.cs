@@ -23,6 +23,7 @@ public class BattleEditWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        WindowModel.Close(WindowEnum.TerrainEdit);
         BattleModel.Instance.CloseBattle();
     }
 }

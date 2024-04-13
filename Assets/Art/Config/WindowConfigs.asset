@@ -118,7 +118,7 @@ MonoBehaviour:
     layer: 1
     show: 3
     depends: 
-    bg: 0
+    bg: 40
   - use: 1
     id: 33
     name: 0
