@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: 692bb8ffa4bb6e94caa3966b361872e2
+  m_GUID: 3852c2c47a3d51f498307be9945134ea
   m_SerializeEntries:
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset
@@ -31,6 +31,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4e6ef0ff2dbe7a47bde390b9592c6aa
     m_Address: Assets/Art/Config/QualityConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02cbcad27c22d084b9df8c741f1ee6a7
+    m_Address: Assets/Art/Config/TerrainConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

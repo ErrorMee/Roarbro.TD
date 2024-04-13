@@ -37,9 +37,9 @@ public class TouchLayer : BattleLayer<TileUnitSelect>
             int idx = GridUtil.GetIndex(index.x, index.y);
             if (BattleModel.Instance.battle.edit)
             {
-                if (BattleModel.Instance.battle.config.terrains[idx] != BattleModel.Instance.battle.config.terrainSelect)
+                if (BattleModel.Instance.battle.config.GetTerrains()[idx] != BattleModel.Instance.battle.config.terrainSelect)
                 {
-                    BattleModel.Instance.battle.config.terrains[idx] = BattleModel.Instance.battle.config.terrainSelect;
+                    BattleModel.Instance.battle.config.GetTerrains()[idx] = BattleModel.Instance.battle.config.terrainSelect;
                     BattleConfigs.Instance.Save();
                     EventModel.Send(EventEnum.ChangeTerrain);
                 }

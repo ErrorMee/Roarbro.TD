@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Configs<S, C> : ConfigsGenerics<C> where S : ConfigsGenerics<C> where C : Config
 {
@@ -17,6 +20,13 @@ public class Configs<S, C> : ConfigsGenerics<C> where S : ConfigsGenerics<C> whe
         set { _instance = value; }
     }
 
+    public void Save()
+    {
+#if UNITY_EDITOR
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssetIfDirty(this);
+#endif
+    }
 
     static Dictionary<string, S> _instances;
     public static S InstanceWidthKey(string key)

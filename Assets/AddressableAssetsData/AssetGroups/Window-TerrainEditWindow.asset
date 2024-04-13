@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Audio-Sound
+  m_Name: Window-TerrainEditWindow
   m_EditorClassIdentifier: 
-  m_GroupName: Audio-Sound
+  m_GroupName: Window-TerrainEditWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: f64a981b6abc32c4ca2c563b46ce1368
+  m_GUID: ac88d8a19b5e1c644b68b01ba1a9a266
   m_SerializeEntries:
-  - m_GUID: 190ca28937c56a547b14ca174cc60ae5
-    m_Address: Assets/Art/Audio/Sound/Click.wav
+  - m_GUID: b3ab8199e2c49a1489f492af9141fa53
+    m_Address: Assets/Art/Window/TerrainEditWindow/TerrainEditWindow.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Audio-Sound
+    - Window-TerrainEditWindow
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fe6e929219340a94a8f5167f76cc846b
-    m_Address: Assets/Art/Audio/Sound/Pop.wav
+  - m_GUID: b005c70ac6ae7124294c331a071c9310
+    m_Address: Assets/Art/Window/TerrainEditWindow/terrainScroll.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Audio-Sound
+    - Window-TerrainEditWindow
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 11ed487a977c48a41968a28417668976, type: 2}
-    - {fileID: 11400000, guid: 4f8f1765055534a4a9c97f083da379e8, type: 2}
+    - {fileID: 11400000, guid: a261613a93df30d4897d303677160183, type: 2}
+    - {fileID: 11400000, guid: e53c5492bafabfe4db65b885905a6214, type: 2}

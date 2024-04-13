@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: UI-BG
   m_Data:
     m_SerializedData: []
-  m_GUID: 49d0d25e7e8590a40a121516eccab665
+  m_GUID: ae2887a4db983534ab63f2ee991ce17e
   m_SerializeEntries:
   - m_GUID: 45fce9a0669a2a24fa3c6dc0aeee27e7
     m_Address: Assets/Art/UI/BG/BlurBokeh.mat

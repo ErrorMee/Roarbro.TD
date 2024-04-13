@@ -119,3 +119,11 @@ MonoBehaviour:
     show: 3
     depends: 
     bg: 0
+  - use: 1
+    id: 33
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 0
+    depends: 
+    bg: 0

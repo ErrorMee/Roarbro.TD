@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5266bddb1e9454d2ea222c39ddbded32, type: 3}
-  m_Name: BattleConfigs
+  m_Script: {fileID: 11500000, guid: 8fe26c517443e3146922c8070be45c36, type: 3}
+  m_Name: TerrainConfigs
   m_EditorClassIdentifier: 
   showDel: 0
   showAdd: 0
@@ -18,7 +18,7 @@ MonoBehaviour:
   showIdx: 1
   showId: 1
   showName: 0
-  pageRow: 8
+  pageRow: 3
   pageColumn: 1
   pageCrt: 1
   key: 
@@ -27,35 +27,14 @@ MonoBehaviour:
     id: 1
     name: 0
     sortUp: 1
-    terrain: 1
-    terrainSelect: 1
+    terrains: 03030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303
   - use: 1
     id: 2
     name: 0
     sortUp: 1
-    terrain: 2
-    terrainSelect: 3
+    terrains: 03030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303
   - use: 1
     id: 3
     name: 0
     sortUp: 1
-    terrain: 3
-    terrainSelect: 3
-  - use: 1
-    id: 4
-    name: 0
-    sortUp: 1
-    terrain: 1
-    terrainSelect: 3
-  - use: 1
-    id: 5
-    name: 0
-    sortUp: 1
-    terrain: 2
-    terrainSelect: 3
-  - use: 1
-    id: 6
-    name: 0
-    sortUp: 1
-    terrain: 3
-    terrainSelect: 3
+    terrains: 03030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303

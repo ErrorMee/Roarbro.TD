@@ -33,6 +33,12 @@ public class #SCRIPTNAME#ConfigsEditor : ConfigsEditor<#SCRIPTNAME#Config, #SCRI
         //TODO
     }
 
+    protected override void DrawMenuAdd()
+    {
+        base.DrawMenuAdd();
+        //TODO
+    }
+
     protected override void DrawConfig(int index, #SCRIPTNAME#Config config)
     {
         base.DrawConfig(index, config);

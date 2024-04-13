@@ -199,10 +199,9 @@ public class ConfigsEditor<C, S> : Editor where C: Config, new() where S : Confi
         }
     }
 
-    protected void GotoConfigs(string label)
+    protected void GotoConfigs(string label, int width)
     {
-        int width = (int)GUI.skin.label.CalcSize(new GUIContent(label)).x + 26;
-        if (GUILayout.Button("☞ " + label, GUILayout.Width(width)))
+        if (GUILayout.Button(label, GUILayout.Width(width)))
         {
             Selection.activeObject = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(string.Format(assetPath, label));
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 2a2631590149bf04297220f5c0c468f2
+  m_DefaultGroup: f64a981b6abc32c4ca2c563b46ce1368
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -66,6 +66,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08289ecd37945470f8a1d72c3af591a1, type: 2}
   - {fileID: 11400000, guid: 94ccfe97c063dee4cb86ff0c094b4f7c, type: 2}
   - {fileID: 11400000, guid: 96dc21db7199ceb4cbc823acef4d860a, type: 2}
+  - {fileID: 11400000, guid: 505e396ef9c725d44b85a74a67169c96, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -128,6 +129,7 @@ MonoBehaviour:
     - Window-StageWindow
     - Window-WaitWindow
     - Window-Widget
+    - Window-TerrainEditWindow
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 734e97579e8520b43a39a86238d9b962, type: 2}
