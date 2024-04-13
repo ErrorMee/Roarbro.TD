@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: f9ab69513aae51b4bb115dd4a1501ec3
+  m_GUID: 85bef1c06210b8a459f2e6e5b5bc606b
   m_SerializeEntries:
   - m_GUID: 65ac586788375a641b2b7bf3315206e2
     m_Address: Assets/Art/Unit/SDF_Unit_Boss.mat

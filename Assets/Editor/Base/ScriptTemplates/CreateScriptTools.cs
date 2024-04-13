@@ -48,7 +48,13 @@ namespace UnityEditor.ProjectWindowCallback
             MyCreateScriptFormTemplate("_Configs.cs", "Config.cs.txt", "Configs");
         }
 
-        [MenuItem(itemName: rootMenu + "(..)Info", isValidateFunction: false, priority: 12)]
+        [MenuItem(itemName: rootMenu + "(..)ConfigEditor", isValidateFunction: false, priority: 12)]
+        public static void CreateConfigEditorFromTemplate()
+        {
+            MyCreateScriptFormTemplate("_ConfigsEditor.cs", "ConfigEditor.cs.txt", "ConfigsEditor");
+        }
+
+        [MenuItem(itemName: rootMenu + "(..)Info", isValidateFunction: false, priority: 13)]
         public static void CreateInfoFromTemplate()
         {
             MyCreateScriptFormTemplate("_Info.cs", "Info.cs.txt", "Info");

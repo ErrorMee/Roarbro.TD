@@ -20,7 +20,7 @@ MonoBehaviour:
   showName: 0
   pageRow: 10
   pageColumn: 1
-  pageCrt: 4
+  pageCrt: 2
   key: 
   all:
   - use: 1
@@ -89,10 +89,10 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u8BED\u79CD"
-    - "\u8A9E\u7A2E"
-    - Language
-    - "\u8A00\u8A9E"
+    - "\u7F16\u8F91"
+    - "\u7DE8\u8F2F"
+    - Edit
+    - "\u7DE8\u96C6"
   - use: 1
     id: 10021
     name: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
     desc: 
     values:
     - "\u5F00\u59CB"
-    - "\u958B \u59CB"
+    - "\u958B\u59CB"
     - Start
     - "\u30B9\u30BF\u30FC\u30C8"
   - use: 1
@@ -369,10 +369,10 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u5168\u90E8"
-    - "\u5168\u90E8"
-    - All
-    - "\u3059\u3079\u3066"
+    - "\u654C\u4EBA"
+    - "\u6575\u4EBA"
+    - Enemy
+    - "\u6575"
   - use: 1
     id: 10051
     name: 0

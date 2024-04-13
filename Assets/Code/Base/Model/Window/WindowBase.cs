@@ -60,6 +60,11 @@ public class WindowBase : FrameMono
         WindowModel.Close(config.id);
     }
 
+    protected void Close(WindowEnum type)
+    {
+        WindowModel.Close(type);
+    }
+
     protected void ReOpenSelf(object obj)
     {
         WindowModel.Open(config.id, obj);

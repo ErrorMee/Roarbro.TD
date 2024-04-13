@@ -7,20 +7,20 @@ public class StageWindow : WindowBase
 
     [SerializeField] SDFBtn editBtn;
 
-    [SerializeField] SDFBtn playBtn;
+    [SerializeField] SDFBtn startBtn;
 
     protected override void Awake()
     {
         base.Awake();
 
         ClickListener.Add(editBtn.transform).onClick += OnClickEdit;
-        ClickListener.Add(playBtn.transform).onClick += OnClickPlay;
+        ClickListener.Add(startBtn.transform).onClick += OnClickStart;
 
         battleList.OnCellClicked((index) =>
         {
             battleList.UpdateSelection(index);
             StageModel.Instance.SelectIndex = index;
-            playBtn.interactable = StageModel.Instance.IsUnLock(index);
+            startBtn.interactable = StageModel.Instance.IsUnLock(index);
         });
     }
 
@@ -44,7 +44,7 @@ public class StageWindow : WindowBase
         BattleModel.Instance.Start(StageModel.Instance.battles[StageModel.Instance.SelectIndex], true);
     }
 
-    void OnClickPlay()
+    void OnClickStart()
     {
         if (StageModel.Instance.IsUnLock(StageModel.Instance.SelectIndex))
         {

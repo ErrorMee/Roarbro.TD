@@ -8,7 +8,7 @@ Shader "SDF/UI/Area"
     SubShader
     {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline"}
-
+        Cull Off
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
 

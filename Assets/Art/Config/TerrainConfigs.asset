@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe26c517443e3146922c8070be45c36, type: 3}
   m_Name: TerrainConfigs
   m_EditorClassIdentifier: 
-  showDel: 0
+  showDel: 1
   showAdd: 0
   showUse: 0
   showIdx: 1

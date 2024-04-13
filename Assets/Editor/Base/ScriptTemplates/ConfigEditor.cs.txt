@@ -1,0 +1,30 @@
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(#SCRIPTNAME#Configs))]
+public class #SCRIPTNAME#ConfigsEditor : ConfigsEditor<#SCRIPTNAME#Config, #SCRIPTNAME#Configs>
+{
+    [MenuItem(ConfigMenu + "#SCRIPTNAME#")]
+    static void Create()
+    {
+        CreateConfigs<#SCRIPTNAME#Configs>("#SCRIPTNAME#");
+    }
+
+    protected override void DrawHead()
+    {
+        base.DrawHead();
+        //TODO
+    }
+
+    protected override void DrawMenuAdd()
+    {
+        base.DrawMenuAdd();
+        //TODO
+    }
+
+    protected override void DrawConfig(int index, #SCRIPTNAME#Config config)
+    {
+        base.DrawConfig(index, config);
+        //TODO
+    }
+}

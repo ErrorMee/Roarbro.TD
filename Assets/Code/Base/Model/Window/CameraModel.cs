@@ -15,7 +15,7 @@ public class CameraModel : SingletonBehaviour<CameraModel>
     /// </summary>
     Transform stick;
 
-    private new Camera camera;
+    public Camera mainCamera;
 
     public Rect InitViewRect
     {
@@ -34,8 +34,8 @@ public class CameraModel : SingletonBehaviour<CameraModel>
         backGround = root.Find("BackGround").GetComponent<MeshRenderer>();
         swivel = root.Find("Swivel");
         stick = swivel.GetChild(0);
-        camera = stick.GetChild(0).GetComponent<Camera>();
-
+        mainCamera = stick.GetChild(0).GetComponent<Camera>();
+        mainCamera.tag = "MainCamera";
         Vector3 leftDown = ScreenToWorldPos(Vector2.zero, 0);
         Vector3 rightUp = ScreenToWorldPos(new Vector2(Screen.width, Screen.height), 0);
         InitViewRect = new Rect(leftDown.x, leftDown.z, rightUp.x - leftDown.x, rightUp.z - leftDown.z);
@@ -43,7 +43,7 @@ public class CameraModel : SingletonBehaviour<CameraModel>
 
     public Vector3 ScreenToWorldPos(Vector2 screenPos, float height)
     {
-        Ray ray = camera.ScreenPointToRay(screenPos);
+        Ray ray = mainCamera.ScreenPointToRay(screenPos);
         Vector3 worldPos = RayUtil.FixedY(ray, height);
         return worldPos;
     }
@@ -101,12 +101,12 @@ public class CameraModel : SingletonBehaviour<CameraModel>
 
     public void CullingMaskAll()
     {
-        camera.cullingMask = -1;
+        mainCamera.cullingMask = -1;
     }
 
     public void CullingMaskJust(LayerEnum layer)
     {
-        camera.cullingMask = (1 << (int)layer);
+        mainCamera.cullingMask = (1 << (int)layer);
     }
 
     public void Vibrate(int milliseconds)

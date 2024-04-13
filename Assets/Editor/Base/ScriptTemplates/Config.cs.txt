@@ -1,8 +1,5 @@
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
+
 using System;
-using UnityEngine;
 
 public class #SCRIPTNAME#Configs : Configs<#SCRIPTNAME#Configs, #SCRIPTNAME#Config>
 {
@@ -14,35 +11,3 @@ public class #SCRIPTNAME#Config : Config
 {
     
 }
-
-
-#if UNITY_EDITOR
-
-[CustomEditor(typeof(#SCRIPTNAME#Configs))]
-public class #SCRIPTNAME#ConfigsEditor : ConfigsEditor<#SCRIPTNAME#Config, #SCRIPTNAME#Configs>
-{
-    [MenuItem(ConfigMenu + "#SCRIPTNAME#")]
-    static void Create()
-    {
-        CreateConfigs<#SCRIPTNAME#Configs>("#SCRIPTNAME#");
-    }
-
-    protected override void DrawHead()
-    {
-        base.DrawHead();
-        //TODO
-    }
-
-    protected override void DrawMenuAdd()
-    {
-        base.DrawMenuAdd();
-        //TODO
-    }
-
-    protected override void DrawConfig(int index, #SCRIPTNAME#Config config)
-    {
-        base.DrawConfig(index, config);
-        //TODO
-    }
-}
-#endif

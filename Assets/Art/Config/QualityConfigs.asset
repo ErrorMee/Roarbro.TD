@@ -63,5 +63,5 @@ MonoBehaviour:
     name: 10006
     sortUp: 1
     quality: 5
-    color1: {r: 0.9490196, g: 0.41568628, b: 0.5176471, a: 1}
+    color1: {r: 1, g: 0.34821108, b: 0.18396229, a: 1}
     color2: {r: 0.95, g: 0.95, b: 1, a: 1}
