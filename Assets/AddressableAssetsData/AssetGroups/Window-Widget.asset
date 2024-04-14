@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: 5b7bc1dcdafb18a48b4fb80258a77dbe
+  m_GUID: d8279a030c0c7d4469b56451d363f3ef
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab
@@ -31,6 +31,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
     m_Address: Assets/Art/Window/Widget/Frame.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c59b74db983e4687b77a7482780a45b
+    m_Address: Assets/Art/Window/Widget/Img.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

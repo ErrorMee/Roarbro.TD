@@ -26,39 +26,40 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         return Instance;
     }
 
-    public void DragDown(PieceInfo fromInfo, Vector2Int to)
+    public void DragDown(PieceInfo fromInfo, Vector2Int toIndex)
     {
-        if (fromInfo.posx != to.x && fromInfo.posy != to.y)
+        if (fromInfo.posx != toIndex.x && fromInfo.posy != toIndex.y)
         {
-            EventModel.Send(EventEnum.ResetPieces);
+            MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
         }
         else
         {
-            if (fromInfo.posx == to.x && fromInfo.posy == to.y)
+            if (fromInfo.posx == toIndex.x && fromInfo.posy == toIndex.y)
             {
-                EventModel.Send(EventEnum.ResetPieces);
+                MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
             }
             else
             {
-                if (to.x < pieceInfos.GetLength(0) && to.y < pieceInfos.GetLength(1))
+                if (toIndex.x >= 0 && toIndex.x < pieceInfos.GetLength(0) &&
+                    toIndex.y >= 0 && toIndex.y < pieceInfos.GetLength(1))
                 {
-                    PieceInfo infoTo = pieceInfos[to.x, to.y];
-
-                    infoTo.posx = fromInfo.posx; infoTo.posy = fromInfo.posy;
-                    pieceInfos[infoTo.posx, infoTo.posy] = infoTo;
-
-                    fromInfo.posx = to.x; fromInfo.posy = to.y;
-                    pieceInfos[to.x, to.y] = fromInfo;
-
-                    EventModel.Send(EventEnum.MovePiece, infoTo);
-                    EventModel.Send(EventEnum.MovePiece, fromInfo);
-                    EventModel.Send(EventEnum.ResetPieces);
+                    PieceInfo toInfo = pieceInfos[toIndex.x, toIndex.y];
+                    MovePiece(toInfo, fromInfo.posx, fromInfo.posy);
+                    MovePiece(fromInfo, toIndex.x, toIndex.y);
                 }
                 else
                 {
-                    EventModel.Send(EventEnum.ResetPieces);
+                    MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
                 }
             }
         }
+    }
+
+    private void MovePiece(PieceInfo piece, int posx, int posy)
+    {
+        Debug.Log("MovePiece " + posx + " - " + posy);
+        piece.posx = posx; piece.posy = posy;
+        pieceInfos[piece.posx, piece.posy] = piece;
+        EventModel.Send(EventEnum.MovePiece, piece);
     }
 }

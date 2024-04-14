@@ -21,6 +21,7 @@ public class PieceLayer : BattleLayer<PieceUnit>
         Init();
 
         AutoListener(EventEnum.ResetPieces, OnResetPieces);
+        AutoListener(EventEnum.MovePiece, OnMovePiece);
     }
 
     private void Init()
@@ -44,14 +45,16 @@ public class PieceLayer : BattleLayer<PieceUnit>
             Select();
         }
 
-        if (selectUnit != null && InputModel.Instance.Presseding)
+        if (selectUnit != null)
         {
-            Drag();
-        }
-
-        if (selectUnit != null && InputModel.Instance.ReleasedThisFrame)
-        {
-            DragDown();
+            if (InputModel.Instance.Presseding)
+            {
+                Drag();
+            }
+            if (InputModel.Instance.ReleasedThisFrame)
+            {
+                DragDown();
+            }
         }
     }
 
@@ -62,8 +65,6 @@ public class PieceLayer : BattleLayer<PieceUnit>
         if (GridUtil.InGrid(index.x, index.y))
         {
             selectUnit = units[index.x, index.y];
-
-            Debug.Log("OnPressed " + index + " posx " + selectUnit.info.posx + " posy " + selectUnit.info.posy);
         }
         else
         {
@@ -121,6 +122,23 @@ public class PieceLayer : BattleLayer<PieceUnit>
 
     private void OnMovePiece(object obj = null)
     {
-        PieceInfo info = (PieceInfo)obj;
+        PieceInfo moveInfo = (PieceInfo)obj;
+
+        for (int y = 0; y < GridUtil.YCount; y++)
+        {
+            for (int x = 0; x < GridUtil.XCount; x++)
+            {
+                PieceUnit moveUnit = units[x, y];
+                if (moveUnit.info == moveInfo)
+                {
+                    Debug.Log("OnMovePiece " + moveInfo.posx + " - " + moveInfo.posy);
+                    moveUnit.transform.DOLocalMove(new Vector3(moveInfo.GetViewX(), 0, moveInfo.GetViewZ()), 0.16f);
+                    PieceUnit tempUnit = units[moveInfo.posx, moveInfo.posy];
+                    units[moveInfo.posx, moveInfo.posy] = moveUnit;
+                    units[x, y] = tempUnit;
+                    break;
+                }
+            }
+        }
     }
 }
