@@ -33,9 +33,9 @@
                 float round = 0.1;
                 float th = 0.03;
                 float glow = 0.07;
-                float sd = opOnion(opRound(sdBox(sdPos, 0.5 - round - th), round), th);
+                float sd = opOnion(opRound(sdBox(sdPos, 0.48 - round - th), round), th);
 
-                f.color.rgb = lerp(f.color.rgb, UNITY_ACCESS_INSTANCED_PROP(Props, _AddColor).rgb, saturate(sd * sharp));
+                f.color.rgb *= lerp(1, 0.05, saturate(sd * sharp));
                 sd -= glow;
 
                 float alpha = saturate(-sd * sharp * 0.15);

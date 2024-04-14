@@ -80,18 +80,43 @@ public class PieceLayer : BattleLayer<PieceUnit>
         float viewZ = selectUnit.info.GetViewZ();
 
         Vector3 unitPos = new Vector3(Mathf.Clamp(worldPos.x, viewX - 1f, viewX + 1f),
-            0.01f, Mathf.Clamp(worldPos.z, viewZ - 1f, viewZ + 1f));
+            0.02f, Mathf.Clamp(worldPos.z, viewZ - 1f, viewZ + 1f));
 
-        selectUnit.transform.localPosition = unitPos;
-
+        Vector3 offset = unitPos - selectUnit.transform.localPosition;
+        if (offset.sqrMagnitude < 0.04f)
+        {
+            selectUnit.transform.localPosition = unitPos;
+        }
+        else
+        {
+            selectUnit.transform.localPosition += offset.normalized * 0.2f;
+        }
+        
         Vector3 selectPos = GridUtil.WorldToGridPos(unitPos, false);
-        select.transform.position = selectPos;
+        Vector2Int index = GridUtil.WorldToGridIndex(selectPos);
+        if (GridUtil.InGrid(index.x, index.y))
+        {
+            if ((Mathf.Abs(index.x - selectUnit.info.posx) + Mathf.Abs(index.y - selectUnit.info.posy)) > 1)
+            {
+                select.meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor2(QualityEnum.SSR));
+            }
+            else
+            {
+                select.meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor(QualityEnum.N));
+            }
+        }
+        else
+        {
+            select.meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor2(QualityEnum.SSR));
+        }
+        selectPos.y = 0;
+        select.transform.localPosition = selectPos;
     }
 
     void DragDown()
     {
         select.gameObject.SetActive(false);
-        Vector2Int index = GridUtil.WorldToGridIndex(select.transform.position);
+        Vector2Int index = GridUtil.WorldToGridIndex(select.transform.localPosition);
         PieceModel.Instance.DragDown(selectUnit.info, index);
         selectUnit = null;
     }
@@ -102,7 +127,7 @@ public class PieceLayer : BattleLayer<PieceUnit>
         worldPos = GridUtil.WorldToGridPos(worldPos, false);
         Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
 
-        select.transform.position = worldPos;
+        select.transform.localPosition = worldPos;
         select.gameObject.SetActive(true);
 
         return index;
@@ -131,7 +156,6 @@ public class PieceLayer : BattleLayer<PieceUnit>
                 PieceUnit moveUnit = units[x, y];
                 if (moveUnit.info == moveInfo)
                 {
-                    Debug.Log("OnMovePiece " + moveInfo.posx + " - " + moveInfo.posy);
                     moveUnit.transform.DOLocalMove(new Vector3(moveInfo.GetViewX(), 0, moveInfo.GetViewZ()), 0.16f);
                     PieceUnit tempUnit = units[moveInfo.posx, moveInfo.posy];
                     units[moveInfo.posx, moveInfo.posy] = moveUnit;

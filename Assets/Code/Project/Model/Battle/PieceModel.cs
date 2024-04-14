@@ -57,7 +57,6 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     private void MovePiece(PieceInfo piece, int posx, int posy)
     {
-        Debug.Log("MovePiece " + posx + " - " + posy);
         piece.posx = posx; piece.posy = posy;
         pieceInfos[piece.posx, piece.posy] = piece;
         EventModel.Send(EventEnum.MovePiece, piece);
