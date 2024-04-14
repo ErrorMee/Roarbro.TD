@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 1e13ada9d304fdd44991fb59f8f63e8b
+  m_GUID: a29a34897be74a448ac5d3d6c70581d8
   m_SerializeEntries:
+  - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
+    m_Address: Assets/Art/Unit/PieceUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 65ac586788375a641b2b7bf3315206e2
     m_Address: Assets/Art/Unit/SDF_Unit_Enemy.mat
     m_ReadOnly: 0
@@ -37,6 +43,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38a7195c994d0d74981836238336a152
     m_Address: Assets/Art/Unit/SDF_Unit_Piece.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac344a7fbdd189a4fa0abf55ae9e47ef
+    m_Address: Assets/Art/Unit/SDF_Unit_Shadow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d2ef8d927da4654d993d06179a8d0e6
+    m_Address: Assets/Art/Unit/SDF_Unit_Shadow.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -73,12 +91,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
     m_Address: Assets/Art/Unit/TileUnitSelect.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
-    m_Address: Assets/Art/Unit/PieceUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
