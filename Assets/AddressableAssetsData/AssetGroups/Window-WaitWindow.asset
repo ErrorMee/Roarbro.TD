@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-WaitWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 18857b676c124d342b572a086d3ebc57
+  m_GUID: 817576a5a4d195d428e07061db476c02
   m_SerializeEntries:
   - m_GUID: b3bd74ba09123d647bd2cfc2700d51d4
     m_Address: Assets/Art/Window/WaitWindow/WaitWindow.prefab

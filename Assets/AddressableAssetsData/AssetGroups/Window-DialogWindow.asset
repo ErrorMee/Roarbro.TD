@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-DialogWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: d6a4473353b478c479b73bf7e0ada1c9
+  m_GUID: 69232f306bc4d6c44a0aa4ac6d1b9aad
   m_SerializeEntries:
   - m_GUID: 1659712a39ff3a34299b640fce08f8fa
     m_Address: Assets/Art/Window/DialogWindow/DialogWindow.prefab

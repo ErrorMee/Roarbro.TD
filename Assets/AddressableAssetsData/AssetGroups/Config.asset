@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: e81578a5f43a8604d96cdb26e30e3ce6
+  m_GUID: 8cce938f748609b40b1c3a5eb10ccc16
   m_SerializeEntries:
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset

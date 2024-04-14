@@ -205,26 +205,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5860492796880498947}
     m_Modifications:
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 3789342791314488389, guid: a1c47cbbb14a9964d8e807d5de71fabc,
         type: 3}
       propertyPath: m_text
@@ -735,26 +715,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5860492796880498947}
     m_Modifications:
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2438755917739905533, guid: a1c47cbbb14a9964d8e807d5de71fabc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 3789342791314488389, guid: a1c47cbbb14a9964d8e807d5de71fabc,
         type: 3}
       propertyPath: m_text

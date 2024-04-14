@@ -26,7 +26,7 @@
                 UNITY_SETUP_INSTANCE_ID(f);
                 float2 sdPos = f.uv.xy; float2 symPos = opSymY(f.uv.xy);
                 float sharp = min(_ScreenParams.x, _ScreenParams.y) * 0.1;
-                float sketch = sdCircle(sdPos, 0.48) * sharp;
+                float sketch = sdCircle(sdPos, 0.5) * sharp;
                 return endSimple(f.color, sketch);
             }
             ENDHLSL
