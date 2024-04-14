@@ -10,7 +10,11 @@ public enum EventEnum
 
     #region Battle
 
-    ChangeTerrain,
+    ResetTerrain,
+
+    ResetPieces,
+
+    MovePiece,
 
     #endregion
 }

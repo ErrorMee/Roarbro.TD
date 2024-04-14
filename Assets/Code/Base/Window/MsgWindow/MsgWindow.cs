@@ -2,7 +2,7 @@ using DG.Tweening;
 
 public class MsgWindow : WindowBase
 {
-    public MsgItem msgItemPrefab;
+    public MsgItem msgTemplate;
 
     const int maxCount = 5;
 
@@ -15,16 +15,16 @@ public class MsgWindow : WindowBase
     override protected void Awake()
     {
         base.Awake();
-        msgItemPrefab.gameObject.SetActive(false);
-        GameObjectPool.Instance.Init(msgItemPrefab.gameObject);
-        itemGap = msgItemPrefab.rectTransform.sizeDelta.y;
+        msgTemplate.gameObject.SetActive(false);
+        GameObjectPool.Instance.Init(msgTemplate.gameObject);
+        itemGap = msgTemplate.rectTransform.sizeDelta.y;
     }
 
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
 
-        MsgItem msgInstance = GameObjectPool.Instance.Get<MsgItem>(msgItemPrefab.gameObject);
+        MsgItem msgInstance = GameObjectPool.Instance.Get<MsgItem>(msgTemplate.gameObject);
         msgItems.PushPop(msgInstance);
 
         DOTween.Kill(msgInstance.transform, false);

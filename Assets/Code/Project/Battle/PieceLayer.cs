@@ -1,18 +1,26 @@
 
+using DG.Tweening;
 using UnityEngine;
 
 public class PieceLayer : BattleLayer<PieceUnit>
 {
     PieceUnit[,] units;
+    PieceUnit selectUnit;
+    TileUnitSelect select;
+
+    bool start = false;
 
     protected override void Awake()
     {
         base.Awake();
+        select = AddressModel.LoadGameObject(Address.UnitPrefab(typeof(TileUnitSelect).Name), transform).GetComponent<TileUnitSelect>();
+        select.gameObject.SetActive(false);
 
         units = new PieceUnit[GridUtil.XCount, GridUtil.YCount];
-
+        DOVirtual.DelayedCall(0.5f, () => { start = true; });
         Init();
-        OnChangeTerrain();
+
+        AutoListener(EventEnum.ResetPieces, OnResetPieces);
     }
 
     private void Init()
@@ -23,14 +31,83 @@ public class PieceLayer : BattleLayer<PieceUnit>
             {
                 PieceUnit unit = CreateUnit();
                 units[x, y] = unit;
-                unit.posx = x;
-                unit.posy = y;
-                unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
+                unit.info = PieceModel.Instance.pieceInfos[x, y];
+                unit.UpdateShow();
             }
         }
     }
 
-    private void OnChangeTerrain(object obj = null)
+    private void Update()
+    {
+        if (start && InputModel.Instance.PressedThisFrame)
+        {
+            Select();
+        }
+
+        if (selectUnit != null && InputModel.Instance.Presseding)
+        {
+            Drag();
+        }
+
+        if (selectUnit != null && InputModel.Instance.ReleasedThisFrame)
+        {
+            DragDown();
+        }
+    }
+
+    void Select()
+    {
+        Vector2Int index = GetTouchIndex();
+
+        if (GridUtil.InGrid(index.x, index.y))
+        {
+            selectUnit = units[index.x, index.y];
+
+            Debug.Log("OnPressed " + index + " posx " + selectUnit.info.posx + " posy " + selectUnit.info.posy);
+        }
+        else
+        {
+            selectUnit = null;
+        }
+    }
+
+    void Drag()
+    {
+        Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos, transform.position.y);
+
+        float viewX = selectUnit.info.GetViewX();
+        float viewZ = selectUnit.info.GetViewZ();
+
+        Vector3 unitPos = new Vector3(Mathf.Clamp(worldPos.x, viewX - 1f, viewX + 1f),
+            0.01f, Mathf.Clamp(worldPos.z, viewZ - 1f, viewZ + 1f));
+
+        selectUnit.transform.localPosition = unitPos;
+
+        Vector3 selectPos = GridUtil.WorldToGridPos(unitPos, false);
+        select.transform.position = selectPos;
+    }
+
+    void DragDown()
+    {
+        select.gameObject.SetActive(false);
+        Vector2Int index = GridUtil.WorldToGridIndex(select.transform.position);
+        PieceModel.Instance.DragDown(selectUnit.info, index);
+        selectUnit = null;
+    }
+
+    Vector2Int GetTouchIndex()
+    {
+        Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos, transform.position.y);
+        worldPos = GridUtil.WorldToGridPos(worldPos, false);
+        Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
+
+        select.transform.position = worldPos;
+        select.gameObject.SetActive(true);
+
+        return index;
+    }
+
+    private void OnResetPieces(object obj = null)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {
@@ -40,5 +117,10 @@ public class PieceLayer : BattleLayer<PieceUnit>
                 unit.UpdateShow();
             }
         }
+    }
+
+    private void OnMovePiece(object obj = null)
+    {
+        PieceInfo info = (PieceInfo)obj;
     }
 }

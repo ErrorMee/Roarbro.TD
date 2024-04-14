@@ -10,7 +10,7 @@ public class TerrainLayer : BattleLayer<TileUnit>
 
         units = new TileUnit[GridUtil.XCount, GridUtil.YCount];
 
-        AutoListener(EventEnum.ChangeTerrain, OnChangeTerrain);
+        AutoListener(EventEnum.ResetTerrain, OnChangeTerrain);
         Init();
         OnChangeTerrain();
     }

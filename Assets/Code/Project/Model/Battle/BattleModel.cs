@@ -26,6 +26,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         else
         {
             WindowModel.Open(WindowEnum.Battle);
+            models.Add(PieceModel.Instance.Init());
         }
 
         battleObj = new GameObject("Battle");
@@ -36,7 +37,10 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         {
             CreateLayer(typeof(PieceLayer), depth++);
         }
-        CreateLayer(typeof(TouchLayer), depth++);
+        else
+        {
+            CreateLayer(typeof(EditLayer), depth++);
+        }
     }
 
     private void CreateLayer(Type type, int depth)

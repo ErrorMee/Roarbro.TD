@@ -1,11 +1,11 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class TouchLayer : BattleLayer<TileUnitSelect>
+public class EditLayer : BattleLayer<TileUnitSelect>
 {
     TileUnitSelect unit;
 
-    public bool start = false;
+    bool start = false;
 
     protected override void Awake()
     {
@@ -18,20 +18,21 @@ public class TouchLayer : BattleLayer<TileUnitSelect>
 
     private void Update()
     {
-        if (InputModel.Instance.Presseding)
+        if (start && InputModel.Instance.Presseding)
         {
-            SetTile();
+            OnPresseding();
         }
     }
 
-    private void SetTile()
+    private void OnPresseding()
     {
         Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos, transform.position.y);
         worldPos = GridUtil.WorldToGridPos(worldPos, true);
+        Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
+
         unit.transform.position = worldPos;
         unit.gameObject.SetActive(true);
 
-        Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
         if (GridUtil.InGrid(index.x, index.y))
         {
             int idx = GridUtil.GetIndex(index.x, index.y);
@@ -41,7 +42,7 @@ public class TouchLayer : BattleLayer<TileUnitSelect>
                 {
                     BattleModel.Instance.battle.config.GetTerrains()[idx] = BattleModel.Instance.battle.config.terrainSelect;
                     BattleConfigs.Instance.Save();
-                    EventModel.Send(EventEnum.ChangeTerrain);
+                    EventModel.Send(EventEnum.ResetTerrain);
                 }
             }
         }

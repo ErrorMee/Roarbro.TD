@@ -5,19 +5,17 @@ using UnityEngine;
 public class PieceUnit : BattleUnit
 {
     [ReadOnlyProperty]
-    public int posx;
-    [ReadOnlyProperty]
-    public int posy;
+    public PieceInfo info;
 
     protected override void OnEnable() { }
     protected override void OnDisable() { }
 
     public void UpdateShow()
     {
-        int randomID = UnityEngine.Random.Range(0, 6);
-        meshRenderer.SetMPBInt(MatPropUtil.IndexKey, randomID, false);
-        int randomQuality = UnityEngine.Random.Range(0, QualityConfigs.All.Length);
-        Color color = QualityConfigs.GetColor(randomQuality);
+        transform.localPosition = new Vector3(info.GetViewX(), 0, info.GetViewZ());
+
+        meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.type, false);
+        Color color = QualityConfigs.GetColor(info.level);
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, color);
     }
 }

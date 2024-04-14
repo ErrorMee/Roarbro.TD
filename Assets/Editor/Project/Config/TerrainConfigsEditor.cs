@@ -34,10 +34,10 @@ public class TerrainConfigsEditor : ConfigsEditor<TerrainConfig, TerrainConfigs>
         int tileWidth = 18; int xWidth = (xCount + 2) * tileWidth;
         EditorGUILayout.BeginVertical(GUILayout.Width(xWidth));
 
-        if (config.terrains == null || config.terrains.Length != GridUtil.XCount * GridUtil.YCount)
+        if (config.terrains == null || config.terrains.Length != GridUtil.AllCount)
         {
             Debug.LogError("new config.terrains");
-            config.terrains = new TerrainEnum[GridUtil.XCount * GridUtil.YCount];
+            config.terrains = new TerrainEnum[GridUtil.AllCount];
             for (int i = 0; i < config.terrains.Length; i++)
             {
                 config.terrains[i] = TerrainEnum.Ground;
