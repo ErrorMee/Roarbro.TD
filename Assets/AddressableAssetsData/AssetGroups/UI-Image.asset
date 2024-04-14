@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: UI-Image
   m_Data:
     m_SerializedData: []
-  m_GUID: f64ffec136aa0d044bbe8d30858fbcaa
+  m_GUID: cbefab7d94bcc884e9a6f0730a71e0b3
   m_SerializeEntries:
   - m_GUID: a6a43c2d93f6079438e2bf21b0bbf867
     m_Address: Assets/Art/UI/Image/SDF_UI_Area.mat
