@@ -35,33 +35,33 @@ MonoBehaviour:
     name: 10002
     sortUp: 1
     quality: 1
-    color1: {r: 0.2, g: 0.8, b: 0.42150298, a: 1}
+    color1: {r: 0.25, g: 1, b: 0.5245098, a: 1}
     color2: {r: 0.2509804, g: 0.2509804, b: 0.29803923, a: 1}
   - use: 1
     id: 2
     name: 10003
     sortUp: 1
     quality: 2
-    color1: {r: 0.18039216, g: 0.61960787, b: 0.9019608, a: 1}
+    color1: {r: 0.19999999, g: 0.6869566, b: 1, a: 1}
     color2: {r: 0.35, g: 0.35, b: 0.4, a: 1}
   - use: 1
     id: 3
     name: 10004
     sortUp: 1
     quality: 3
-    color1: {r: 0.7411765, g: 0.27058825, b: 0.9019608, a: 1}
+    color1: {r: 0.82173926, g: 0.29999995, b: 1, a: 1}
     color2: {r: 0.6, g: 0.6, b: 0.65, a: 1}
   - use: 1
     id: 4
     name: 10005
     sortUp: 1
     quality: 4
-    color1: {r: 0.9490196, g: 0.9019608, b: 0.050980393, a: 1}
+    color1: {r: 1, g: 0.95041317, b: 0.053718984, a: 1}
     color2: {r: 0.8, g: 0.8, b: 0.85, a: 1}
   - use: 1
     id: 5
     name: 10006
     sortUp: 1
     quality: 5
-    color1: {r: 1, g: 0.34821108, b: 0.18396229, a: 1}
+    color1: {r: 1, g: 0.33333334, b: 0, a: 1}
     color2: {r: 0.95, g: 0.95, b: 1, a: 1}

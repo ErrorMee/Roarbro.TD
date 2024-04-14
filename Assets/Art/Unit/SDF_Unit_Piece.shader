@@ -21,13 +21,10 @@
             #pragma multi_compile_instancing
             #include "../SDFLib/SDFUnit.hlsl"
 
-            float4 end(float4 color, float eye, float sketch, float pattern, float4 baseColor)
+            float4 end(float4 color, float sketch, float pattern, float4 baseColor)
             {
                 float4 patternColor = baseColor; patternColor.rgb *= 0.5;
                 color = paintIn(color, pattern, patternColor);
-
-                float4 eyeColor = baseColor; eyeColor.rgb *= 0.1;
-                color = paintIn(color, eye, eyeColor);
 
                 return endSimple(color, sketch);
             }
@@ -40,39 +37,71 @@
 
                 float4 baseColor = f.color;
                 float4 patternColor = baseColor; patternColor.rgb *= 0.5;
-                float2 sdPos = f.uv.xy; float2 sdPosSym = opSymY(f.uv.xy);
-                float sharp = min(_ScreenParams.x, _ScreenParams.y) * 0.08;
+                float2 sdPos = f.uv.xy; float2 symPos = opSymY(f.uv.xy);
+                float sharp = min(_ScreenParams.x, _ScreenParams.y) * 0.1;
                 float sketch = sdCircle(sdPos, 0.48) * sharp;
-                float eye = sdCircle(sdPosSym - float2(0.08, 0.36), 0.066);
-                eye = opUnion(eye, -sdCircle(sdPos, 0.43)) * sharp;
-
-                float pattern = sdCircle(sdPosSym - float2(0, 0.4), 0.2);
-
-
+                
+                float head = sdCircle(symPos - float2(0, 0.4), 0.2);
+                float pattern = opSubtraction(sdCircle(symPos - float2(0.08, 0.36), 0.05), head);
                 if (id == 0)
                 {
-                    pattern = opUnion(pattern, sdCircle(sdPosSym - float2(0, 0.05), 0.1));
-                    pattern = opUnion(pattern, sdCircle(sdPosSym - float2(0, -0.42), 0.13));
-                    pattern = opUnion(pattern, sdCircle(sdPosSym - float2(0.2, -0.16), 0.11));
-                    pattern = opUnion(pattern, sdCircle(sdPosSym - float2(0.4, 0.15), 0.12));
-
-                    return end(f.color, eye, sketch, pattern * sharp, baseColor);
+                    float rotRadian = fmod(_Time.y, TWO_PI) * 2;
+                    float2 sdPosRot = rotate(sdPos, rotRadian);
+                    pattern = sdStar5(sdPosRot, 0.22, 0.62) - 0.05;
+                    return end(f.color, sketch, pattern * sharp, baseColor);
                 }
-                
+
                 if (id == 1)
                 {
-                    pattern = opUnion(pattern, opOnion(sdCircle(sdPosSym - float2(0, 0.5), 0.5), 0.062));
-                    pattern = opUnion(pattern, opOnion(sdCircle(sdPosSym - float2(0, 0.5), 0.75), 0.062));
-                    return end(f.color, eye, sketch, pattern * sharp, baseColor);
+                    pattern = opUnion(pattern, sdCircle(symPos - float2(0, 0.05), 0.1));
+                    pattern = opUnion(pattern, sdCircle(symPos - float2(0, -0.42), 0.13));
+                    pattern = opUnion(pattern, sdCircle(symPos - float2(0.2, -0.16), 0.11));
+                    pattern = opUnion(pattern, sdCircle(symPos - float2(0.4, 0.15), 0.12));
+                    return end(f.color, sketch, pattern * sharp, baseColor);
                 }
                 
                 if (id == 2)
                 {
-                    pattern = opUnion(pattern, opOnion(sdHexagon(sdPosSym - float2(0, 0), 0.14), 0.04));
-                    pattern = opUnion(pattern, opOnion(sdHexagon(sdPosSym - float2(0, -0.4), 0.15), 0.04));
-                    sdPosSym = abs(f.uv.xy);
-                    pattern = opUnion(pattern, opOnion(sdHexagon(sdPosSym - float2(0.32, 0.2), 0.14), 0.04));
-                    return end(f.color, eye, sketch, pattern * sharp, baseColor);
+                    pattern = opUnion(pattern, opOnion(sdCircle(symPos - float2(0, 0.52), 0.45), 0.05));
+                    pattern = opUnion(pattern, opOnion(sdCircle(symPos - float2(0, 0.52), 0.65), 0.05));
+                    pattern = opUnion(pattern, opOnion(sdCircle(symPos - float2(0, 0.52), 0.85), 0.05));
+                    return end(f.color, sketch, pattern * sharp, baseColor);
+                }
+                
+                if (id == 3)
+                {
+                    pattern = opUnion(pattern, opOnion(sdHexagon(symPos - float2(0, 0), 0.16), 0.04));
+                    pattern = opUnion(pattern, opOnion(sdHexagon(symPos - float2(0, -0.42), 0.16), 0.04));
+                    symPos = abs(f.uv.xy);
+                    pattern = opUnion(pattern, opOnion(sdHexagon(symPos - float2(0.38, 0.21), 0.16), 0.04));
+                    return end(f.color, sketch, pattern * sharp, baseColor);
+                }
+
+                if (id == 4)
+                {
+                    float pre = sdCircle(symPos - float2(0.4, 0.4), 0.2);
+                    float pre1 = opUnion(head + 0.01, pre);
+                    pattern = opUnion(pattern, opOnion(pre, 0.04));
+
+                    float pre2 = opUnion(sdCircle(symPos - float2(0.2, 0.2), 0.2), pre1);
+                    pre2 = opUnion(pre2, sdCircle(symPos - float2(0.6, 0.2), 0.2));
+                    pattern = opUnion(pattern, opSubtraction(pre1, opOnion(pre2, 0.04)));
+
+                    float pre3 = opUnion(sdCircle(symPos - float2(0, 0), 0.2), sdCircle(symPos - float2(0.4, 0), 0.2));
+                    pattern = opUnion(pattern, opSubtraction(pre2, opOnion(pre3, 0.04)));
+                    
+                    float pre4 = opUnion(sdCircle(symPos - float2(0.2, -0.2), 0.2), sdCircle(symPos - float2(0.6, -0.2), 0.2));
+                    pattern = opUnion(pattern, opSubtraction(pre3, opOnion(pre4, 0.04)));
+
+                    return end(f.color, sketch, pattern * sharp, baseColor);
+                }
+
+                if (id == 5)
+                {
+                    pattern = opUnion(pattern, opSubtraction(head + 0.01, opOnion(sdCircle(symPos, 0.35), 0.04)));
+                    pattern = opUnion(pattern, opOnion(sdCircle(symPos, 0.2), 0.04));
+                    pattern = opUnion(pattern, sdCircle(symPos, 0.08));
+                    return end(f.color, sketch, pattern * sharp, baseColor);
                 }
 
                 return f.color;

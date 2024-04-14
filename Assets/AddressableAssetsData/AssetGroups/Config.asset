@@ -15,10 +15,16 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: eaa2b26a552eb3c428e3371a9b49b3eb
+  m_GUID: 8800f7d89b99ec44898900143e19054f
   m_SerializeEntries:
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f086a665bf38ce242b533fbf048aa0c3
+    m_Address: Assets/Art/Config/HeroConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

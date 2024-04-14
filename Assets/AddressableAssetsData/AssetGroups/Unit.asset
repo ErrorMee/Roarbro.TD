@@ -15,16 +15,28 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 85bef1c06210b8a459f2e6e5b5bc606b
+  m_GUID: 1e13ada9d304fdd44991fb59f8f63e8b
   m_SerializeEntries:
   - m_GUID: 65ac586788375a641b2b7bf3315206e2
-    m_Address: Assets/Art/Unit/SDF_Unit_Boss.mat
+    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 22b807947ad66a849a9057aeef8741a5
-    m_Address: Assets/Art/Unit/SDF_Unit_Boss.shader
+    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85ce44404db23a5468c499d3c9c76ceb
+    m_Address: Assets/Art/Unit/SDF_Unit_Piece.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38a7195c994d0d74981836238336a152
+    m_Address: Assets/Art/Unit/SDF_Unit_Piece.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -61,6 +73,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
     m_Address: Assets/Art/Unit/TileUnitSelect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
+    m_Address: Assets/Art/Unit/PieceUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

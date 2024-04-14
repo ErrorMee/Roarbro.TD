@@ -42,7 +42,7 @@ v2f vert(appdata v)
 
 float4 paintIn(float4 colorOri, float sd, float4 newColor = 0)
 {
-    colorOri = lerp(colorOri, newColor, saturate(-sd));
+    colorOri.rgb = lerp(colorOri.rgb, newColor.rgb, saturate(-sd));
     return colorOri;
 }
 

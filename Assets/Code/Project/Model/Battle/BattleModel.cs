@@ -12,14 +12,14 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public BattleInfo battle;
 
-    public void Start(BattleInfo battle, bool edit = false)
+    public void Start(BattleInfo battleInfo, bool edit = false)
     {
-        this.battle = battle;
-        this.battle.edit = edit;
+        battle = battleInfo;
+        battle.edit = edit;
         models.Clear();
         models.Add(BattleTimerModel.Instance.Init());
 
-        if (this.battle.edit)
+        if (battle.edit == true)
         {
             WindowModel.Open(WindowEnum.BattleEdit);
         }
@@ -32,6 +32,10 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         battleLayers = new List<Transform>();
         int depth = -2;
         CreateLayer(typeof(TerrainLayer), depth++);
+        if (battle.edit == false)
+        {
+            CreateLayer(typeof(PieceLayer), depth++);
+        }
         CreateLayer(typeof(TouchLayer), depth++);
     }
 
