@@ -12,8 +12,6 @@ public enum EventEnum
 
     ResetTerrain,
 
-    ResetPieces,
-
     MovePiece,
 
     #endregion

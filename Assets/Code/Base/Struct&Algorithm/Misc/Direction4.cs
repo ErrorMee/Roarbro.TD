@@ -13,4 +13,9 @@ public static class Direction4Ext
 	{
 		return direction <= Direction4.forward ? direction + 2 : direction - 2;
 	}
+
+    public static bool IsVertical(this Direction4 direction)
+    {
+        return (int)direction % 2 != 0;
+    }
 }

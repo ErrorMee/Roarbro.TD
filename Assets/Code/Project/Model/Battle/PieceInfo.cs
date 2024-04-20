@@ -8,17 +8,15 @@ public class PieceInfo
 
     public int level;
 
-    public int posx;
-
-    public int posy;
+    public Vector2Int index;
 
     public float GetViewX()
     {
-        return posx - GridUtil.XRadiusCount;
+        return index.x - GridUtil.XRadiusCount;
     }
 
     public float GetViewZ()
     {
-        return posy - GridUtil.YRadiusCount;
+        return index.y - GridUtil.YRadiusCount;
     }
 }

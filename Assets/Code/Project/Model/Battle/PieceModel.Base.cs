@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
@@ -18,47 +17,62 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                 int randomID = UnityEngine.Random.Range(0, 6);
                 pieceInfo.type = randomID;
                 pieceInfo.level = 0;
-                pieceInfo.posx = x;
-                pieceInfo.posy = y;
-                
+                pieceInfo.index = new Vector2Int(x, y);
             }
         }
         return Instance;
     }
 
-    public void DragDown(PieceInfo fromInfo, Vector2Int toIndex)
+    public PieceInfo GetPiece(Vector2Int index)
     {
-        if (fromInfo.posx != toIndex.x && fromInfo.posy != toIndex.y)
+        if (index.x >= 0 && index.x < pieceInfos.GetLength(0) &&
+                    index.y >= 0 && index.y < pieceInfos.GetLength(1))
         {
-            MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
+            return pieceInfos[index.x, index.y];
         }
         else
         {
-            if (fromInfo.posx == toIndex.x && fromInfo.posy == toIndex.y)
+            return null;
+        }
+    }
+
+    private void MovePiece(PieceInfo piece, Vector2Int index)
+    {
+        piece.index = index;
+        pieceInfos[piece.index.x, piece.index.y] = piece;
+        EventModel.Send(EventEnum.MovePiece, piece);
+    }
+
+    public void DragDown(PieceInfo fromInfo, Vector2Int toIndex)
+    {
+        if (fromInfo.index.x != toIndex.x && fromInfo.index.y != toIndex.y)
+        {
+            MovePiece(fromInfo, fromInfo.index);
+        }
+        else
+        {
+            if (fromInfo.index.x == toIndex.x && fromInfo.index.y == toIndex.y)
             {
-                MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
+                MovePiece(fromInfo, fromInfo.index);
             }
             else
             {
                 if (toIndex.x >= 0 && toIndex.x < pieceInfos.GetLength(0) &&
                     toIndex.y >= 0 && toIndex.y < pieceInfos.GetLength(1))
                 {
+                    Vector2Int fromIndex = fromInfo.index;
                     PieceInfo toInfo = pieceInfos[toIndex.x, toIndex.y];
-                    MovePiece(toInfo, fromInfo.posx, fromInfo.posy);
-                    MovePiece(fromInfo, toIndex.x, toIndex.y);
+                    MovePiece(toInfo, fromIndex);
+                    MovePiece(fromInfo, toIndex);
+
+                    HandleMatchs(fromIndex);
+                    HandleMatchs(toIndex);
                 }
                 else
                 {
-                    MovePiece(fromInfo, fromInfo.posx, fromInfo.posy);
+                    MovePiece(fromInfo, fromInfo.index);
                 }
             }
         }
-    }
-
-    private void MovePiece(PieceInfo piece, int posx, int posy)
-    {
-        piece.posx = posx; piece.posy = posy;
-        pieceInfos[piece.posx, piece.posy] = piece;
-        EventModel.Send(EventEnum.MovePiece, piece);
     }
 }

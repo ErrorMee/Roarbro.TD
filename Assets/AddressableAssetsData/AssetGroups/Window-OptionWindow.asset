@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-OptionWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 4977d95b9d2611746b7eb00cb1434444
+  m_GUID: 68d46872f0961d843885cfa66b9377d7
   m_SerializeEntries:
   - m_GUID: 686717a2d459da942a57e999d8b1361c
     m_Address: Assets/Art/Window/OptionWindow/OptionWindow.prefab

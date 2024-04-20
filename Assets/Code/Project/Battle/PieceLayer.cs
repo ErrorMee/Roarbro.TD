@@ -1,4 +1,3 @@
-
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,14 +12,14 @@ public class PieceLayer : BattleLayer<PieceUnit>
     protected override void Awake()
     {
         base.Awake();
-        select = AddressModel.LoadGameObject(Address.UnitPrefab(typeof(TileUnitSelect).Name), transform).GetComponent<TileUnitSelect>();
+        select = AddressModel.LoadGameObject(
+            Address.UnitPrefab(typeof(TileUnitSelect).Name), transform).GetComponent<TileUnitSelect>();
         select.gameObject.SetActive(false);
 
         units = new PieceUnit[GridUtil.XCount, GridUtil.YCount];
         DOVirtual.DelayedCall(0.5f, () => { start = true; });
         Init();
 
-        AutoListener(EventEnum.ResetPieces, OnResetPieces);
         AutoListener(EventEnum.MovePiece, OnMovePiece);
     }
 
@@ -96,7 +95,7 @@ public class PieceLayer : BattleLayer<PieceUnit>
         Vector2Int index = GridUtil.WorldToGridIndex(selectPos);
         if (GridUtil.InGrid(index.x, index.y))
         {
-            if ((Mathf.Abs(index.x - selectUnit.info.posx) + Mathf.Abs(index.y - selectUnit.info.posy)) > 1)
+            if ((Mathf.Abs(index.x - selectUnit.info.index.x) + Mathf.Abs(index.y - selectUnit.info.index.y)) > 1)
             {
                 select.meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor2(QualityEnum.SSR));
             }
@@ -133,18 +132,6 @@ public class PieceLayer : BattleLayer<PieceUnit>
         return index;
     }
 
-    private void OnResetPieces(object obj = null)
-    {
-        for (int y = 0; y < GridUtil.YCount; y++)
-        {
-            for (int x = 0; x < GridUtil.XCount; x++)
-            {
-                PieceUnit unit = units[x, y];
-                unit.UpdateShow();
-            }
-        }
-    }
-
     private void OnMovePiece(object obj = null)
     {
         PieceInfo moveInfo = (PieceInfo)obj;
@@ -157,8 +144,8 @@ public class PieceLayer : BattleLayer<PieceUnit>
                 if (moveUnit.info == moveInfo)
                 {
                     moveUnit.transform.DOLocalMove(new Vector3(moveInfo.GetViewX(), 0, moveInfo.GetViewZ()), 0.16f);
-                    PieceUnit tempUnit = units[moveInfo.posx, moveInfo.posy];
-                    units[moveInfo.posx, moveInfo.posy] = moveUnit;
+                    PieceUnit tempUnit = units[moveInfo.index.x, moveInfo.index.y];
+                    units[moveInfo.index.x, moveInfo.index.y] = moveUnit;
                     units[x, y] = tempUnit;
                     break;
                 }
