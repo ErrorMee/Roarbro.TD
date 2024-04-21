@@ -8,12 +8,12 @@ public class State<T>
     public Action OnExit;
     public Action OnUpdate;
 
-    public State(T info, Action onEnter, Action onExit = null, Action onUpdate = null)
+    public State(T info, Action onEnter, Action onUpdate = null, Action onExit = null)
     {
         mInfo = info;
         OnEnter = onEnter;
-        OnExit = onExit;
         OnUpdate = onUpdate;
+        OnExit = onExit;
     }
 
     public virtual void Enter()

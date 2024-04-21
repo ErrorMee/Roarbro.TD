@@ -3,8 +3,6 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    Direction4 marchDir = Direction4.forward;
-
     List<PieceInfo> matchs = new List<PieceInfo>();
 
     public void HandleMatchs(Vector2Int index)

@@ -12,8 +12,6 @@ public class PieceUnit : BattleUnit
 
     public void UpdateShow()
     {
-        transform.localPosition = new Vector3(info.GetViewX(), 0, info.GetViewZ());
-
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.type, false);
         Color color = QualityConfigs.GetColor(info.level);
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, color);

@@ -5,7 +5,7 @@ public class FSM<T>
     public HashSet<State<T>> mStates = new HashSet<State<T>>();
     public State<T> mCurrentState;
 
-    public virtual void Switch(State<T> state)
+    public virtual void ChangeState(State<T> state)
     {
         if (mCurrentState == state)
         {
