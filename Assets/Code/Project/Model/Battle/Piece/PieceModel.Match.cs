@@ -27,5 +27,4 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             }
         }
     }
-
 }

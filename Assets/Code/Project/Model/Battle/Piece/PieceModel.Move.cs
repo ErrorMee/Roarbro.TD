@@ -1,9 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    public Vector2Int dragFromIndex = -Vector2Int.one;
-    public Vector2Int dragToIndex = -Vector2Int.one;
+    private List<Vector2Int> dragIndexs = new List<Vector2Int>();
 
     public void DragPiece(PieceInfo fromInfo, Vector2Int toIndex)
     {
@@ -27,11 +27,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                     ChangeIndex(toInfo, fromIndex);
                     ChangeIndex(fromInfo, toIndex);
 
-                    dragFromIndex = fromIndex;
-                    dragToIndex = toIndex;
-
-                    //CheckMatchs(dragFromIndex);
-                    //CheckMatchs(dragToIndex);
+                    dragIndexs.Add(fromIndex);
+                    dragIndexs.Add(toIndex);
                 }
                 else
                 {

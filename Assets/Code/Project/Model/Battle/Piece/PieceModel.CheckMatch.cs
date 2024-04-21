@@ -7,12 +7,23 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     public void CheckMatchs()
     {
-        for (int y = GridUtil.YMaxIndex; y >=0; y--)
+        if (dragIndexs.Count > 0)
+        {
+            for (int i = dragIndexs.Count - 1; i >= 0; i--)
+            {
+                CheckMatchs(dragIndexs[i]);
+                dragIndexs.RemoveAt(i);
+                if (readyMatchs.Count > 2)
+                {
+                    return;
+                }
+            }
+        }
+        for (int y = GridUtil.YMaxIndex; y >= 0; y--)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
                 CheckMatchs(new Vector2Int(x, y));
-
                 if (readyMatchs.Count > 2)
                 {
                     return;
@@ -62,7 +73,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private PieceInfo GetMatch(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null && pieceOffset.type == piece.type && pieceOffset.level == piece.level)
+        if (pieceOffset != null && piece.level <= 5 &&
+            pieceOffset.type == piece.type && pieceOffset.level == piece.level)
         {
             return pieceOffset;
         }
