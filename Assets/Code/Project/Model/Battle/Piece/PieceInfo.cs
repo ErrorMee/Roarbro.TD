@@ -19,4 +19,11 @@ public class PieceInfo
     {
         return index.y - GridUtil.YRadiusCount;
     }
+
+    public bool DeleteMark
+    {
+        set;get;
+    }
+
+
 }

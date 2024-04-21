@@ -61,7 +61,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         {
             select.gameObject.SetActive(false);
             index = GridUtil.WorldToGridIndex(select.transform.localPosition);
-            PieceModel.Instance.MovePiece(selectUnit.info, index);
+            PieceModel.Instance.DragPiece(selectUnit.info, index);
             selectUnit = null;
 
             ChangeState(PieceLayerState.Move);

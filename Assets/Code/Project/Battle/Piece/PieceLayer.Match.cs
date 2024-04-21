@@ -18,7 +18,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             PieceUnit upgradeUnit = GetPieceUnit(upgradeInfo);
             upgradeUnit.UpdateShow();
         }
-        removePieces.Clear();
+
         for (int i = 0; i < PieceModel.Instance.removePieces.Count; i++)
         {
             PieceInfo removeInfo = PieceModel.Instance.removePieces[i];
@@ -35,16 +35,20 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         bool playing = false;
         foreach (PieceUnit removePiece in removePieces)
         {
-            if (removePiece.info.level >= 0)
+            if (removePiece.info.DeleteMark == false)
             {
                 playing = true;
                 removePiece.transform.localScale -= removeSpeed;
                 if (removePiece.transform.localScale.x <= 0.1f || 
                     removePiece.transform.localScale.z <= 0.1f)
                 {
-                    removePiece.info.level = -1;
+                    removePiece.info.DeleteMark = true;
                 }
             }
+        }
+        if (playing == false)
+        {
+            ChangeState(PieceLayerState.Fill);
         }
     }
 }

@@ -17,4 +17,8 @@ public enum PieceLayerState
     /// ∆•≈‰£¨∫œ≤¢
     /// </summary>
     Match,
+    /// <summary>
+    /// ÃÓ≥‰
+    /// </summary>
+    Fill,
 }

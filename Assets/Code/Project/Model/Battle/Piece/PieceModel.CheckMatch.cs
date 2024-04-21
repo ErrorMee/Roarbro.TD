@@ -33,17 +33,6 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
         CheckSymmetryMatch(piece0, Vector2Int.left);
         CheckSymmetryMatch(piece0, Vector2Int.up);
-
-        if (readyMatchs.Count > 2)
-        {
-            string matchLog = string.Empty;
-            for (int i = 0; i < readyMatchs.Count; i++)
-            {
-                PieceInfo match = readyMatchs[i];
-                matchLog += match.index;
-            }
-            Debug.LogError(matchLog);
-        }
     }
 
     private void CheckSymmetryMatch(PieceInfo piece0, Vector2Int offset)
@@ -73,7 +62,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private PieceInfo GetMatch(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null && pieceOffset.type == piece.type)
+        if (pieceOffset != null && pieceOffset.type == piece.type && pieceOffset.level == piece.level)
         {
             return pieceOffset;
         }

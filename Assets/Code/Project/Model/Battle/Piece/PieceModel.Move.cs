@@ -2,17 +2,20 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    public void MovePiece(PieceInfo fromInfo, Vector2Int toIndex)
+    public Vector2Int dragFromIndex = -Vector2Int.one;
+    public Vector2Int dragToIndex = -Vector2Int.one;
+
+    public void DragPiece(PieceInfo fromInfo, Vector2Int toIndex)
     {
         if (fromInfo.index.x != toIndex.x && fromInfo.index.y != toIndex.y)
         {
-            OnMovePiece(fromInfo, fromInfo.index);
+            ChangeIndex(fromInfo, fromInfo.index);
         }
         else
         {
             if (fromInfo.index.x == toIndex.x && fromInfo.index.y == toIndex.y)
             {
-                OnMovePiece(fromInfo, fromInfo.index);
+                ChangeIndex(fromInfo, fromInfo.index);
             }
             else
             {
@@ -21,21 +24,24 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                 {
                     Vector2Int fromIndex = fromInfo.index;
                     PieceInfo toInfo = pieceInfos[toIndex.x, toIndex.y];
-                    OnMovePiece(toInfo, fromIndex);
-                    OnMovePiece(fromInfo, toIndex);
+                    ChangeIndex(toInfo, fromIndex);
+                    ChangeIndex(fromInfo, toIndex);
 
-                    CheckMatchs(fromIndex);
-                    CheckMatchs(toIndex);
+                    dragFromIndex = fromIndex;
+                    dragToIndex = toIndex;
+
+                    //CheckMatchs(dragFromIndex);
+                    //CheckMatchs(dragToIndex);
                 }
                 else
                 {
-                    OnMovePiece(fromInfo, fromInfo.index);
+                    ChangeIndex(fromInfo, fromInfo.index);
                 }
             }
         }
     }
 
-    public void OnMovePiece(PieceInfo piece, Vector2Int index)
+    public void ChangeIndex(PieceInfo piece, Vector2Int index)
     {
         piece.index = index;
         pieceInfos[piece.index.x, piece.index.y] = piece;

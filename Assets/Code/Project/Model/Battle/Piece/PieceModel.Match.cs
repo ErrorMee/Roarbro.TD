@@ -9,6 +9,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     public void ExcuteMatch()
     {
         upgradePieces.Clear();
+        removePieces.Clear();
 
         int upgradeCount = readyMatchs.Count - 2;
 
