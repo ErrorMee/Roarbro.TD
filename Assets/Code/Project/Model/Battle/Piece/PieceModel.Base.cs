@@ -16,7 +16,6 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                 pieceInfos[x, y] = pieceInfo;
                 int randomID = UnityEngine.Random.Range(0, 6);
                 pieceInfo.type = randomID;
-                pieceInfo.level = 0;
                 pieceInfo.index = new Vector2Int(x, y);
             }
         }

@@ -6,7 +6,7 @@ public class PieceInfo
 {
     public int type;
 
-    public int level;
+    public int level = 0;
 
     public Vector2Int index;
 

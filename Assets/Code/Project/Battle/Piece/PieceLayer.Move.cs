@@ -56,7 +56,15 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
         if (movePieces.Count < 1)
         {
-            ChangeState(PieceLayerState.Idle);
+            PieceModel.Instance.CheckMatchs();
+            if (PieceModel.Instance.readyMatchs.Count > 2)
+            {
+                ChangeState(PieceLayerState.Match);
+            }
+            else
+            {
+                ChangeState(PieceLayerState.Idle);
+            }
         }
     }
 }

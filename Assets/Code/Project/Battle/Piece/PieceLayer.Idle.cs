@@ -4,11 +4,8 @@ using UnityEngine;
 
 public partial class PieceLayer : BattleLayer<PieceUnit>
 {
-    int idleFrame;
-
     private void IdleEnter()
     {
-        idleFrame = 0;
         movePieces.Clear();
     }
 
@@ -18,8 +15,6 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
     private void IdleUpdate()
     {
-        idleFrame++;
-
         if (InputModel.Instance.PressedThisFrame)
         {
             Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos,

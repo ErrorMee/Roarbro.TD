@@ -24,8 +24,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                     OnMovePiece(toInfo, fromIndex);
                     OnMovePiece(fromInfo, toIndex);
 
-                    HandleMatchs(fromIndex);
-                    HandleMatchs(toIndex);
+                    CheckMatchs(fromIndex);
+                    CheckMatchs(toIndex);
                 }
                 else
                 {
@@ -35,7 +35,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    private void OnMovePiece(PieceInfo piece, Vector2Int index)
+    public void OnMovePiece(PieceInfo piece, Vector2Int index)
     {
         piece.index = index;
         pieceInfos[piece.index.x, piece.index.y] = piece;

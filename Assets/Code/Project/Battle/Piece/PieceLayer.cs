@@ -27,6 +27,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Idle, IdleEnter, IdleUpdate, IdleExit));
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Drag, DragEnter, DragUpdate, DragExit));
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Move, MoveEnter, MoveUpdate, MoveExit));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Match, MatchEnter, MatchUpdate, MatchExit));
 
         units = new PieceUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
