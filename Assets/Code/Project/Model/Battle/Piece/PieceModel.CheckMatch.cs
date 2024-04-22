@@ -73,8 +73,11 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private PieceInfo GetMatch(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null && piece.level <= 5 &&
-            pieceOffset.type == piece.type && pieceOffset.level == piece.level)
+        if (pieceOffset != null
+            //&& piece.level <= 5 
+            //&& pieceOffset.level == piece.level
+            && pieceOffset.type == piece.type 
+            )
         {
             return pieceOffset;
         }

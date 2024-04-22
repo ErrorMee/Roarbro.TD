@@ -11,20 +11,31 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         upgradePieces.Clear();
         removePieces.Clear();
 
-        int upgradeCount = readyMatchs.Count - 2;
+        //int upgradeCount = readyMatchs.Count - 2;
+        //for (int i = 0; i < readyMatchs.Count; i++)
+        //{
+        //    PieceInfo pieceInfo = readyMatchs[i];
+        //    if (i < upgradeCount)
+        //    {
+        //        pieceInfo.level += 1;
+        //        upgradePieces.Add(pieceInfo);
+        //    }
+        //    else
+        //    {
+        //        removePieces.Add(pieceInfo);
+        //    }
+        //}
 
-        for (int i = 0; i < readyMatchs.Count; i++)
+        PieceInfo pieceInfo0 = readyMatchs[0];
+        int addLevel = 0;
+        for (int i = 1; i < readyMatchs.Count; i++)
         {
             PieceInfo pieceInfo = readyMatchs[i];
-            if (i < upgradeCount)
-            {
-                pieceInfo.level += 1;
-                upgradePieces.Add(pieceInfo);
-            }
-            else
-            {
-                removePieces.Add(pieceInfo);
-            }
+            addLevel += pieceInfo.level;
+            removePieces.Add(pieceInfo);
+            pieceInfo.level = 1;
         }
+        pieceInfo0.level += addLevel;
+        upgradePieces.Add(pieceInfo0);
     }
 }

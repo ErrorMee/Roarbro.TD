@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-ArchiveWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 3f0301be454ec084daac149ba2a098d5
+  m_GUID: ba3d2336432c9b14bb49e39bd7710dd4
   m_SerializeEntries:
   - m_GUID: cf8842d1ba4ec444e93c0168dc1ab583
     m_Address: Assets/Art/Window/ArchiveWindow/ArchiveWindow.prefab

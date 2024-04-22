@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Font
   m_Data:
     m_SerializedData: []
-  m_GUID: 4a4fbdf60c2062a42bb680442f5d8ad7
+  m_GUID: b4c1f015b1e59ad4a8561359d709ac8e
   m_SerializeEntries:
   - m_GUID: 30cb8442c8ff6fc458cdd2f80e5add61
     m_Address: Assets/Art/Font/Chinese.asset
@@ -43,6 +43,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c16eb7d7c3953489db00312b8b09df4b
     m_Address: Assets/Art/Font/English.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Font
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66f99e98de04f8441834fd6b9a0b9eea
+    m_Address: Assets/Art/Font/Number.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Font
