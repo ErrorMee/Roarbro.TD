@@ -27,13 +27,9 @@
                 float4 addColor = UNITY_ACCESS_INSTANCED_PROP(Props, _AddColor);
 
                 float2 sdPos = abs(f.uv.xy);
-                float edge = 0.48 - max(sdPos.x, sdPos.y);
+                float edge = 0.475 - max(sdPos.x, sdPos.y);
 
                 float sd = edge;
-
-                int placeable = fmod(index, 2);
-
-                sd = opUnion(edge, placeable * sdCircle(sdPos - 0.131, 0.062));
 
                 sd = saturate(-sd * sharp);
 

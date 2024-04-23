@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class PieceLayer : BattleLayer<PieceUnit>
 {
-    const float moveSpeed = 0.1f;
+    const float moveSpeed = 0.125f;
     const float moveStreshold = moveSpeed * moveSpeed;
 
     HashSet<PieceUnit> movePieces = new HashSet<PieceUnit>();

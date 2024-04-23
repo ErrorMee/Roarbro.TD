@@ -13,9 +13,9 @@ public class TileUnit : BattleUnit
     public void UpdateShow()
     {
         BattleConfig battleConfig = BattleModel.Instance.battle.config;
-
-        TerrainEnum terrain = battleConfig.GetTerrains()[GridUtil.GetIndex(posx, posy)];
-        Color color = terrain.GetColor();
+        TerrainConfig terrainConfig = battleConfig.GetTerrainConfig();
+        TerrainEnum terrain = terrainConfig.GetTerrain(posx, posy);
+        Color color = terrainConfig.GetColor(terrain);
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, (int)terrain, false);
         //meshRenderer.SetMPBColor(MatPropUtil.AddColorKey, new Color(0.35f, 0.35f, 0.4f), false);
         meshRenderer.SetMPBColor(MatPropUtil.AddColorKey, color * 1.25f, false);

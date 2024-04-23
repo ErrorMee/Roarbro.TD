@@ -59,12 +59,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6c1cee8ad0bdba24e8d5664632d44515
-    m_Address: Assets/Art/Window/Widget/ListView.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89a102cd1cedd99459437708c0029882
     m_Address: Assets/Art/Window/Widget/ScrollFocus.prefab
     m_ReadOnly: 0

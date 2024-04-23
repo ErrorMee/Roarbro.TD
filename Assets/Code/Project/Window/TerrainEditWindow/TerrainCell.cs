@@ -9,8 +9,15 @@ public class TerrainCell : ScrollCell<TerrainEnum>
     public override void UpdateContent(TerrainEnum info)
     {
         base.UpdateContent(info);
-        title.text = info.GetName();
-        title.color = info.GetColor();
+        
+        BattleConfig battleConfig = BattleModel.Instance.battle.config;
+        TerrainConfig terrainConfig = battleConfig.GetTerrainConfig();
+
+        //title.text = info.GetName();
+        //title.color = terrainConfig.GetColor(info);
+
+        btn.targetGraphic.color = terrainConfig.GetColor(info);
+
         if (select != null)
         {
             select.gameObject.SetActive(Index == Context.SelectedIndex);

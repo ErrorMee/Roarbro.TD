@@ -6,7 +6,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 {
     Dictionary<int, List<PieceUnit>> sortedReusePieces = new Dictionary<int, List<PieceUnit>>();
 
-    static Vector3 fillSpeed = new Vector3(0.05f, 0.05f, 0.05f);
+    static Vector3 fillSpeed = new Vector3(0.1f, 0.1f, 0.1f);
 
     private void FillEnter()
     {

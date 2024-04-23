@@ -28,7 +28,7 @@ MonoBehaviour:
     name: 0
     sortUp: 1
     terrain: 1
-    terrainSelect: 0
+    terrainSelect: 1
   - use: 1
     id: 2
     name: 0

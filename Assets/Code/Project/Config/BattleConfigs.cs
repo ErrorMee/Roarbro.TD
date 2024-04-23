@@ -10,11 +10,21 @@ public class BattleConfig : Config
 {
     public int terrain;
 
-    public TerrainEnum terrainSelect = TerrainEnum.Ground;
+    public TerrainEnum terrainSelect = TerrainEnum.Water;
+
+    public TerrainConfig GetTerrainConfig()
+    {
+        TerrainConfig terrainConfig = TerrainConfigs.Instance.GetConfigByID(terrain);
+        if (terrainConfig != null)
+        {
+            return terrainConfig;
+        }
+        return null;
+    }
 
     public TerrainEnum[] GetTerrains()
     {
-        TerrainConfig terrainConfig = TerrainConfigs.Instance.GetConfigByID(terrain);
+        TerrainConfig terrainConfig = GetTerrainConfig();
         if (terrainConfig != null)
         {
             return terrainConfig.terrains;

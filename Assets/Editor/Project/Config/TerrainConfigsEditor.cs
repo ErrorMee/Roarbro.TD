@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -34,13 +35,29 @@ public class TerrainConfigsEditor : ConfigsEditor<TerrainConfig, TerrainConfigs>
         int tileWidth = 18; int xWidth = (xCount + 2) * tileWidth;
         EditorGUILayout.BeginVertical(GUILayout.Width(xWidth));
 
+        Array terrainValues = Enum.GetValues(typeof(TerrainEnum));
+        if (config.colors == null || config.colors.Length != terrainValues.Length)
+        {
+            config.colors = new Color[terrainValues.Length];
+            config.colors[(byte)TerrainEnum.Water] = new Color(0.43f, 0.58f, 0.65f);
+            config.colors[(byte)TerrainEnum.Land] = new Color(0.65f, 0.65f, 0.44f);
+        }
+
+        EditorGUILayout.BeginHorizontal(GUILayout.Width(xWidth));
+        foreach (byte value in Enum.GetValues(typeof(TerrainEnum)))
+        {
+            DrawPreferredLabel(((TerrainEnum)value).ToString());
+            config.colors[value] = EditorGUILayout.ColorField(config.colors[value], GUILayout.Width(40));
+        }
+        EditorGUILayout.EndHorizontal();
+
         if (config.terrains == null || config.terrains.Length != GridUtil.AllCount)
         {
             Debug.LogError("new config.terrains");
             config.terrains = new TerrainEnum[GridUtil.AllCount];
             for (int i = 0; i < config.terrains.Length; i++)
             {
-                config.terrains[i] = TerrainEnum.Ground;
+                config.terrains[i] = TerrainEnum.Water;
             }
         }
 
@@ -55,7 +72,7 @@ public class TerrainConfigsEditor : ConfigsEditor<TerrainConfig, TerrainConfigs>
             {
                 TerrainEnum terrain = config.terrains[GridUtil.GetIndex(x, z)];
                 oriColor = GUI.color;
-                GUI.color = terrain.GetConfigColor();
+                GUI.color = config.colors[(byte)terrain];
                 EditorGUILayout.LabelField("¡ö", GUILayout.Width(tileWidth));
                 GUI.color = oriColor;
             }

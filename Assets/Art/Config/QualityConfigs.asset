@@ -42,7 +42,7 @@ MonoBehaviour:
     name: 10003
     sortUp: 1
     quality: 2
-    color1: {r: 0.0901961, g: 0.5843138, b: 0.9019608, a: 1}
+    color1: {r: 0.0901961, g: 0.58680487, b: 0.9019608, a: 1}
     color2: {r: 0.35, g: 0.35, b: 0.4, a: 1}
   - use: 1
     id: 3

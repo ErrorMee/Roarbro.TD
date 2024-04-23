@@ -20,7 +20,7 @@ MonoBehaviour:
   showName: 0
   pageRow: 10
   pageColumn: 1
-  pageCrt: 2
+  pageCrt: 4
   key: 
   all:
   - use: 1
@@ -379,20 +379,20 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u6C34\u57DF"
-    - "\u6C34\u57DF"
-    - Water
-    - "\u6C34\u57DF"
+    - "\u6D77\u6D0B"
+    - "\u6D77\u6D0B"
+    - Ocean
+    - "\u304B\u3044\u3088\u3046"
   - use: 1
     id: 10052
     name: 0
     sortUp: 1
     desc: 
     values:
-    - "\u8349\u5730"
-    - "\u8349\u5730"
-    - Grass
-    - "\u829D\u751F"
+    - "\u9646\u5730"
+    - "\u9678\u5730"
+    - Land
+    - "\u9678\u5730"
   - use: 1
     id: 10053
     name: 0
