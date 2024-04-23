@@ -10,18 +10,27 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             for (int y = GridUtil.YMaxIndex; y >= 0;)
             {
                 PieceInfo crtPiece = pieceInfos[x, y];
-                if (crtPiece.DeleteMark == true)
+                if (crtPiece.RremoveMark == true)
                 {
+                    int moveStep = 1;
                     for (int ym = y - 1; ym >= 0; ym--)
                     {
                         PieceInfo movePiece = pieceInfos[x, ym];
-                        ChangeIndex(movePiece, new Vector2Int(x, ym + 1));
+                        if (movePiece.level > 1)
+                        {
+                            moveStep++;
+                        }
+                        else
+                        {
+                            ChangeIndex(movePiece, new Vector2Int(x, ym + moveStep));
+                            moveStep = 1;
+                        }
                     }
 
-                    int randomID = UnityEngine.Random.Range(0, 6);
+                    int randomID = Random.Range(0, 6);
                     crtPiece.type = randomID;
-                    crtPiece.DeleteMark = false;
-                    ChangeIndex(crtPiece, new Vector2Int(x, 0));
+                    crtPiece.RremoveMark = false;
+                    ChangeIndex(crtPiece, new Vector2Int(x, moveStep - 1));
                 }
                 else
                 {

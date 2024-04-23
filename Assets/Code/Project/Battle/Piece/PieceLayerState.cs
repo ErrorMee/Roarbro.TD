@@ -14,9 +14,9 @@ public enum PieceLayerState
     /// </summary>
     Drag,
     /// <summary>
-    /// 匹配，合并
+    /// 合并
     /// </summary>
-    Match,
+    Merge,
     /// <summary>
     /// 填充
     /// </summary>

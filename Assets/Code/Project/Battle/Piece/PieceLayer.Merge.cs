@@ -8,9 +8,9 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
     List<PieceUnit> removePieces = new List<PieceUnit>();
 
-    private void MatchEnter()
+    private void MergeEnter()
     {
-        PieceModel.Instance.ExcuteMatch();
+        PieceModel.Instance.ExcuteMerge();
 
         PieceUnit upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePiece);
         upgradeUnit.UpdateShow();
@@ -22,23 +22,23 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         }
     }
 
-    private void MatchExit()
+    private void MergeExit()
     {
     }
 
-    private void MatchUpdate()
+    private void MergeUpdate()
     {
         bool playing = false;
         foreach (PieceUnit removePiece in removePieces)
         {
-            if (removePiece.info.DeleteMark == false)
+            if (removePiece.info.RremoveMark == false)
             {
                 playing = true;
                 removePiece.transform.localScale -= removeSpeed;
                 if (removePiece.transform.localScale.x <= 0.1f || 
                     removePiece.transform.localScale.z <= 0.1f)
                 {
-                    removePiece.info.DeleteMark = true;
+                    removePiece.info.RremoveMark = true;
                 }
             }
         }

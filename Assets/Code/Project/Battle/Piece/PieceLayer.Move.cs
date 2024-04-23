@@ -46,6 +46,8 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             else
             {
                 moveUnit.transform.localPosition += dir.normalized * moveSpeed;
+                moveUnit.transform.localPosition = new Vector3(moveUnit.transform.localPosition.x,
+                    0.02f, moveUnit.transform.localPosition.z);
             }
         }
 
@@ -56,10 +58,10 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
         if (movePieces.Count < 1)
         {
-            PieceModel.Instance.CheckMatchs();
-            if (PieceModel.Instance.readyMatchs.Count > 2)
+            PieceModel.Instance.CheckMerges();
+            if (PieceModel.Instance.readyMerges.Count > 2)
             {
-                ChangeState(PieceLayerState.Match);
+                ChangeState(PieceLayerState.Merge);
             }
             else
             {

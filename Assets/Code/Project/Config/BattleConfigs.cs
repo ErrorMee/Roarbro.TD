@@ -14,7 +14,7 @@ public class BattleConfig : Config
 
     public TerrainEnum[] GetTerrains()
     {
-        TerrainConfig terrainConfig = TerrainConfigs.Instance.GetConfigByIndex(terrain);
+        TerrainConfig terrainConfig = TerrainConfigs.Instance.GetConfigByID(terrain);
         if (terrainConfig != null)
         {
             return terrainConfig.terrains;

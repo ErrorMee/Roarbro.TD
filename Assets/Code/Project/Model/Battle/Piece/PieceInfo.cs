@@ -18,12 +18,12 @@ public class PieceInfo
         return index.y - GridUtil.YRadiusCount;
     }
 
-    public bool DeleteMark
+    public bool RremoveMark
     {
         set;get;
     }
 
-    public int GetMatchPriority(PieceInfo start)
+    public int GetMergePriority(PieceInfo start)
     {
         // level distance random
         Vector2Int offsetIndex = index - start.index;

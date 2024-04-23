@@ -6,18 +6,18 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     public PieceInfo upgradePiece;
     public List<PieceInfo> removePieces = new List<PieceInfo>();
 
-    public void ExcuteMatch()
+    public void ExcuteMerge()
     {
-        startPiece = readyMatchs[0];
-        readyMatchs.Sort(SortMatchs);
+        startPiece = readyMerges[0];
+        readyMerges.Sort(SortMerges);
 
-        upgradePiece = readyMatchs[0];
+        upgradePiece = readyMerges[0];
         removePieces.Clear();
 
         int addLevel = 0;
-        for (int i = 1; i < readyMatchs.Count; i++)
+        for (int i = 1; i < readyMerges.Count; i++)
         {
-            PieceInfo pieceInfo = readyMatchs[i];
+            PieceInfo pieceInfo = readyMerges[i];
             addLevel += pieceInfo.level;
             removePieces.Add(pieceInfo);
             pieceInfo.level = 1;
@@ -25,8 +25,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         upgradePiece.level += addLevel;
     }
 
-    private int SortMatchs(PieceInfo a, PieceInfo b)
+    private int SortMerges(PieceInfo a, PieceInfo b)
     {
-        return b.GetMatchPriority(startPiece) - a.GetMatchPriority(startPiece);
+        return b.GetMergePriority(startPiece) - a.GetMergePriority(startPiece);
     }
 }

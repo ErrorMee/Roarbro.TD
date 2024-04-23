@@ -3,17 +3,17 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    public List<PieceInfo> readyMatchs = new List<PieceInfo>();
+    public List<PieceInfo> readyMerges = new List<PieceInfo>();
 
-    public void CheckMatchs()
+    public void CheckMerges()
     {
         if (dragIndexs.Count > 0)
         {
             for (int i = dragIndexs.Count - 1; i >= 0; i--)
             {
-                CheckMatchs(dragIndexs[i]);
+                CheckMerges(dragIndexs[i]);
                 dragIndexs.RemoveAt(i);
-                if (readyMatchs.Count > 2)
+                if (readyMerges.Count > 2)
                 {
                     return;
                 }
@@ -23,8 +23,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                CheckMatchs(new Vector2Int(x, y));
-                if (readyMatchs.Count > 2)
+                CheckMerges(new Vector2Int(x, y));
+                if (readyMerges.Count > 2)
                 {
                     return;
                 }
@@ -32,45 +32,45 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    public void CheckMatchs(Vector2Int index)
+    public void CheckMerges(Vector2Int index)
     {
-        readyMatchs.Clear();
+        readyMerges.Clear();
         PieceInfo piece0 = GetPiece(index);
         if (piece0 == null)
         {
             return;
         }
-        readyMatchs.Add(piece0);
+        readyMerges.Add(piece0);
 
-        CheckSymmetryMatch(piece0, Vector2Int.left);
-        CheckSymmetryMatch(piece0, Vector2Int.up);
+        CheckSymmetryMerge(piece0, Vector2Int.left);
+        CheckSymmetryMerge(piece0, Vector2Int.up);
     }
 
-    private void CheckSymmetryMatch(PieceInfo piece0, Vector2Int offset)
+    private void CheckSymmetryMerge(PieceInfo piece0, Vector2Int offset)
     {
-        int preCount = readyMatchs.Count;
-        CheckDirectionMatch(piece0, offset);
-        CheckDirectionMatch(piece0, -offset);
-        int addCount = readyMatchs.Count - preCount;
+        int preCount = readyMerges.Count;
+        CheckDirectionMerge(piece0, offset);
+        CheckDirectionMerge(piece0, -offset);
+        int addCount = readyMerges.Count - preCount;
         if (addCount < 2)
         {
-            readyMatchs.RemoveRange(preCount, addCount);
+            readyMerges.RemoveRange(preCount, addCount);
         }
     }
 
-    private void CheckDirectionMatch(PieceInfo piece0, Vector2Int offset)
+    private void CheckDirectionMerge(PieceInfo piece0, Vector2Int offset)
     {
         Vector2Int offsetAdd = offset;
-        PieceInfo next = GetMatch(piece0, offsetAdd);
+        PieceInfo next = GetMerge(piece0, offsetAdd);
         while (next != null)
         {
-            readyMatchs.Add(next);
+            readyMerges.Add(next);
             offsetAdd += offset;
-            next = GetMatch(piece0, offsetAdd);
+            next = GetMerge(piece0, offsetAdd);
         }
     }
 
-    private PieceInfo GetMatch(PieceInfo piece, Vector2Int offset)
+    private PieceInfo GetMerge(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
         if (pieceOffset != null
