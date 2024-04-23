@@ -12,12 +12,8 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     {
         PieceModel.Instance.ExcuteMatch();
 
-        for (int i = 0; i < PieceModel.Instance.upgradePieces.Count; i++)
-        {
-            PieceInfo upgradeInfo = PieceModel.Instance.upgradePieces[i];
-            PieceUnit upgradeUnit = GetPieceUnit(upgradeInfo);
-            upgradeUnit.UpdateShow();
-        }
+        PieceUnit upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePiece);
+        upgradeUnit.UpdateShow();
 
         for (int i = 0; i < PieceModel.Instance.removePieces.Count; i++)
         {

@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PieceInfo
@@ -23,5 +21,13 @@ public class PieceInfo
     public bool DeleteMark
     {
         set;get;
+    }
+
+    public int GetMatchPriority(PieceInfo start)
+    {
+        // level distance random
+        Vector2Int offsetIndex = index - start.index;
+        int distance = Mathf.Max(Mathf.Abs(offsetIndex.x), Mathf.Abs(offsetIndex.y));
+        return level * 1000 + (20 - distance) * 10 + Random.Range(0, 10);
     }
 }
