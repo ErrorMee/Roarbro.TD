@@ -9,10 +9,6 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         movePieces.Clear();
     }
 
-    private void IdleExit()
-    {
-    }
-
     private void IdleUpdate()
     {
         if (InputModel.Instance.PressedThisFrame)
@@ -23,16 +19,18 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
 
             select.transform.localPosition = worldPos;
-            select.gameObject.SetActive(true);
-
+            
             if (GridUtil.InGrid(index.x, index.y))
             {
+                select.gameObject.SetActive(true);
+
                 selectUnit = units[index.x, index.y];
 
                 ChangeState(PieceLayerState.Drag);
             }
             else
             {
+                select.gameObject.SetActive(false);
                 selectUnit = null;
             }
         }

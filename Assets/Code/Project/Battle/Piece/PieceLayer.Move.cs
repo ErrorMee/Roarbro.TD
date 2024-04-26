@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class PieceLayer : BattleLayer<PieceUnit>
 {
-    const float moveSpeed = 0.125f;
+    const float moveSpeed = 0.12f;
     const float moveStreshold = moveSpeed * moveSpeed;
 
     HashSet<PieceUnit> movePieces = new HashSet<PieceUnit>();
@@ -12,10 +12,10 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
     private void MoveEnter()
     {
-    }
-
-    private void MoveExit()
-    {
+        if (movePieces.Count > 1)
+        {
+            select.gameObject.SetActive(false);
+        }
     }
 
     private void OnAddMovePiece(object obj = null)

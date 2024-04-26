@@ -9,13 +9,13 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     {
         if (fromInfo.index.x != toIndex.x && fromInfo.index.y != toIndex.y)
         {
-            ChangeIndex(fromInfo, fromInfo.index);
+            MoveIndex(fromInfo, fromInfo.index);
         }
         else
         {
             if (fromInfo.index.x == toIndex.x && fromInfo.index.y == toIndex.y)
             {
-                ChangeIndex(fromInfo, fromInfo.index);
+                MoveIndex(fromInfo, fromInfo.index);
             }
             else
             {
@@ -24,21 +24,21 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                 {
                     Vector2Int fromIndex = fromInfo.index;
                     PieceInfo toInfo = pieceInfos[toIndex.x, toIndex.y];
-                    ChangeIndex(toInfo, fromIndex);
-                    ChangeIndex(fromInfo, toIndex);
+                    MoveIndex(toInfo, fromIndex);
+                    MoveIndex(fromInfo, toIndex);
 
                     dragIndexs.Add(fromIndex);
                     dragIndexs.Add(toIndex);
                 }
                 else
                 {
-                    ChangeIndex(fromInfo, fromInfo.index);
+                    MoveIndex(fromInfo, fromInfo.index);
                 }
             }
         }
     }
 
-    public void ChangeIndex(PieceInfo piece, Vector2Int index)
+    public void MoveIndex(PieceInfo piece, Vector2Int index)
     {
         piece.index = index;
         pieceInfos[piece.index.x, piece.index.y] = piece;

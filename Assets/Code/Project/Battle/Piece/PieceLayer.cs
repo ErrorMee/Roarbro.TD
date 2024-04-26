@@ -24,11 +24,11 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     {
         fsm = new FSM<PieceLayerState>();
 
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Idle, IdleEnter, IdleUpdate, IdleExit));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Drag, DragEnter, DragUpdate, DragExit));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Move, MoveEnter, MoveUpdate, MoveExit));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Merge, MergeEnter, MergeUpdate, MergeExit));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Fill, FillEnter, FillUpdate, FillExit));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Idle, IdleEnter, IdleUpdate));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Drag, DragEnter, DragUpdate));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Move, MoveEnter, MoveUpdate));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Merge, MergeEnter, MergeUpdate));
+        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Fill, FillEnter, FillUpdate));
 
         units = new PieceUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)

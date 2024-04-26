@@ -22,7 +22,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                         }
                         else
                         {
-                            ChangeIndex(movePiece, new Vector2Int(x, ym + moveStep));
+                            MoveIndex(movePiece, new Vector2Int(x, ym + moveStep));
                             moveStep = 1;
                         }
                     }
@@ -30,7 +30,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                     int randomID = Random.Range(0, 6);
                     crtPiece.type = randomID;
                     crtPiece.RremoveMark = false;
-                    ChangeIndex(crtPiece, new Vector2Int(x, moveStep - 1));
+                    MoveIndex(crtPiece, new Vector2Int(x, moveStep - 1));
                 }
                 else
                 {

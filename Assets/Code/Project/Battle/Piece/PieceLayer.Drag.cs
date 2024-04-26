@@ -8,10 +8,6 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     {
     }
 
-    private void DragExit()
-    {
-    }
-
     private void DragUpdate()
     {
         Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos,
@@ -33,6 +29,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             selectUnit.transform.localPosition += offset.normalized * moveSpeed;
         }
 
+        bool selectEnable = false;
         Vector3 selectPos = GridUtil.WorldToGridPos(unitPos, false);
         Vector2Int index = GridUtil.WorldToGridIndex(selectPos);
         if (GridUtil.InGrid(index.x, index.y))
@@ -47,6 +44,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             {
                 select.meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey,
                     QualityConfigs.GetColor(QualityEnum.N));
+                selectEnable = true;
             }
         }
         else
@@ -59,7 +57,10 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
         if (InputModel.Instance.ReleasedThisFrame)
         {
-            select.gameObject.SetActive(false);
+            if (selectEnable == false)
+            {
+                select.gameObject.SetActive(false);
+            }
             index = GridUtil.WorldToGridIndex(select.transform.localPosition);
             PieceModel.Instance.DragPiece(selectUnit.info, index);
             selectUnit = null;

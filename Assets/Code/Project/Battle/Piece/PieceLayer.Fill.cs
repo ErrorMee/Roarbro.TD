@@ -48,10 +48,6 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         }
     }
 
-    private void FillExit()
-    {
-    }
-
     private void FillUpdate()
     {
         PieceUnit reuseUnit = null;

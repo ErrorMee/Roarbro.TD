@@ -4,7 +4,10 @@ using UnityEngine;
 
 public partial class PieceLayer : BattleLayer<PieceUnit>
 {
-    static Vector3 removeSpeed = new Vector3(0.05f, 0.05f, 0.05f);
+    const int RemoveFrameCount = 24;
+    int removeFrame = 0;
+    const float RemoveStep = 1f / RemoveFrameCount;
+    static Vector3 removeSpeed = new Vector3(RemoveStep, RemoveStep, RemoveStep);
 
     List<PieceUnit> removePieces = new List<PieceUnit>();
 
@@ -14,6 +17,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     {
         PieceModel.Instance.ExcuteMerge();
 
+        removeFrame = 0;
         upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePiece);
         upgradeUnit.UpdateShow();
 
@@ -24,12 +28,18 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         }
     }
 
-    private void MergeExit()
-    {
-    }
-
     private void MergeUpdate()
     {
+        removeFrame++;
+        if (removeFrame < RemoveFrameCount * 0.5f)
+        {
+            upgradeUnit.transform.localScale += removeSpeed;
+        }
+        else
+        {
+            upgradeUnit.transform.localScale -= removeSpeed;
+        }
+
         bool playing = false;
         foreach (PieceUnit removePiece in removePieces)
         {
@@ -52,6 +62,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         }
         if (playing == false)
         {
+            upgradeUnit.transform.localScale = Vector3.one;
             ChangeState(PieceLayerState.Fill);
         }
     }
