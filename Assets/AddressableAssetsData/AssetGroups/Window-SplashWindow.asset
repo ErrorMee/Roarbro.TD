@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-SplashWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 80ac182b82f32c543968f94a2391d0ab
+  m_GUID: 0734c05adde4107448842e84ac68e7ef
   m_SerializeEntries:
   - m_GUID: d84519d45492df34990233115095e614
     m_Address: Assets/Art/Window/SplashWindow/SDF_UI_Roarbro.mat

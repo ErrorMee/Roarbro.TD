@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-LobbyWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 9b5cf1f816beb4b4b90b3ca9e2633992
+  m_GUID: a33fe91b610ec3b43b9ad7106583cf90
   m_SerializeEntries:
   - m_GUID: 27c7aa8aa21bb58418e9683fe5bc6314
     m_Address: Assets/Art/Window/LobbyWindow/LobbyWindow.prefab
