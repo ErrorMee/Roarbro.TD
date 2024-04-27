@@ -7,6 +7,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     public void DragPiece(PieceInfo fromInfo, Vector2Int toIndex)
     {
+        combo = 0;
         if (fromInfo.index.x != toIndex.x && fromInfo.index.y != toIndex.y)
         {
             MoveIndex(fromInfo, fromInfo.index);

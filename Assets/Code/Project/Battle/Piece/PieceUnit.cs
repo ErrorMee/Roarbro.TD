@@ -40,7 +40,14 @@ public class PieceUnit : BattleUnit
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, color);
         if (info.level > 1)
         {
-            txt.text = info.level.OptStr();
+            if (info.level >= PieceModel.PieceMaxLV)
+            {
+                txt.text = "Max";
+            }
+            else
+            {
+                txt.text = info.level.OptStr();
+            }
         }
         else
         {

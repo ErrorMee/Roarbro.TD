@@ -4,23 +4,27 @@ using UnityEngine;
 
 public partial class PieceLayer : BattleLayer<PieceUnit>
 {
-    const int RemoveFrameCount = 24;
+    const int RemoveFrameMax = 24;
     int removeFrame = 0;
-    const float RemoveStep = 1f / RemoveFrameCount;
+    const float RemoveStep = 1f / RemoveFrameMax;
     static Vector3 removeSpeed = new Vector3(RemoveStep, RemoveStep, RemoveStep);
 
     List<PieceUnit> removePieces = new List<PieceUnit>();
 
-    PieceUnit upgradeUnit;
+    List<PieceUnit> upgradePieces = new List<PieceUnit>();
 
     private void MergeEnter()
     {
         PieceModel.Instance.ExcuteMerge();
 
         removeFrame = 0;
-        upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePiece);
-        upgradeUnit.UpdateShow();
-
+        for (int i = 0; i < PieceModel.Instance.upgradePieces.Count; i++)
+        {
+            PieceUnit upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePieces[i]);
+            upgradeUnit.UpdateShow();
+            upgradePieces.Add(upgradeUnit);
+        }
+        
         for (int i = 0; i < PieceModel.Instance.removePieces.Count; i++)
         {
             PieceInfo removeInfo = PieceModel.Instance.removePieces[i];
@@ -31,39 +35,65 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     private void MergeUpdate()
     {
         removeFrame++;
-        if (removeFrame < RemoveFrameCount * 0.5f)
+        if (removeFrame < RemoveFrameMax * 0.5f)
         {
-            upgradeUnit.transform.localScale += removeSpeed;
+            for (int i = 0; i < upgradePieces.Count; i++)
+            {
+                PieceUnit upgradeUnit = upgradePieces[i];
+                upgradeUnit.transform.localScale += removeSpeed;
+            }
         }
         else
         {
-            upgradeUnit.transform.localScale -= removeSpeed;
+            for (int i = 0; i < upgradePieces.Count; i++)
+            {
+                PieceUnit upgradeUnit = upgradePieces[i];
+                upgradeUnit.transform.localScale -= removeSpeed;
+            }
         }
 
         bool playing = false;
+        int upIndex = 0;
         foreach (PieceUnit removePiece in removePieces)
         {
-            if (removePiece.info.RremoveMark == false)
+            if (removePiece.info.RemoveMark == false)
             {
                 playing = true;
                 removePiece.transform.localScale -= removeSpeed;
 
                 Vector3 crtPos = removePiece.transform.localPosition;
-                Vector3 dir = upgradeUnit.transform.localPosition - crtPos;
+                Vector3 dir = upgradePieces[upIndex].transform.localPosition - crtPos;
+                upIndex++;
+                if (upIndex >= upgradePieces.Count)
+                {
+                    upIndex = 0;
+                }
 
                 removePiece.transform.localPosition += dir.normalized * removeSpeed.x;
 
                 if (removePiece.transform.localScale.x <= 0.1f || 
                     removePiece.transform.localScale.z <= 0.1f)
                 {
-                    removePiece.info.RremoveMark = true;
+                    removePiece.info.RemoveMark = true;
                 }
             }
         }
-        if (playing == false)
+        if (playing == false && removeFrame >= RemoveFrameMax)
         {
-            upgradeUnit.transform.localScale = Vector3.one;
-            ChangeState(PieceLayerState.Fill);
+            for (int i = 0; i < upgradePieces.Count; i++)
+            {
+                PieceUnit upgradeUnit = upgradePieces[i];
+                upgradeUnit.transform.localScale = Vector3.one;
+            }
+            upgradePieces.Clear();
+            if (removePieces.Count > 0)
+            {
+                ChangeState(PieceLayerState.Fill);
+            }
+            else
+            {
+                ChangeState(PieceLayerState.Move);
+            }
         }
     }
 }

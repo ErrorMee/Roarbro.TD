@@ -18,7 +18,7 @@ public class PieceInfo
         return index.y - GridUtil.YRadiusCount;
     }
 
-    public bool RremoveMark
+    public bool RemoveMark
     {
         set;get;
     }

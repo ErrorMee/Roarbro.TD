@@ -10,7 +10,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             for (int y = GridUtil.YMaxIndex; y >= 0;)
             {
                 PieceInfo crtPiece = pieceInfos[x, y];
-                if (crtPiece.RremoveMark == true)
+                if (crtPiece.RemoveMark == true)
                 {
                     int moveStep = 1;
                     for (int ym = y - 1; ym >= 0; ym--)
@@ -29,7 +29,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
                     int randomID = Random.Range(0, 6);
                     crtPiece.type = randomID;
-                    crtPiece.RremoveMark = false;
+                    crtPiece.RemoveMark = false;
                     MoveIndex(crtPiece, new Vector2Int(x, moveStep - 1));
                 }
                 else

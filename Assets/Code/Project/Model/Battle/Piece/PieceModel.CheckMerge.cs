@@ -11,7 +11,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         {
             for (int i = dragIndexs.Count - 1; i >= 0; i--)
             {
-                CheckMerges(dragIndexs[i]);
+                CrossMerges(dragIndexs[i]);
                 dragIndexs.RemoveAt(i);
                 if (readyMerges.Count > 2)
                 {
@@ -23,7 +23,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                CheckMerges(new Vector2Int(x, y));
+                CrossMerges(new Vector2Int(x, y));
                 if (readyMerges.Count > 2)
                 {
                     return;
@@ -32,7 +32,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    public void CheckMerges(Vector2Int index)
+    private void CrossMerges(Vector2Int index)
     {
         readyMerges.Clear();
         PieceInfo piece0 = GetPiece(index);
@@ -40,31 +40,39 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         {
             return;
         }
-        readyMerges.Add(piece0);
 
-        CheckSymmetryMerge(piece0, Vector2Int.left);
-        CheckSymmetryMerge(piece0, Vector2Int.up);
+        if (piece0.level < PieceMaxLV)
+        {
+            readyMerges.Add(piece0);
+        }
+
+        int centerCount = readyMerges.Count;
+        BiVectorMerge(piece0, Vector2Int.left, centerCount);
+        BiVectorMerge(piece0, Vector2Int.up, centerCount);
     }
 
-    private void CheckSymmetryMerge(PieceInfo piece0, Vector2Int offset)
+    private void BiVectorMerge(PieceInfo piece0, Vector2Int offset, int centerCount)
     {
         int preCount = readyMerges.Count;
-        CheckDirectionMerge(piece0, offset);
-        CheckDirectionMerge(piece0, -offset);
+        UniVectorMerge(piece0, offset);
+        UniVectorMerge(piece0, -offset);
         int addCount = readyMerges.Count - preCount;
-        if (addCount < 2)
+        if ((addCount + centerCount) < 3)
         {
             readyMerges.RemoveRange(preCount, addCount);
         }
     }
 
-    private void CheckDirectionMerge(PieceInfo piece0, Vector2Int offset)
+    private void UniVectorMerge(PieceInfo piece0, Vector2Int offset)
     {
         Vector2Int offsetAdd = offset;
         PieceInfo next = GetMerge(piece0, offsetAdd);
         while (next != null)
         {
-            readyMerges.Add(next);
+            if (next.level < PieceMaxLV)
+            {
+                readyMerges.Add(next);
+            }
             offsetAdd += offset;
             next = GetMerge(piece0, offsetAdd);
         }
@@ -73,11 +81,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private PieceInfo GetMerge(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null
-            //&& piece.level <= 5 
-            //&& pieceOffset.level == piece.level
-            && pieceOffset.type == piece.type 
-            )
+        if (pieceOffset != null && pieceOffset.type == piece.type)
         {
             return pieceOffset;
         }

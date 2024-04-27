@@ -4,6 +4,10 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
     public PieceInfo[,] pieceInfos;
 
+    public static int PieceMaxLV = 60;
+
+    int combo = 0;
+
     public PieceModel Init()
     {
         pieceInfos = new PieceInfo[GridUtil.XCount, GridUtil.YCount];

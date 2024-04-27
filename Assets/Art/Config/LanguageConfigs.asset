@@ -20,7 +20,7 @@ MonoBehaviour:
   showName: 0
   pageRow: 10
   pageColumn: 1
-  pageCrt: 4
+  pageCrt: 2
   key: 
   all:
   - use: 1
@@ -209,10 +209,10 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - '-'
-    - '-'
-    - '-'
-    - '-'
+    - "\u5956\u52B1"
+    - "\u734E\u52F5"
+    - Bonus
+    - "\u30DC\u30FC\u30CA\u30B9"
   - use: 1
     id: 10033
     name: 0
