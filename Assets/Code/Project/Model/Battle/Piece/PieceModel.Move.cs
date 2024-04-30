@@ -3,6 +3,40 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
+    public int maxStep = 32;
+    public int MaxStep
+    {
+        get
+        {
+            return maxStep;
+        }
+        set
+        {
+            if (maxStep != value)
+            {
+                maxStep = value;
+                LeftStep = maxStep;
+            }
+        }
+    }
+
+    private int leftStep = 32;
+    public int LeftStep
+    {
+        get
+        {
+            return leftStep;
+        }
+        set
+        {
+            if (leftStep != value)
+            {
+                leftStep = Mathf.Max(0, value);
+                EventModel.Send(EventEnum.ChangeStep);
+            }
+        }
+    }
+
     private List<Vector2Int> dragIndexs = new List<Vector2Int>();
 
     public void DragPiece(PieceInfo fromInfo, Vector2Int toIndex)
@@ -30,6 +64,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
                     dragIndexs.Add(fromIndex);
                     dragIndexs.Add(toIndex);
+
+                    LeftStep--;
                 }
                 else
                 {

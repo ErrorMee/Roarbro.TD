@@ -4,6 +4,7 @@ using UnityEngine;
 public class BattleWindow : WindowBase
 {
     [SerializeField] SDFBtn pauseBtn;
+    [SerializeField] TextMeshProUGUI step;
 
     private void OnApplicationFocus(bool focus)
     {
@@ -22,8 +23,8 @@ public class BattleWindow : WindowBase
 
         ClickListener.Add(pauseBtn.transform).onClick += OnClickPause;
 
-        BattleTimerModel.AddImmediately(OnTick, TimerEnum.Tick);
-        BattleTimerModel.AddImmediately(OnLogic, TimerEnum.Logic);
+        AutoListener(EventEnum.ChangeStep, OnChangeStep);
+        OnChangeStep();
     }
 
     public override void OnOpen(object obj)
@@ -31,17 +32,11 @@ public class BattleWindow : WindowBase
         base.OnOpen(obj);
         BattleTimerModel.Countinue();
         CameraModel.Instance.CullingMaskAll();
-        OnTick();
     }
 
-    private void OnTick()
+    void OnChangeStep(object obj = null)
     {
-
-    }
-
-    private void OnLogic()
-    {
-        
+        step.text = PieceModel.Instance.LeftStep + "/" + PieceModel.Instance.maxStep;
     }
 
     void OnClickPause()

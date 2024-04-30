@@ -32,13 +32,13 @@ Shader "SDF/UI/Icon"
                 //    sd = opSubtraction(sdSegment(opSymY(sdPos), float2(0.16, -0.02), float2(0.12, -0.26)) - 0.13, sd);
                 //    return endWithOnionOutGlow(f.color, sd - roundness, f);
                 //}
-                //if (id == 1)//<
-                //{
-                //    return f.color;
-                //    float th = -(sdPos.x) * 0.3 + 0.15;
-                //    float sd = sdOrientedBox(opSymX(sdPos), float2(-0.15, -0.08), float2(0.15, 0.27), th) - roundness;
-                //    return endWithOnionOutGlow(f.color, sd, f);
-                //}
+                if (id == 1)//<
+                {
+                    float2 pos = opSymXS(sdPos);
+                    float sd = sdSegment(pos, float2(0.28, 0.17), float2(-0.28, 0.17));
+                    sd = opUnion(sdSegment(pos, float2(0.28, 0.17), float2(0.13, 0.3)), sd);
+                    return endWithOnionOutGlow(f.color, sd - 0.11, f);
+                }
                 if (id == 2)//Lock
                 {
                     float sd = sdRoundedBox(sdPos + float2(0, 0.16), float2(0.36, 0.26), roundness);

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Mesh
   m_Data:
     m_SerializedData: []
-  m_GUID: 05c797681f1f8f94f98d9c59a1c396c3
+  m_GUID: 05cee5c90462cea46b0c6d86647730cb
   m_SerializeEntries:
   - m_GUID: b8d6275e5b346224bb74632a2bf87a4d
     m_Address: Assets/Art/Mesh/Circle06.asset

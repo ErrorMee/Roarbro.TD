@@ -8,11 +8,10 @@ public enum EventEnum
 
     LanguageChange,
 
-    #region Battle
-
     ResetTerrain,
 
     MovePiece,
 
-    #endregion
+    ChangeStep,
+
 }

@@ -4,13 +4,11 @@ public class MsgWindow : WindowBase
 {
     public MsgItem msgTemplate;
 
-    const int maxCount = 5;
+    const int maxCount = 6;
 
     private readonly SmartList<MsgItem> msgItems = new(maxCount);
 
     float itemGap;
-
-    public const int InitY = 128;
 
     override protected void Awake()
     {
@@ -35,7 +33,7 @@ public class MsgWindow : WindowBase
         {
             MsgItem msgItem = msgItems[i];
             len++;
-            msgItem.transform.DOLocalMoveY(InitY + len * itemGap, 0.2f);
+            msgItem.transform.DOLocalMoveY(len * itemGap, 0.2f);
         }
     }
 }

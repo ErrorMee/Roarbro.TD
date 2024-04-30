@@ -52,6 +52,11 @@ float2 opSymX(in float2 p)
     return float2(p.x, abs(p.y));
 }
 
+float2 opSymXS(in float2 p)
+{
+    return float2(p.x * sign(p.y), abs(p.y));
+}
+
 float2 opSym45(in float2 p)
 {
     p.xy *= sign(p.y - p.x); return p;

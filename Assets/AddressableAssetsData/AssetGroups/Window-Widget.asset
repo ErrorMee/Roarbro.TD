@@ -15,14 +15,8 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: f2bcfeaac919fec4785355d5b420e405
+  m_GUID: 44ccecd8c4b533b4fb0fc2bcf24eb6d1
   m_SerializeEntries:
-  - m_GUID: d08b46278b5526846b2f99517f6141d6
-    m_Address: Assets/Art/Window/Widget/Attr.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3341b4b1a95cb0a4180bbaba397a4efb
     m_Address: Assets/Art/Window/Widget/Btn.prefab
     m_ReadOnly: 0
@@ -43,12 +37,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e16d5f75aa4fe540ba7b11cc3766df4
     m_Address: Assets/Art/Window/Widget/IntSwitch.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aba550acfbc07284789b5dde9c64f2e2
-    m_Address: Assets/Art/Window/Widget/Lable.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

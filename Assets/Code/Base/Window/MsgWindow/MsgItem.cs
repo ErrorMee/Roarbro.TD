@@ -22,7 +22,7 @@ public class MsgItem : MonoBehaviour
             tweenSequence = null;
         }
         
-        rectTransform.localPosition = new Vector3(0, MsgWindow.InitY, 0);
+        rectTransform.localPosition = new Vector3(0, 0, 0);
 
         text.text = msg;
         float alpha = 0;
