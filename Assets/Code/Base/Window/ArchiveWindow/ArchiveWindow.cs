@@ -10,7 +10,7 @@ public class ArchiveWindow : WindowBase
     protected override void Awake()
     {
         base.Awake();
-        AirModel.Add(transform, AirCallback);
+        AirModel.Add(transform, AirCallback, AirEnum.Alpha);
     }
 
     public override void OnOpen(object obj)
@@ -21,12 +21,6 @@ public class ArchiveWindow : WindowBase
         archiveList.OnCellClicked((info) =>
         {
             ArchiveModel.Instance.Select(info);
-            if (info.created == false)
-            {
-                info.created = true;
-            }
-            ArchiveModel.Instance.SaveArchives();
-            WindowModel.Open(WindowEnum.Stage);
             AirCallback();
         });
     }

@@ -35,7 +35,7 @@ public class LobbyWindow : WindowBase
 
     void OnClickStart()
     {
-        WindowModel.Open(WindowEnum.Archive);
+        WindowModel.Open(WindowEnum.Stage);
     }
 
     void OnClickIcon()

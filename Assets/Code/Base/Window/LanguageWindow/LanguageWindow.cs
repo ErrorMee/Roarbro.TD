@@ -22,7 +22,7 @@ public class LanguageWindow : WindowBase
     private void AirCallback()
     {
         CloseSelf();
-        SendEvent(EventEnum.LanguageChange);
+        SendEvent(EventEnum.LanguageSelect);
         AirModel.Remove(transform);
     }
 

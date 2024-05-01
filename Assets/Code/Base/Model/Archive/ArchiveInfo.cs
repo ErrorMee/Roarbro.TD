@@ -5,7 +5,7 @@ public class ArchiveInfo
 {
     public int index;
     public bool selected;
-    public bool created;
+    public bool enable;
 
     public ArchiveInfo(int index)
     {

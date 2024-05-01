@@ -5,22 +5,28 @@ using UnityEngine;
 public class OptionWindow : WindowBase
 {
     [SerializeField] SDFBtn languageBtn;
-
     [SerializeField] TextMeshProUGUI lang;
 
     [SerializeField] IntSwitch soundLv;
     [SerializeField] IntSwitch musicLv;
+
+    [SerializeField] SDFBtn archiveBtn;
+    [SerializeField] TextMeshProUGUI archive;
 
     override protected void Awake()
     {
         base.Awake();
         AirModel.Add(transform, AirCallback);
 
-        AutoListener(EventEnum.LanguageChange, OnLanguageChange);
+        AutoListener(EventEnum.LanguageSelect, OnLanguageSelect);
+        AutoListener(EventEnum.ArchiveSelect, OnLanguageSelect);
+
         ClickListener.Add(languageBtn.transform).onClick += OnClickLanguage;
         
         soundLv.switchCallBack = OnSoundChange;
         musicLv.switchCallBack = OnMusicChange;
+
+        ClickListener.Add(archiveBtn.transform).onClick += OnClickArchive;
     }
 
     private void AirCallback()
@@ -33,15 +39,16 @@ public class OptionWindow : WindowBase
     {
         base.OnOpen(obj);
 
-        lang.text = LanguageConfigs.Instance.types[LanguageModel.Instance.LanguageCrt].tag;
+        OnLanguageSelect();
 
         soundLv.Set(ArchiveModel.GetInt(ArchiveEnum.SoundVolume, AudioModel.DefSoundVolume, false), AudioModel.MaxVolume);
         musicLv.Set(ArchiveModel.GetInt(ArchiveEnum.MusicVolume, AudioModel.DefMusicVolume, false), AudioModel.MaxVolume);
     }
 
-    void OnLanguageChange(object obj)
+    void OnLanguageSelect(object obj = null)
     {
         lang.text = LanguageConfigs.Instance.types[LanguageModel.Instance.LanguageCrt].tag;
+        archive.text = LanguageModel.Get(10036) + " " + (ArchiveModel.Instance.Current.index + 1);
     }
 
     void OnClickLanguage()
@@ -57,5 +64,10 @@ public class OptionWindow : WindowBase
     void OnMusicChange(int index)
     {
         AudioModel.Instance.SetMusicVolumeLv(index);
+    }
+
+    void OnClickArchive()
+    {
+        WindowModel.Open(WindowEnum.Archive);
     }
 }

@@ -6,7 +6,9 @@ public enum EventEnum
 {
     undefined,
 
-    LanguageChange,
+    LanguageSelect,
+
+    ArchiveSelect,
 
     ResetTerrain,
 

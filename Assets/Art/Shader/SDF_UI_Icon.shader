@@ -32,11 +32,11 @@ Shader "SDF/UI/Icon"
                 //    sd = opSubtraction(sdSegment(opSymY(sdPos), float2(0.16, -0.02), float2(0.12, -0.26)) - 0.13, sd);
                 //    return endWithOnionOutGlow(f.color, sd - roundness, f);
                 //}
-                if (id == 1)//<
+                if (id == 1)//=
                 {
                     float2 pos = opSymXS(sdPos);
-                    float sd = sdSegment(pos, float2(0.28, 0.17), float2(-0.28, 0.17));
-                    sd = opUnion(sdSegment(pos, float2(0.28, 0.17), float2(0.13, 0.3)), sd);
+                    float sd = sdSegment(pos, float2(0.28, 0.28), float2(-0.28, 0.28));
+                    sd = opUnion(sdSegment(pos, float2(0.28, 0.28), float2(0.15, 0.15)), sd);
                     return endWithOnionOutGlow(f.color, sd - 0.11, f);
                 }
                 if (id == 2)//Lock

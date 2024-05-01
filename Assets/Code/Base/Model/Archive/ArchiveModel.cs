@@ -50,15 +50,21 @@ public partial class ArchiveModel : Singleton<ArchiveModel>, IDestroy
     {
         for (int i = 0; i < Archives.Length; i++)
         {
-            ArchiveInfo archiveItem = Archives[i];
-            if (archiveItem == archive)
+            ArchiveInfo archiveInfo = Archives[i];
+            if (archiveInfo == archive)
             {
-                archiveItem.selected = true;
-                Current = archiveItem;
+                archiveInfo.selected = true;
+                Current = archiveInfo;
+                if (Current.enable == false)
+                {
+                    Current.enable = true;
+                }
+                EventModel.Send(EventEnum.ArchiveSelect);
+                SaveArchives();
             }
             else
             {
-                archiveItem.selected = false;
+                archiveInfo.selected = false;
             }
         }
     }
@@ -74,5 +80,19 @@ public partial class ArchiveModel : Singleton<ArchiveModel>, IDestroy
     public void SaveArchives()
     {
         SetObject(ArchiveEnum.Archives, Instance.Archives, false);
+    }
+
+    public int EnableArchiveCount()
+    {
+        int count = 0;
+        for (int i = 0; i < Archives.Length; i++)
+        {
+            ArchiveInfo archiveInfo = Archives[i];
+            if (archiveInfo.enable)
+            {
+                count ++;
+            }
+        }
+        return count;
     }
 }

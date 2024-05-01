@@ -23,10 +23,17 @@ public class ArchiveCell: ListCell<ArchiveInfo>
     public override void UpdateContent(ArchiveInfo info)
     {
         base.UpdateContent(info);
-        if (info.created)
+        if (info.enable)
         {
             title.text = LanguageModel.Get(10036) + " " + (info.index + 1);
-            btnDel.transform.DOScale(1, 0.2f).SetDelay(0.2f);
+            if (ArchiveModel.Instance.EnableArchiveCount() > 1)
+            {
+                btnDel.transform.DOScale(1, 0.2f).SetDelay(0.2f);
+            }
+            else
+            {
+                btnDel.transform.localScale = Vector3.zero;
+            }
         }
         else
         {
@@ -42,7 +49,7 @@ public class ArchiveCell: ListCell<ArchiveInfo>
 
     private void OnConfirm()
     {
-        info.created = false;
+        info.enable = false;
         ArchiveModel.Instance.SaveArchives();
         UpdateContent(info);
     }

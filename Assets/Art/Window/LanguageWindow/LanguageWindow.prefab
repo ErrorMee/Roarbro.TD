@@ -190,10 +190,10 @@ RectTransform:
   - {fileID: 2432951492821407089}
   m_Father: {fileID: 2834355967071524058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 440, y: 456}
+  m_SizeDelta: {x: -48, y: -96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2432951494718018420
 CanvasRenderer:
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907395373c210bd4aa2fe9621eeda409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellInterval: 0.2027972
-  scrollOffset: 0.2027972
+  cellInterval: 0.19727892
+  scrollOffset: 0.19727892
   loop: 0
   cellContainer: {fileID: 2432951493610231908}
   reuseCellMarginCount: 0
@@ -289,7 +289,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 480, y: 536}
+  m_SizeDelta: {x: 512, y: 568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2834355967071524056
 CanvasRenderer:
@@ -359,7 +359,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 24, y: 64}
+  m_SizeDelta: {x: 28, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7263313630193088768
 CanvasRenderer:
@@ -455,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 8631197079451159690, guid: a1c47cbbb14a9964d8e807d5de71fabc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 432
       objectReference: {fileID: 0}
     - target: {fileID: 8631197079451159690, guid: a1c47cbbb14a9964d8e807d5de71fabc,
         type: 3}
