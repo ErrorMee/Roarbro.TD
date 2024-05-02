@@ -18,4 +18,5 @@ public enum WindowEnum : ushort
     Battle = 31,
     BattleEdit,
     TerrainEdit,
+    Win,
 }

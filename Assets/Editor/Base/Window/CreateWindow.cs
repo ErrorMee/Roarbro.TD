@@ -159,7 +159,9 @@ public class CreateWindow : EditorWindow
         WindowConfig newConfig = new();
         allNew[^1] = newConfig;
 
-        newConfig.id = allNew.Length;
+        int[] enums = (int[])Enum.GetValues(typeof(WindowEnum));
+
+        newConfig.id = enums[(enums.Length - 1)];
         newConfig.layer = layer;
         newConfig.show = show;
         configs.all = allNew;
