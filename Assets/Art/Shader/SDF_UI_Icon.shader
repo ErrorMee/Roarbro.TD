@@ -35,8 +35,8 @@ Shader "SDF/UI/Icon"
                 if (id == 1)//=
                 {
                     float2 pos = opSymXS(sdPos);
-                    float sd = sdSegment(pos, float2(0.28, 0.28), float2(-0.28, 0.28));
-                    sd = opUnion(sdSegment(pos, float2(0.28, 0.28), float2(0.15, 0.15)), sd);
+                    float sd = sdSegment(pos, float2(0.28, 0.24), float2(-0.28, 0.24));
+                    sd = opUnion(sdSegment(pos, float2(0.28, 0.24), float2(0.15, 0.11)), sd);
                     return endWithOnionOutGlow(f.color, sd - 0.11, f);
                 }
                 if (id == 2)//Lock
@@ -54,7 +54,7 @@ Shader "SDF/UI/Icon"
                 }
                 if (id == 4)//pause
                 {
-                    float sd = sdOrientedBox(opSymY(sdPos), float2(0.22, 0.25), float2(0.24, -0.27), roundness) - roundness;
+                    float sd = sdOrientedBox(opSymY(sdPos), float2(0.22, 0.26), float2(0.24, -0.27), roundness) - roundness;
                     return endWithOnionOutGlow(f.color, sd, f);
                 }
 

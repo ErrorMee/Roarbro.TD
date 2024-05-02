@@ -3,7 +3,8 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    public int maxStep = 32;
+    const int TEST_STEP = 3;
+    private int maxStep = TEST_STEP;
     public int MaxStep
     {
         get
@@ -20,7 +21,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    private int leftStep = 32;
+    private int leftStep = TEST_STEP;
     public int LeftStep
     {
         get
@@ -32,6 +33,10 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             if (leftStep != value)
             {
                 leftStep = Mathf.Max(0, value);
+                if (leftStep < 1)
+                {
+                    BattleModel.Instance.CloseBattle();
+                }
                 EventModel.Send(EventEnum.ChangeStep);
             }
         }

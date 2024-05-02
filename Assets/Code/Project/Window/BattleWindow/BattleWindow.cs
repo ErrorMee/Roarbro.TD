@@ -36,7 +36,7 @@ public class BattleWindow : WindowBase
 
     void OnChangeStep(object obj = null)
     {
-        step.text = PieceModel.Instance.LeftStep + "/" + PieceModel.Instance.maxStep;
+        step.text = PieceModel.Instance.LeftStep + "/" + PieceModel.Instance.MaxStep;
     }
 
     void OnClickPause()
@@ -47,6 +47,6 @@ public class BattleWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        BattleModel.Instance.CloseBattle();
+        BattleModel.Instance.DestroyBattle();
     }
 }

@@ -11,7 +11,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
     private void IdleUpdate()
     {
-        if (InputModel.Instance.PressedThisFrame)
+        if (PieceModel.Instance.LeftStep > 0 && InputModel.Instance.PressedThisFrame)
         {
             Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos,
             transform.position.y);

@@ -15,7 +15,7 @@ public class MsgWindow : WindowBase
         base.Awake();
         msgTemplate.gameObject.SetActive(false);
         GameObjectPool.Instance.Init(msgTemplate.gameObject);
-        itemGap = msgTemplate.rectTransform.sizeDelta.y;
+        itemGap = msgTemplate.rectTransform.sizeDelta.y - 8;
     }
 
     public override void OnOpen(object obj)

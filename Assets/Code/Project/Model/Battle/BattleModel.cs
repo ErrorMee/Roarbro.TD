@@ -54,7 +54,12 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public void CloseBattle()
     {
-        if (battleObj != null)
+        StageModel.Instance.Complete();
+    }
+
+    public void DestroyBattle()
+    {
+        if (battleObj != null && CameraModel.Instance != null)
         {
             CameraModel.Instance.Target = null;
             UnityEngine.Object.DestroyImmediate(battleObj);
