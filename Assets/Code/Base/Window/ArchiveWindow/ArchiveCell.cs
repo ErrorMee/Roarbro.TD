@@ -49,7 +49,7 @@ public class ArchiveCell: ListCell<ArchiveInfo>
 
     private void OnConfirm()
     {
-        info.enable = false;
+        ArchiveModel.Instance.Delete(info);
         ArchiveModel.Instance.SaveArchives();
         UpdateContent(info);
     }

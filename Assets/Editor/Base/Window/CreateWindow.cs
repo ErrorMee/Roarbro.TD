@@ -36,6 +36,8 @@ public class CreateWindow : EditorWindow
             DestroyImmediate(prefab);
 
             AddWindowConfigs();
+
+            ManagedAddressable.FastRefreshGroup();
         }
 
         GUILayout.Label("WindowName"); 
@@ -161,7 +163,9 @@ public class CreateWindow : EditorWindow
 
         int[] enums = (int[])Enum.GetValues(typeof(WindowEnum));
 
-        newConfig.id = enums[(enums.Length - 1)];
+        newConfig.id = enums[enums.Length - 1];
+        Debug.LogError("id " + newConfig.id);
+
         newConfig.layer = layer;
         newConfig.show = show;
         configs.all = allNew;

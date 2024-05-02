@@ -71,6 +71,7 @@ public partial class ArchiveModel : Singleton<ArchiveModel>, IDestroy
 
     public void Delete(ArchiveInfo archive)
     {
+        archive.enable = false;
         foreach (ArchiveEnum key in Enum.GetValues(typeof(ArchiveEnum)))
         {
             PlayerPrefs.DeleteKey(archive.index + key.Str());

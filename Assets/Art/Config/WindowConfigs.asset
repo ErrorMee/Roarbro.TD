@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WindowConfigs
   m_EditorClassIdentifier: 
   showDel: 1
-  showAdd: 0
+  showAdd: 1
   showUse: 0
   showIdx: 1
   showId: 0
@@ -129,6 +129,14 @@ MonoBehaviour:
     bg: 0
   - use: 1
     id: 34
+    name: 0
+    sortUp: 1
+    layer: 2
+    show: 0
+    depends: 
+    bg: 0
+  - use: 1
+    id: 35
     name: 0
     sortUp: 1
     layer: 2

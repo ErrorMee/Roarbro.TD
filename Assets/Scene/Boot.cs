@@ -3,6 +3,8 @@ using UnityEngine.Rendering;
 
 public class Boot: MonoBehaviour
 {
+    public static bool isQuiting = false;
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void BootFunction()
     {
@@ -48,6 +50,7 @@ public class Boot: MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        isQuiting = true;
         Debug.Log("OnApplicationQuit");
     }
 }

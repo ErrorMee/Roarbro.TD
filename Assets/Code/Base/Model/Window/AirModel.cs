@@ -85,6 +85,10 @@ public class AirModel : Singleton<AirModel>, IDestroy
 
     public static void Remove(Transform caller)
     {
+        if (Boot.isQuiting)
+        {
+            return;
+        }
         Instance.airStack.Pop();
         Instance.tweenFade.Complete(true);
 

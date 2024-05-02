@@ -29,12 +29,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
-    m_Address: Assets/Art/Window/Widget/Frame.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c59b74db983e4687b77a7482780a45b
     m_Address: Assets/Art/Window/Widget/Img.prefab
     m_ReadOnly: 0
@@ -103,6 +97,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1c47cbbb14a9964d8e807d5de71fabc
     m_Address: Assets/Art/Window/Widget/TxtBtn.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
+    m_Address: Assets/Art/Window/Widget/Frame.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

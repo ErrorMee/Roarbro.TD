@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Window-WinWindow
+  m_EditorClassIdentifier: 
+  m_GroupName: Window-WinWindow
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3abb1c6b72d4749e4a7e5b85c532b37f
+  m_SerializeEntries:
+  - m_GUID: 66dcc7dd86d3b4b6aa4a8c03ea5e82f1
+    m_Address: Assets/Art/Window/WinWindow/WinWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-WinWindow
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a9b7e3861b74d47f08d00991c6811f90, type: 2}
+    - {fileID: 11400000, guid: 9ea917a2fceeb490a90adc70c99878c0, type: 2}

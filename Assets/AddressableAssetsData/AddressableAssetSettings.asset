@@ -67,6 +67,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 505e396ef9c725d44b85a74a67169c96, type: 2}
   - {fileID: 11400000, guid: 94ccfe97c063dee4cb86ff0c094b4f7c, type: 2}
   - {fileID: 11400000, guid: 96dc21db7199ceb4cbc823acef4d860a, type: 2}
+  - {fileID: 11400000, guid: 004fe445e67654649aa14e75c8d2c0cf, type: 2}
+  - {fileID: 11400000, guid: f2334540e085e46fca5bcfb2f378b739, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -130,6 +132,8 @@ MonoBehaviour:
     - Window-TerrainEditWindow
     - Window-WaitWindow
     - Window-Widget
+    - Window-LoseWindow
+    - Window-WinWindow
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 734e97579e8520b43a39a86238d9b962, type: 2}

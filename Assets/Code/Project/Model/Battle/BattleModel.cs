@@ -55,6 +55,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
     public void CloseBattle()
     {
         StageModel.Instance.Complete();
+        WindowModel.Open(WindowEnum.Win);
     }
 
     public void DestroyBattle()
