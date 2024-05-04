@@ -1,4 +1,4 @@
-﻿Shader "SDF/Unit/Tile"
+﻿Shader "SDF/Unit/Terrain"
 {
     Properties
     {

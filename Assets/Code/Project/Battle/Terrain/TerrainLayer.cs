@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class TerrainLayer : BattleLayer<TileUnit>
+public class TerrainLayer : BattleLayer<TerrainUnit>
 {
-    TileUnit[,] units;
+    TerrainUnit[,] units;
 
     protected override void Awake()
     {
         base.Awake();
 
-        units = new TileUnit[GridUtil.XCount, GridUtil.YCount];
+        units = new TerrainUnit[GridUtil.XCount, GridUtil.YCount];
 
         AutoListener(EventEnum.ResetTerrain, OnChangeTerrain);
         Init();
@@ -21,7 +21,7 @@ public class TerrainLayer : BattleLayer<TileUnit>
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                TileUnit unit = CreateUnit();
+                TerrainUnit unit = CreateUnit();
                 units[x, y] = unit;
                 unit.posx = x;
                 unit.posy = y;
@@ -36,7 +36,7 @@ public class TerrainLayer : BattleLayer<TileUnit>
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                TileUnit unit = units[x, y];
+                TerrainUnit unit = units[x, y];
                 unit.UpdateShow();
             }
         }

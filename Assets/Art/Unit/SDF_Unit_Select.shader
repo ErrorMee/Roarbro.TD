@@ -1,4 +1,4 @@
-﻿Shader "SDF/Unit/TileAlpha"
+﻿Shader "SDF/Unit/Select"
 {
     Properties
     {

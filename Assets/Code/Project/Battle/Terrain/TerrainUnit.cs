@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TileUnit : BattleUnit
+public class TerrainUnit : BattleUnit
 {
     [ReadOnlyProperty]
     public int posx;

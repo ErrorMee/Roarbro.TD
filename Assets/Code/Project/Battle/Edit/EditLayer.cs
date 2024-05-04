@@ -1,9 +1,9 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class EditLayer : BattleLayer<TileUnitSelect>
+public class EditLayer : BattleLayer<UnitSelect>
 {
-    TileUnitSelect unit;
+    UnitSelect unit;
 
     bool start = false;
 
@@ -38,9 +38,10 @@ public class EditLayer : BattleLayer<TileUnitSelect>
             int idx = GridUtil.GetIndex(index.x, index.y);
             if (BattleModel.Instance.battle.edit)
             {
-                if (BattleModel.Instance.battle.config.GetTerrains()[idx] != BattleModel.Instance.battle.config.terrainSelect)
+                TerrainEnum[] terrains = BattleModel.Instance.battle.config.GetTerrains();
+                if (terrains[idx] != BattleModel.Instance.battle.config.terrainSelect)
                 {
-                    BattleModel.Instance.battle.config.GetTerrains()[idx] = BattleModel.Instance.battle.config.terrainSelect;
+                    terrains[idx] = BattleModel.Instance.battle.config.terrainSelect;
                     BattleConfigs.Instance.Save();
                     EventModel.Send(EventEnum.ResetTerrain);
                 }

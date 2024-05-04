@@ -60,37 +60,37 @@ MonoBehaviour:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 78989c70ef4a1408c809c60db3e45d73
-    m_Address: Assets/Art/Unit/SDF_Unit_Tile.mat
+    m_Address: Assets/Art/Unit/SDF_Unit_Terrain.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7ffc2f13b5a0c441d8b5da0f4dbbe8f8
-    m_Address: Assets/Art/Unit/SDF_Unit_Tile.shader
+    m_Address: Assets/Art/Unit/SDF_Unit_Terrain.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e1a998dada5fffe449a59223862626c0
-    m_Address: Assets/Art/Unit/SDF_Unit_TileAlpha.mat
+    m_Address: Assets/Art/Unit/SDF_Unit_Select.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0423c0d772af4b94e829751c91040968
-    m_Address: Assets/Art/Unit/SDF_Unit_TileAlpha.shader
+    m_Address: Assets/Art/Unit/SDF_Unit_Select.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfacaca977a164b4c88c5a8c66f3f850
-    m_Address: Assets/Art/Unit/TileUnit.prefab
+    m_Address: Assets/Art/Unit/TerrainUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
-    m_Address: Assets/Art/Unit/TileUnitSelect.prefab
+    m_Address: Assets/Art/Unit/UnitSelect.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 295561715580951077}
   - component: {fileID: 4150785081991648829}
   m_Layer: 0
-  m_Name: TileUnit
+  m_Name: TerrainUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,13 +42,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618913913956880586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a281b5bc7223b1249a138217d8a9977b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ac2bf5593338dc48835daec85c22c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 201980320161529286}
   posx: 0
   posy: 0
-  meshRendererAdd: {fileID: 0}
 --- !u!1 &5798637689125289092
 GameObject:
   m_ObjectHideFlags: 0

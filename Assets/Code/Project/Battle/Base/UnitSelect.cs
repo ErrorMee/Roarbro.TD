@@ -1,5 +1,5 @@
 
-public class TileUnitSelect : BattleUnit
+public class UnitSelect : BattleUnit
 {
     protected override void OnEnable()
     {
