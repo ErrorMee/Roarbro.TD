@@ -10,7 +10,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         movePieces.Clear();
         if (PieceModel.Instance.LeftStep <= 0)
         {
-            DOVirtual.DelayedCall(0.5f, () =>
+            DOVirtual.DelayedCall(1.5f, () =>
             {
                 WindowModel.Open(WindowEnum.Win);
             });
