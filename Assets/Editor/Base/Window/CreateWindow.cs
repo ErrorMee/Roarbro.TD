@@ -161,9 +161,13 @@ public class CreateWindow : EditorWindow
         WindowConfig newConfig = new();
         allNew[^1] = newConfig;
 
-        int[] enums = (int[])Enum.GetValues(typeof(WindowEnum));
+        int maxV = 0;
+        foreach (int value in Enum.GetValues(typeof(WindowEnum)))
+        {
+            maxV = Mathf.Max(maxV, value);
+        }
 
-        newConfig.id = enums[enums.Length - 1];
+        newConfig.id = maxV;
         Debug.LogError("id " + newConfig.id);
 
         newConfig.layer = layer;
