@@ -52,10 +52,9 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         battleLayers.Add(battleLayer.transform);
     }
 
-    public void CloseBattle()
+    public void Complete()
     {
         StageModel.Instance.Complete();
-        WindowModel.Open(WindowEnum.Win);
     }
 
     public void DestroyBattle()

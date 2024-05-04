@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Font
   m_Data:
     m_SerializedData: []
-  m_GUID: 0f2dc4bb3328ac64bb67d9ff17cab47c
+  m_GUID: 50a3f15f9ee5c4943983a49ccdc2a388
   m_SerializeEntries:
   - m_GUID: 30cb8442c8ff6fc458cdd2f80e5add61
     m_Address: Assets/Art/Font/Chinese.asset

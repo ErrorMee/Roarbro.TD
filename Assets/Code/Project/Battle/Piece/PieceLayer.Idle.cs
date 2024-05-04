@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,13 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     private void IdleEnter()
     {
         movePieces.Clear();
+        if (PieceModel.Instance.LeftStep <= 0)
+        {
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                WindowModel.Open(WindowEnum.Win);
+            });
+        }
     }
 
     private void IdleUpdate()

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Shader
   m_Data:
     m_SerializedData: []
-  m_GUID: 9b3d0b5f528f6aa40b556276a3012df9
+  m_GUID: 096c27e3d069a264a9152f3a666016a4
   m_SerializeEntries:
   - m_GUID: 58444fb291a5bc5499e26596e5993395
     m_Address: Assets/Art/Shader/SDF_UI_Area.shader
