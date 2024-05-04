@@ -5,6 +5,8 @@ public class ScrollCell<TInfo> : FancyGridViewCell<TInfo, ScrollContext>
 {
     [SerializeField] protected SDFBtn btn = default;
 
+    protected TInfo info;
+
     public override void Initialize()
     {
         if (btn != null)
@@ -20,5 +22,6 @@ public class ScrollCell<TInfo> : FancyGridViewCell<TInfo, ScrollContext>
 
     public override void UpdateContent(TInfo info)
     {
+        this.info = info;
     }
 }

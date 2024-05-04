@@ -36,7 +36,7 @@ public partial class LanguageModel : Singleton<LanguageModel>, IDestroy
         }
     }
 
-    public void Set(int language)
+    public void Select(int language)
     {
         if (LanguageCrt != language)
         {

@@ -15,7 +15,7 @@ public class LanguageWindow : WindowBase
         languageScroll.OnCellClicked((index) =>
         {
             languageScroll.UpdateSelection(index);
-            LanguageModel.Instance.Set(index);
+            LanguageModel.Instance.Select(index);
         });
     }
 

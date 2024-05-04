@@ -227,7 +227,7 @@ MonoBehaviour:
     VelocityThreshold: 0.5
     Duration: 0.3
     Easing: 24
-  draggable: 1
+  draggable: 0
   scrollbar: {fileID: 0}
 --- !u!114 &3097071831238550466
 MonoBehaviour:

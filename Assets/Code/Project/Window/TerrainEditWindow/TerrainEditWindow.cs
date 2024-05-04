@@ -23,11 +23,18 @@ public class TerrainEditWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
+        EditLayer.Start = true;
     }
 
     private void OnSwitchClicked(int index)
     {
         terrainScroll.UpdateSelection(index);
         BattleModel.Instance.battle.config.terrainSelect = (TerrainEnum)index;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        EditLayer.Start = false;
     }
 }

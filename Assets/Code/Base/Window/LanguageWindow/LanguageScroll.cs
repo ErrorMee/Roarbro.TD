@@ -6,6 +6,11 @@ public class LanguageScroll : ScrollList<LanguageType, LanguageCell>
 {
     class CellGroup : DefaultCellGroup { }
 
+    protected override bool Scrollable
+    {
+        get { return false; }
+    }
+
     protected override void SetupCellTemplate()
     {
         base.SetupCellTemplate();

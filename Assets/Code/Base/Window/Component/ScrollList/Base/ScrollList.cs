@@ -65,9 +65,9 @@ public class ScrollList<TInfo, TCell> : FancyGridView<TInfo, ScrollContext>
         }
     }
 
-    public void UpdateSelection(int index)
+    public void UpdateSelection(int index, bool check = true)
     {
-        if (Context.SelectedIndex == index)
+        if (Context.SelectedIndex == index && check)
         {
             return;
         }

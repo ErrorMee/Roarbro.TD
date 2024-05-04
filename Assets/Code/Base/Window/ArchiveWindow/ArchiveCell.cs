@@ -2,22 +2,17 @@ using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ArchiveCell: ListCell<ArchiveInfo>
+public class ArchiveCell: ScrollCell<ArchiveInfo>
 {
     [SerializeField] TextMeshProUGUI title = default;
 
-    [SerializeField] protected SDFBtn btnDel = default;
+    [SerializeField] Graphic select = default;
 
-    protected override void Awake()
+    public override void Initialize()
     {
-        base.Awake();
-        ClickListener.Add(btnDel.transform).onClick = OnDel;
-    }
-
-    private void Start()
-    {
-        btnDel.transform.localScale = Vector3.zero;
+        base.Initialize();
     }
 
     public override void UpdateContent(ArchiveInfo info)
@@ -26,33 +21,11 @@ public class ArchiveCell: ListCell<ArchiveInfo>
         if (info.enable)
         {
             title.text = LanguageModel.Get(10036) + " " + (info.index + 1);
-            if (ArchiveModel.Instance.EnableArchiveCount() > 1)
-            {
-                btnDel.transform.DOScale(1, 0.2f).SetDelay(0.2f);
-            }
-            else
-            {
-                btnDel.transform.localScale = Vector3.zero;
-            }
         }
         else
         {
             title.text = LanguageModel.Get(10046);
-            btnDel.transform.localScale = Vector3.zero;
         }
+        select.gameObject.SetActive(Index == Context.SelectedIndex);
     }
-
-    private void OnDel()
-    {
-        WindowModel.Dialog(LanguageModel.Get(10035), LanguageModel.Get(10047), OnConfirm, OnCancel);
-    }
-
-    private void OnConfirm()
-    {
-        ArchiveModel.Instance.Delete(info);
-        ArchiveModel.Instance.SaveArchives();
-        UpdateContent(info);
-    }
-
-    private void OnCancel() { }
 }

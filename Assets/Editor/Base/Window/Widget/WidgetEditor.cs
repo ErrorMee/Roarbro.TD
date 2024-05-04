@@ -78,12 +78,6 @@ public class WidgetEditor
         AddWidget(menuCmd, "ScrollFocus");
     }
 
-    [MenuItem(rootMenu + "ListView", false, 14)]
-    static void ListView(MenuCommand menuCmd)
-    {
-        AddWidget(menuCmd, "ListView");
-    }
-
     [MenuItem(rootMenu + "IntSwitch", false, 16)]
     static void Pages(MenuCommand menuCmd)
     {

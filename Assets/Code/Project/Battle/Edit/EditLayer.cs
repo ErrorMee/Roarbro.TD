@@ -5,20 +5,18 @@ public class EditLayer : BattleLayer<UnitSelect>
 {
     UnitSelect unit;
 
-    bool start = false;
+    public static bool Start = false;
 
     protected override void Awake()
     {
         base.Awake();
         unit = CreateUnit();
         unit.gameObject.SetActive(false);
-        start = false;
-        DOVirtual.DelayedCall(0.5f, () => { start = true; });
     }
 
     private void Update()
     {
-        if (start && InputModel.Instance.Presseding)
+        if (Start && InputModel.Instance.Presseding)
         {
             OnPresseding();
         }

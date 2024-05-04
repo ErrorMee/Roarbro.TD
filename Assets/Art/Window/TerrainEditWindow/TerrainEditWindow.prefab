@@ -93,7 +93,7 @@ MonoBehaviour:
   paddingHead: 0
   paddingTail: 0
   spacing: 8
-  startAxisSpacing: 8
+  startAxisSpacing: 0
   startAxisCellCount: 1
   cellSize: {x: 108, y: 108}
   cellPrefab: {fileID: 7349808180543038643}
