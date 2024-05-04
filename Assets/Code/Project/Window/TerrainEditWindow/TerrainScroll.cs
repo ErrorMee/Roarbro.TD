@@ -8,4 +8,9 @@ public class TerrainScroll : ScrollList<TerrainEnum, TerrainCell>
         base.SetupCellTemplate();
         Setup<CellGroup>();
     }
+
+    override protected bool Scrollable
+    {
+        get { return false; }
+    }
 }
