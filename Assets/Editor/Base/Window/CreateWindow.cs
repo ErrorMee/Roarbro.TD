@@ -162,9 +162,9 @@ public class CreateWindow : EditorWindow
         allNew[^1] = newConfig;
 
         int maxV = 0;
-        foreach (int value in Enum.GetValues(typeof(WindowEnum)))
+        foreach (WindowEnum value in Enum.GetValues(typeof(WindowEnum)))
         {
-            maxV = Mathf.Max(maxV, value);
+            maxV = Mathf.Max(maxV, (int)value);
         }
 
         newConfig.id = maxV;
