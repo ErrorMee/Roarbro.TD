@@ -51,7 +51,7 @@
 
 # 界面
 ### 创建
-![image](Img/CreatwWindow.png)
+![image](Img/CreateWindow.png)
 ### 配置
 ![image](Img/WindowConfig.png)
 ### 打开关闭
