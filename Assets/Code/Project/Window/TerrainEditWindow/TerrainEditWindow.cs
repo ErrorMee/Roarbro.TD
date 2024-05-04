@@ -10,12 +10,12 @@ public class TerrainEditWindow : WindowBase
     {
         base.Awake();
 
-        List<TerrainEnum> terrainSwitchStr = new List<TerrainEnum>();
+        List<TerrainEnum> terrains = new List<TerrainEnum>();
         foreach (byte value in Enum.GetValues(typeof(TerrainEnum)))
         {
-            terrainSwitchStr.Add((TerrainEnum)value);
+            terrains.Add((TerrainEnum)value);
         }
-        terrainScroll.UpdateContents(terrainSwitchStr);
+        terrainScroll.UpdateContents(terrains);
         terrainScroll.UpdateSelection((int)BattleModel.Instance.battle.config.terrainSelect);
         terrainScroll.OnCellClicked(OnSwitchClicked);
     }

@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BattleEditWindow : WindowBase
 {
-    [SerializeField] SDFBtn quit;
-
     [SerializeField] SDFBtn terrain;
     [SerializeField] Graphic terrainSelect;
     [SerializeField] SDFBtn enemy;
@@ -16,15 +12,9 @@ public class BattleEditWindow : WindowBase
     {
         base.Awake();
         CameraModel.Instance.mainCamera.orthographicSize = 8;
-        ClickListener.Add(quit.transform).onClick += OnClickQiut;
 
         ClickListener.Add(terrain.transform).onClick += OnClickTerrain;
         ClickListener.Add(enemy.transform).onClick += OnClickEnemy;
-    }
-
-    void OnClickQiut()
-    {
-        CloseSelf();
     }
 
     void OnClickTerrain()

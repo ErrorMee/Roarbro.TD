@@ -117,7 +117,7 @@ MonoBehaviour:
     sortUp: 1
     layer: 1
     show: 3
-    depends: 
+    depends: 0e00
     bg: 0
   - use: 1
     id: 33

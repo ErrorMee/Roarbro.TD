@@ -7,16 +7,17 @@ public class WindowBase : FrameMono
     [ReadOnlyProperty]
     public WindowConfig config;
 
+    /// <summary>
+    /// ExecutionOrder: Awake>OnEnable>OnOpen>Start <see href="https://docs.unity3d.com/2020.3/Documentation/Manual/ExecutionOrder.html"/> 
+    /// </summary>
     protected override void Awake()
     {
         base.Awake();
     }
 
     /// <summary>
-    /// ExecutionOrder Awake>OnEnable>OnOpen>Start   
-    /// https://docs.unity3d.com/2020.3/Documentation/Manual/ExecutionOrder.html
+    /// OnOpen(object obj):Refreshable
     /// </summary>
-    /// <param name="obj"></param>
     public virtual void OnOpen(object obj)
     {
         switch (config.show)

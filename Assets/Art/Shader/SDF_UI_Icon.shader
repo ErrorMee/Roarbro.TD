@@ -35,8 +35,8 @@ Shader "SDF/UI/Icon"
                 if (id == 1)//=
                 {
                     float2 pos = opSymXS(sdPos);
-                    float sd = sdSegment(pos, float2(0.28, 0.24), float2(-0.28, 0.24));
-                    sd = opUnion(sdSegment(pos, float2(0.28, 0.24), float2(0.15, 0.11)), sd);
+                    float sd = sdSegment(pos, float2(0.28, 0.26), float2(-0.28, 0.26));
+                    sd = opUnion(sdSegment(pos, float2(0.28, 0.26), float2(0.15, 0.14)), sd);
                     return endWithOnionOutGlow(f.color, sd - 0.11, f);
                 }
                 if (id == 2)//Lock
