@@ -15,10 +15,16 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: c11f12a574d511642adcc7027890ed88
+  m_GUID: 9c5f5347864fb3d4c88cd1b33cfb4609
   m_SerializeEntries:
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05356bab684934e418afcba1b01d7925
+    m_Address: Assets/Art/Config/EnemyConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

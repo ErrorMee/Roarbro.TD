@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: ce5eb68d93364d543aad1a296f322fe7
+  m_GUID: 3356f5c2530eff14fa60f7cfa9489090
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab
@@ -73,6 +73,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a051b285d933a544ac2cde5f57a102e
     m_Address: Assets/Art/Window/Widget/ScrollFocusCell.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c6b0e001abeb2948acb04b78873604d
+    m_Address: Assets/Art/Window/Widget/ScrollHorizontal.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: e3ccfe1b77c2fe141908f91d7af741d1
+  m_DefaultGroup: 431b84b17d435a446b63c5e18d8c0e8f
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5e7a6507a8c96b4eba79d592466d6dc, type: 2}
   - {fileID: 11400000, guid: baf16842bfa03409d835149cf541de9c, type: 2}
   - {fileID: 11400000, guid: 9e2080ddc74f1d946b51512518db18bd, type: 2}
+  - {fileID: 11400000, guid: 9a0e7ceba7e1f724684529082a7f7792, type: 2}
   - {fileID: 11400000, guid: 41de27d8ffd42c5469d2f0a4958d77e1, type: 2}
   - {fileID: 11400000, guid: 0755db6e49e2ea148a74a083391365ac, type: 2}
   - {fileID: 11400000, guid: 004fe445e67654649aa14e75c8d2c0cf, type: 2}
@@ -69,7 +70,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94ccfe97c063dee4cb86ff0c094b4f7c, type: 2}
   - {fileID: 11400000, guid: 96dc21db7199ceb4cbc823acef4d860a, type: 2}
   - {fileID: 11400000, guid: f2334540e085e46fca5bcfb2f378b739, type: 2}
-  - {fileID: 11400000, guid: 9a0e7ceba7e1f724684529082a7f7792, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -123,6 +123,7 @@ MonoBehaviour:
     - Window-BattleEditWindow
     - Window-BattleWindow
     - Window-DialogWindow
+    - Window-EnemyEditWindow
     - Window-LanguageWindow
     - Window-LobbyWindow
     - Window-LoseWindow
@@ -135,7 +136,6 @@ MonoBehaviour:
     - Window-WaitWindow
     - Window-Widget
     - Window-WinWindow
-    - Window-EnemyEditWindow
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 734e97579e8520b43a39a86238d9b962, type: 2}

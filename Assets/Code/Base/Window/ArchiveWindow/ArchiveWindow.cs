@@ -8,6 +8,7 @@ public class ArchiveWindow : WindowBase
     public ArchiveList archiveList;
 
     [SerializeField] SDFBtn delBtn = default;
+    [SerializeField] SDFBtn sureBtn = default;
 
     int selectIndex = -1;
 
@@ -17,6 +18,8 @@ public class ArchiveWindow : WindowBase
         AirModel.Add(transform);
         ClickListener.Add(delBtn.transform).onClick = OnClickDel;
         delBtn.gameObject.SetActive(false);
+        ClickListener.Add(sureBtn.transform).onClick = OnClickSure;
+        sureBtn.gameObject.SetActive(false);
 
         archiveList.OnCellClicked((index) =>
         {
@@ -30,6 +33,7 @@ public class ArchiveWindow : WindowBase
             selectIndex = index;
 
             delBtn.gameObject.SetActive(true);
+            sureBtn.gameObject.SetActive(true);
         });
     }
 
@@ -45,6 +49,11 @@ public class ArchiveWindow : WindowBase
         WindowModel.Dialog(LanguageModel.Get(10035), LanguageModel.Get(10047), OnConfirm, OnCancel);
     }
 
+    private void OnClickSure()
+    {
+        CloseSelf();
+    }
+
     private void OnConfirm()
     {
         ArchiveModel.Instance.Delete(ArchiveModel.Instance.Current);
@@ -52,6 +61,7 @@ public class ArchiveWindow : WindowBase
         archiveList.UpdateContents(ArchiveModel.Instance.Archives);
         selectIndex = -1;
         delBtn.gameObject.SetActive(false);
+        sureBtn.gameObject.SetActive(false);
     }
 
     private void OnCancel() { }

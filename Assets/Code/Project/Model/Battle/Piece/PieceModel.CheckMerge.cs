@@ -21,9 +21,11 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
         for (int y = GridUtil.YMaxIndex; y >= 0; y--)
         {
+            bool random = Random.Range(0, 2) == 0;
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                CrossMerges(new Vector2Int(x, y));
+                int randX = random ? x : GridUtil.XCount - x - 1;
+                CrossMerges(new Vector2Int(randX, y));
                 if (readyMerges.Count > 2)
                 {
                     return;

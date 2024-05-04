@@ -241,14 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907395373c210bd4aa2fe9621eeda409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellInterval: 0.19727892
-  scrollOffset: 0.19727892
+  cellInterval: 0.20754717
+  scrollOffset: 0.20754717
   loop: 0
   cellContainer: {fileID: 2432951493610231908}
   reuseCellMarginCount: 0
   paddingHead: 0
   paddingTail: 0
-  spacing: 8
+  spacing: 24
   startAxisSpacing: 0
   startAxisCellCount: 1
   cellSize: {x: 408, y: 108}
@@ -289,7 +289,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 568}
+  m_SizeDelta: {x: 512, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2834355967071524056
 CanvasRenderer:

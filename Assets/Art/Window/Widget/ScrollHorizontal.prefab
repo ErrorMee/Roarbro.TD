@@ -86,14 +86,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d863ca44c25641e4ea4b3e0c3d20db9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellInterval: 0.20512821
-  scrollOffset: 0.20512821
+  cellInterval: 0.22891566
+  scrollOffset: 0.22891566
   loop: 0
   cellContainer: {fileID: 4583026313488045100}
   reuseCellMarginCount: 0
   paddingHead: 0
   paddingTail: 0
-  spacing: 0
+  spacing: 24
   startAxisSpacing: 0
   startAxisCellCount: 1
   cellSize: {x: 128, y: 128}
@@ -133,8 +133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8, y: -8}
-  m_SizeDelta: {x: -16, y: -16}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4583026312666257722
 CanvasRenderer:
@@ -192,7 +192,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -16, y: -16}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7354099108790623501
 GameObject:
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 4678479070870824392}
   - component: {fileID: 7541962678606213311}
   m_Layer: 5
-  m_Name: dragarea
+  m_Name: DragArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,15 +251,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbecb3bb28a1554789eceaa93c2a9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: a6a43c2d93f6079438e2bf21b0bbf867, type: 2}
-  m_Color: {r: 0.34901962, g: 0.34901962, b: 0.4, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34901962, g: 0.34901962, b: 0.4, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  slice: 2
+  slice: 0
   sliceRadius: 32
   id: 4
   outline: 4
