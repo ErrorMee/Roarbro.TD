@@ -7,26 +7,29 @@ public class ArchiveWindow : WindowBase
 {
     public ArchiveList archiveList;
 
-    [SerializeField] protected SDFBtn delBtn = default;
+    [SerializeField] SDFBtn delBtn = default;
 
     int selectIndex = -1;
 
     protected override void Awake()
     {
         base.Awake();
-        AirModel.Add(transform, AirCallback, AirEnum.Alpha);
+        AirModel.Add(transform);
         ClickListener.Add(delBtn.transform).onClick = OnClickDel;
+        delBtn.gameObject.SetActive(false);
 
         archiveList.OnCellClicked((index) =>
         {
             if (selectIndex == index)
             {
-                AirCallback();
-                ArchiveModel.Instance.Select(index);
+                CloseSelf();
                 return;
             }
+            ArchiveModel.Instance.Select(index);
             archiveList.UpdateSelection(index, false);
             selectIndex = index;
+
+            delBtn.gameObject.SetActive(true);
         });
     }
 
@@ -47,13 +50,9 @@ public class ArchiveWindow : WindowBase
         ArchiveModel.Instance.Delete(ArchiveModel.Instance.Current);
         ArchiveModel.Instance.SaveArchives();
         archiveList.UpdateContents(ArchiveModel.Instance.Archives);
+        selectIndex = -1;
+        delBtn.gameObject.SetActive(false);
     }
 
     private void OnCancel() { }
-
-    private void AirCallback()
-    {
-        CloseSelf();
-        AirModel.Remove(transform);
-    }
 }

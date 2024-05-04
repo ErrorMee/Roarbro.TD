@@ -83,4 +83,10 @@ public class WindowBase : FrameMono
             WindowModel.Close(item);
         }
     }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        AirModel.Remove(transform);
+    }
 }

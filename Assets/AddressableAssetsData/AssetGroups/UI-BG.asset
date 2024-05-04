@@ -15,20 +15,8 @@ MonoBehaviour:
   m_GroupName: UI-BG
   m_Data:
     m_SerializedData: []
-  m_GUID: bf4f86925aa579140b345a8dde4c69e9
+  m_GUID: d92fbed7209193746acb13323f050d6d
   m_SerializeEntries:
-  - m_GUID: 45fce9a0669a2a24fa3c6dc0aeee27e7
-    m_Address: Assets/Art/UI/BG/BlurBokeh.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UI-BG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dfdbfc23053dc714fb7c1675ad653a3b
-    m_Address: Assets/Art/UI/BG/BlurBokeh.shader
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UI-BG
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c9323c547a1ae24a95e79930066e205
     m_Address: Assets/Art/UI/BG/BlurGaussian.mat
     m_ReadOnly: 0
@@ -37,18 +25,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c28016e8358ff6146a4332b4a564faf0
     m_Address: Assets/Art/UI/BG/BlurGaussian.shader
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UI-BG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: daa814a8d953e43398ff8b4195380640
-    m_Address: Assets/Art/UI/BG/BlurRadial.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UI-BG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f222c3aca1eb348a6af194bc42ad283c
-    m_Address: Assets/Art/UI/BG/BlurRadial.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - UI-BG

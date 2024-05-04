@@ -23,7 +23,6 @@ public class WinWindow : WindowBase
     {
         CloseSelf();
         
-        AirModel.Remove(transform);
         WindowModel.Close(WindowEnum.Battle);
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 1e903d9b390223b4da59083214112006
+  m_GUID: 8230be4ae7c7d774faeed98d0243174a
   m_SerializeEntries:
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
     m_Address: Assets/Art/Unit/PieceUnit.prefab
@@ -47,6 +47,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1a998dada5fffe449a59223862626c0
+    m_Address: Assets/Art/Unit/SDF_Unit_Select.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0423c0d772af4b94e829751c91040968
+    m_Address: Assets/Art/Unit/SDF_Unit_Select.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ac344a7fbdd189a4fa0abf55ae9e47ef
     m_Address: Assets/Art/Unit/SDF_Unit_Shadow.mat
     m_ReadOnly: 0
@@ -67,18 +79,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7ffc2f13b5a0c441d8b5da0f4dbbe8f8
     m_Address: Assets/Art/Unit/SDF_Unit_Terrain.shader
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e1a998dada5fffe449a59223862626c0
-    m_Address: Assets/Art/Unit/SDF_Unit_Select.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0423c0d772af4b94e829751c91040968
-    m_Address: Assets/Art/Unit/SDF_Unit_Select.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

@@ -12,9 +12,7 @@ public class AirModel : Singleton<AirModel>, IDestroy
     readonly Dictionary<Transform, Action> callerCallBack = new();
 
     Tweener tweenFade;
-    readonly Dictionary<AirEnum, Material> airMats = new();
-
-    public Stack<AirEnum> airStack = new Stack<AirEnum>();
+    Material airMat;
 
     public void Init()
     {
@@ -36,23 +34,18 @@ public class AirModel : Singleton<AirModel>, IDestroy
         ClickListener.Add(air).onClick += OnClickAir;
     }
 
-    public static void Add(Transform caller, Action callback = null, AirEnum airEnum = AirEnum.BlurGaussian)
+    public static void Add(Transform caller, Action callback = null)
     {
-        Instance.airStack.Push(airEnum);
         Instance.rawImage.color = Color.clear;
         WindowModel.GetLayer(WindowLayerEnum.Bot).canvasGroup.alpha = 1;
-        switch (airEnum)
-        {
-            case AirEnum.Alpha: break;
-            default:
-                if (!Instance.airMats.TryGetValue(airEnum, out Material material))
-                {
-                    material = AddressModel.LoadMaterial(Address.BgMaterial(airEnum.ToString()));
-                    Instance.airMats.Add(airEnum, material);
-                }
 
-                StaticBlurFeature.Instance.Show(material);
-                break;
+        if (Instance.callerList.Count < 1)
+        {
+            if (Instance.airMat == null)
+            {
+                Instance.airMat = AddressModel.LoadMaterial(Address.BgMaterial("BlurGaussian"));
+            }
+            StaticBlurFeature.Instance.Show(Instance.airMat);
         }
 
         Instance.air.SetParent(caller.parent, false);
@@ -89,23 +82,26 @@ public class AirModel : Singleton<AirModel>, IDestroy
         {
             return;
         }
-        Instance.airStack.Pop();
-        Instance.tweenFade.Complete(true);
+        
+        if (Instance.callerList.Contains(caller))
+        {
+            Instance.tweenFade.Complete(true);
 
-        Instance.callerCallBack.Remove(caller);
-        Instance.callerList.Remove(caller);
-        if (Instance.callerList.Count > 0)
-        {
-            Instance.air.SetParent(Instance.callerList.Last.Value.parent, false);
-            Instance.air.SetSiblingIndex(Instance.callerList.Last.Value.GetSiblingIndex());
-        }
-        else
-        {
-            Instance.air.SetParent(WindowModel.Instance.gameObject.transform, false);
-            Instance.air.SetAsFirstSibling();
-            Instance.rawImage.color = Color.clear;
-            Instance.air.gameObject.SetActive(false);
-            WindowModel.GetLayer(WindowLayerEnum.Bot).canvasGroup.alpha = 1;
+            Instance.callerCallBack.Remove(caller);
+            Instance.callerList.Remove(caller);
+            if (Instance.callerList.Count > 0)
+            {
+                Instance.air.SetParent(Instance.callerList.Last.Value.parent, false);
+                Instance.air.SetSiblingIndex(Instance.callerList.Last.Value.GetSiblingIndex());
+            }
+            else
+            {
+                Instance.air.SetParent(WindowModel.Instance.gameObject.transform, false);
+                Instance.air.SetAsFirstSibling();
+                Instance.rawImage.color = Color.clear;
+                Instance.air.gameObject.SetActive(false);
+                WindowModel.GetLayer(WindowLayerEnum.Bot).canvasGroup.alpha = 1;
+            }
         }
     }
 

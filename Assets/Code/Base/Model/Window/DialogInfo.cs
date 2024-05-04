@@ -7,5 +7,4 @@ public class DialogInfo
 
     public Action confirm;
     public Action cancel;
-    public AirEnum airEnum;
 }

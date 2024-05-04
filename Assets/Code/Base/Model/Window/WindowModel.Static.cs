@@ -65,14 +65,13 @@ public partial class WindowModel
     /// </summary>
     /// <param name="title"> LanguageModel.Instance.Get(20010)</param>
     public static void Dialog(string title, string content, Action confirm,
-        Action cancel = null, AirEnum airEnum = AirEnum.BlurGaussian)
+        Action cancel = null)
     {
         DialogInfo dialogInfo = SharedPool<DialogInfo>.Get();
 
         dialogInfo.content = content;
         dialogInfo.confirm = confirm;
         dialogInfo.cancel = cancel;
-        dialogInfo.airEnum = airEnum;
         dialogInfo.title = title;
 
         Open(WindowEnum.Dialog, dialogInfo);

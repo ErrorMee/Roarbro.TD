@@ -10,7 +10,7 @@ public class LanguageWindow : WindowBase
     {
         base.Awake();
 
-        AirModel.Add(transform, AirCallback, AirEnum.Alpha);
+        AirModel.Add(transform, AirCallback);
 
         languageScroll.OnCellClicked((index) =>
         {
@@ -23,7 +23,6 @@ public class LanguageWindow : WindowBase
     {
         CloseSelf();
         SendEvent(EventEnum.LanguageSelect);
-        AirModel.Remove(transform);
     }
 
     public override void OnOpen(object obj)

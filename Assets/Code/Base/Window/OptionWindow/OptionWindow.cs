@@ -32,7 +32,6 @@ public class OptionWindow : WindowBase
     private void AirCallback()
     {
         CloseSelf();
-        AirModel.Remove(transform);
     }
 
     public override void OnOpen(object obj)

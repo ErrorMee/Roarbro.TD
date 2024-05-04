@@ -8,7 +8,7 @@ public class WaitWindow : WindowBase
     protected override void Awake()
     {
         base.Awake();
-        AirModel.Add(transform, null, AirEnum.BlurGaussian);
+        AirModel.Add(transform, null);
     }
 
     public override void OnOpen(object obj)
@@ -16,10 +16,5 @@ public class WaitWindow : WindowBase
         base.OnOpen(obj);
         loading.gameObject.SetActive(false);
         DOVirtual.DelayedCall(0.05f, () => { loading.gameObject.SetActive(true); });
-    }
-
-    protected override void OnDisable()
-    {
-        AirModel.Remove(transform);
     }
 }

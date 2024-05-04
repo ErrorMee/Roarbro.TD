@@ -15,10 +15,16 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: 45912a17b83d27a48b51b5a1406ca35c
+  m_GUID: ce5eb68d93364d543aad1a296f322fe7
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3341b4b1a95cb0a4180bbaba397a4efb
+    m_Address: Assets/Art/Window/Widget/Btn.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget
@@ -77,14 +83,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dc2ae3e45a15c6428e289cfd4d20a6a
+    m_Address: Assets/Art/Window/Widget/ScrollVertical.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98b8c4848f0cbea438963ad825a76a71
     m_Address: Assets/Art/Window/Widget/Txt.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5dc2ae3e45a15c6428e289cfd4d20a6a
-    m_Address: Assets/Art/Window/Widget/ScrollVertical.prefab
+  - m_GUID: a1c47cbbb14a9964d8e807d5de71fabc
+    m_Address: Assets/Art/Window/Widget/TxtBtn.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

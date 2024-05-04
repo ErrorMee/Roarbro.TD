@@ -40,23 +40,7 @@ public class DialogWindow : WindowBase
         cancelBtn.gameObject.SetActive(info.cancel != null);
         confirmBtn.gameObject.SetActive(info.confirm != null);
 
-        if (info.airEnum != AirEnum.None)
-        {
-            if (AirModel.Instance.airStack.Count > 0)
-            {
-                if (AirModel.Instance.airStack.Peek() == info.airEnum)
-                {
-                    AirModel.Add(transform, OnClickAir, AirEnum.Alpha);
-                } else
-                {
-                    AirModel.Add(transform, OnClickAir, info.airEnum);
-                }
-            }
-            else
-            {
-                AirModel.Add(transform, OnClickAir, info.airEnum);
-            }
-        }
+        AirModel.Add(transform, OnClickAir);
     }
 
     private void OnConfirm()
@@ -81,10 +65,6 @@ public class DialogWindow : WindowBase
 
     protected override void OnDisable()
     {
-        if (info.airEnum != AirEnum.None)
-        {
-            AirModel.Remove(transform);
-        }
         SharedPool<DialogInfo>.Cache(info);
     }
 }
