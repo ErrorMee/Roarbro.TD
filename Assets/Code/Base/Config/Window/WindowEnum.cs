@@ -20,4 +20,5 @@ public enum WindowEnum : ushort
     TerrainEdit,
     Win,
     Lose,
+    EnemyEdit,
 }

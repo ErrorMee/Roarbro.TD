@@ -77,12 +77,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1c6b0e001abeb2948acb04b78873604d
-    m_Address: Assets/Art/Window/Widget/ScrollHorizontal.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5dc2ae3e45a15c6428e289cfd4d20a6a
     m_Address: Assets/Art/Window/Widget/ScrollVertical.prefab
     m_ReadOnly: 0

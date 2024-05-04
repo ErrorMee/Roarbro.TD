@@ -22,6 +22,7 @@ public class BattleEditWindow : WindowBase
         terrainSelect.gameObject.SetActive(true);
         enemySelect.gameObject.SetActive(false);
         Open(WindowEnum.TerrainEdit);
+        Close(WindowEnum.EnemyEdit);
     }
 
     void OnClickEnemy()
@@ -29,12 +30,14 @@ public class BattleEditWindow : WindowBase
         enemySelect.gameObject.SetActive(true);
         terrainSelect.gameObject.SetActive(false);
         Close(WindowEnum.TerrainEdit);
+        Open(WindowEnum.EnemyEdit);
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
         Close(WindowEnum.TerrainEdit);
+        Close(WindowEnum.EnemyEdit);
         BattleModel.Instance.DestroyBattle();
     }
 }

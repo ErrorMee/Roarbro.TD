@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Window-EnemyEditWindow
+  m_EditorClassIdentifier: 
+  m_GroupName: Window-EnemyEditWindow
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 4c836e7b5edab6b4e921a1cbe6f8eac5
+  m_SerializeEntries:
+  - m_GUID: 8012ec17e8dd66746b7844ce7004985c
+    m_Address: Assets/Art/Window/EnemyEditWindow/EnemyEditWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-EnemyEditWindow
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8a7abf4f7656a0e4fb8ab3a97e90cbfc, type: 2}
+    - {fileID: 11400000, guid: 99baf956ba5c493439b4357cb8fe4474, type: 2}
