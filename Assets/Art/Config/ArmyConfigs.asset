@@ -238,7 +238,41 @@ MonoBehaviour:
       level: 0
     - enemyID: 0
       level: 0
+    - enemyID: 1
+      level: 0
     - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 2
+      level: 0
+    - enemyID: 2
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 1
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 2
+      level: 0
+    - enemyID: 2
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 1
+      level: 0
+    - enemyID: 2
       level: 0
     - enemyID: 0
       level: 0
@@ -252,7 +286,19 @@ MonoBehaviour:
       level: 0
     - enemyID: 0
       level: 0
+    - enemyID: 2
+      level: 0
     - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 2
       level: 0
     - enemyID: 0
       level: 0
@@ -266,7 +312,9 @@ MonoBehaviour:
       level: 0
     - enemyID: 0
       level: 0
-    - enemyID: 0
+    - enemyID: 2
+      level: 0
+    - enemyID: 2
       level: 0
     - enemyID: 0
       level: 0
@@ -278,57 +326,9 @@ MonoBehaviour:
       level: 0
     - enemyID: 0
       level: 0
-    - enemyID: 0
+    - enemyID: 2
       level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
-      level: 0
-    - enemyID: 0
+    - enemyID: 2
       level: 0
     - enemyID: 0
       level: 0

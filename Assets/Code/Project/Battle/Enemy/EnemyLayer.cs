@@ -39,7 +39,7 @@ public partial class EnemyLayer : BattleLayer<EnemyUnit>
             {
                 EnemyUnit unit = units[x, y];
                 unit.UpdateShow();
-                unit.transform.localPosition = new Vector3(x, 0, y);
+                unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
             }
         }
     }

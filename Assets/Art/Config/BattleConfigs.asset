@@ -29,33 +29,39 @@ MonoBehaviour:
     sortUp: 1
     terrain: 1
     terrainSelect: 0
+    enemySelect: 0
   - use: 1
     id: 2
     name: 0
     sortUp: 1
     terrain: 2
     terrainSelect: 3
+    enemySelect: 0
   - use: 1
     id: 3
     name: 0
     sortUp: 1
     terrain: 3
     terrainSelect: 0
+    enemySelect: 2
   - use: 1
     id: 4
     name: 0
     sortUp: 1
     terrain: 1
     terrainSelect: 3
+    enemySelect: 0
   - use: 1
     id: 5
     name: 0
     sortUp: 1
     terrain: 2
     terrainSelect: 3
+    enemySelect: 0
   - use: 1
     id: 6
     name: 0
     sortUp: 1
     terrain: 3
     terrainSelect: 3
+    enemySelect: 0

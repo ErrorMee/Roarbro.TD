@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 201980320161529286}
-  shadow: {fileID: 201980320161529286}
+  shadow: {fileID: 6499144366323052783}
   txt: {fileID: 728267696235187781}
 --- !u!1 &5798637689125289092
 GameObject:
