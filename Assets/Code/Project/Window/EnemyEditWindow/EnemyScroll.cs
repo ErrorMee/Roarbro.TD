@@ -12,8 +12,8 @@ public class EnemyScroll : ScrollList<EnemyConfig, EnemyCell>
         Setup<CellGroup>();
     }
 
-    override protected bool Scrollable
-    {
-        get { return false; }
-    }
+    //override protected bool Scrollable
+    //{
+    //    get { return false; }
+    //}
 }

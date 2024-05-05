@@ -1,0 +1,545 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7defe716733d04147b5aa30007bf4982, type: 3}
+  m_Name: ArmyConfigs
+  m_EditorClassIdentifier: 
+  showDel: 0
+  showAdd: 0
+  showUse: 0
+  showIdx: 1
+  showId: 1
+  showName: 0
+  pageRow: 3
+  pageColumn: 1
+  pageCrt: 1
+  key: 
+  all:
+  - use: 1
+    id: 1
+    name: 0
+    sortUp: 1
+    enemys:
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+  - use: 1
+    id: 2
+    name: 0
+    sortUp: 1
+    enemys:
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+  - use: 1
+    id: 3
+    name: 0
+    sortUp: 1
+    enemys:
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+  - use: 1
+    id: 4
+    name: 0
+    sortUp: 1
+    enemys:
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+  - use: 1
+    id: 5
+    name: 0
+    sortUp: 1
+    enemys:
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+    - enemyID: 0
+      level: 0
+  - use: 1
+    id: -1
+    name: 0
+    sortUp: 1
+    enemys: []
