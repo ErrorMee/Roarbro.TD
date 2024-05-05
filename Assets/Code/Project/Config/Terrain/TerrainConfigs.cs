@@ -22,5 +22,4 @@ public class TerrainConfig : Config
     {
         return colors[(byte)terrain];
     }
-
 }

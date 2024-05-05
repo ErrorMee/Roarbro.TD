@@ -38,10 +38,10 @@ public class ArmyConfigsEditor : ConfigsEditor<ArmyConfig, ArmyConfigs>
         if (config.enemys == null || config.enemys.Length != GridUtil.AllCount)
         {
             Debug.LogError("new ArmyEnemyConfig");
-            config.enemys = new ArmyEnemyConfig[GridUtil.AllCount];
+            config.enemys = new EnemyInfoConfig[GridUtil.AllCount];
             for (int i = 0; i < config.enemys.Length; i++)
             {
-                config.enemys[i] = new ArmyEnemyConfig();
+                config.enemys[i] = new EnemyInfoConfig();
             }
         }
 
@@ -54,11 +54,11 @@ public class ArmyConfigsEditor : ConfigsEditor<ArmyConfig, ArmyConfigs>
             GUI.color = oriColor;
             for (int x = 0; x < xCount; x++)
             {
-                ArmyEnemyConfig enemy = config.enemys[GridUtil.GetIndex(x, z)];
+                EnemyInfoConfig enemy = config.enemys[GridUtil.GetIndex(x, z)];
 
                 oriColor = GUI.color;
                 GUI.color = EnemyConfigs.Instance.GetConfigByID(enemy.enemyID).color;
-                EditorGUILayout.LabelField(enemy.enemyID.OptStr(), GUILayout.Width(tileWidth));
+                EditorGUILayout.LabelField(enemy.level.OptStr(), GUILayout.Width(tileWidth));
                 GUI.color = oriColor;
             }
             EditorGUILayout.EndHorizontal();

@@ -21,7 +21,7 @@ public class EnemyUnit : BattleUnit
         shadow.gameObject.SetActive(info.config.id > 0);
         if (info.config.id > 0)
         {
-            txt.text = info.level.OptStr();
+            txt.text = info.enemyInfoConfig.level.OptStr();
         }
         else
         {

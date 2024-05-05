@@ -8,16 +8,14 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
     {
         base.Awake();
 
-        units = new TerrainUnit[GridUtil.XCount, GridUtil.YCount];
-
         Init();
-        OnChangeUnits();
-
+        UpdateUnits();
         CreateSelect();
     }
 
     private void Init()
     {
+        units = new TerrainUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
@@ -31,7 +29,7 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
         }
     }
 
-    private void OnChangeUnits(object obj = null)
+    private void UpdateUnits(object obj = null)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {

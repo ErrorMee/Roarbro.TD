@@ -38,6 +38,7 @@
                 if (id == 1)
                 {
                     float animatX = (abs(frac(_Time.y * 4) - 0.5) * 2 - 0.5);
+                    animatX = 0.5;
                     float2 symUVRot = opSymY(sdPos);
 
                     float sd1 = sdRoundedBox(sdPos + float2(0, 0.1), float2(0.225, 0.36), 0.2);

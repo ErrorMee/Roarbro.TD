@@ -10,16 +10,14 @@ public partial class EnemyLayer : BattleLayer<EnemyUnit>
     {
         base.Awake();
 
-        units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
-
         Init();
-        OnChangeUnits();
-
+        UpdateUnits();
         CreateSelect();
     }
 
     private void Init()
     {
+        units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
@@ -31,7 +29,7 @@ public partial class EnemyLayer : BattleLayer<EnemyUnit>
         }
     }
 
-    private void OnChangeUnits(object obj = null)
+    private void UpdateUnits(object obj = null)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {

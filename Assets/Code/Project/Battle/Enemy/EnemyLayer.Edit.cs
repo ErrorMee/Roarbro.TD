@@ -26,14 +26,18 @@ public partial class EnemyLayer : BattleLayer<EnemyUnit>
         if (GridUtil.InGrid(index.x, index.y))
         {
             int idx = GridUtil.GetIndex(index.x, index.y);
-            ArmyEnemyConfig[] enemys = BattleModel.Instance.battle.army.enemys;
-            ArmyEnemyConfig enemy = enemys[idx];
+            EnemyInfoConfig[] enemyInfoConfigs = BattleModel.Instance.battle.army.enemys;
+            EnemyInfoConfig enemyInfoConfig = enemyInfoConfigs[idx];
 
-            if (enemy.enemyID != BattleModel.Instance.battle.config.enemySelect)
+            if (enemyInfoConfig.enemyID != EnemyModel.Instance.selectEnemy.enemyID
+                || enemyInfoConfig.level != EnemyModel.Instance.selectEnemy.level)
             {
-                enemy.enemyID = BattleModel.Instance.battle.config.enemySelect;
+                enemyInfoConfig.enemyID = EnemyModel.Instance.selectEnemy.enemyID;
+                enemyInfoConfig.level = EnemyModel.Instance.selectEnemy.level;
+                EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
+
                 ArmyConfigs.Instance.Save();
-                OnChangeUnits();
+                UpdateUnits();
             }
         }
     }

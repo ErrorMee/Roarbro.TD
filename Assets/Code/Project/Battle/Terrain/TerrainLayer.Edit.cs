@@ -29,7 +29,7 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
             {
                 terrains[idx] = BattleModel.Instance.battle.config.terrainSelect;
                 TerrainConfigs.Instance.Save();
-                OnChangeUnits();
+                UpdateUnits();
             }
         }
     }

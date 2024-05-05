@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class EnemyInfo : ConfigInfo<EnemyConfig>
 {
+    public EnemyInfoConfig enemyInfoConfig;
     public Vector2Int index;
-    public int level;
 
-    public EnemyInfo(EnemyConfig config)
+    public EnemyInfo(EnemyInfoConfig enemyInfoConfig)
     {
-        this.config = config;
+        SetEnemyInfoConfig(enemyInfoConfig);
+    }
+
+    public void SetEnemyInfoConfig(EnemyInfoConfig enemyInfoConfig)
+    {
+        this.enemyInfoConfig = enemyInfoConfig;
+        EnemyConfig enemyConfig = EnemyConfigs.Instance.GetConfigByID(enemyInfoConfig.enemyID);
+        config = enemyConfig;
     }
 }

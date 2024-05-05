@@ -6,18 +6,19 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
 {
     public EnemyInfo[,] infos;
 
+    public EnemyInfoConfig selectEnemy = new EnemyInfoConfig();
+
     public EnemyModel Init()
     {
         infos = new EnemyInfo[GridUtil.XCount, GridUtil.YCount];
-        EnemyConfig emptyEnemy = EnemyConfigs.ConfigByID(0);
+        
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                EnemyInfo info = new EnemyInfo(emptyEnemy);
-
+                EnemyInfoConfig enemyInfoConfig = BattleModel.Instance.battle.army.GetEnemyInfoConfig(x, y);
+                EnemyInfo info = new EnemyInfo(enemyInfoConfig);
                 infos[x, y] = info;
-                info.level = 0;
                 info.index = new Vector2Int(x, y);
             }
         }
