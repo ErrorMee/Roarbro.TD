@@ -9,23 +9,38 @@ public partial class EnemyLayer : BattleLayer<EnemyUnit>
     protected override void Awake()
     {
         base.Awake();
+
         units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
+
+        Init();
+        OnChangeUnits();
+
         CreateSelect();
     }
 
-    private EnemyUnit GetUnit(EnemyInfo info)
+    private void Init()
+    {
+        for (int y = 0; y < GridUtil.YCount; y++)
+        {
+            for (int x = 0; x < GridUtil.XCount; x++)
+            {
+                EnemyUnit unit = CreateUnit();
+                units[x, y] = unit;
+                unit.info = EnemyModel.Instance.infos[x, y];
+            }
+        }
+    }
+
+    private void OnChangeUnits(object obj = null)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
                 EnemyUnit unit = units[x, y];
-                if (unit.info == info)
-                {
-                    return unit;
-                }
+                unit.UpdateShow();
+                unit.transform.localPosition = new Vector3(x, 0, y);
             }
         }
-        return null;
     }
 }

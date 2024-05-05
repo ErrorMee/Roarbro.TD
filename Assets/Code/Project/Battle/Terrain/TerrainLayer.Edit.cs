@@ -24,15 +24,12 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
         if (GridUtil.InGrid(index.x, index.y))
         {
             int idx = GridUtil.GetIndex(index.x, index.y);
-            if (BattleModel.Instance.battle.edit)
+            TerrainEnum[] terrains = BattleModel.Instance.battle.terrain.terrains;
+            if (terrains[idx] != BattleModel.Instance.battle.config.terrainSelect)
             {
-                TerrainEnum[] terrains = BattleModel.Instance.battle.terrain.terrains;
-                if (terrains[idx] != BattleModel.Instance.battle.config.terrainSelect)
-                {
-                    terrains[idx] = BattleModel.Instance.battle.config.terrainSelect;
-                    TerrainConfigs.Instance.Save();
-                    EventModel.Send(EventEnum.ResetTerrain);
-                }
+                terrains[idx] = BattleModel.Instance.battle.config.terrainSelect;
+                TerrainConfigs.Instance.Save();
+                OnChangeUnits();
             }
         }
     }

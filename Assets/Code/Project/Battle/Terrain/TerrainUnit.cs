@@ -3,9 +3,7 @@ using UnityEngine;
 public class TerrainUnit : BattleUnit
 {
     [ReadOnlyProperty]
-    public int posx;
-    [ReadOnlyProperty]
-    public int posy;
+    public Vector2Int index;
 
     protected override void OnEnable() { }
     protected override void OnDisable() { }
@@ -13,7 +11,7 @@ public class TerrainUnit : BattleUnit
     public void UpdateShow()
     {
         TerrainConfig terrainConfig = BattleModel.Instance.battle.terrain;
-        TerrainEnum terrain = terrainConfig.GetTerrain(posx, posy);
+        TerrainEnum terrain = terrainConfig.GetTerrain(index.x, index.y);
         Color color = terrainConfig.GetColor(terrain);
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, (int)terrain, false);
         //meshRenderer.SetMPBColor(MatPropUtil.AddColorKey, new Color(0.35f, 0.35f, 0.4f), false);

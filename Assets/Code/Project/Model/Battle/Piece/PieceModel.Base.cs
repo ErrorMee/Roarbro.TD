@@ -2,7 +2,7 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    public PieceInfo[,] pieceInfos;
+    public PieceInfo[,] infos;
 
     public static int PieceMaxLV = 60;
 
@@ -10,17 +10,17 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     public PieceModel Init()
     {
-        pieceInfos = new PieceInfo[GridUtil.XCount, GridUtil.YCount];
+        infos = new PieceInfo[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                PieceInfo pieceInfo = new PieceInfo();
+                PieceInfo info = new PieceInfo();
 
-                pieceInfos[x, y] = pieceInfo;
+                infos[x, y] = info;
                 int randomID = UnityEngine.Random.Range(0, 6);
-                pieceInfo.type = randomID;
-                pieceInfo.index = new Vector2Int(x, y);
+                info.type = randomID;
+                info.index = new Vector2Int(x, y);
             }
         }
         return Instance;
@@ -28,10 +28,10 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     public PieceInfo GetPiece(Vector2Int index)
     {
-        if (index.x >= 0 && index.x < pieceInfos.GetLength(0) &&
-                    index.y >= 0 && index.y < pieceInfos.GetLength(1))
+        if (index.x >= 0 && index.x < infos.GetLength(0) &&
+                    index.y >= 0 && index.y < infos.GetLength(1))
         {
-            return pieceInfos[index.x, index.y];
+            return infos[index.x, index.y];
         }
         else
         {

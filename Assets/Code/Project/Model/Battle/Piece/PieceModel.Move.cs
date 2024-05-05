@@ -59,11 +59,11 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             }
             else
             {
-                if (toIndex.x >= 0 && toIndex.x < pieceInfos.GetLength(0) &&
-                    toIndex.y >= 0 && toIndex.y < pieceInfos.GetLength(1))
+                if (toIndex.x >= 0 && toIndex.x < infos.GetLength(0) &&
+                    toIndex.y >= 0 && toIndex.y < infos.GetLength(1))
                 {
                     Vector2Int fromIndex = fromInfo.index;
-                    PieceInfo toInfo = pieceInfos[toIndex.x, toIndex.y];
+                    PieceInfo toInfo = infos[toIndex.x, toIndex.y];
                     MoveIndex(toInfo, fromIndex);
                     MoveIndex(fromInfo, toIndex);
 
@@ -83,7 +83,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     public void MoveIndex(PieceInfo piece, Vector2Int index)
     {
         piece.index = index;
-        pieceInfos[piece.index.x, piece.index.y] = piece;
+        infos[piece.index.x, piece.index.y] = piece;
         EventModel.Send(EventEnum.MovePiece, piece);
     }
 }

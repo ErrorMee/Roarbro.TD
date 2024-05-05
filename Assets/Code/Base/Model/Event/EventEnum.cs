@@ -10,10 +10,7 @@ public enum EventEnum
 
     ArchiveSelect,
 
-    ResetTerrain,
-
     MovePiece,
 
     ChangeStep,
-
 }

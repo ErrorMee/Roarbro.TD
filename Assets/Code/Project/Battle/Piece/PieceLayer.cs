@@ -34,7 +34,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
             {
                 PieceUnit unit = CreateUnit();
                 units[x, y] = unit;
-                unit.info = PieceModel.Instance.pieceInfos[x, y];
+                unit.info = PieceModel.Instance.infos[x, y];
                 unit.UpdateShow();
                 unit.transform.localPosition = 
                     new Vector3(unit.info.GetViewX(), 0, unit.info.GetViewZ() - GridUtil.YCount);

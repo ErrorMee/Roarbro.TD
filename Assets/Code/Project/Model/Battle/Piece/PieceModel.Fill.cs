@@ -9,13 +9,13 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         {
             for (int y = GridUtil.YMaxIndex; y >= 0;)
             {
-                PieceInfo crtPiece = pieceInfos[x, y];
+                PieceInfo crtPiece = infos[x, y];
                 if (crtPiece.RemoveMark == true)
                 {
                     int moveStep = 1;
                     for (int ym = y - 1; ym >= 0; ym--)
                     {
-                        PieceInfo movePiece = pieceInfos[x, ym];
+                        PieceInfo movePiece = infos[x, ym];
                         if (movePiece.level > 1)
                         {
                             moveStep++;

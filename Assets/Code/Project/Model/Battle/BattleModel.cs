@@ -18,7 +18,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         battle.edit = edit;
         models.Clear();
         models.Add(BattleTimerModel.Instance.Init());
-
+        models.Add(EnemyModel.Instance.Init());
         if (battle.edit == true)
         {
             WindowModel.Open(WindowEnum.BattleEdit);

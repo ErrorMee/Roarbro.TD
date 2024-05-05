@@ -10,9 +10,8 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
 
         units = new TerrainUnit[GridUtil.XCount, GridUtil.YCount];
 
-        AutoListener(EventEnum.ResetTerrain, OnChangeTerrain);
         Init();
-        OnChangeTerrain();
+        OnChangeUnits();
 
         CreateSelect();
     }
@@ -25,14 +24,14 @@ public partial class TerrainLayer : BattleLayer<TerrainUnit>
             {
                 TerrainUnit unit = CreateUnit();
                 units[x, y] = unit;
-                unit.posx = x;
-                unit.posy = y;
+                unit.index.x = x;
+                unit.index.y = y;
                 unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
             }
         }
     }
 
-    private void OnChangeTerrain(object obj = null)
+    private void OnChangeUnits(object obj = null)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {

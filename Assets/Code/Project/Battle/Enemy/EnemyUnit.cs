@@ -7,7 +7,7 @@ public class EnemyUnit : BattleUnit
 {
     [ReadOnlyProperty]
     public EnemyInfo info;
-
+    public MeshRenderer shadow;
     public TextMeshPro txt;
 
     protected override void OnEnable() { }
@@ -16,8 +16,16 @@ public class EnemyUnit : BattleUnit
     public void UpdateShow()
     {
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.config.avatar, false);
-
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, info.config.color);
-        txt.text = info.level.OptStr();
+
+        if (info.config.avatar > 0)
+        {
+            shadow.gameObject.SetActive(info.config.avatar > 0);
+            txt.text = info.level.OptStr();
+        }
+        else
+        {
+            txt.text = "";
+        }
     }
 }

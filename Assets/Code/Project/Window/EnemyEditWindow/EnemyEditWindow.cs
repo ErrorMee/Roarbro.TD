@@ -15,7 +15,7 @@ public class EnemyEditWindow : WindowBase
         base.Awake();
 
         enemyScroll.UpdateContents(EnemyConfigs.All);
-        enemyScroll.UpdateSelection(0);
+        enemyScroll.UpdateSelection(BattleModel.Instance.battle.config.enemySelect);
         enemyScroll.OnCellClicked(OnScrollClicked);
     }
 
@@ -31,6 +31,8 @@ public class EnemyEditWindow : WindowBase
     private void OnScrollClicked(int index)
     {
         enemyScroll.UpdateSelection(index);
+        BattleModel.Instance.battle.config.enemySelect = index;
+        BattleConfigs.Instance.Save();
     }
 
     protected override void OnDestroy()
