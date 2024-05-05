@@ -59,7 +59,7 @@
                     sd = opUnion(sd, sd3) - 0.09 - sdPosSymY.y * 0.05;
                     sd = opUnion(sd1, sd);
 
-                    float sd4 = sdCircle(sdPosSymY + float2(-0.07, -0.2), 0.04);
+                    float sd4 = sdCircle(sdPosSymY + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
 
                     return end(f.color, sd * sharp);
@@ -76,7 +76,7 @@
                     sd = opUnion(sd, sd3) - 0.09 - sdPosSymY.y * 0.05;
                     sd = opUnion(sd1, sd);
 
-                    float sd4 = sdBox(sdPosSymY + float2(-0.075, -0.2), float2(0.0156, 0.05)) - 0.02;
+                    float sd4 = sdCircle(sdPosSymY + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
                     return end(f.color, sd * sharp);
                 }
