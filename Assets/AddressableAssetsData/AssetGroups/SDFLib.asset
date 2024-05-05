@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: SDFLib
   m_Data:
     m_SerializedData: []
-  m_GUID: 4763d5b6c231d1246b91134a0747ec49
+  m_GUID: 91dbbaf2f90cd9d48969539c1e5099a7
   m_SerializeEntries:
   - m_GUID: 7910601501dc2324fb8774f2083d4405
     m_Address: Assets/Art/SDFLib/Blend.hlsl

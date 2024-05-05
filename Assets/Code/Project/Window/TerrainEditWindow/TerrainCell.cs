@@ -6,6 +6,8 @@ public class TerrainCell : ScrollCell<TerrainEnum>
 {
     [SerializeField] protected TextMeshProUGUI title = default;
     [SerializeField] Graphic select = default;
+    [SerializeField] Graphic diffuse = default;
+
     public override void UpdateContent(TerrainEnum info)
     {
         base.UpdateContent(info);
@@ -18,9 +20,7 @@ public class TerrainCell : ScrollCell<TerrainEnum>
 
         btn.targetGraphic.color = terrainConfig.GetColor(info);
 
-        if (select != null)
-        {
-            select.gameObject.SetActive(Index == Context.SelectedIndex);
-        }
+        select.gameObject.SetActive(Index == Context.SelectedIndex);
+        diffuse.gameObject.SetActive(Index != Context.SelectedIndex);
     }
 }

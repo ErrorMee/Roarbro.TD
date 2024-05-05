@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 996223433909706383}
   - component: {fileID: 8350671979207186621}
   m_Layer: 5
-  m_Name: light
+  m_Name: diffuse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

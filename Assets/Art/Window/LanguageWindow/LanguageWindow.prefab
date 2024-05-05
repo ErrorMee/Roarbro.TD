@@ -575,6 +575,19 @@ MonoBehaviour:
   btn: {fileID: 6038515506530547233}
   title: {fileID: 2870016645719903435}
   select: {fileID: 3094589365446842620}
+  diffuse: {fileID: 4533410522585728337}
+--- !u!114 &4533410522585728337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614079832292223431, guid: a1c47cbbb14a9964d8e807d5de71fabc,
+    type: 3}
+  m_PrefabInstance: {fileID: 8286868527127456918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbecb3bb28a1554789eceaa93c2a9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6038515506530547233 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2363759617017322167, guid: a1c47cbbb14a9964d8e807d5de71fabc,

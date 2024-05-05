@@ -575,7 +575,20 @@ MonoBehaviour:
   btn: {fileID: 2387207390769886545}
   title: {fileID: 3853570077035140003}
   select: {fileID: 6349579614181874572}
+  diffuse: {fileID: 5478036845303154209}
   icon: {fileID: 4175542496013933385}
+--- !u!114 &5478036845303154209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614079832292223431, guid: a1c47cbbb14a9964d8e807d5de71fabc,
+    type: 3}
+  m_PrefabInstance: {fileID: 138717274365079526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbecb3bb28a1554789eceaa93c2a9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6349579614181874572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6481506304730002538, guid: a1c47cbbb14a9964d8e807d5de71fabc,
@@ -898,6 +911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304035946070576915, guid: 98b8c4848f0cbea438963ad825a76a71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8019283296944953273, guid: 98b8c4848f0cbea438963ad825a76a71,
         type: 3}

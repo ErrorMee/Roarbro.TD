@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: f1d49702be32b8d43aa7a46f546c66a5
+  m_GUID: 702daafeadd4bf748a7d5c5941a75adc
   m_SerializeEntries:
+  - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
+    m_Address: Assets/Art/Unit/EnemyUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
     m_Address: Assets/Art/Unit/PieceUnit.prefab
     m_ReadOnly: 0
@@ -91,12 +97,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
     m_Address: Assets/Art/Unit/UnitSelect.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
-    m_Address: Assets/Art/Unit/EnemyUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

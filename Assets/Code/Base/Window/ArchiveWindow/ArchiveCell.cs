@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ArchiveCell: ScrollCell<ArchiveInfo>
 {
     [SerializeField] TextMeshProUGUI title = default;
-
+    [SerializeField] Graphic diffuse = default;
     [SerializeField] Graphic select = default;
 
     public override void Initialize()
@@ -27,5 +27,6 @@ public class ArchiveCell: ScrollCell<ArchiveInfo>
             title.text = LanguageModel.Get(10046);
         }
         select.gameObject.SetActive(Index == Context.SelectedIndex);
+        diffuse.gameObject.SetActive(Index != Context.SelectedIndex);
     }
 }
