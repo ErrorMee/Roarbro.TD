@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TerrainLayer : BattleLayer<TerrainUnit>
+public partial class TerrainLayer : BattleLayer<TerrainUnit>
 {
     TerrainUnit[,] units;
 
@@ -13,6 +13,8 @@ public class TerrainLayer : BattleLayer<TerrainUnit>
         AutoListener(EventEnum.ResetTerrain, OnChangeTerrain);
         Init();
         OnChangeTerrain();
+
+        CreateSelect();
     }
 
     private void Init()

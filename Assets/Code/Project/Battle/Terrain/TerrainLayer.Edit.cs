@@ -1,22 +1,12 @@
-using DG.Tweening;
 using UnityEngine;
 
-public class EditLayer : BattleLayer<UnitSelect>
+public partial class TerrainLayer : BattleLayer<TerrainUnit>
 {
-    UnitSelect unit;
-
-    public static bool Start = false;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        unit = CreateUnit();
-        unit.gameObject.SetActive(false);
-    }
+    public static bool Edit = false;
 
     private void Update()
     {
-        if (Start && InputModel.Instance.Presseding)
+        if (Edit && InputModel.Instance.Presseding)
         {
             OnPresseding();
         }
@@ -28,8 +18,8 @@ public class EditLayer : BattleLayer<UnitSelect>
         worldPos = GridUtil.WorldToGridPos(worldPos, true);
         Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
 
-        unit.transform.position = worldPos;
-        unit.gameObject.SetActive(true);
+        select.transform.position = worldPos;
+        select.gameObject.SetActive(true);
 
         if (GridUtil.InGrid(index.x, index.y))
         {

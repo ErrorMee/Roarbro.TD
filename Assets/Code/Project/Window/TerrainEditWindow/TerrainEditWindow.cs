@@ -23,7 +23,7 @@ public class TerrainEditWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
-        EditLayer.Start = true;
+        TerrainLayer.Edit = true;
     }
 
     private void OnScrollClicked(int index)
@@ -35,6 +35,6 @@ public class TerrainEditWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        EditLayer.Start = false;
+        TerrainLayer.Edit = false;
     }
 }

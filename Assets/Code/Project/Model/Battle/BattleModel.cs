@@ -39,7 +39,6 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         }
         else
         {
-            CreateLayer(typeof(EditLayer), depth++);
             CreateLayer(typeof(EnemyLayer), depth++);
         }
     }

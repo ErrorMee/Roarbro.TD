@@ -6,14 +6,11 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
 
     public PieceUnit[,] units;
     public PieceUnit selectUnit;
-    public UnitSelect select;
 
     protected override void Awake()
     {
         base.Awake();
-        select = AddressModel.LoadGameObject(
-            Address.UnitPrefab(typeof(UnitSelect).Name), transform).GetComponent<UnitSelect>();
-        select.gameObject.SetActive(false);
+        CreateSelect();
 
         Init();
 
