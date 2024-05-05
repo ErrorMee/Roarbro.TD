@@ -48,16 +48,16 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         ChangeState(PieceLayerState.Move);
     }
 
-    private PieceUnit GetPieceUnit(PieceInfo pieceInfo)
+    private PieceUnit GetUnit(PieceInfo info)
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                PieceUnit pieceUnit = units[x, y];
-                if (pieceUnit.info == pieceInfo)
+                PieceUnit unit = units[x, y];
+                if (unit.info == info)
                 {
-                    return pieceUnit;
+                    return unit;
                 }
             }
         }

@@ -20,7 +20,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         removeFrame = 0;
         for (int i = 0; i < PieceModel.Instance.upgradePieces.Count; i++)
         {
-            PieceUnit upgradeUnit = GetPieceUnit(PieceModel.Instance.upgradePieces[i]);
+            PieceUnit upgradeUnit = GetUnit(PieceModel.Instance.upgradePieces[i]);
             upgradeUnit.UpdateShow();
             upgradePieces.Add(upgradeUnit);
         }
@@ -28,7 +28,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
         for (int i = 0; i < PieceModel.Instance.removePieces.Count; i++)
         {
             PieceInfo removeInfo = PieceModel.Instance.removePieces[i];
-            removePieces.Add(GetPieceUnit(removeInfo));
+            removePieces.Add(GetUnit(removeInfo));
         }
     }
 

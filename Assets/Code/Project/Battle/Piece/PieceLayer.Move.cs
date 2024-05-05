@@ -21,7 +21,7 @@ public partial class PieceLayer : BattleLayer<PieceUnit>
     private void OnAddMovePiece(object obj = null)
     {
         PieceInfo moveInfo = (PieceInfo)obj;
-        PieceUnit moveUnit = GetPieceUnit(moveInfo);
+        PieceUnit moveUnit = GetUnit(moveInfo);
         movePieces.Add(moveUnit);
     }
 

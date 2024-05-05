@@ -95,6 +95,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
+    m_Address: Assets/Art/Unit/EnemyUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
   m_SchemaSet:

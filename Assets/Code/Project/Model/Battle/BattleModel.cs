@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BattleModel : Singleton<BattleModel>, IDestroy
 {
-    private GameObject battleObj;
+    private GameObject world;
 
     private List<Transform> battleLayers;
 
@@ -29,7 +29,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
             models.Add(PieceModel.Instance.Init());
         }
 
-        battleObj = new GameObject("Battle");
+        world = new GameObject("World");
         battleLayers = new List<Transform>();
         int depth = -2;
         CreateLayer(typeof(TerrainLayer), depth++);
@@ -40,13 +40,14 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         else
         {
             CreateLayer(typeof(EditLayer), depth++);
+            CreateLayer(typeof(EnemyLayer), depth++);
         }
     }
 
     private void CreateLayer(Type type, int depth)
     {
         GameObject battleLayer = new(type.Name);
-        battleLayer.transform.SetParent(battleObj.transform, false);
+        battleLayer.transform.SetParent(world.transform, false);
         battleLayer.AddComponent(type);
         battleLayer.transform.position = new Vector3(0, depth * 0.01f, 0);
         battleLayers.Add(battleLayer.transform);
@@ -59,12 +60,12 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public void DestroyBattle()
     {
-        if (battleObj != null && CameraModel.Instance != null)
+        if (world != null && CameraModel.Instance != null)
         {
             CameraModel.Instance.Target = null;
-            UnityEngine.Object.DestroyImmediate(battleObj);
+            UnityEngine.Object.DestroyImmediate(world);
         }
-        battleObj = null;
+        world = null;
 
         for (int i = 0; i < models.Count; i++)
         {
