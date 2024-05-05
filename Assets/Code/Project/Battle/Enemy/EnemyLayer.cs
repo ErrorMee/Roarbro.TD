@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLayer : BattleLayer<EnemyUnit>
+public partial class EnemyLayer : BattleLayer<EnemyUnit>
 {
     public EnemyUnit[,] units;
 
@@ -10,7 +10,7 @@ public class EnemyLayer : BattleLayer<EnemyUnit>
     {
         base.Awake();
         units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
-
+        CreateSelect();
     }
 
     private EnemyUnit GetUnit(EnemyInfo info)

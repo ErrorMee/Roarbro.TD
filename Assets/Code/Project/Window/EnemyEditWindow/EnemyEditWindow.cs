@@ -25,10 +25,17 @@ public class EnemyEditWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
+        EnemyLayer.Edit = true;
     }
 
     private void OnScrollClicked(int index)
     {
         enemyScroll.UpdateSelection(index);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        EnemyLayer.Edit = false;
     }
 }

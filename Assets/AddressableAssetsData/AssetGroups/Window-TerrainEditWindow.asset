@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-TerrainEditWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: c0df38c2e151b7e48b09ed06f90916ad
+  m_GUID: 0d9e45bb765ba38428d5ae6c5214522e
   m_SerializeEntries:
   - m_GUID: b3ab8199e2c49a1489f492af9141fa53
     m_Address: Assets/Art/Window/TerrainEditWindow/TerrainEditWindow.prefab

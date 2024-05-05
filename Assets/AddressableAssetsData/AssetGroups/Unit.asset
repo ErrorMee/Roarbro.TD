@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 702daafeadd4bf748a7d5c5941a75adc
+  m_GUID: 12bdf3de5f110ec4483559d8eff589f2
   m_SerializeEntries:
   - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
     m_Address: Assets/Art/Unit/EnemyUnit.prefab

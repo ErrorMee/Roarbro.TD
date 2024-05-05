@@ -30,6 +30,7 @@ public class TerrainEditWindow : WindowBase
     {
         terrainScroll.UpdateSelection(index);
         BattleModel.Instance.battle.config.terrainSelect = (TerrainEnum)index;
+        BattleConfigs.Instance.Save();
     }
 
     protected override void OnDestroy()

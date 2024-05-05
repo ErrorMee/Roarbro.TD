@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-LoseWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: c7a6657955db0494ab3a5e0d89f939eb
+  m_GUID: 670cc74740d1e12468b758181625b3db
   m_SerializeEntries:
   - m_GUID: 4f439d69699e24784934e6512e001d22
     m_Address: Assets/Art/Window/LoseWindow/LoseWindow.prefab

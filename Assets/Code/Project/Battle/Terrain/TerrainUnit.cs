@@ -12,8 +12,7 @@ public class TerrainUnit : BattleUnit
 
     public void UpdateShow()
     {
-        BattleConfig battleConfig = BattleModel.Instance.battle.config;
-        TerrainConfig terrainConfig = battleConfig.GetTerrainConfig();
+        TerrainConfig terrainConfig = BattleModel.Instance.battle.terrain;
         TerrainEnum terrain = terrainConfig.GetTerrain(posx, posy);
         Color color = terrainConfig.GetColor(terrain);
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, (int)terrain, false);

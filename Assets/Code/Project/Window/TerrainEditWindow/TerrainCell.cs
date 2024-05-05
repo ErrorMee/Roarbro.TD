@@ -12,8 +12,7 @@ public class TerrainCell : ScrollCell<TerrainEnum>
     {
         base.UpdateContent(info);
         
-        BattleConfig battleConfig = BattleModel.Instance.battle.config;
-        TerrainConfig terrainConfig = battleConfig.GetTerrainConfig();
+        TerrainConfig terrainConfig = BattleModel.Instance.battle.terrain;
 
         //title.text = info.GetName();
         //title.color = terrainConfig.GetColor(info);
