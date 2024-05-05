@@ -241,6 +241,7 @@ float sdStar(in float2 p, in float r, in int n, in float m) // m=[2,n]
     return length(p) * sign(p.x);
 }
 
+//w=width; l=len; a=angle
 float sdJoint2DSphere(in float2 p, in float l, in float a, float w)
 {
     // parameters

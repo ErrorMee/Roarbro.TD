@@ -20,7 +20,7 @@ MonoBehaviour:
   showName: 0
   pageRow: 10
   pageColumn: 1
-  pageCrt: 3
+  pageCrt: 1
   key: 
   all:
   - use: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u795E\u8BDD"
+    - "\u53F2\u8BD7"
     - UR
     - UR
     - UR
@@ -79,7 +79,7 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u53F2\u8BD7"
+    - "\u795E\u8BDD"
     - ER
     - ER
     - ER
