@@ -47,3 +47,21 @@ MonoBehaviour:
     sortUp: 1
     avatar: 3
     color: {r: 0.7877665, g: 1, b: 0.6367924, a: 1}
+  - use: 1
+    id: 4
+    name: 0
+    sortUp: 1
+    avatar: 4
+    color: {r: 1, g: 0.7242374, b: 0.7019608, a: 1}
+  - use: 1
+    id: 5
+    name: 0
+    sortUp: 1
+    avatar: 5
+    color: {r: 0.9472297, g: 0.7019608, b: 1, a: 1}
+  - use: 1
+    id: 6
+    name: 0
+    sortUp: 1
+    avatar: 6
+    color: {r: 0.68235296, g: 0.9631654, b: 1, a: 1}

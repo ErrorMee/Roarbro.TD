@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-StageWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 9618957ce4b4c5a478b79eeb3bd82b6b
+  m_GUID: b55c4b1e677a51a458d1b517b1335e8e
   m_SerializeEntries:
   - m_GUID: 0bca3625c5a0943c8a62baef8ce2c89b
     m_Address: Assets/Art/Window/StageWindow/StageWindow.prefab

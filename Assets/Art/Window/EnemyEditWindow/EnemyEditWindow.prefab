@@ -105,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 4583026312380260147, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 584
+      value: 736
       objectReference: {fileID: 0}
     - target: {fileID: 4583026312380260147, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b575ab84e3a004bb997ab368e59a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellInterval: 0.20652173
-  scrollOffset: 0.20652173
+  cellInterval: 0.17117117
+  scrollOffset: 0.17117117
   loop: 0
   cellContainer: {fileID: 8185024898732180570}
   reuseCellMarginCount: 0
