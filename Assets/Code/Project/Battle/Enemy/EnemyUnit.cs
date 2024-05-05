@@ -19,7 +19,7 @@ public class EnemyUnit : BattleUnit
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, info.config.color);
 
         shadow.gameObject.SetActive(info.config.id > 0);
-        if (info.config.id > 0)
+        if (info.enemyInfoConfig.level > 1)
         {
             txt.text = info.enemyInfoConfig.level.OptStr();
         }

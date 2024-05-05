@@ -15,7 +15,7 @@ public class EnemyEditWindow : WindowBase
         base.Awake();
 
         enemyScroll.UpdateContents(EnemyConfigs.All);
-        enemyScroll.UpdateSelection(0);
+        enemyScroll.UpdateSelection(EnemyModel.Instance.selectEnemy.enemyID);
         enemyScroll.OnCellClicked(OnScrollClicked);
     }
 
