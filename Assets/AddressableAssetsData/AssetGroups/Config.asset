@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: ab7bcd85dba7d0641a5184eba3ff80bf
+  m_GUID: 36e6e446f86c01842823e26f0a6028c6
   m_SerializeEntries:
+  - m_GUID: e65013a9f6c1ea74e8aa192ee7f3995b
+    m_Address: Assets/Art/Config/ArmyConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset
     m_ReadOnly: 0
@@ -55,12 +61,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4df071baa84f21a438fee9a7a71864e5
     m_Address: Assets/Art/Config/WindowConfigs.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Config
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e65013a9f6c1ea74e8aa192ee7f3995b
-    m_Address: Assets/Art/Config/ArmyConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Audio-Sound
   m_Data:
     m_SerializedData: []
-  m_GUID: 0147a8c4b4c3c39439579b57c8aef4ac
+  m_GUID: 4776e3f33c7b0d9498f5bed9adadc5e0
   m_SerializeEntries:
   - m_GUID: 190ca28937c56a547b14ca174cc60ae5
     m_Address: Assets/Art/Audio/Sound/Click.wav

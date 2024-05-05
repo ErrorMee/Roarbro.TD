@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-LanguageWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 19593c3bb9a89404890bfeadd7a1e682
+  m_GUID: 5827d9d0d14c0ae47af3bda7a019e655
   m_SerializeEntries:
   - m_GUID: ca722db43e681a744853c6bbb8776d00
     m_Address: Assets/Art/Window/LanguageWindow/LanguageWindow.prefab
