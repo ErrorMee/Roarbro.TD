@@ -13,7 +13,10 @@ public class ArmyConfigsEditor : ConfigsEditor<ArmyConfig, ArmyConfigs>
     protected override void DrawHead()
     {
         base.DrawHead();
-        //TODO
+        if (EnemyConfigs.Instance == null)
+        {
+            EnemyConfigs.Instance = GetConfigs("Enemy") as EnemyConfigs;
+        }
     }
 
     protected override void DrawMenuAdd()
@@ -52,7 +55,11 @@ public class ArmyConfigsEditor : ConfigsEditor<ArmyConfig, ArmyConfigs>
             for (int x = 0; x < xCount; x++)
             {
                 ArmyEnemyConfig enemy = config.enemys[GridUtil.GetIndex(x, z)];
+
+                oriColor = GUI.color;
+                GUI.color = EnemyConfigs.Instance.GetConfigByID(enemy.enemyID).color;
                 EditorGUILayout.LabelField(enemy.enemyID.OptStr(), GUILayout.Width(tileWidth));
+                GUI.color = oriColor;
             }
             EditorGUILayout.EndHorizontal();
         }

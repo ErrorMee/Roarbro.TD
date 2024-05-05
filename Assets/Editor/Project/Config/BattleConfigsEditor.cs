@@ -39,6 +39,7 @@ public class BattleConfigsEditor : ConfigsEditor<BattleConfig, BattleConfigs>
     protected override void DrawMenuAdd()
     {
         base.DrawMenuAdd();
+        GotoConfigs("Army", 50);
     }
 
     protected override void DrawConfig(int index, BattleConfig config)
