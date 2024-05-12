@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class DialogWindow : WindowBase
 {
@@ -20,6 +21,7 @@ public class DialogWindow : WindowBase
     protected override void Awake()
     {
         base.Awake();
+        
         ClickListener.Add(cancelBtn.transform).onClick = OnCancel;
         ClickListener.Add(confirmBtn.transform).onClick = OnConfirm;
     }
@@ -27,7 +29,12 @@ public class DialogWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
-        
+
+        cancelBtn.transform.localScale = Vector3.zero;
+        confirmBtn.transform.localScale = Vector3.zero;
+        cancelBtn.transform.DOScale(1, 0.2f).SetDelay(0.25f);
+        confirmBtn.transform.DOScale(1, 0.2f).SetDelay(0.25f);
+
         info = (DialogInfo)obj;
         Show();
     }

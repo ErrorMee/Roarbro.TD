@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3341b4b1a95cb0a4180bbaba397a4efb
-    m_Address: Assets/Art/Window/Widget/Btn.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
     m_Address: Assets/Art/Window/Widget/Frame.prefab
     m_ReadOnly: 0

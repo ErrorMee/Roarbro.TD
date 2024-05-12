@@ -24,14 +24,14 @@ Shader "SDF/UI/Icon"
                 float2 sdPos = f.uv.xy;
                 float id = f.uv.w;
                 float radius = 0.4; float roundness = 0.1;
-                //if (id == 0)//Clear
-                //{
-                //    float sd = sdTrapezoid(sdPos - float2(0, -0.05), 0.1, 0.17, 0.18) - roundness;
-                //    sd = opUnion(sd, sdCircle(sdPos - float2(0, 0.32), 0));
-                //    sd = opSmoothSubtraction(sdSegment(sdPos, float2(-0.5, 0.15), float2(0.5, 0.15)) - 0.13, sd, 0.03);
-                //    sd = opSubtraction(sdSegment(opSymY(sdPos), float2(0.16, -0.02), float2(0.12, -0.26)) - 0.13, sd);
-                //    return endWithOnionOutGlow(f.color, sd - roundness, f);
-                //}
+                if (id == 0)//Clear
+                {
+                    float sd = sdTrapezoid(sdPos - float2(0, -0.05), 0.1, 0.17, 0.18) - roundness;
+                    sd = opUnion(sd, sdCircle(sdPos - float2(0, 0.32), 0));
+                    sd = opSmoothSubtraction(sdSegment(sdPos, float2(-0.5, 0.15), float2(0.5, 0.15)) - 0.13, sd, 0.03);
+                    sd = opSubtraction(sdSegment(opSymY(sdPos), float2(0.16, -0.02), float2(0.12, -0.26)) - 0.13, sd);
+                    return endWithOnionOutGlow(f.color, sd - roundness, f);
+                }
                 if (id == 1)//=
                 {
                     float2 pos = opSymXS(sdPos);
@@ -139,6 +139,25 @@ Shader "SDF/UI/Icon"
                 {
                     sdPos.y += 0.03 * sin(_Time.y * 1.62 + sdPos.x * 10);
                     float sd = sdBox(sdPos, float2(0.4, 0.02)) - 0.03;
+                    return endWithOnionOutGlow(f.color, sd, f);
+                }
+
+                if (id == 14)//yes
+                {
+                    float sd = opOnion(sdCircle(sdPos, 0.4), 0.05);
+
+                    sd = opUnion(sdSegment(sdPos, float2(-0.05, -0.12), float2(0.17, 0.1)) - roundness, sd);
+                    sd = opUnion(sdSegment(sdPos, float2(-0.05, -0.12), float2(-0.18, -0.02)) - roundness, sd);
+
+                    return endWithOnionOutGlow(f.color, sd, f);
+                }
+
+                if (id == 15)//no
+                {
+                    float sd = opOnion(sdCircle(sdPos, 0.4), 0.05);
+
+                    sd = opUnion(sdSegment(abs(sdPos), 0, 0.14) - roundness, sd);
+
                     return endWithOnionOutGlow(f.color, sd, f);
                 }
 
