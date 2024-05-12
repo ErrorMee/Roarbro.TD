@@ -24,4 +24,12 @@ public partial class WorldModel : SingletonBehaviour<WorldModel>
             Instance.layers.Remove(type);
         }
     }
+
+    public static void ShowLayer(Type type, bool show)
+    {
+        if (Instance.layers.ContainsKey(type))
+        {
+            Instance.layers[type].gameObject.SetActive(show);
+        }
+    }
 }

@@ -23,6 +23,7 @@ public class BattleEditWindow : WindowBase
         enemySelect.gameObject.SetActive(false);
         Open(WindowEnum.TerrainEdit);
         Close(WindowEnum.EnemyEdit);
+        WorldModel.ShowLayer(typeof(EnemyLayer), false);
     }
 
     void OnClickEnemy()
@@ -31,6 +32,7 @@ public class BattleEditWindow : WindowBase
         terrainSelect.gameObject.SetActive(false);
         Close(WindowEnum.TerrainEdit);
         Open(WindowEnum.EnemyEdit);
+        WorldModel.ShowLayer(typeof(EnemyLayer), true);
     }
 
     protected override void OnDestroy()
