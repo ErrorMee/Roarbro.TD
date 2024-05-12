@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: 21db4faf688ebe5419a8ee508597a3f8
+  m_GUID: 4f32a5005b402bc41aa2cc21cbd1c554
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab

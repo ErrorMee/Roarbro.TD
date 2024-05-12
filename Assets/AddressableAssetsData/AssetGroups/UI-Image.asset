@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: UI-Image
   m_Data:
     m_SerializedData: []
-  m_GUID: 463d92b3e59b5974ca816a68ef720988
+  m_GUID: ce4d85f5aa46b334ab2684ac38f5957b
   m_SerializeEntries:
   - m_GUID: a6a43c2d93f6079438e2bf21b0bbf867
     m_Address: Assets/Art/UI/Image/SDF_UI_Area.mat
@@ -25,6 +25,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f7ef73bbfb235ea4da2fad996b5f2544
     m_Address: Assets/Art/UI/Image/SDF_UI_Ascii01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI-Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19398ec7efd36de459b57315d5053807
+    m_Address: Assets/Art/UI/Image/SDF_UI_Enemy.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - UI-Image

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Shader
   m_Data:
     m_SerializedData: []
-  m_GUID: d65e1eb620a7ec74090c90c22d9ef25a
+  m_GUID: 009988b4cc0d0014aa9b7fbf12d28514
   m_SerializeEntries:
   - m_GUID: 58444fb291a5bc5499e26596e5993395
     m_Address: Assets/Art/Shader/SDF_UI_Area.shader
@@ -25,6 +25,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 09085f619ba430c418d5aba2f7394464
     m_Address: Assets/Art/Shader/SDF_UI_Ascii01.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5116fa9b78a4aa4c9dba4f483e23930
+    m_Address: Assets/Art/Shader/SDF_UI_Enemy.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Shader

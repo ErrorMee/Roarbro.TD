@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-NavigationWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 27f3377b0bb86294f95f9a952cb3fb9a
+  m_GUID: 9c452c94e21157e4e8c32d227160340d
   m_SerializeEntries:
   - m_GUID: 0cd8db6737936414b92bc96851c070da
     m_Address: Assets/Art/Window/NavigationWindow/NavigationWindow.prefab
