@@ -88,11 +88,11 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             upgradePieces.Clear();
             if (removePieces.Count > 0)
             {
-                ChangeState(PieceLayerState.Fill);
+                fsm.ChangeState(PieceLayerState.Fill);
             }
             else
             {
-                ChangeState(PieceLayerState.Move);
+                fsm.ChangeState(PieceLayerState.Move);
             }
         }
     }

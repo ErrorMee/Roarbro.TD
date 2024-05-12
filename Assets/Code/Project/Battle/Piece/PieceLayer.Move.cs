@@ -12,6 +12,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 
     private void MoveEnter()
     {
+        CreateSelect();
         if (movePieces.Count > 1)
         {
             select.gameObject.SetActive(false);
@@ -61,11 +62,11 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             PieceModel.Instance.CheckMerges();
             if (PieceModel.Instance.readyMerges.Count > 2)
             {
-                ChangeState(PieceLayerState.Merge);
+                fsm.ChangeState(PieceLayerState.Merge);
             }
             else
             {
-                ChangeState(PieceLayerState.Idle);
+                fsm.ChangeState(PieceLayerState.Idle);
             }
         }
     }

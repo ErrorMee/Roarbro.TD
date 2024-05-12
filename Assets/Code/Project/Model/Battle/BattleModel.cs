@@ -27,21 +27,20 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
             models.Add(PieceModel.Instance.Init());
         }
 
-        int depth = -2;
-        CreateLayer(typeof(TerrainLayer), depth++);
+        CreateLayer(typeof(TerrainLayer));
         if (battle.edit == false)
         {
-            CreateLayer(typeof(PieceLayer), depth++);
+            CreateLayer(typeof(PieceLayer));
         }
         else
         {
-            CreateLayer(typeof(EnemyLayer), depth++);
+            CreateLayer(typeof(EnemyLayer));
         }
     }
 
-    private void CreateLayer(Type type, int depth)
+    public void CreateLayer(Type type)
     {
-        WorldModel.CreateLayer(type, depth);
+        WorldModel.CreateLayer(type, layers.Count - 2);
         layers.Add(type);
     }
 

@@ -6,6 +6,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 {
     private void DragEnter()
     {
+        CreateSelect();
     }
 
     private void DragUpdate()
@@ -65,7 +66,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             PieceModel.Instance.DragPiece(selectUnit.info, index);
             selectUnit = null;
 
-            ChangeState(PieceLayerState.Move);
+            fsm.ChangeState(PieceLayerState.Move);
         }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public partial class EnemyLayer : WorldLayer<EnemyUnit>
 {
+    public static FSM<EnemyLayerState> fsm = new FSM<EnemyLayerState>();
+
     public EnemyUnit[,] units;
 
     protected override void Awake()
@@ -12,11 +14,13 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
 
         Init();
         UpdateUnits();
-        CreateSelect();
     }
 
     private void Init()
     {
+        fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Edit, EditEnter, EditUpdate));
+        fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Idle, IdleEnter, IdleUpdate));
+
         units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
         {
@@ -29,7 +33,7 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
         }
     }
 
-    private void UpdateUnits(object obj = null)
+    private void UpdateUnits()
     {
         for (int y = 0; y < GridUtil.YCount; y++)
         {
@@ -40,5 +44,10 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
             }
         }
+    }
+
+    private void Update()
+    {
+        fsm.Update();
     }
 }

@@ -25,7 +25,7 @@ public class EnemyEditWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
-        EnemyLayer.Edit = true;
+        EnemyLayer.fsm.ChangeState(EnemyLayerState.Edit);
     }
 
     private void OnScrollClicked(int index)
@@ -41,6 +41,6 @@ public class EnemyEditWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        EnemyLayer.Edit = false;
+        EnemyLayer.fsm.ChangeState(EnemyLayerState.Idle);
     }
 }

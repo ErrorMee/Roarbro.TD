@@ -7,6 +7,8 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 {
     private void IdleEnter()
     {
+        CreateSelect();
+
         movePieces.Clear();
         if (PieceModel.Instance.LeftStep <= 0)
         {
@@ -34,7 +36,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 
                 selectUnit = units[index.x, index.y];
 
-                ChangeState(PieceLayerState.Drag);
+                fsm.ChangeState(PieceLayerState.Drag);
             }
             else
             {

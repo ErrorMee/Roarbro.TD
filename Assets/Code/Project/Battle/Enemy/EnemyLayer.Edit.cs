@@ -4,41 +4,40 @@ using UnityEngine;
 
 public partial class EnemyLayer : WorldLayer<EnemyUnit>
 {
-    public static bool Edit = false;
-
-    private void Update()
+    private void EditEnter()
     {
-        if (Edit && InputModel.Instance.Presseding)
-        {
-            OnPresseding();
-        }
+        CreateSelect();
     }
 
-    private void OnPresseding()
+    private void EditUpdate()
     {
-        Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos, transform.position.y);
-        worldPos = GridUtil.WorldToGridPos(worldPos, true);
-        select.transform.position = worldPos;
-        select.gameObject.SetActive(true);
-
-        Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
-
-        if (GridUtil.InGrid(index.x, index.y))
+        if (InputModel.Instance.Presseding)
         {
-            int idx = GridUtil.GetIndex(index.x, index.y);
-            EnemyInfoConfig[] enemyInfoConfigs = BattleModel.Instance.battle.army.enemys;
-            EnemyInfoConfig enemyInfoConfig = enemyInfoConfigs[idx];
+            Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos, transform.position.y);
+            worldPos = GridUtil.WorldToGridPos(worldPos, true);
+            select.transform.position = worldPos;
+            select.gameObject.SetActive(true);
 
-            if (enemyInfoConfig.enemyID != EnemyModel.Instance.selectEnemy.enemyID
-                || enemyInfoConfig.level != EnemyModel.Instance.selectEnemy.level)
+            Vector2Int index = GridUtil.WorldToGridIndex(worldPos);
+
+            if (GridUtil.InGrid(index.x, index.y))
             {
-                enemyInfoConfig.enemyID = EnemyModel.Instance.selectEnemy.enemyID;
-                enemyInfoConfig.level = EnemyModel.Instance.selectEnemy.level;
-                EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
+                int idx = GridUtil.GetIndex(index.x, index.y);
+                EnemyInfoConfig[] enemyInfoConfigs = BattleModel.Instance.battle.army.enemys;
+                EnemyInfoConfig enemyInfoConfig = enemyInfoConfigs[idx];
 
-                ArmyConfigs.Instance.Save();
-                UpdateUnits();
+                if (enemyInfoConfig.enemyID != EnemyModel.Instance.selectEnemy.enemyID
+                    || enemyInfoConfig.level != EnemyModel.Instance.selectEnemy.level)
+                {
+                    enemyInfoConfig.enemyID = EnemyModel.Instance.selectEnemy.enemyID;
+                    enemyInfoConfig.level = EnemyModel.Instance.selectEnemy.level;
+                    EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
+
+                    ArmyConfigs.Instance.Save();
+                    UpdateUnits();
+                }
             }
         }
     }
+
 }

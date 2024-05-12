@@ -2,7 +2,7 @@ using UnityEngine;
 
 public partial class PieceLayer : WorldLayer<PieceUnit>
 {
-    public FSM<PieceLayerState> fsm;
+    FSM<PieceLayerState> fsm = new FSM<PieceLayerState>();
 
     public PieceUnit[,] units;
     public PieceUnit selectUnit;
@@ -10,8 +10,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
     protected override void Awake()
     {
         base.Awake();
-        CreateSelect();
-
+        
         Init();
 
         AutoListener(EventEnum.MovePiece, OnAddMovePiece);
@@ -19,8 +18,6 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 
     private void Init()
     {
-        fsm = new FSM<PieceLayerState>();
-
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Idle, IdleEnter, IdleUpdate));
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Drag, DragEnter, DragUpdate));
         fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Move, MoveEnter, MoveUpdate));
@@ -42,7 +39,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             }
         }
 
-        ChangeState(PieceLayerState.Move);
+        fsm.ChangeState(PieceLayerState.Move);
     }
 
     private PieceUnit GetUnit(PieceInfo info)
@@ -59,18 +56,6 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             }
         }
         return null;
-    }
-
-    private void ChangeState(PieceLayerState pieceLayerState)
-    {
-        foreach (var item in fsm.mStates)
-        {
-            if (item.mInfo == pieceLayerState)
-            {
-                fsm.ChangeState(item);
-                return;
-            }
-        }
     }
 
     private void Update()

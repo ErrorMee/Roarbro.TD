@@ -67,7 +67,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             }
 
             removePieces.Clear();
-            ChangeState(PieceLayerState.Move);
+            fsm.ChangeState(PieceLayerState.Move);
         }
     }
 }
