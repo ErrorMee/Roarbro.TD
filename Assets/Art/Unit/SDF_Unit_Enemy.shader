@@ -108,7 +108,7 @@
                     sd = opUnion(sdSegment(sdPosSymY, float2(0.25, 0), float2(0.38, -0.03 + move)) - 0.05, sd);
                     sd = opUnion(sdSegment(sdPosSymY, float2(0.25, -0.17), float2(0.33, -0.22 - move)) - 0.05, sd);
 
-                    float sd4 = sdCircle(sdPosSymY + float2(-0.07, -0.16), 0.04);
+                    float sd4 = sdCircle(sdPosSymY + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
                     return end(f.color, sd * sharp);
                 }
@@ -117,7 +117,7 @@
                 {
                     float sd = sdStar5(sdPos, 0.39, 0.5 + animatX * 0.1) - 0.05;
 
-                    float sd4 = sdCircle(sdPosSymY + float2(-0.07, -0.16), 0.04);
+                    float sd4 = sdCircle(sdPosSymY + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
                     return end(f.color, sd * sharp);
                 }
@@ -134,7 +134,7 @@
 
                     sd = opUnion(sd, sd2);
                     
-                    float sd4 = sdCircle(sdPos + float2(-0.16, -0.2), 0.04);
+                    float sd4 = sdCircle(sdPos + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
                     return end(f.color, sd * sharp);
                 }
@@ -146,7 +146,7 @@
                     sd = opUnion(sd, sdSegment(sdPosSymY, float2(0, 0.22), float2(0.2, -0.20 + animatX * 0.07)) - 0.12);
                     sd = opUnion(sd, sdSegment(sdPosSymY, float2(0.1, 0.22), float2(0.3, -0.03 + animatX * 0.05)) - 0.12);
 
-                    float sd4 = sdCircle(sdPosSymY + float2(-0.07, -0.16), 0.04);
+                    float sd4 = sdCircle(sdPosSymY + float2(-0.075, -0.2), 0.04);
                     f.color = paintIn(f.color, sd4 * sharp, addColor);
                     return end(f.color, sd * sharp);
                 }

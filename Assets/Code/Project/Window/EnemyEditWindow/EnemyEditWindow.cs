@@ -34,6 +34,7 @@ public class EnemyEditWindow : WindowBase
 
         EnemyModel.Instance.selectEnemy.enemyID = EnemyConfigs.Instance.GetConfigByIndex(index).id;
         //todo level
+        EnemyModel.Instance.selectEnemy.level = 10;
         BattleConfigs.Instance.Save();
     }
 

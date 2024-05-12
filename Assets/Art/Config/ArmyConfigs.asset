@@ -29,103 +29,103 @@ MonoBehaviour:
     sortUp: 1
     enemys:
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 7
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 6
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 5
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 4
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
     - enemyID: 1
-      level: 1
+      level: 10
   - use: 1
     id: 2
     name: 0
@@ -137,60 +137,8 @@ MonoBehaviour:
       level: 1
     - enemyID: 0
       level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
+    - enemyID: 1
+      level: 10
     - enemyID: 0
       level: 1
     - enemyID: 0
@@ -202,136 +150,188 @@ MonoBehaviour:
     - enemyID: 0
       level: 1
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 0
+      level: 10
     - enemyID: 2
+      level: 10
+    - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 0
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 0
+      level: 10
+    - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 4
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 0
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 0
       level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
+    - enemyID: 0
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 0
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 0
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 7
+      level: 10
   - use: 1
     id: 3
     name: 0
     sortUp: 1
     enemys:
     - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 6
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 5
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 4
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
-    - enemyID: 3
-      level: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
+    - enemyID: 1
+      level: 10
     - enemyID: 2
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
-    - enemyID: 1
-      level: 1
+      level: 10
+    - enemyID: 3
+      level: 10
+    - enemyID: 4
+      level: 10
+    - enemyID: 5
+      level: 10
+    - enemyID: 6
+      level: 10
+    - enemyID: 7
+      level: 10
   - use: 1
     id: 4
     name: 0

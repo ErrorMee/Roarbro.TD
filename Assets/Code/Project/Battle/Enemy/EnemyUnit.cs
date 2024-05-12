@@ -17,13 +17,13 @@ public class EnemyUnit : WorldUnit
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.config.avatar, false);
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, info.config.color);
 
-        if (info.enemyInfoConfig.level > 1)
+        if (info.enemyInfoConfig.enemyID > 0 && info.enemyInfoConfig.level > 1)
         {
             txt.text = info.enemyInfoConfig.level.OptStr();
         }
         else
         {
-            txt.text = "";
+            txt.text = string.Empty;
         }
     }
 }

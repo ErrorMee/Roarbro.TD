@@ -284,18 +284,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 66f99e98de04f8441834fd6b9a0b9eea,
+        type: 2}
+    - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
+        type: 3}
       propertyPath: m_fontColor.b
-      value: 0.29803923
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0.2509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
       propertyPath: m_fontColor.r
-      value: 0.2509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
@@ -304,13 +310,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3017342495717651970, guid: 66f99e98de04f8441834fd6b9a0b9eea,
+        type: 2}
+    - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
+        type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4283187264
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
         type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190399973336499371, guid: 1c6b0e001abeb2948acb04b78873604d,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2681980741113292332, guid: 1c6b0e001abeb2948acb04b78873604d, type: 3}

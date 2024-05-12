@@ -18,15 +18,14 @@ public class EnemyCell : ScrollCell<EnemyConfig>
     {
         base.UpdateContent(info);
 
-        if (info.avatar <= 0)
+        //if (info.avatar <= 0)
         {
             title.text = string.Empty;
         }
-        else
-        {
-            title.text = info.avatar.Opt00Str();
-            //title.color = new Color(1 - info.color.r, 1 - info.color.g, 1 - info.color.b, info.color.a);
-        }
+        //else
+        //{
+        //    title.text = info.avatar.Opt00Str();
+        //}
 
         shadow.ID = bg.ID = select.ID = diffuse.ID = info.avatar;
 
