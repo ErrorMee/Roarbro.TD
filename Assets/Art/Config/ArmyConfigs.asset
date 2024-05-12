@@ -142,7 +142,7 @@ MonoBehaviour:
     - enemyID: 0
       level: 1
     - enemyID: 0
-      level: 1
+      level: 10
     - enemyID: 0
       level: 1
     - enemyID: 0

@@ -7,6 +7,21 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
     private void EditEnter()
     {
         CreateSelect();
+
+        UpdateEditUnits();
+    }
+
+    private void UpdateEditUnits()
+    {
+        for (int y = 0; y < GridUtil.YCount; y++)
+        {
+            for (int x = 0; x < GridUtil.XCount; x++)
+            {
+                EnemyUnit unit = units[x, y];
+                unit.UpdateShow();
+                unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
+            }
+        }
     }
 
     private void EditUpdate()
@@ -34,7 +49,7 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                     EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
 
                     ArmyConfigs.Instance.Save();
-                    UpdateUnits();
+                    UpdateEditUnits();
                 }
             }
         }

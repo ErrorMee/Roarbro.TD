@@ -25,6 +25,7 @@ public class EnemyEditWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
+        BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
         EnemyLayer.fsm.ChangeState(EnemyLayerState.Edit);
     }
 
@@ -41,6 +42,6 @@ public class EnemyEditWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        EnemyLayer.fsm.ChangeState(EnemyLayerState.Idle);
+        BattleModel.Instance.DeleteLayer(typeof(EnemyLayer));
     }
 }

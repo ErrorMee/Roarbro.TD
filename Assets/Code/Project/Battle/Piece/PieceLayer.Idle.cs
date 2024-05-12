@@ -12,10 +12,13 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
         movePieces.Clear();
         if (PieceModel.Instance.LeftStep <= 0)
         {
-            DOVirtual.DelayedCall(1.5f, () =>
-            {
-                WindowModel.Open(WindowEnum.Win);
-            });
+            BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
+            EnemyLayer.fsm.ChangeState(EnemyLayerState.Ready);
+
+            //DOVirtual.DelayedCall(1.5f, () =>
+            //{
+            //    WindowModel.Open(WindowEnum.Win);
+            //});
         }
     }
 

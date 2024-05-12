@@ -8,7 +8,7 @@ public enum EnemyLayerState
     /// <summary>
     /// µÈ´ý
     /// </summary>
-    Idle,
+    Ready,
     /// <summary>
     /// ÒÆ¶¯
     /// </summary>

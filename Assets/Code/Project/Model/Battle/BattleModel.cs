@@ -32,16 +32,21 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         {
             CreateLayer(typeof(PieceLayer));
         }
-        else
-        {
-            CreateLayer(typeof(EnemyLayer));
-        }
     }
 
     public void CreateLayer(Type type)
     {
         WorldModel.CreateLayer(type, layers.Count - 2);
         layers.Add(type);
+    }
+
+    public void DeleteLayer(Type type)
+    {
+        if (layers.Contains(type))
+        {
+            layers.Remove(type);
+            WorldModel.DeleteLayer(type);
+        }
     }
 
     public void Complete()
