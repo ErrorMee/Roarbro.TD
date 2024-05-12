@@ -15,6 +15,7 @@ public class FSM<T>
                 return;
             }
         }
+        mCurrentState = null;
     }
 
     public virtual void ChangeState(State<T> state)
