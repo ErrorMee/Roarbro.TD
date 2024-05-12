@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-EnemyEditWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 6d9e024828e93874dbc813448b943b78
+  m_GUID: 4783fb6f082833642bec5fd2e6a64084
   m_SerializeEntries:
   - m_GUID: 8012ec17e8dd66746b7844ce7004985c
     m_Address: Assets/Art/Window/EnemyEditWindow/EnemyEditWindow.prefab

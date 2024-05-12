@@ -28,89 +28,89 @@ MonoBehaviour:
     name: 0
     sortUp: 1
     enemys:
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 7
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 6
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 5
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 4
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 3
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
-    - enemyID: 1
+    - enemyID: 2
       level: 1
     - enemyID: 1
       level: 1
