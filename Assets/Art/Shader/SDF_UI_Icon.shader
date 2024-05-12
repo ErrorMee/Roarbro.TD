@@ -144,7 +144,7 @@ Shader "SDF/UI/Icon"
 
                 if (id == 14)//yes
                 {
-                    float sd = opOnion(sdCircle(sdPos, 0.4), 0.05);
+                    float sd = opOnion(sdQuadraticCircle(sdPos, 0.4), 0.062);
 
                     sd = opUnion(sdSegment(sdPos, float2(-0.05, -0.12), float2(0.17, 0.1)) - roundness, sd);
                     sd = opUnion(sdSegment(sdPos, float2(-0.05, -0.12), float2(-0.18, -0.02)) - roundness, sd);
@@ -154,7 +154,7 @@ Shader "SDF/UI/Icon"
 
                 if (id == 15)//no
                 {
-                    float sd = opOnion(sdCircle(sdPos, 0.4), 0.05);
+                    float sd = opOnion(sdQuadraticCircle(sdPos, 0.4), 0.062);
 
                     sd = opUnion(sdSegment(abs(sdPos), 0, 0.14) - roundness, sd);
 

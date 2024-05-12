@@ -286,14 +286,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b575ab84e3a004bb997ab368e59a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellInterval: 0.17117117
-  scrollOffset: 0.17117117
+  cellInterval: 0.1559633
+  scrollOffset: 0.1559633
   loop: 0
   cellContainer: {fileID: 8185024898732180570}
   reuseCellMarginCount: 0
   paddingHead: 0
   paddingTail: 0
-  spacing: 24
+  spacing: 8
   startAxisSpacing: 0
   startAxisCellCount: 1
   cellSize: {x: 128, y: 128}

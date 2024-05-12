@@ -67,7 +67,7 @@
 
                 if (id == 2)
                 {
-                    float sd1 = sdRoundedBox(sdPosSymY + float2(0, -0.1), float2(0.33, 0.28) + animatX * 0.01, 0.2);
+                    float sd1 = sdQuadraticCircle(sdPosSymY + float2(0, -0.1), float2(0.33, 0.28) + animatX * 0.01);
                     float sd = sdBezier(sdPosSymY, float2(0.125, -0.15), float2(0.175, -0.3),
                         float2(0.23 + 0.08 * animatX, -0.32 + 0.08 * animatX));
                     float sd3 = sdBezier(sdPosSymY, float2(0.025, -0.15), float2(0.04, -0.325),
@@ -99,7 +99,7 @@
                 if (id == 4)
                 {
                     float sd = sdQuadraticCircle(sdPosSymY + float2(0, 0.062), 0.28);
-                    float sd1 = sdCircle(sdPosSymY - float2(0.25, 0.25), 0.1);
+                    float sd1 = sdCircle(sdPosSymY - float2(0.23, 0.23), 0.12);
                     sd1 = opSubtraction(sdTriangle(sdPosSymY, float2(0.22, 0.22),
                         float2(1 + sign(sdPos.x) * animatX * 0.6, 0.7), float2(0.36 - sign(sdPos.x) * animatX * 0.4, 1)), sd1);
 
