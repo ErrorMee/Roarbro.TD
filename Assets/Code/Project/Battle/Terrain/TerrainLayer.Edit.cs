@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public partial class TerrainLayer : BattleLayer<TerrainUnit>
+public partial class TerrainLayer : WorldLayer<TerrainUnit>
 {
     public static bool Edit = false;
 

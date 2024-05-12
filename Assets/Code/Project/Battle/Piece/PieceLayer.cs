@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public partial class PieceLayer : BattleLayer<PieceUnit>
+public partial class PieceLayer : WorldLayer<PieceUnit>
 {
     public FSM<PieceLayerState> fsm;
 

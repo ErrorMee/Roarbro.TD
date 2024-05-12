@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TerrainUnit : BattleUnit
+public class TerrainUnit : WorldUnit
 {
     [ReadOnlyProperty]
     public Vector2Int index;

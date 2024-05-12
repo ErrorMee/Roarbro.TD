@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceLayer : BattleLayer<PieceUnit>
+public partial class PieceLayer : WorldLayer<PieceUnit>
 {
     const float moveSpeed = 0.12f;
     const float moveStreshold = moveSpeed * moveSpeed;

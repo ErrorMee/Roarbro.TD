@@ -1,5 +1,5 @@
 
-public class UnitSelect : BattleUnit
+public class UnitSelect : WorldUnit
 {
     protected override void OnEnable()
     {

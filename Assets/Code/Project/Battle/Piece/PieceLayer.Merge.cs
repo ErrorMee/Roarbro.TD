@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceLayer : BattleLayer<PieceUnit>
+public partial class PieceLayer : WorldLayer<PieceUnit>
 {
     const int RemoveFrameMax = 24;
     int removeFrame = 0;

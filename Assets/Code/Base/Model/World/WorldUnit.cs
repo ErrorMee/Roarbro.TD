@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public abstract class BattleUnit : MonoBehaviour
+public abstract class WorldUnit : MonoBehaviour
 {
     public MeshRenderer meshRenderer;
 

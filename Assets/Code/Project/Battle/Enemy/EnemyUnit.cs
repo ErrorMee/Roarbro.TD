@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnemyUnit : BattleUnit
+public class EnemyUnit : WorldUnit
 {
     [ReadOnlyProperty]
     public EnemyInfo info;

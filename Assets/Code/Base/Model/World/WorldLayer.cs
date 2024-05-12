@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class BattleLayer<T> : FrameMono where T: BattleUnit
+public class WorldLayer<T> : FrameMono where T: WorldUnit
 {
     protected T unitTemplate;
 

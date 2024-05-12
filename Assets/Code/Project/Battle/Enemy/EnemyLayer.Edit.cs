@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class EnemyLayer : BattleLayer<EnemyUnit>
+public partial class EnemyLayer : WorldLayer<EnemyUnit>
 {
     public static bool Edit = false;
 
