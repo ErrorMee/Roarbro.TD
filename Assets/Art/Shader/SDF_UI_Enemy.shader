@@ -31,7 +31,7 @@ Shader "SDF/UI/Enemy"
                 float2 sdPosSymY = opSymY(sdPos);
                 float id = f.uv.w;
                 float radius = 0.4; float roundness = 0.1;
-                float animatX = (abs(frac(_Time.y) - 0.5) * 2 - 0.5);
+                float animatX = (abs(frac(_Time.y * 1.33) - 0.5) * 2 - 0.5);
 
                 if (id == 0)//Clear
                 {

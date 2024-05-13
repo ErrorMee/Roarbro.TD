@@ -11,5 +11,10 @@ public partial class EnemyUnit : WorldUnit
     private void MoveUpdate()
     {
         transform.localPosition += Vector3.back * moveSpeed;
+
+        if (transform.localPosition.z <= -5)
+        {
+            fsm.ChangeState(EnemyState.Die);
+        }
     }
 }

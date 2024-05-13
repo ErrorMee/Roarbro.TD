@@ -30,10 +30,21 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
         {
             fsm.ChangeState(EnemyLayerState.Move);
         }
+
+        AutoListener(EventEnum.EnemyDie, OnEnemyDie);
     }
 
     private void Update()
     {
         fsm.Update();
+    }
+
+    void OnEnemyDie(object obj)
+    {
+        EnemyUnit dieUnit = (EnemyUnit)obj;
+        units[dieUnit.info.index.x, dieUnit.info.index.y] = null;
+        Destroy(dieUnit.gameObject);
+
+        EnemyModel.Instance.EnemyDie(dieUnit.info);
     }
 }

@@ -13,4 +13,6 @@ public enum EventEnum
     MovePiece,
 
     ChangeStep,
+
+    EnemyDie,
 }

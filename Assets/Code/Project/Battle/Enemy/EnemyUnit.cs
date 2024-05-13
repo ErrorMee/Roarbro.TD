@@ -13,6 +13,7 @@ public partial class EnemyUnit : WorldUnit
         fsm = new FSM<EnemyState>();
         fsm.mStates.Add(new State<EnemyState>(EnemyState.Idle, IdleEnter, IdleUpdate));
         fsm.mStates.Add(new State<EnemyState>(EnemyState.Move, MoveEnter, MoveUpdate));
+        fsm.mStates.Add(new State<EnemyState>(EnemyState.Die, DieEnter, DieUpdate));
     }
 
     protected override void OnLogic()

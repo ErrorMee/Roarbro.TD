@@ -33,10 +33,6 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
             if (leftStep != value)
             {
                 leftStep = Mathf.Max(0, value);
-                if (leftStep < 1)
-                {
-                    BattleModel.Instance.Complete();
-                }
                 EventModel.Send(EventEnum.ChangeStep);
             }
         }

@@ -36,7 +36,7 @@
                 float4 addColor = UNITY_ACCESS_INSTANCED_PROP(Props, _AddColor);
                 float2 sdPos = f.uv.xy;
                 float sharp = min(_ScreenParams.x, _ScreenParams.y) * 0.2;
-                float animatX = (abs(frac(_Time.y) - 0.5) * 2 - 0.5);
+                float animatX = (abs(frac(_Time.y * 1.33) - 0.5) * 2 - 0.5);
                 //animatX = 0.5;
                 float2 sdPosSymY = opSymY(sdPos);
 

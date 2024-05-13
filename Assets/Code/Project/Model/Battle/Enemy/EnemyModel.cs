@@ -8,6 +8,8 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
 
     public EnemyInfoConfig selectEnemy = new EnemyInfoConfig();
 
+    List<EnemyInfo> leftEnemys = new List<EnemyInfo>();
+
     public EnemyModel Init()
     {
         infos = new EnemyInfo[GridUtil.XCount, GridUtil.YCount];
@@ -20,8 +22,22 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
                 EnemyInfo info = new EnemyInfo(enemyInfoConfig);
                 infos[x, y] = info;
                 info.index = new Vector2Int(x, y);
+                if (enemyInfoConfig.enemyID > 0)
+                {
+                    leftEnemys.Add(info);
+                }
             }
         }
         return Instance;
+    }
+
+    public void EnemyDie(EnemyInfo enemy)
+    {
+        leftEnemys.Remove(enemy);
+        if (leftEnemys.Count == 0)
+        {
+            BattleModel.Instance.Complete();
+            WindowModel.Open(WindowEnum.Win);
+        }
     }
 }

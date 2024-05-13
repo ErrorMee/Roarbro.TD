@@ -9,4 +9,6 @@ public enum EnemyState
     /// ÒÆ¶¯
     /// </summary>
     Move,
+
+    Die,
 }
