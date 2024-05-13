@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-
 public partial class EnemyLayer : WorldLayer<EnemyUnit>
 {
-    public static FSM<EnemyLayerState> fsm;
+    public FSM<EnemyLayerState> fsm;
 
     public EnemyUnit[,] units;
 
@@ -13,7 +9,6 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
         base.Awake();
         fsm = new FSM<EnemyLayerState>();
         fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Edit, EditEnter, EditUpdate));
-        fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Ready, ReadyEnter, ReadyUpdate));
         fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Move, MoveEnter, MoveUpdate));
 
         units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
@@ -25,6 +20,15 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 units[x, y] = unit;
                 unit.info = EnemyModel.Instance.infos[x, y];
             }
+        }
+
+        if (BattleModel.Instance.battle.edit)
+        {
+            fsm.ChangeState(EnemyLayerState.Edit);
+        }
+        else
+        {
+            fsm.ChangeState(EnemyLayerState.Move);
         }
     }
 

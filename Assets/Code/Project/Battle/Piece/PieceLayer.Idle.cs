@@ -13,7 +13,6 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
         if (PieceModel.Instance.LeftStep <= 0)
         {
             BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
-            EnemyLayer.fsm.ChangeState(EnemyLayerState.Ready);
 
             //DOVirtual.DelayedCall(1.5f, () =>
             //{

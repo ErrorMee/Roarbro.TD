@@ -476,6 +476,8 @@ MonoBehaviour:
       level: 1
     - enemyID: 0
       level: 1
+    - enemyID: 2
+      level: 10
     - enemyID: 0
       level: 1
     - enemyID: 0
@@ -486,12 +488,10 @@ MonoBehaviour:
       level: 1
     - enemyID: 0
       level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
+    - enemyID: 2
+      level: 10
+    - enemyID: 2
+      level: 10
     - enemyID: 0
       level: 1
     - enemyID: 0

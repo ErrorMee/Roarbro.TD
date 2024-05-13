@@ -8,7 +8,7 @@ public class BattleWindow : WindowBase
 
     private void OnApplicationFocus(bool focus)
     {
-        if (focus == false && BattleTimerModel.Instance.CountDown > 0)
+        if (focus == false)
         {
             //if (WindowModel.Get((int)WindowEnum.Pause) == null)
             //{
@@ -30,7 +30,7 @@ public class BattleWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
-        BattleTimerModel.Countinue();
+        LogicUpdateModel.Instance.timer.Pause = false;
         CameraModel.Instance.CullingMaskAll();
     }
 

@@ -1,10 +1,10 @@
 
-public enum EnemyLayerState
+public enum EnemyState
 {
     /// <summary>
-    /// ±à¼­
+    /// ·¢´ô
     /// </summary>
-    Edit,
+    Idle,
     /// <summary>
     /// ÒÆ¶¯
     /// </summary>

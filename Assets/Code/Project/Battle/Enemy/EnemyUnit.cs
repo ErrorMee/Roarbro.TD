@@ -1,16 +1,25 @@
-using System;
-using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
 
-public class EnemyUnit : WorldUnit
+public partial class EnemyUnit : WorldUnit
 {
+    public FSM<EnemyState> fsm;
+
     [ReadOnlyProperty]
     public EnemyInfo info;
     public TextMeshPro txt;
 
-    protected override void OnEnable() { }
-    protected override void OnDisable() { }
+    private void Awake()
+    {
+        fsm = new FSM<EnemyState>();
+        fsm.mStates.Add(new State<EnemyState>(EnemyState.Idle, IdleEnter, IdleUpdate));
+        fsm.mStates.Add(new State<EnemyState>(EnemyState.Move, MoveEnter, MoveUpdate));
+    }
+
+    protected override void OnLogic()
+    {
+        base.OnLogic();
+        fsm.Update();
+    }
 
     public void UpdateShow()
     {

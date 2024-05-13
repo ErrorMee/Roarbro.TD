@@ -7,12 +7,12 @@ public abstract class WorldUnit : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        BattleTimerModel.Add(OnLogic, TimerEnum.Logic);
+        LogicUpdateModel.Add(OnLogic);
     }
 
     protected virtual void OnDisable()
     {
-        BattleTimerModel.Remove(OnLogic, TimerEnum.Logic);
+        LogicUpdateModel.Remove(OnLogic);
     }
 
     protected virtual void OnLogic()

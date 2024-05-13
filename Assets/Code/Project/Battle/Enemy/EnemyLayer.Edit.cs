@@ -20,6 +20,7 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 EnemyUnit unit = units[x, y];
                 unit.UpdateShow();
                 unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
+                unit.fsm.ChangeState(EnemyState.Idle);
             }
         }
     }

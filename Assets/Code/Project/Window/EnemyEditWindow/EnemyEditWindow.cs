@@ -26,7 +26,6 @@ public class EnemyEditWindow : WindowBase
     {
         base.OnOpen(obj);
         BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
-        EnemyLayer.fsm.ChangeState(EnemyLayerState.Edit);
     }
 
     private void OnScrollClicked(int index)
