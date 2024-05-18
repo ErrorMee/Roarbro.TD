@@ -30,7 +30,6 @@ public class BattleWindow : WindowBase
     public override void OnOpen(object obj)
     {
         base.OnOpen(obj);
-        LogicUpdateModel.Instance.timer.Pause = false;
         CameraModel.Instance.CullingMaskAll();
     }
 

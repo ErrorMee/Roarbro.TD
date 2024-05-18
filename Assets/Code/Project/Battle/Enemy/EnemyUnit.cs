@@ -16,9 +16,9 @@ public partial class EnemyUnit : WorldUnit
         fsm.mStates.Add(new State<EnemyState>(EnemyState.Die, DieEnter, DieUpdate));
     }
 
-    protected override void OnLogic()
+    protected override void FixedUpdate()
     {
-        base.OnLogic();
+        base.FixedUpdate();
         fsm.Update();
     }
 

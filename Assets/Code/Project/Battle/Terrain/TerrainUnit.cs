@@ -5,9 +5,6 @@ public class TerrainUnit : WorldUnit
     [ReadOnlyProperty]
     public Vector2Int index;
 
-    protected override void OnEnable() { }
-    protected override void OnDisable() { }
-
     public void UpdateShow()
     {
         TerrainConfig terrainConfig = BattleModel.Instance.battle.terrain;

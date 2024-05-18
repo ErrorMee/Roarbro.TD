@@ -10,9 +10,6 @@ public class PieceUnit : WorldUnit
 
     public TextMeshPro txt;
 
-    protected override void OnEnable() { }
-    protected override void OnDisable() { }
-
     public void UpdateShow()
     {
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.type, false);

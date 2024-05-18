@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public delegate void TimerCall();
 
@@ -7,6 +8,12 @@ public class TimerModel : Singleton<TimerModel>, IDestroy
     private readonly Dictionary<TimerCall, TimerInfo> timerInfos = new();
 
     private readonly List<TimerCall> finishedTimers = new();
+
+    public static void Init()
+    {
+        Time.fixedDeltaTime = 1f / 50.0f;
+        Time.timeScale = 1;
+    }
 
     public static TimerInfo Add(TimerCall timerCall, float delay, bool loop = false)
     {

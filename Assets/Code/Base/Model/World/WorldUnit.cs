@@ -7,14 +7,13 @@ public abstract class WorldUnit : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        LogicUpdateModel.Add(OnLogic);
     }
 
     protected virtual void OnDisable()
     {
-        LogicUpdateModel.Remove(OnLogic);
     }
 
-    protected virtual void OnLogic()
-    { }
+    protected virtual void FixedUpdate()
+    { 
+    }
 }

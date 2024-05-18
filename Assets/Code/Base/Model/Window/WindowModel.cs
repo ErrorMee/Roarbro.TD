@@ -12,6 +12,7 @@ public partial class WindowModel : SingletonBehaviour<WindowModel>
     {
         base.Awake();
         ConfigModel.Instance.Init();
+        TimerModel.Init();
 	}
 
     void Update()

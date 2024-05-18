@@ -5,8 +5,4 @@ public class UnitSelect : WorldUnit
     {
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor(QualityEnum.N), false);
     }
-
-    protected override void OnDisable()
-    {
-    }
 }
