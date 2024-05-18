@@ -18,11 +18,12 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 
     private void Init()
     {
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Idle, IdleEnter, IdleUpdate));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Drag, DragEnter, DragUpdate));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Move, MoveEnter, MoveUpdate));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Merge, MergeEnter, MergeUpdate));
-        fsm.mStates.Add(new State<PieceLayerState>(PieceLayerState.Fill, FillEnter, FillUpdate));
+        fsm.AddState(PieceLayerState.Idle, IdleEnter, IdleUpdate);
+        fsm.AddState(PieceLayerState.Drag, DragEnter, DragUpdate);
+        fsm.AddState(PieceLayerState.Move, MoveEnter, MoveUpdate);
+        fsm.AddState(PieceLayerState.Merge, MergeEnter, MergeUpdate);
+        fsm.AddState(PieceLayerState.Fill, FillEnter, FillUpdate);
+        fsm.AddState(PieceLayerState.Fight, FightEnter, FightUpdate);
 
         units = new PieceUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)

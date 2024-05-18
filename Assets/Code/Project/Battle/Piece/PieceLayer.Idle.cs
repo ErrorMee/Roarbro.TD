@@ -13,6 +13,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
         if (PieceModel.Instance.LeftStep <= 0)
         {
             BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
+            fsm.ChangeState(PieceLayerState.Fight);
         }
     }
 

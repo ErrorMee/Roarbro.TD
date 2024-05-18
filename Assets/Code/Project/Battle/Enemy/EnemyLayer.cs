@@ -8,8 +8,8 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
     {
         base.Awake();
         fsm = new FSM<EnemyLayerState>();
-        fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Edit, EditEnter, EditUpdate));
-        fsm.mStates.Add(new State<EnemyLayerState>(EnemyLayerState.Move, MoveEnter, MoveUpdate));
+        fsm.AddState(EnemyLayerState.Edit, EditEnter, EditUpdate);
+        fsm.AddState(EnemyLayerState.Move, MoveEnter, MoveUpdate);
 
         units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)

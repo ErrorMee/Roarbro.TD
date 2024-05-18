@@ -11,9 +11,9 @@ public partial class EnemyUnit : WorldUnit
     private void Awake()
     {
         fsm = new FSM<EnemyState>();
-        fsm.mStates.Add(new State<EnemyState>(EnemyState.Idle, IdleEnter, IdleUpdate));
-        fsm.mStates.Add(new State<EnemyState>(EnemyState.Move, MoveEnter, MoveUpdate));
-        fsm.mStates.Add(new State<EnemyState>(EnemyState.Die, DieEnter, DieUpdate));
+        fsm.AddState(EnemyState.Idle, IdleEnter, IdleUpdate);
+        fsm.AddState(EnemyState.Move, MoveEnter, MoveUpdate);
+        fsm.AddState(EnemyState.Die, DieEnter, DieUpdate);
     }
 
     protected override void FixedUpdate()
