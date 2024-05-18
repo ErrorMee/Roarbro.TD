@@ -4,6 +4,6 @@ using UnityEngine;
 
 public partial class WorldModel : SingletonBehaviour<WorldModel>
 {
-    private Dictionary<Type, Transform> layers = new Dictionary<Type, Transform>();
+    private Dictionary<Type, GameObject> layers = new Dictionary<Type, GameObject>();
 
 }

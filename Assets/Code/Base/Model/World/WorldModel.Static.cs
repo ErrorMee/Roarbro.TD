@@ -1,26 +1,29 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public partial class WorldModel : SingletonBehaviour<WorldModel>
 {
-    public static void CreateLayer(Type type, int depth)
+    public static GameObject AddLayer(Type type)
     {
         if (Instance.layers.ContainsKey(type) == false)
         {
-            GameObject battleLayer = new(type.Name);
-            battleLayer.transform.SetParent(Instance.transform, false);
-            battleLayer.AddComponent(type);
-            battleLayer.transform.position = new Vector3(0, depth * 0.01f, 0);
-            Instance.layers.Add(type, battleLayer.transform);
+            GameObject worldLayer = new(type.Name);
+            worldLayer.transform.SetParent(Instance.transform, false);
+            worldLayer.AddComponent(type);
+            Instance.layers.Add(type, worldLayer);
+            return worldLayer;
+        }
+        else
+        {
+            return Instance.layers[type];
         }
     }
 
-    public static void DeleteLayer(Type type)
+    public static void RemoveLayer(Type type)
     {
         if (Instance.layers.ContainsKey(type))
         {
-            Destroy(Instance.layers[type].gameObject);
+            Destroy(Instance.layers[type]);
             Instance.layers.Remove(type);
         }
     }
@@ -29,7 +32,7 @@ public partial class WorldModel : SingletonBehaviour<WorldModel>
     {
         if (Instance.layers.ContainsKey(type))
         {
-            Instance.layers[type].gameObject.SetActive(show);
+            Instance.layers[type].SetActive(show);
         }
     }
 }

@@ -35,7 +35,8 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public void CreateLayer(Type type)
     {
-        WorldModel.CreateLayer(type, layers.Count - 2);
+        GameObject worldLayer = WorldModel.AddLayer(type);
+        worldLayer.transform.position = new Vector3(0, (layers.Count - 2) * 0.01f, 0);
         layers.Add(type);
     }
 
@@ -44,7 +45,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         if (layers.Contains(type))
         {
             layers.Remove(type);
-            WorldModel.DeleteLayer(type);
+            WorldModel.RemoveLayer(type);
         }
     }
 
@@ -61,7 +62,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
             foreach (var item in layers)
             {
-                WorldModel.DeleteLayer(item);
+                WorldModel.RemoveLayer(item);
             }
             layers.Clear();
         }
