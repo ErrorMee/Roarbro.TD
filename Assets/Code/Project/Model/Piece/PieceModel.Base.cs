@@ -8,6 +8,8 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     int combo = 0;
 
+    public bool fighting = false;
+
     public PieceModel Init()
     {
         infos = new PieceInfo[GridUtil.XCount, GridUtil.YCount];
@@ -19,7 +21,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
                 infos[x, y] = info;
                 int randomID = UnityEngine.Random.Range(0, 6);
-                info.type = randomID;
+                info.config = PieceConfigs.Instance.GetConfigByID(randomID);
                 info.index = new Vector2Int(x, y);
             }
         }

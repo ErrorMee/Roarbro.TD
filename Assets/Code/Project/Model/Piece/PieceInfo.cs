@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class PieceInfo
+public class PieceInfo : ConfigInfo<PieceConfig>
 {
-    public int type;
-
     public int level = 1;
 
     public Vector2Int index;

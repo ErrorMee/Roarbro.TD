@@ -28,7 +28,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                     }
 
                     int randomID = Random.Range(0, 6);
-                    crtPiece.type = randomID;
+                    crtPiece.config = PieceConfigs.Instance.GetConfigByID(randomID);
                     crtPiece.RemoveMark = false;
                     MoveIndex(crtPiece, new Vector2Int(x, moveStep - 1));
                 }

@@ -83,7 +83,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private PieceInfo GetMerge(PieceInfo piece, Vector2Int offset)
     {
         PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null && pieceOffset.type == piece.type)
+        if (pieceOffset != null && pieceOffset.config.id == piece.config.id)
         {
             return pieceOffset;
         }

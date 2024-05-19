@@ -10,10 +10,6 @@ public class PieceUnit : WorldUnit
 
     public TextMeshPro txt;
 
-    public bool fighting = false;
-
-    private float viewRadius = 1.2f;
-
     static int[] xSearchs = new int[] { 0, -1, 1, 2, -2, -3, 3, 4, -4, -5, 5, 6, -6, -7, 7, 8, -8, -9, 9 };
 
     protected override void FixedUpdate()
@@ -25,13 +21,13 @@ public class PieceUnit : WorldUnit
 
     private void FindEnemy()
     {
-        if (fighting)
+        if (PieceModel.Instance.fighting)
         {
             Vector2Int center = info.GetViewCoord();
-            int viewRadiusInt = Mathf.RoundToInt(viewRadius);
-            for (int z = -viewRadiusInt; z <= viewRadiusInt; z++)
+            int attRadiusInt = Mathf.RoundToInt(info.config.attRadius);
+            for (int z = -attRadiusInt; z <= attRadiusInt; z++)
             {
-                for (int x = 0; x <= viewRadiusInt * 2; x++)
+                for (int x = 0; x <= attRadiusInt * 2; x++)
                 {
                     int xSearch = xSearchs[x];
 
@@ -44,7 +40,7 @@ public class PieceUnit : WorldUnit
                         {
                             Vector2 enemyDir = item.transform.localPosition.XZ() - transform.localPosition.XZ();
                             float dis = enemyDir.magnitude;
-                            if (dis < viewRadius)
+                            if (dis < info.config.attRadius)
                             {
                                 if (dis > 0.1f)
                                 {
@@ -61,10 +57,10 @@ public class PieceUnit : WorldUnit
 
     public void UpdateShow()
     {
-        meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.type, false);
+        meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.config.id, false);
 
         Color color = Color.white;
-        switch (info.type)
+        switch (info.config.id)
         {
             case 1:
                 color = QualityConfigs.GetColor(QualityEnum.ER);
