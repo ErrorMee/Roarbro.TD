@@ -11,17 +11,6 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
         fsm.AddState(EnemyLayerState.Edit, EditEnter, EditUpdate);
         fsm.AddState(EnemyLayerState.Move, MoveEnter, MoveUpdate);
 
-        units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
-        for (int y = 0; y < GridUtil.YCount; y++)
-        {
-            for (int x = 0; x < GridUtil.XCount; x++)
-            {
-                EnemyUnit unit = CreateUnit();
-                units[x, y] = unit;
-                unit.info = EnemyModel.Instance.infos[x, y];
-            }
-        }
-
         if (BattleModel.Instance.battle.edit)
         {
             fsm.ChangeState(EnemyLayerState.Edit);
@@ -43,8 +32,15 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
     {
         EnemyUnit dieUnit = (EnemyUnit)obj;
         units[dieUnit.info.index.x, dieUnit.info.index.y] = null;
+        GridModel.Instance.RemoveItem(dieUnit);
         Destroy(dieUnit.gameObject);
 
         EnemyModel.Instance.EnemyDie(dieUnit.info);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        GridModel.Instance.DeletetGrid<EnemyUnit>();
     }
 }

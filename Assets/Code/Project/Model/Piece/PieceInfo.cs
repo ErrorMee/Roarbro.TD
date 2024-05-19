@@ -18,6 +18,11 @@ public class PieceInfo
         return index.y - GridUtil.YRadiusCount;
     }
 
+    public Vector2Int GetViewCoord()
+    {
+        return new Vector2Int(index.x - GridUtil.XRadiusCount, index.y - GridUtil.YRadiusCount);
+    }
+
     public bool RemoveMark
     {
         set;get;

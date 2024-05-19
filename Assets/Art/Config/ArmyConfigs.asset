@@ -440,43 +440,13 @@ MonoBehaviour:
     name: 0
     sortUp: 1
     enemys:
+    - enemyID: 1
+      level: 10
     - enemyID: 0
-      level: 1
+      level: 10
     - enemyID: 0
-      level: 1
+      level: 10
     - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 0
-      level: 1
-    - enemyID: 2
       level: 10
     - enemyID: 0
       level: 1
@@ -488,9 +458,39 @@ MonoBehaviour:
       level: 1
     - enemyID: 0
       level: 1
-    - enemyID: 2
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
       level: 10
-    - enemyID: 2
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 1
+    - enemyID: 0
+      level: 10
+    - enemyID: 0
       level: 10
     - enemyID: 0
       level: 1

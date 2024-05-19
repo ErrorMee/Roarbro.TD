@@ -8,6 +8,8 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
     {
         CreateSelect();
 
+        units = new EnemyUnit[GridUtil.XCount, GridUtil.YCount];
+
         UpdateEditUnits();
     }
 
@@ -18,6 +20,12 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
             for (int x = 0; x < GridUtil.XCount; x++)
             {
                 EnemyUnit unit = units[x, y];
+                if (unit == null)
+                {
+                    unit = CreateUnit();
+                    units[x, y] = unit;
+                    unit.info = EnemyModel.Instance.infos[x, y]; ;
+                }
                 unit.UpdateShow();
                 unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
                 unit.fsm.ChangeState(EnemyState.Idle);

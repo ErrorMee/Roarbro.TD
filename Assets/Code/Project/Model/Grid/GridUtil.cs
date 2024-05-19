@@ -17,6 +17,9 @@ public static class GridUtil
 
     public const int AllCount = XCount * YCount;
 
+    public const int FightStartY = YRadiusCount + 1 + 4;
+    public const int FightEndY = -YRadiusCount - 1 - 1;
+
     public static Vector2Int WorldToGridIndex(Vector3 worldPos)
     {
         Vector2Int gridIndex = new Vector2Int(Mathf.RoundToInt(worldPos.x) + XRadiusCount,

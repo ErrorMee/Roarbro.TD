@@ -10,9 +10,11 @@ public partial class EnemyUnit : WorldUnit
 
     private void MoveUpdate()
     {
-        transform.localPosition += Vector3.back * moveSpeed;
+        Vector3 newPos = transform.localPosition + Vector3.back * moveSpeed;
+        transform.LookAt(newPos);
+        GridModel.Instance.UpdatePos(this, newPos);
 
-        if (transform.localPosition.z <= -5)
+        if (transform.localPosition.z <= GridUtil.FightEndY)
         {
             fsm.ChangeState(EnemyState.Die);
         }
