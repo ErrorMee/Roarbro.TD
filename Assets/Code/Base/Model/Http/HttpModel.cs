@@ -36,7 +36,7 @@ public class HttpModel : Singleton<HttpModel>,IDestroy
                 }
                 else
                 {
-                    if (Boot.Config.netLog)
+                    if (ProjectConfigs.Instance.netLog)
                     {
                         LogUtil.Log("<<<OnPost:", postingRequest.downloadHandler.text, Color.green);
                     }
@@ -45,7 +45,6 @@ public class HttpModel : Singleton<HttpModel>,IDestroy
                 postingRequest = null;
             }
         }
-        
     }
 
     public static void Post<T>(string uri, T postDataData, 
@@ -71,7 +70,7 @@ public class HttpModel : Singleton<HttpModel>,IDestroy
 
         Instance.postCallBack = callBack;
 
-        if (Boot.Config.netLog)
+        if (ProjectConfigs.Instance.netLog)
         {
             LogUtil.Log(">>>Post:" + uri + " : " + postJson, Color.green * 0.6f);
         }

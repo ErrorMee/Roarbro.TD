@@ -6,7 +6,7 @@ using UnityEngine;
 
 public static class FindReferences
 {
-    [MenuItem("Assets/" + BootConfig.company + "/References/Shader", true)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Shader", true)]
     static bool CheckShaderReferences()
     {
         if (Selection.activeObject)
@@ -20,13 +20,13 @@ public static class FindReferences
         return false;
     }
 
-    [MenuItem("Assets/" + BootConfig.company + "/References/Shader", false)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Shader", false)]
     static void ShaderReferences()
     {
         References(Selection.activeObject, "*.mat");
     }
 
-    [MenuItem("Assets/" + BootConfig.company + "/References/Material", true)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Material", true)]
     static bool CheckMaterialReferences()
     {
         if (Selection.activeObject)
@@ -40,13 +40,13 @@ public static class FindReferences
         return false;
     }
 
-    [MenuItem("Assets/" + BootConfig.company + "/References/Material", false)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Material", false)]
     static void MaterialReferences()
     {
         References(Selection.activeObject, "*.prefab");
     }
 
-    [MenuItem("Assets/" + BootConfig.company + "/References/Prefab", true)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Prefab", true)]
     static bool CheckPrefabReferences()
     {
         if (Selection.activeObject)
@@ -60,7 +60,7 @@ public static class FindReferences
         return false;
     }
 
-    [MenuItem("Assets/" + BootConfig.company + "/References/Prefab", false)]
+    [MenuItem("Assets/" + ProjectConfigs.company + "/References/Prefab", false)]
     static void PrefabReferences()
     {
         References(Selection.activeObject, "*.prefab");

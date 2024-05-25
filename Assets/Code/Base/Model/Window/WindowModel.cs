@@ -8,24 +8,6 @@ public partial class WindowModel : SingletonBehaviour<WindowModel>
     readonly Dictionary<WindowLayerEnum, WindowLayer> layers = new();
     readonly HashSet<int> loadingWindows = new();
 
-    protected override void Awake()
-    {
-        base.Awake();
-        ConfigModel.Instance.Init();
-        TimerModel.Init();
-	}
-
-    void Update()
-	{
-		AddressModel.Instance.Update();
-        HttpModel.Instance.Update();
-    }
-
-    private void FixedUpdate()
-    {
-        TimerModel.Instance.FixedUpdate(Time.fixedDeltaTime);
-    }
-
     public void Init()
 	{
 		UILayerID = LayerMask.NameToLayer("UI");

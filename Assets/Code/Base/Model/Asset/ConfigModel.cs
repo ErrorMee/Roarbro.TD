@@ -8,6 +8,8 @@ public class ConfigModel : Singleton<ConfigModel>, IDestroy
 {
     private Dictionary<string, ConfigsBase> m_Configs = new Dictionary<string, ConfigsBase>();
 
+    public static Action configLoadCompleted;
+
     public void Init() 
     {
         List<string> labels = new() { "Config" };
@@ -20,9 +22,7 @@ public class ConfigModel : Singleton<ConfigModel>, IDestroy
     {
         asyncOperationHandle.Completed -= OnLoadConfigCompolete;
         Addressables.Release(asyncOperationHandle);//卸载配置
-        //TODO
-        LanguageModel.Instance.Init();
-        WindowModel.Instance.Init();
+        configLoadCompleted?.Invoke();
     }
 
     private void OnLoadConfig(ConfigsBase configAsset)

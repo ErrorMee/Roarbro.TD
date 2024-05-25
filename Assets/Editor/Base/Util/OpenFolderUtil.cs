@@ -7,56 +7,56 @@ using UnityEngine;
 public static class OpenFolderUtil
 {
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/PersistentDataPath", false, 201)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/PersistentDataPath", false, 201)]
     public static void OpenPersistentDataPath()
     {
         var targetDir = new DirectoryInfo(Application.persistentDataPath);
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/CacheForWritingPath", false, 202)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/CacheForWritingPath", false, 202)]
     public static void OpenCacheForWritingPath()
     {
         var targetDir = new DirectoryInfo(Caching.currentCacheForWriting.path);
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/ApplicationDataPath", false, 203)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/ApplicationDataPath", false, 203)]
     public static void OpenApplicationDataPath()
     {
         var targetDir = new DirectoryInfo(Application.dataPath);
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/StreamingAssetsPath", false, 204)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/StreamingAssetsPath", false, 204)]
     public static void OpenStreamingAssetsPath()
     {
         var targetDir = new DirectoryInfo(Application.streamingAssetsPath);
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/AddressablesLocalBuildPath", false, 205)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/AddressablesLocalBuildPath", false, 205)]
     public static void OpenAddressablesLocalBuildPath()
     {
         var targetDir = new DirectoryInfo("Library/com.unity.addressables/aa/Android/Android");
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/LocalServerDataPath", false, 206)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/LocalServerDataPath", false, 206)]
     public static void OpenLocalServerDataPath()
     {
         var targetDir = new DirectoryInfo("ServerData");
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/AppPath", false, 207)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/AppPath", false, 207)]
     public static void OpenAppPath()
     {
         var targetDir = new DirectoryInfo(Application.dataPath + "/../App");
         OpenDirectory(targetDir.FullName);
     }
 
-    [@MenuItem(BootConfig.company + "/OpenFolder/ArtPath", false, 208)]
+    [@MenuItem(ProjectConfigs.company + "/OpenFolder/ArtPath", false, 208)]
     public static void OpenArtPath()
     {
         var targetDir = new DirectoryInfo(Application.dataPath + "/../../Art");

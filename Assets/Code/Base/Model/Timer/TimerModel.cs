@@ -35,11 +35,11 @@ public class TimerModel : Singleton<TimerModel>, IDestroy
         }
     }
 
-    public void FixedUpdate(float fixedDeltaTime)
+    public void FixedUpdate()
     {
         foreach (var item in timerInfos)
         {
-            item.Value.Update(fixedDeltaTime);
+            item.Value.Update(Time.fixedDeltaTime);
             if (item.Value.Finished)
             {
                 finishedTimers.Add(item.Key);

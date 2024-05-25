@@ -14,21 +14,21 @@ public class BuildApp : IPreprocessBuildWithReport
         Debug.Log("BuildPrepare for target " + report.summary.platform + " at path " + report.summary.outputPath);
     }
 
-    [MenuItem(BootConfig.company + "/BuildApp/Debug", false, 1)]
+    [MenuItem(ProjectConfigs.company + "/BuildApp/Debug", false, 1)]
     public static void BuildDebug()
     {
         OnBuild(true, true);
         OpenFolderUtil.OpenAppPath();
     }
 
-    [MenuItem(BootConfig.company + "/BuildApp/Rlease", false, 2)]
+    [MenuItem(ProjectConfigs.company + "/BuildApp/Rlease", false, 2)]
     public static void BuildRlease()
     {
         OnBuild(false, false);
         OpenFolderUtil.OpenAppPath();
     }
 
-    [MenuItem(BootConfig.company + "/BuildApp/Analyze", false, 3)]
+    [MenuItem(ProjectConfigs.company + "/BuildApp/Analyze", false, 3)]
     public static void BuildAnalyze()
     {
         OnBuild(false, true);
@@ -77,7 +77,7 @@ public class BuildApp : IPreprocessBuildWithReport
             buildOptions |= BuildOptions.Development;
         }
 
-        BootConfig bootConfig = AssetDatabase.LoadAssetAtPath<BootConfig>("Assets/Scene/BootConfig.asset");
+        ProjectConfigs bootConfig = AssetDatabase.LoadAssetAtPath<ProjectConfigs>("Assets/Art/Config/ProjectConfigs.asset");
         bootConfig.analyzer = analyze;
         EditorUtility.SetDirty(bootConfig);
         AssetDatabase.SaveAssetIfDirty(bootConfig);

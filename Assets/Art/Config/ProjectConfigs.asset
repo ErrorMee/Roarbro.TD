@@ -9,11 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1682e828bff9f439f14da15c3ddd5b, type: 3}
-  m_Name: BootConfig
+  m_Script: {fileID: 11500000, guid: cbdad651e694bd340903049c10a7ccf3, type: 3}
+  m_Name: ProjectConfigs
   m_EditorClassIdentifier: 
+  showDel: 0
+  showAdd: 0
+  showUse: 0
+  showIdx: 0
+  showId: 0
+  showName: 0
+  pageRow: 10
+  pageColumn: 1
+  pageCrt: 1
+  key: 
+  all: []
   fps: 60
   analyzer: 1
   netLog: 0
-  HttpHost: cb
-  LoginURL: https://cb/login.php
+  HttpHost: Roarbro
+  LoginURL: 

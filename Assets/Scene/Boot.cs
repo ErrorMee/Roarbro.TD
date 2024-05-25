@@ -20,24 +20,29 @@ public class Boot: MonoBehaviour
         EnumUtil.Init();
 
         Debug.Log("OnApplicationBoot");
-
     }
-
-    [SerializeField] BootConfig bootConfig;
-    public static BootConfig Config;
 
     [SerializeField] GameObject analyzer;
 
     private void Awake()
     {
-        Config = bootConfig;
-        Application.targetFrameRate = bootConfig.fps;
+        Application.targetFrameRate = 30;
+
+        ConfigModel.configLoadCompleted += OnConfigLoadCompleted;
+        ConfigModel.Instance.Init();
+        TimerModel.Init();
+    }
+
+    void OnConfigLoadCompleted()
+    {
+        ConfigModel.configLoadCompleted -= OnConfigLoadCompleted;
+        Application.targetFrameRate = ProjectConfigs.Instance.fps;
 
 #if UNITY_EDITOR
         Destroy(analyzer);
 #else
         int iconIndex = ArchiveModel.GetInt(ArchiveEnum.IconIndex, 0, false);
-        if (bootConfig.analyzer && iconIndex > 0)
+        if (ProjectConfigs.Instance.analyzer && iconIndex > 0)
         {
             analyzer.SetActive(true);
         }
@@ -46,6 +51,19 @@ public class Boot: MonoBehaviour
             Destroy(analyzer);
         }
 #endif
+        LanguageModel.Instance.Init();
+        WindowModel.Instance.Init();
+    }
+
+    void Update()
+    {
+        AddressModel.Instance.Update();
+        HttpModel.Instance.Update();
+    }
+
+    private void FixedUpdate()
+    {
+        TimerModel.Instance.FixedUpdate();
     }
 
     private void OnApplicationQuit()

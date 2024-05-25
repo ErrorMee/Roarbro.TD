@@ -16,8 +16,8 @@ public partial class AudioModel : SingletonBehaviour<AudioModel>
         base.Awake();
         audioGroupInfos.Clear();
 
-        soundVolume = ArchiveModel.GetInt(ArchiveEnum.SoundVolume, AudioModel.DefSoundVolume, false) / (MaxVolume + 0f);
-        musicVolume = ArchiveModel.GetInt(ArchiveEnum.MusicVolume, AudioModel.DefMusicVolume, false) / (MaxVolume + 0f);
+        soundVolume = ArchiveModel.GetInt(ArchiveEnum.SoundVolume, DefSoundVolume, false) / (MaxVolume + 0f);
+        musicVolume = ArchiveModel.GetInt(ArchiveEnum.MusicVolume, DefMusicVolume, false) / (MaxVolume + 0f);
 
         AddAudioGroupInfo(AudioGroupEnum.Music, 1, true, true);
         AddAudioGroupInfo(AudioGroupEnum.Sound, 16, false, false);

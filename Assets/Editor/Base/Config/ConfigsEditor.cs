@@ -9,7 +9,7 @@ public class ConfigsEditor<C, S> : Editor where C: Config, new() where S : Confi
 
     bool sortUp = true;
 
-    public const string ConfigMenu = "Assets/" + BootConfig.company + "/Configs/";
+    public const string ConfigMenu = "Assets/" + ProjectConfigs.company + "/Configs/";
     const string assetPath = "Assets/Art/Config/{0}Configs.asset";
 
     int lastID = 0;

@@ -1252,6 +1252,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929002077}
   m_CullTransparentMesh: 1
+--- !u!1 &971962749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971962750}
+  - component: {fileID: 971962751}
+  m_Layer: 0
+  m_Name: Boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971962750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971962749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &971962751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971962749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd879b071bc30fa4aa1525500c1b4cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bootConfig: {fileID: 11400000, guid: 0af74e90a657ced4db01df8679ac2310, type: 2}
+  analyzer: {fileID: 1203468070}
 --- !u!1 &1037144248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,7 +4137,6 @@ GameObject:
   - component: {fileID: 1784654845}
   - component: {fileID: 1784654847}
   - component: {fileID: 1784654848}
-  - component: {fileID: 1784654849}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -4143,20 +4188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapGap: 0.2
---- !u!114 &1784654849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784654842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd879b071bc30fa4aa1525500c1b4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bootConfig: {fileID: 11400000, guid: 0af74e90a657ced4db01df8679ac2310, type: 2}
-  analyzer: {fileID: 1203468070}
 --- !u!1001 &2003909994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5888,6 +5919,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1190123998}
   - {fileID: 587419145}
+  - {fileID: 971962750}
   - {fileID: 1784654845}
-  - {fileID: 747971130}
   - {fileID: 164564204}
+  - {fileID: 747971130}

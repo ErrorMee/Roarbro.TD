@@ -7,7 +7,7 @@ namespace UnityEditor.ProjectWindowCallback
 {
     public class CreateScriptTools
     {
-        const string rootMenu = "Assets/" + BootConfig.company + "/Script/";
+        const string rootMenu = "Assets/" + ProjectConfigs.company + "/Script/";
         const string rootTemplate = "Assets/Editor/Base/ScriptTemplates/";
 
         static string addSuffix;

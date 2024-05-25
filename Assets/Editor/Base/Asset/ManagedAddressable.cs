@@ -15,7 +15,7 @@ public static class ManagedAddressable
 	static AddressableAssetSettings addressSetting;
 	static AddressableConfig addressConfig;
 
-    [MenuItem(BootConfig.company + "/Asset/OpenGroup", false, 4)]
+    [MenuItem(ProjectConfigs.company + "/Asset/OpenGroup", false, 4)]
     public static void OpenGroup()
     {
         Type typeReflection =
@@ -25,7 +25,7 @@ public static class ManagedAddressable
         methodAction.Invoke(null, null);
     }
 
-    [MenuItem(BootConfig.company + "/Asset/BuildBundle", false, 3)]
+    [MenuItem(ProjectConfigs.company + "/Asset/BuildBundle", false, 3)]
 	public static void BuildBundle()
 	{
 		ClearRefreshGroup();
@@ -65,7 +65,7 @@ public static class ManagedAddressable
 		}
 	}
 
-	[MenuItem(BootConfig.company + "/Asset/RefreshGroup(Clear)", false, 2)]
+	[MenuItem(ProjectConfigs.company + "/Asset/RefreshGroup(Clear)", false, 2)]
 	public static void ClearRefreshGroup()
 	{
         addressSetting = AddressableAssetSettingsDefaultObject.Settings;
@@ -84,15 +84,15 @@ public static class ManagedAddressable
 		FastRefreshGroup();
     }
 
-    [MenuItem(BootConfig.company + "/Asset/RefreshGroup(Auto)", true, 2)]
+    [MenuItem(ProjectConfigs.company + "/Asset/RefreshGroup(Auto)", true, 2)]
     static bool AutoRefreshGroupCheck()
     {
 		bool isCheck = EditorPrefs.GetBool(AssetAuditing.ToggleAutoRefreshGroup, true);
-		Menu.SetChecked(BootConfig.company + "/Asset/RefreshGroup(Auto)", isCheck);
+		Menu.SetChecked(ProjectConfigs.company + "/Asset/RefreshGroup(Auto)", isCheck);
 		return true;
     }
 
-    [MenuItem(BootConfig.company + "/Asset/RefreshGroup(Auto)", false, 2)]
+    [MenuItem(ProjectConfigs.company + "/Asset/RefreshGroup(Auto)", false, 2)]
     static void AutoRefreshGroup()
     {
         bool isCheck = EditorPrefs.GetBool(AssetAuditing.ToggleAutoRefreshGroup, true);
@@ -100,7 +100,7 @@ public static class ManagedAddressable
 		FastRefreshGroup();
     }
 
-    [MenuItem(BootConfig.company + "/Asset/RefreshGroup(Fast)", false, 1)]
+    [MenuItem(ProjectConfigs.company + "/Asset/RefreshGroup(Fast)", false, 1)]
 	public static void FastRefreshGroup()
 	{
 		addressSetting = AddressableAssetSettingsDefaultObject.Settings;
