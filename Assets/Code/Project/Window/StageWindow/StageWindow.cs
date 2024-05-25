@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class StageWindow : WindowBase
@@ -42,6 +41,11 @@ public class StageWindow : WindowBase
     void OnClickEdit()
     {
         BattleModel.Instance.Start(StageModel.Instance.battles[StageModel.Instance.SelectIndex], true);
+        BattleModel.Instance.CreateLayer(typeof(TerrainLayer));
+        if (BattleModel.Instance.battle.edit == false)
+        {
+            BattleModel.Instance.CreateLayer(typeof(PieceLayer));
+        }
     }
 
     void OnClickStart()
@@ -49,6 +53,12 @@ public class StageWindow : WindowBase
         if (StageModel.Instance.IsUnLock(StageModel.Instance.SelectIndex))
         {
             BattleModel.Instance.Start(StageModel.Instance.battles[StageModel.Instance.SelectIndex]);
+
+            BattleModel.Instance.CreateLayer(typeof(TerrainLayer));
+            if (BattleModel.Instance.battle.edit == false)
+            {
+                BattleModel.Instance.CreateLayer(typeof(PieceLayer));
+            }
         }
         else
         {

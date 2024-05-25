@@ -25,12 +25,6 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
             WindowModel.Open(WindowEnum.Battle);
             models.Add(PieceModel.Instance.Init());
         }
-
-        CreateLayer(typeof(TerrainLayer));
-        if (battle.edit == false)
-        {
-            CreateLayer(typeof(PieceLayer));
-        }
     }
 
     public void CreateLayer(Type type)

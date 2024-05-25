@@ -27,4 +27,4 @@ MonoBehaviour:
   analyzer: 1
   netLog: 0
   HttpHost: Roarbro
-  LoginURL: 
+  LoginURL: https://Roarbro/login.php

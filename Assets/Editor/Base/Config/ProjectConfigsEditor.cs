@@ -17,16 +17,8 @@ public class ProjectConfigsEditor : ConfigsEditor<ProjectConfig, ProjectConfigs>
     {
         base.DrawHead();
 
-
         EditorGUILayout.BeginVertical();
 
-        if (GUILayout.Button("Save", GUILayout.Width(40)))
-        {
-            EditorUtility.SetDirty(Configs);
-            AssetDatabase.SaveAssetIfDirty(Configs);
-        }
-
-        EditorGUILayout.LabelField("Company:    " + ProjectConfigs.company);
         EditorGUILayout.BeginHorizontal();
         Configs.HttpHost = PreferredGUIUtil.DrawPreferredTextArea("LoginURL      https://", Configs.HttpHost, 200);
         DrawPreferredLabel("/login.php");

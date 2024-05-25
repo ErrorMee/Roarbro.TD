@@ -1,0 +1,17 @@
+{
+    "name": "Project.Model",
+    "rootNamespace": "",
+    "references": [
+        "GUID:57037b358e1812447b376f7837f7fb1a",
+        "GUID:24888284e6d77804589b7fc340d8abd2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
