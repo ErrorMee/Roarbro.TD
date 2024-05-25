@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: b3c5bbf301257694d9940b38859cfb51
+  m_GUID: d91cbf34b97370846839c0542fa17244
   m_SerializeEntries:
   - m_GUID: e65013a9f6c1ea74e8aa192ee7f3995b
     m_Address: Assets/Art/Config/ArmyConfigs.asset
@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9f76c70ef6bcc143833b510fb6270b4
+    m_Address: Assets/Art/Config/ProjectConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4e6ef0ff2dbe7a47bde390b9592c6aa
     m_Address: Assets/Art/Config/QualityConfigs.asset
     m_ReadOnly: 0
@@ -61,12 +67,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4df071baa84f21a438fee9a7a71864e5
     m_Address: Assets/Art/Config/WindowConfigs.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Config
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c9f76c70ef6bcc143833b510fb6270b4
-    m_Address: Assets/Art/Config/ProjectConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

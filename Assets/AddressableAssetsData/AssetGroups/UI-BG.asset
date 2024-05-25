@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: UI-BG
   m_Data:
     m_SerializedData: []
-  m_GUID: 09519fc04fd8f0f48aded44099673fa2
+  m_GUID: 21e063642c7ce084eb1f3f729099550a
   m_SerializeEntries:
   - m_GUID: 0c9323c547a1ae24a95e79930066e205
     m_Address: Assets/Art/UI/BG/BlurGaussian.mat

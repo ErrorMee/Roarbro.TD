@@ -29,7 +29,6 @@ public class SplashWindow : WindowBase
 
         canvasGroup.transform.DOScale(Vector3.one, enterTime).SetEase(enterEase);
         canvasGroup.DOFade(1, enterTime).SetEase(enterEase);
-
         canvasGroup.DOFade(0, outTime).SetEase(outEase).SetDelay(enterTime + stopTime);
 
         DOVirtual.DelayedCall(enterTime + stopTime + outTime + endTime, () =>
