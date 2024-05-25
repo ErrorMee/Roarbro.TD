@@ -47,14 +47,13 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
             if (GridUtil.InGrid(index.x, index.y))
             {
                 int idx = GridUtil.GetIndex(index.x, index.y);
-                EnemyInfoConfig[] enemyInfoConfigs = BattleModel.Instance.battle.army.enemys;
-                EnemyInfoConfig enemyInfoConfig = enemyInfoConfigs[idx];
+                EnemyTemplate[] enemyInfoConfigs = BattleModel.Instance.battle.army.enemys;
+                EnemyTemplate enemyInfoConfig = enemyInfoConfigs[idx];
 
-                if (enemyInfoConfig.enemyID != EnemyModel.Instance.selectEnemy.enemyID
-                    || enemyInfoConfig.level != EnemyModel.Instance.selectEnemy.level)
+                if (enemyInfoConfig.Equal(EnemyModel.Instance.crtTemplate) == false)
                 {
-                    enemyInfoConfig.enemyID = EnemyModel.Instance.selectEnemy.enemyID;
-                    enemyInfoConfig.level = EnemyModel.Instance.selectEnemy.level;
+                    enemyInfoConfig.enemyID = EnemyModel.Instance.crtTemplate.enemyID;
+                    enemyInfoConfig.level = EnemyModel.Instance.crtTemplate.level;
                     EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
 
                     ArmyConfigs.Instance.Save();

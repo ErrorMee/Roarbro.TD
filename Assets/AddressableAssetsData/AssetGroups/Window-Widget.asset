@@ -41,12 +41,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0e16d5f75aa4fe540ba7b11cc3766df4
-    m_Address: Assets/Art/Window/Widget/IntSwitch.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aba550acfbc07284789b5dde9c64f2e2
     m_Address: Assets/Art/Window/Widget/Lable.prefab
     m_ReadOnly: 0

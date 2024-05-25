@@ -9,7 +9,9 @@ public class IntSwitch : MonoBehaviour
     [SerializeField] SDFBtn rightBtn;
     public TextMeshProUGUI title;
 
-    int crt; int max = 9; int min;
+    public string prefix = string.Empty;
+
+    int crt; int max = 9; int min = 0;
 
     public Action<int> switchCallBack;
 
@@ -19,17 +21,19 @@ public class IntSwitch : MonoBehaviour
         ClickListener.Add(rightBtn.transform).onClick = OnClickRight;
     }
 
-    public void Set(int crt, int max, int min = 0)
+    public void Set(int crt)
+    {
+        Set(crt, max, min);
+    }
+
+    public void Set(int crt, int max, int min)
     {
         this.crt = crt;
         this.max = max;
         this.min = min;
         this.crt = Mathf.Max(this.crt, this.min);
-        this.crt = Mathf.Min(this.crt, this.max);
-        if (title != null)
-        {
-            title.text = crt.ToString();
-        }
+        this.crt = Mathf.Min(this.crt, this.max); 
+        UpdateTxt();
         switchCallBack?.Invoke(crt);
     }
 
@@ -40,10 +44,7 @@ public class IntSwitch : MonoBehaviour
         {
             crt = max;
         }
-        if (title != null)
-        {
-            title.text = crt.ToString();
-        }
+        UpdateTxt();
         switchCallBack?.Invoke(crt);
     }
 
@@ -54,10 +55,15 @@ public class IntSwitch : MonoBehaviour
         {
             crt = min;
         }
+        UpdateTxt();
+        switchCallBack?.Invoke(crt);
+    }
+
+    private void UpdateTxt()
+    {
         if (title != null)
         {
-            title.text = crt.ToString();
+            title.text = prefix + crt.ToString();
         }
-        switchCallBack?.Invoke(crt);
     }
 }

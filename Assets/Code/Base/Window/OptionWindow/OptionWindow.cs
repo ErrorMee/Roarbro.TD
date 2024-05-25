@@ -40,8 +40,8 @@ public class OptionWindow : WindowBase
 
         OnLanguageSelect();
 
-        soundLv.Set(ArchiveModel.GetInt(ArchiveEnum.SoundVolume, AudioModel.DefSoundVolume, false), AudioModel.MaxVolume);
-        musicLv.Set(ArchiveModel.GetInt(ArchiveEnum.MusicVolume, AudioModel.DefMusicVolume, false), AudioModel.MaxVolume);
+        soundLv.Set(ArchiveModel.GetInt(ArchiveEnum.SoundVolume, AudioModel.DefSoundVolume, false), AudioModel.MaxVolume, 0);
+        musicLv.Set(ArchiveModel.GetInt(ArchiveEnum.MusicVolume, AudioModel.DefMusicVolume, false), AudioModel.MaxVolume, 0);
     }
 
     void OnLanguageSelect(object obj = null)

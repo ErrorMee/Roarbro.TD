@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyEditWindow : WindowBase
 {
     [SerializeField] EnemyScroll enemyScroll;
+    [SerializeField] IntSwitch levelSwitch;
 
     /// <summary>
     /// ExecutionOrder: Awake>OnEnable>OnOpen>Start <see href="https://docs.unity3d.com/2020.3/Documentation/Manual/ExecutionOrder.html"/> 
@@ -15,8 +16,12 @@ public class EnemyEditWindow : WindowBase
         base.Awake();
 
         enemyScroll.UpdateContents(EnemyConfigs.All);
-        enemyScroll.UpdateSelection(EnemyModel.Instance.selectEnemy.enemyID);
+        enemyScroll.UpdateSelection(EnemyModel.Instance.crtTemplate.enemyID);
         enemyScroll.OnCellClicked(OnScrollClicked);
+
+        levelSwitch.prefix = LanguageModel.Get(10039) + ":";
+        levelSwitch.Set(1, 99, 1);
+        levelSwitch.switchCallBack = OnChangeLevel;
     }
 
     /// <summary>
@@ -32,23 +37,19 @@ public class EnemyEditWindow : WindowBase
     {
         enemyScroll.UpdateSelection(index);
 
-        EnemyModel.Instance.selectEnemy.enemyID = EnemyConfigs.Instance.GetConfigByIndex(index).id;
-        
-        if (EnemyModel.Instance.selectEnemy.enemyID > 0)
-        {//todo level
-            EnemyModel.Instance.selectEnemy.level = 10;
-        }
-        else
-        {
-            EnemyModel.Instance.selectEnemy.level = 0;
-        }
-        
-        BattleConfigs.Instance.Save();
+        EnemyModel.Instance.SelectTemplate(index);
+
+        levelSwitch.Set(EnemyModel.Instance.crtTemplate.level);
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
         BattleModel.Instance.DeleteLayer(typeof(EnemyLayer));
+    }
+
+    private void OnChangeLevel(int value)
+    {
+        EnemyModel.Instance.crtTemplate.level = value;
     }
 }

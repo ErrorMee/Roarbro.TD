@@ -9,9 +9,9 @@ public class ArmyConfigs : Configs<ArmyConfigs, ArmyConfig>
 [Serializable]
 public class ArmyConfig : Config
 {
-    public EnemyInfoConfig[] enemys;
+    public EnemyTemplate[] enemys;
 
-    public EnemyInfoConfig GetEnemyInfoConfig(int posx, int posy)
+    public EnemyTemplate GetEnemyInfoConfig(int posx, int posy)
     {
         return enemys[GridUtil.GetIndex(posx, posy)];
     }
