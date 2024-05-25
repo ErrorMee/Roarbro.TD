@@ -14,4 +14,6 @@ public class EnemyConfig : Config
     public Color color;
 
     public float speed = 1;
+
+    public FloatUp hp;
 }

@@ -17,6 +17,8 @@ Library: D:\Roarbro\Roarbro.TD\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_bu
 --assembly-defines=IngameDebugConsole.Runtime;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
+--assembly-defines=Project.Config;
+--assembly-defines=Project.Model;
 --assembly-defines=System.Configuration;
 --assembly-defines=System.Core;
 --assembly-defines=System;
@@ -60,6 +62,8 @@ Library: D:\Roarbro\Roarbro.TD\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_bu
 --assembly-defines=IngameDebugConsole.Runtime;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
+--assembly-defines=Project.Config;
+--assembly-defines=Project.Model;
 --assembly-defines=System.Configuration;
 --assembly-defines=System.Core;
 --assembly-defines=System;

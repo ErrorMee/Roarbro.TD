@@ -42,10 +42,10 @@ public class PieceUnit : WorldUnit
                             float dis = enemyDir.magnitude;
                             if (dis < info.config.attRadius)
                             {
-                                if (dis > 0.1f)
-                                {
-                                    transform.forward = new Vector3(enemyDir.x, 0, enemyDir.y);
-                                }
+                                //if (dis > 0.1f)
+                                //{
+                                //    transform.forward = new Vector3(enemyDir.x, 0, enemyDir.y);
+                                //}
                                 return;
                             }
                         }

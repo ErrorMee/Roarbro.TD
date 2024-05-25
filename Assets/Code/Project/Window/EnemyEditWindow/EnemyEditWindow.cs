@@ -33,8 +33,16 @@ public class EnemyEditWindow : WindowBase
         enemyScroll.UpdateSelection(index);
 
         EnemyModel.Instance.selectEnemy.enemyID = EnemyConfigs.Instance.GetConfigByIndex(index).id;
-        //todo level
-        EnemyModel.Instance.selectEnemy.level = 10;
+        
+        if (EnemyModel.Instance.selectEnemy.enemyID > 0)
+        {//todo level
+            EnemyModel.Instance.selectEnemy.level = 10;
+        }
+        else
+        {
+            EnemyModel.Instance.selectEnemy.level = 0;
+        }
+        
         BattleConfigs.Instance.Save();
     }
 

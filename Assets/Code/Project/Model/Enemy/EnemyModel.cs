@@ -12,6 +12,9 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
 
     public EnemyModel Init()
     {
+        selectEnemy.enemyID = 0;
+        selectEnemy.level = 0;
+
         infos = new EnemyInfo[GridUtil.XCount, GridUtil.YCount];
         
         for (int y = 0; y < GridUtil.YCount; y++)
