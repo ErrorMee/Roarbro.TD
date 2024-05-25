@@ -15,12 +15,12 @@ public class ConfigModel : Singleton<ConfigModel>, IDestroy
         List<string> labels = new() { "Config" };
         AsyncOperationHandle<IList<ConfigsBase>> asyncOperationHandle = 
         Addressables.LoadAssetsAsync<ConfigsBase>(labels, OnLoadConfig, Addressables.MergeMode.Union);
-        asyncOperationHandle.Completed += OnLoadConfigCompolete;
+        asyncOperationHandle.Completed += OnLoadConfigComplete;
     }
 
-    private void OnLoadConfigCompolete(AsyncOperationHandle<IList<ConfigsBase>> asyncOperationHandle)
+    private void OnLoadConfigComplete(AsyncOperationHandle<IList<ConfigsBase>> asyncOperationHandle)
     {
-        asyncOperationHandle.Completed -= OnLoadConfigCompolete;
+        asyncOperationHandle.Completed -= OnLoadConfigComplete;
         Addressables.Release(asyncOperationHandle);//卸载配置
         configLoadCompleted?.Invoke();
     }
