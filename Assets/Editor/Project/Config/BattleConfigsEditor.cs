@@ -34,6 +34,7 @@ public class BattleConfigsEditor : ConfigsEditor<BattleConfig, BattleConfigs>
             }
         }
         GotoConfigs("Terrain", 50);
+        EditorGUILayout.LabelField("steps", GUILayout.Width(32));
     }
 
     protected override void DrawMenuAdd()
@@ -47,6 +48,6 @@ public class BattleConfigsEditor : ConfigsEditor<BattleConfig, BattleConfigs>
         base.DrawConfig(index, config);
 
         config.terrain = EditorGUILayout.IntPopup(config.terrain, terrainStrs, terrainInts, GUILayout.Width(50));
-
+        config.steps = EditorGUILayout.IntField(config.steps, GUILayout.Width(32));
     }
 }

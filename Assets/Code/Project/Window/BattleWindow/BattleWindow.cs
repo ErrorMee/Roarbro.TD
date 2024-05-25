@@ -46,6 +46,9 @@ public class BattleWindow : WindowBase
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        BattleModel.Instance.DestroyBattle();
+        if (ProjectConfigs.isQuiting == false)
+        {
+            BattleModel.Instance.DestroyBattle();
+        }
     }
 }

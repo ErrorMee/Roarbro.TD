@@ -29,45 +29,53 @@ MonoBehaviour:
     sortUp: 1
     avatar: 0
     color: {r: 1, g: 1, b: 1, a: 1}
+    speed: 0
   - use: 1
     id: 1
     name: 0
     sortUp: 1
     avatar: 1
     color: {r: 1, g: 0.756069, b: 0.7019608, a: 1}
+    speed: 1
   - use: 1
     id: 2
     name: 0
     sortUp: 1
     avatar: 2
     color: {r: 0.6839622, g: 0.7977614, b: 1, a: 1}
+    speed: 1
   - use: 1
     id: 3
     name: 0
     sortUp: 1
     avatar: 3
     color: {r: 0.7877665, g: 1, b: 0.6367924, a: 1}
+    speed: 1
   - use: 1
     id: 4
     name: 0
     sortUp: 1
     avatar: 4
     color: {r: 1, g: 0.7019608, b: 0.7019608, a: 1}
+    speed: 1
   - use: 1
     id: 5
     name: 0
     sortUp: 1
     avatar: 5
     color: {r: 1, g: 0.9499803, b: 0.7019608, a: 1}
+    speed: 1
   - use: 1
     id: 6
     name: 0
     sortUp: 1
     avatar: 6
     color: {r: 0.68235296, g: 0.9631654, b: 1, a: 1}
+    speed: 1
   - use: 1
     id: 7
     name: 0
     sortUp: 1
     avatar: 7
     color: {r: 0.8162331, g: 0.68235296, b: 1, a: 1}
+    speed: 1

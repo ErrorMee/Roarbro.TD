@@ -3,8 +3,7 @@ using UnityEngine;
 
 public partial class PieceModel : Singleton<PieceModel>, IDestroy
 {
-    const int TEST_STEP = 12;
-    private int maxStep = TEST_STEP;
+    private int maxStep;
     public int MaxStep
     {
         get
@@ -21,7 +20,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    private int leftStep = TEST_STEP;
+    private int leftStep;
     public int LeftStep
     {
         get

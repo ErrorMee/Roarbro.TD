@@ -15,6 +15,7 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
         base.DrawHead();
         EditorGUILayout.LabelField("avatar", GUILayout.Width(40));
         EditorGUILayout.LabelField("color", GUILayout.Width(40));
+        EditorGUILayout.LabelField("speed", GUILayout.Width(40));
     }
 
     protected override void DrawMenuAdd()
@@ -29,5 +30,6 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
 
         config.avatar = EditorGUILayout.IntField(config.avatar, GUILayout.Width(40));
         config.color = EditorGUILayout.ColorField(config.color, GUILayout.Width(40));
+        config.speed = EditorGUILayout.FloatField(config.speed, GUILayout.Width(40));
     }
 }

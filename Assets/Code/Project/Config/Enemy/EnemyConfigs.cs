@@ -12,4 +12,6 @@ public class EnemyConfig : Config
 {
     public int avatar;
     public Color color;
+
+    public float speed = 1;
 }

@@ -2,16 +2,17 @@ using UnityEngine;
 
 public partial class EnemyUnit : WorldUnit
 {
-    float moveSpeed = 0.01f;
+    float speedFixedDelta;
 
     private void MoveEnter()
     {
+        speedFixedDelta = info.config.speed * Time.fixedDeltaTime;
     }
 
     private void MoveUpdate()
     {
-        Vector3 newPos = transform.localPosition + Vector3.back * moveSpeed;
-        transform.LookAt(newPos);
+        Vector3 newPos = transform.localPosition + speedFixedDelta * Vector3.back;
+        //transform.LookAt(newPos);
         GridModel.Instance.UpdatePos(this, newPos);
 
         if (transform.localPosition.z <= GridUtil.FightEndY)

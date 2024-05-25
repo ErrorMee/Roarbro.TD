@@ -10,8 +10,10 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     public bool fighting = false;
 
-    public PieceModel Init()
+    public PieceModel Init(BattleInfo battleInfo)
     {
+        MaxStep = battleInfo.config.steps;
+
         infos = new PieceInfo[GridUtil.XCount, GridUtil.YCount];
         for (int y = 0; y < GridUtil.YCount; y++)
         {
