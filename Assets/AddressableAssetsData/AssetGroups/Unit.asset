@@ -24,7 +24,7 @@ MonoBehaviour:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
-    m_Address: Assets/Art/Unit/PieceUnit.prefab
+    m_Address: Assets/Art/Unit/BallUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -42,13 +42,13 @@ MonoBehaviour:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85ce44404db23a5468c499d3c9c76ceb
-    m_Address: Assets/Art/Unit/SDF_Unit_Piece.mat
+    m_Address: Assets/Art/Unit/SDF_Unit_Ball.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38a7195c994d0d74981836238336a152
-    m_Address: Assets/Art/Unit/SDF_Unit_Piece.shader
+    m_Address: Assets/Art/Unit/SDF_Unit_Ball.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

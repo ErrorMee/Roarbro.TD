@@ -42,7 +42,7 @@ MonoBehaviour:
     - Config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f086a665bf38ce242b533fbf048aa0c3
-    m_Address: Assets/Art/Config/PieceConfigs.asset
+    m_Address: Assets/Art/Config/BallConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config
