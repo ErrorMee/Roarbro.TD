@@ -1,5 +1,5 @@
 
-public enum PieceLayerState
+public enum BallLayerState
 {
     Move,
     Idle,

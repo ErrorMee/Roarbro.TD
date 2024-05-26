@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceLayer : WorldLayer<PieceUnit>
+public partial class BallLayer : WorldLayer<BallUnit>
 {
     private void DragEnter()
     {
@@ -63,10 +63,10 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
                 select.gameObject.SetActive(false);
             }
             index = GridUtil.WorldToGridIndex(select.transform.localPosition);
-            PieceModel.Instance.DragPiece(selectUnit.info, index);
+            BallModel.Instance.DragBall(selectUnit.info, index);
             selectUnit = null;
 
-            fsm.ChangeState(PieceLayerState.Move);
+            fsm.ChangeState(BallLayerState.Move);
         }
     }
 }

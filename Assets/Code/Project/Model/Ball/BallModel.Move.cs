@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceModel : Singleton<PieceModel>, IDestroy
+public partial class BallModel : Singleton<BallModel>, IDestroy
 {
     private int maxStep;
     public int MaxStep
@@ -39,7 +39,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
 
     private List<Vector2Int> dragIndexs = new List<Vector2Int>();
 
-    public void DragPiece(PieceInfo fromInfo, Vector2Int toIndex)
+    public void DragBall(BallInfo fromInfo, Vector2Int toIndex)
     {
         combo = 0;
         if (fromInfo.index.x != toIndex.x && fromInfo.index.y != toIndex.y)
@@ -58,7 +58,7 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
                     toIndex.y >= 0 && toIndex.y < infos.GetLength(1))
                 {
                     Vector2Int fromIndex = fromInfo.index;
-                    PieceInfo toInfo = infos[toIndex.x, toIndex.y];
+                    BallInfo toInfo = infos[toIndex.x, toIndex.y];
                     MoveIndex(toInfo, fromIndex);
                     MoveIndex(fromInfo, toIndex);
 
@@ -75,10 +75,10 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    public void MoveIndex(PieceInfo piece, Vector2Int index)
+    public void MoveIndex(BallInfo ball, Vector2Int index)
     {
-        piece.index = index;
-        infos[piece.index.x, piece.index.y] = piece;
-        EventModel.Send(EventEnum.MovePiece, piece);
+        ball.index = index;
+        infos[ball.index.x, ball.index.y] = ball;
+        EventModel.Send(EventEnum.MoveBall, ball);
     }
 }

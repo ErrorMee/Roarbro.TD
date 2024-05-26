@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public partial class PieceLayer : WorldLayer<PieceUnit>
+public partial class BallLayer : WorldLayer<BallUnit>
 {
     private void FightEnter()
     {
-        PieceModel.Instance.fighting = true;
+        BallModel.Instance.fighting = true;
     }
 
     private void FightUpdate()

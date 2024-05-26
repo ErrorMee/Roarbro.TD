@@ -1,4 +1,4 @@
-﻿Shader "SDF/Unit/Piece"
+﻿Shader "SDF/Unit/Ball"
 {
     Properties
     {

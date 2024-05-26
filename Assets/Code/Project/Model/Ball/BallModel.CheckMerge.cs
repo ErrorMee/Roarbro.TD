@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceModel : Singleton<PieceModel>, IDestroy
+public partial class BallModel : Singleton<BallModel>, IDestroy
 {
-    public List<PieceInfo> readyMerges = new List<PieceInfo>();
+    public List<BallInfo> readyMerges = new List<BallInfo>();
 
     public void CheckMerges()
     {
@@ -37,27 +37,27 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
     private void CrossMerges(Vector2Int index)
     {
         readyMerges.Clear();
-        PieceInfo piece0 = GetPiece(index);
-        if (piece0 == null)
+        BallInfo ball0 = GetBall(index);
+        if (ball0 == null)
         {
             return;
         }
 
-        if (piece0.level < PieceMaxLV)
+        if (ball0.level < BallMaxLV)
         {
-            readyMerges.Add(piece0);
+            readyMerges.Add(ball0);
         }
 
         int centerCount = readyMerges.Count;
-        BiVectorMerge(piece0, Vector2Int.left, centerCount);
-        BiVectorMerge(piece0, Vector2Int.up, centerCount);
+        BiVectorMerge(ball0, Vector2Int.left, centerCount);
+        BiVectorMerge(ball0, Vector2Int.up, centerCount);
     }
 
-    private void BiVectorMerge(PieceInfo piece0, Vector2Int offset, int centerCount)
+    private void BiVectorMerge(BallInfo ball0, Vector2Int offset, int centerCount)
     {
         int preCount = readyMerges.Count;
-        UniVectorMerge(piece0, offset);
-        UniVectorMerge(piece0, -offset);
+        UniVectorMerge(ball0, offset);
+        UniVectorMerge(ball0, -offset);
         int addCount = readyMerges.Count - preCount;
         if ((addCount + centerCount) < 3)
         {
@@ -65,27 +65,27 @@ public partial class PieceModel : Singleton<PieceModel>, IDestroy
         }
     }
 
-    private void UniVectorMerge(PieceInfo piece0, Vector2Int offset)
+    private void UniVectorMerge(BallInfo ball0, Vector2Int offset)
     {
         Vector2Int offsetAdd = offset;
-        PieceInfo next = GetMerge(piece0, offsetAdd);
+        BallInfo next = GetMerge(ball0, offsetAdd);
         while (next != null)
         {
-            if (next.level < PieceMaxLV)
+            if (next.level < BallMaxLV)
             {
                 readyMerges.Add(next);
             }
             offsetAdd += offset;
-            next = GetMerge(piece0, offsetAdd);
+            next = GetMerge(ball0, offsetAdd);
         }
     }
 
-    private PieceInfo GetMerge(PieceInfo piece, Vector2Int offset)
+    private BallInfo GetMerge(BallInfo ball, Vector2Int offset)
     {
-        PieceInfo pieceOffset = GetPiece(piece.index + offset);
-        if (pieceOffset != null && pieceOffset.config.id == piece.config.id)
+        BallInfo ballOffset = GetBall(ball.index + offset);
+        if (ballOffset != null && ballOffset.config.id == ball.config.id)
         {
-            return pieceOffset;
+            return ballOffset;
         }
         return null;
     }

@@ -44,7 +44,7 @@ public class StageWindow : WindowBase
         BattleModel.Instance.CreateLayer(typeof(TerrainLayer));
         if (BattleModel.Instance.battle.edit == false)
         {
-            BattleModel.Instance.CreateLayer(typeof(PieceLayer));
+            BattleModel.Instance.CreateLayer(typeof(BallLayer));
         }
     }
 
@@ -57,7 +57,7 @@ public class StageWindow : WindowBase
             BattleModel.Instance.CreateLayer(typeof(TerrainLayer));
             if (BattleModel.Instance.battle.edit == false)
             {
-                BattleModel.Instance.CreateLayer(typeof(PieceLayer));
+                BattleModel.Instance.CreateLayer(typeof(BallLayer));
             }
         }
         else

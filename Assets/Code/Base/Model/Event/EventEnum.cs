@@ -10,7 +10,7 @@ public enum EventEnum
 
     ArchiveSelect,
 
-    MovePiece,
+    MoveBall,
 
     ChangeStep,
 

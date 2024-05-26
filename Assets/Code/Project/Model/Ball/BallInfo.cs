@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PieceInfo : ConfigInfo<PieceConfig>
+public class BallInfo : ConfigInfo<BallConfig>
 {
     public int level = 1;
 
@@ -26,7 +26,7 @@ public class PieceInfo : ConfigInfo<PieceConfig>
         set;get;
     }
 
-    public int GetMergePriority(PieceInfo start)
+    public int GetMergePriority(BallInfo start)
     {
         // level distance random
         Vector2Int offsetIndex = index - start.index;

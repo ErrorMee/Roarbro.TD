@@ -35,7 +35,7 @@ public class BattleWindow : WindowBase
 
     void OnChangeStep(object obj = null)
     {
-        step.text = PieceModel.Instance.LeftStep + "/" + PieceModel.Instance.MaxStep;
+        step.text = BallModel.Instance.LeftStep + "/" + BallModel.Instance.MaxStep;
     }
 
     void OnClickPause()

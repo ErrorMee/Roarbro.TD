@@ -1,13 +1,13 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(PieceConfigs))]
-public class PieceConfigsEditor : ConfigsEditor<PieceConfig, PieceConfigs>
+[CustomEditor(typeof(BallConfigs))]
+public class BallConfigsEditor : ConfigsEditor<BallConfig, BallConfigs>
 {
-    [MenuItem(ConfigMenu + "Piece")]
+    [MenuItem(ConfigMenu + "Ball")]
     static void Create()
     {
-        CreateConfigs<PieceConfigs>("Piece");
+        CreateConfigs<BallConfigs>("Ball");
     }
 
     protected override void DrawHead()
@@ -24,7 +24,7 @@ public class PieceConfigsEditor : ConfigsEditor<PieceConfig, PieceConfigs>
         //TODO
     }
 
-    protected override void DrawConfig(int index, PieceConfig config)
+    protected override void DrawConfig(int index, BallConfig config)
     {
         base.DrawConfig(index, config);
         config.attack = EditorGUILayout.IntField(config.attack, GUILayout.Width(40));

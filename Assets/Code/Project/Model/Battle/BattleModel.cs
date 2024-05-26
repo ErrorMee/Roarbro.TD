@@ -23,7 +23,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
         else
         {
             WindowModel.Open(WindowEnum.Battle);
-            models.Add(PieceModel.Instance.Init(battle));
+            models.Add(BallModel.Instance.Init(battle));
         }
     }
 

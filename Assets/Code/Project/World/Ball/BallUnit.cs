@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PieceUnit : WorldUnit
+public class BallUnit : WorldUnit
 {
     [ReadOnlyProperty]
-    public PieceInfo info;
+    public BallInfo info;
 
     public TextMeshPro txt;
 
@@ -21,7 +21,7 @@ public class PieceUnit : WorldUnit
 
     private void FindEnemy()
     {
-        if (PieceModel.Instance.fighting)
+        if (BallModel.Instance.fighting)
         {
             Vector2Int center = info.GetViewCoord();
             int attRadiusInt = Mathf.RoundToInt(info.config.attRadius);
@@ -82,7 +82,7 @@ public class PieceUnit : WorldUnit
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, color);
         if (info.level > 1)
         {
-            if (info.level >= PieceModel.PieceMaxLV)
+            if (info.level >= BallModel.BallMaxLV)
             {
                 txt.text = "Max";
             }

@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 295561715580951077}
   - component: {fileID: 6516685680905186670}
   m_Layer: 0
-  m_Name: PieceUnit
+  m_Name: BallUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

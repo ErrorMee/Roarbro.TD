@@ -2,35 +2,35 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceLayer : WorldLayer<PieceUnit>
+public partial class BallLayer : WorldLayer<BallUnit>
 {
     const float moveSpeed = 0.12f;
     const float moveStreshold = moveSpeed * moveSpeed;
 
-    HashSet<PieceUnit> movePieces = new HashSet<PieceUnit>();
-    HashSet<PieceUnit> moveEndPieces = new HashSet<PieceUnit>();
+    HashSet<BallUnit> moveBalls = new HashSet<BallUnit>();
+    HashSet<BallUnit> moveEndBalls = new HashSet<BallUnit>();
 
     private void MoveEnter()
     {
         CreateSelect();
-        if (movePieces.Count > 1)
+        if (moveBalls.Count > 1)
         {
             select.gameObject.SetActive(false);
         }
     }
 
-    private void OnAddMovePiece(object obj = null)
+    private void OnAddMoveBall(object obj = null)
     {
-        PieceInfo moveInfo = (PieceInfo)obj;
-        PieceUnit moveUnit = GetUnit(moveInfo);
-        movePieces.Add(moveUnit);
+        BallInfo moveInfo = (BallInfo)obj;
+        BallUnit moveUnit = GetUnit(moveInfo);
+        moveBalls.Add(moveUnit);
     }
 
     private void MoveUpdate()
     {
-        moveEndPieces.Clear();
+        moveEndBalls.Clear();
 
-        foreach (PieceUnit moveUnit in movePieces)
+        foreach (BallUnit moveUnit in moveBalls)
         {
             Vector3 targetPos = new Vector3(moveUnit.info.GetViewX(), 0, moveUnit.info.GetViewZ());
 
@@ -40,7 +40,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             if (dir.sqrMagnitude <= moveStreshold)
             {
                 moveUnit.transform.localPosition = targetPos;
-                moveEndPieces.Add(moveUnit);
+                moveEndBalls.Add(moveUnit);
 
                 units[moveUnit.info.index.x, moveUnit.info.index.y] = moveUnit;
             }
@@ -52,21 +52,21 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
             }
         }
 
-        foreach (PieceUnit moveEndUnit in moveEndPieces)
+        foreach (BallUnit moveEndUnit in moveEndBalls)
         {
-            movePieces.Remove(moveEndUnit);
+            moveBalls.Remove(moveEndUnit);
         }
 
-        if (movePieces.Count < 1)
+        if (moveBalls.Count < 1)
         {
-            PieceModel.Instance.CheckMerges();
-            if (PieceModel.Instance.readyMerges.Count > 2)
+            BallModel.Instance.CheckMerges();
+            if (BallModel.Instance.readyMerges.Count > 2)
             {
-                fsm.ChangeState(PieceLayerState.Merge);
+                fsm.ChangeState(BallLayerState.Merge);
             }
             else
             {
-                fsm.ChangeState(PieceLayerState.Idle);
+                fsm.ChangeState(BallLayerState.Idle);
             }
         }
     }

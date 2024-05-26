@@ -1,13 +1,13 @@
 
 using System;
 
-public class PieceConfigs : Configs<PieceConfigs, PieceConfig>
+public class BallConfigs : Configs<BallConfigs, BallConfig>
 {
     
 }
 
 [Serializable]
-public class PieceConfig : Config
+public class BallConfig : Config
 {
     public int attack;
     public float attCD;

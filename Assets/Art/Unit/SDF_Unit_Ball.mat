@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SDF_Unit_Piece
+  m_Name: SDF_Unit_Ball
   m_Shader: {fileID: 4800000, guid: 38a7195c994d0d74981836238336a152, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0

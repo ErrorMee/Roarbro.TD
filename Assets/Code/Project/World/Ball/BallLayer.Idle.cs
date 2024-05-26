@@ -3,23 +3,23 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class PieceLayer : WorldLayer<PieceUnit>
+public partial class BallLayer : WorldLayer<BallUnit>
 {
     private void IdleEnter()
     {
         CreateSelect();
 
-        movePieces.Clear();
-        if (PieceModel.Instance.LeftStep <= 0)
+        moveBalls.Clear();
+        if (BallModel.Instance.LeftStep <= 0)
         {
             BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
-            fsm.ChangeState(PieceLayerState.Fight);
+            fsm.ChangeState(BallLayerState.Fight);
         }
     }
 
     private void IdleUpdate()
     {
-        if (PieceModel.Instance.LeftStep > 0 && InputModel.Instance.PressedThisFrame)
+        if (BallModel.Instance.LeftStep > 0 && InputModel.Instance.PressedThisFrame)
         {
             Vector3 worldPos = CameraModel.Instance.ScreenToWorldPos(InputModel.Instance.Touch0LastPos,
             transform.position.y);
@@ -34,7 +34,7 @@ public partial class PieceLayer : WorldLayer<PieceUnit>
 
                 selectUnit = units[index.x, index.y];
 
-                fsm.ChangeState(PieceLayerState.Drag);
+                fsm.ChangeState(BallLayerState.Drag);
             }
             else
             {
