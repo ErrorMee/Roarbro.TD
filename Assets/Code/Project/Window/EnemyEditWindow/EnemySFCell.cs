@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnemySFCell : ScrollFocusCell<EnemyConfig>
+public class EnemySFCell : ScrollFocusCell<EnemyTemplate>
 {
     [SerializeField] protected TextMeshProUGUI title = default;
 
@@ -11,22 +11,24 @@ public class EnemySFCell : ScrollFocusCell<EnemyConfig>
     [SerializeField] SDFImg bg = default;
     [SerializeField] SDFImg diffuse = default;
 
-    public override void UpdateContent(EnemyConfig info)
+    public override void UpdateContent(EnemyTemplate info)
     {
         base.UpdateContent(info);
 
-        //if (info.avatar <= 0)
+        EnemyConfig enemyConfig = EnemyConfigs.ConfigByID(info.enemyID);
+
+        //if (enemyConfig.avatar <= 0)
         {
             title.text = string.Empty;
         }
         //else
         //{
-        //    title.text = info.avatar.Opt00Str();
+        //    title.text = info.level.Opt00Str();
         //}
 
-        shadow.ID = bg.ID = select.ID = diffuse.ID = info.avatar;
+        shadow.ID = bg.ID = select.ID = diffuse.ID = enemyConfig.avatar;
 
-        btn.targetGraphic.color = info.color;
+        btn.targetGraphic.color = enemyConfig.color;
 
         diffuse.gameObject.SetActive(Index != Context.SelectedIndex);
     }

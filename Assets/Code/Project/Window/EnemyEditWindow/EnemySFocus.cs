@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySFocus : ScrollFocus<EnemyConfig, EnemySFCell>
+public class EnemySFocus : ScrollFocus<EnemyTemplate, EnemySFCell>
 {
     private void OnValidate()
     {

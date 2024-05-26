@@ -27,7 +27,7 @@ public partial class EnemyUnit : WorldUnit
         meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.config.avatar, false);
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, info.config.color);
 
-        if (info.enemyTemplate.enemyID > 0 && info.enemyTemplate.level > 1)
+        if (info.enemyTemplate.Exist())
         {
             txt.text = info.enemyTemplate.level.OptStr();
         }

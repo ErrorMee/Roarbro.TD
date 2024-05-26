@@ -25,7 +25,7 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
                 EnemyInfo info = new EnemyInfo(enemyInfoConfig);
                 infos[x, y] = info;
                 info.index = new Vector2Int(x, y);
-                if (enemyInfoConfig.enemyID > 0)
+                if (enemyInfoConfig.Exist())
                 {
                     leftEnemys.Add(info);
                 }

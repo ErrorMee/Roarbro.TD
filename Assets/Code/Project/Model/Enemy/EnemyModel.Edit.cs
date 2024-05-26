@@ -6,7 +6,7 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
 {
     public EnemyTemplate crtTemplate;
 
-    EnemyTemplate[] enemyTemplates;
+    public EnemyTemplate[] enemyTemplates;
 
     public void EditInit()
     {
@@ -16,10 +16,9 @@ public partial class EnemyModel : Singleton<EnemyModel>, IDestroy
             EnemyConfig enemyConfig = EnemyConfigs.All[i];
             EnemyTemplate enemyTemplate = new EnemyTemplate();
             enemyTemplate.enemyID = enemyConfig.id;
-            enemyTemplate.level = 0;
+            enemyTemplate.level = 1;
             enemyTemplates[i] = enemyTemplate;
         }
-        SelectTemplate(0);
     }
 
     public void SelectTemplate(int index)

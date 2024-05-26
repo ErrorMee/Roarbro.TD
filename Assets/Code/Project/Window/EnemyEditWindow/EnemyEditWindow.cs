@@ -16,9 +16,9 @@ public class EnemyEditWindow : WindowBase
     {
         base.Awake();
 
-        enemyFoucus.UpdateContents(EnemyConfigs.All);
+        enemyFoucus.UpdateContents(EnemyModel.Instance.enemyTemplates);
         enemyFoucus.OnSelected(OnEnemySelected);
-        enemyFoucus.SelectCell(EnemyModel.Instance.crtTemplate.enemyID);
+        enemyFoucus.SelectCell(0);
 
         levelSwitch.prefix = LanguageModel.Get(10039) + ":";
         levelSwitch.Set(1, 99, 1);
@@ -37,7 +37,7 @@ public class EnemyEditWindow : WindowBase
     private void OnEnemySelected(int index)
     {
         EnemyModel.Instance.SelectTemplate(index);
-
+        levelSwitch.gameObject.SetActive(EnemyModel.Instance.crtTemplate.Exist());
         levelSwitch.Set(EnemyModel.Instance.crtTemplate.level);
     }
 
@@ -53,5 +53,6 @@ public class EnemyEditWindow : WindowBase
     private void OnChangeLevel(int value)
     {
         EnemyModel.Instance.crtTemplate.level = value;
+        enemyFoucus.UpdateContents(EnemyModel.Instance.enemyTemplates);
     }
 }
