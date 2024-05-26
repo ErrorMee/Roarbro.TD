@@ -16,7 +16,7 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
         EditorGUILayout.LabelField("avatar", GUILayout.Width(40));
         EditorGUILayout.LabelField("color", GUILayout.Width(40));
         EditorGUILayout.LabelField("speed", GUILayout.Width(40));
-        EditorGUILayout.LabelField("hp:basic-percent", GUILayout.Width(100));
+        EditorGUILayout.LabelField("hp:basic-growth", GUILayout.Width(100));
     }
 
     protected override void DrawMenuAdd()
@@ -36,6 +36,6 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
 
 
         config.hp.basic = EditorGUILayout.FloatField(config.hp.basic, GUILayout.Width(48));
-        config.hp.percent = EditorGUILayout.FloatField(config.hp.percent, GUILayout.Width(48));
+        config.hp.growth = EditorGUILayout.FloatField(config.hp.growth, GUILayout.Width(48));
     }
 }

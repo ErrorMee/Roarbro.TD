@@ -1,13 +1,13 @@
 using System;
 
 [Serializable]
-public class FloatUp
+public class FloatGrowth
 {
     public float basic;
-    public float percent;
+    public float growth;
 
     public float GetValue(uint level)
     {
-        return basic * percent * (level - 1);
+        return basic + growth * (level - 1);
     }
 }

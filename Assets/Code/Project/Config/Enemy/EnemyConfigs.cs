@@ -15,5 +15,5 @@ public class EnemyConfig : Config
 
     public float speed = 1;
 
-    public FloatUp hp;
+    public FloatGrowth hp;
 }

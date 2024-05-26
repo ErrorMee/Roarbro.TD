@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using UnityEngine;
 
 public partial class EnemyUnit : WorldUnit
 {
@@ -29,7 +31,7 @@ public partial class EnemyUnit : WorldUnit
 
         if (info.enemyTemplate.Exist())
         {
-            txt.text = info.enemyTemplate.level.OptStr();
+            txt.text = Mathf.CeilToInt(info.leftHP).OptStr();
         }
         else
         {
