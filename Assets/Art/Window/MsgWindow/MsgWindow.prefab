@@ -204,7 +204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068635997116116, guid: 9c59b74db983e4687b77a7482780a45b, type: 3}
       propertyPath: id
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068635997116116, guid: 9c59b74db983e4687b77a7482780a45b, type: 3}
       propertyPath: onion
