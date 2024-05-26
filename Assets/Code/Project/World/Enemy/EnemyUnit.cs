@@ -14,7 +14,7 @@ public partial class EnemyUnit : WorldUnit
     {
         fsm = new FSM<EnemyState>();
         fsm.AddState(EnemyState.Idle, IdleEnter, IdleUpdate);
-        fsm.AddState(EnemyState.Move, MoveEnter, MoveUpdate);
+        fsm.AddState(EnemyState.Fight, FightEnter, FightUpdate);
         fsm.AddState(EnemyState.Die, DieEnter, DieUpdate);
     }
 

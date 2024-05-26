@@ -3,56 +3,27 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BallUnit : WorldUnit
+public partial class BallUnit : WorldUnit
 {
+    public FSM<BallState> fsm;
+
     [ReadOnlyProperty]
     public BallInfo info;
 
     public TextMeshPro txt;
 
-    static int[] xSearchs = new int[] { 0, -1, 1, 2, -2, -3, 3, 4, -4, -5, 5, 6, -6, -7, 7, 8, -8, -9, 9 };
+    private void Awake()
+    {
+        fsm = new FSM<BallState>();
+        fsm.AddState(BallState.Idle, null, null);
+        fsm.AddState(BallState.Fight, FightEnter, FightUpdate);
+        fsm.ChangeState(BallState.Idle);
+    }
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-
-        FindEnemy();
-    }
-
-    private void FindEnemy()
-    {
-        if (BallModel.Instance.fighting)
-        {
-            Vector2Int center = info.GetViewCoord();
-            int attRadiusInt = Mathf.RoundToInt(info.config.attRadius);
-            for (int z = -attRadiusInt; z <= attRadiusInt; z++)
-            {
-                for (int x = 0; x <= attRadiusInt * 2; x++)
-                {
-                    int xSearch = xSearchs[x];
-
-                    Vector2Int coord = center + new Vector2Int(xSearch, z);
-
-                    HashSet<MonoBehaviour> enemys = GridModel.Instance.GetItems<EnemyUnit>(coord);
-                    if (enemys != null)
-                    {
-                        foreach (MonoBehaviour item in enemys)
-                        {
-                            Vector2 enemyDir = item.transform.localPosition.XZ() - transform.localPosition.XZ();
-                            float dis = enemyDir.magnitude;
-                            if (dis < info.config.attRadius)
-                            {
-                                //if (dis > 0.1f)
-                                //{
-                                //    transform.forward = new Vector3(enemyDir.x, 0, enemyDir.y);
-                                //}
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        fsm.Update();
     }
 
     public void UpdateShow()

@@ -6,6 +6,14 @@ public class BallInfo : ConfigInfo<BallConfig>
 
     public Vector2Int index;
 
+    public float attCDLeft = 0;
+
+    public BallInfo(BallConfig config)
+    {
+        this.config = config;
+        attCDLeft = config.attCD;
+    }
+
     public float GetViewX()
     {
         return index.x - GridUtil.XRadiusCount;
@@ -32,5 +40,10 @@ public class BallInfo : ConfigInfo<BallConfig>
         Vector2Int offsetIndex = index - start.index;
         int distance = Mathf.Max(Mathf.Abs(offsetIndex.x), Mathf.Abs(offsetIndex.y));
         return level * 1000 + (20 - distance) * 10 + Random.Range(0, 10);
+    }
+
+    public int GetAttackValue()
+    {
+        return level * config.attack;
     }
 }

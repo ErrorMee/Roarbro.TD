@@ -8,8 +8,6 @@ public partial class BallModel : Singleton<BallModel>, IDestroy
 
     int combo = 0;
 
-    public bool fighting = false;
-
     public BallModel Init(BattleInfo battleInfo)
     {
         MaxStep = battleInfo.config.steps;
@@ -19,12 +17,10 @@ public partial class BallModel : Singleton<BallModel>, IDestroy
         {
             for (int x = 0; x < GridUtil.XCount; x++)
             {
-                BallInfo info = new BallInfo();
-
-                infos[x, y] = info;
                 int randomID = UnityEngine.Random.Range(0, 6);
-                info.config = BallConfigs.Instance.GetConfigByID(randomID);
+                BallInfo info = new BallInfo(BallConfigs.Instance.GetConfigByID(randomID));
                 info.index = new Vector2Int(x, y);
+                infos[x, y] = info;
             }
         }
         return Instance;

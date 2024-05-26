@@ -8,7 +8,7 @@ public enum EnemyState
     /// <summary>
     /// ÒÆ¶¯
     /// </summary>
-    Move,
+    Fight,
 
     Die,
 }
