@@ -163,7 +163,7 @@ namespace FancyScrollView
         }
 
         /// <inheritdoc/>
-        protected override void UpdateContents(IList<TItemData> items)
+        public override void UpdateContents(IList<TItemData> items)
         {
             AdjustCellIntervalAndScrollOffset();
             base.UpdateContents(items);

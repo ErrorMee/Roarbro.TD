@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class EnemyInfo : ConfigInfo<EnemyConfig>
 {
-    public EnemyTemplate enemyInfoConfig;
+    public EnemyTemplate enemyTemplate;
     public Vector2Int index;
 
-    public EnemyInfo(EnemyTemplate enemyInfoConfig)
+    public float leftHP;
+
+    public EnemyInfo(EnemyTemplate enemyTemplate)
     {
-        SetEnemyInfoConfig(enemyInfoConfig);
+        SetEnemyTemplate(enemyTemplate);
+        leftHP = GetMaxHP();
     }
 
-    public void SetEnemyInfoConfig(EnemyTemplate enemyInfoConfig)
+    public void SetEnemyTemplate(EnemyTemplate enemyTemplate)
     {
-        this.enemyInfoConfig = enemyInfoConfig;
-        EnemyConfig enemyConfig = EnemyConfigs.Instance.GetConfigByID(enemyInfoConfig.enemyID);
+        this.enemyTemplate = enemyTemplate;
+        EnemyConfig enemyConfig = EnemyConfigs.Instance.GetConfigByID(enemyTemplate.enemyID);
         config = enemyConfig;
+    }
+
+    public float GetMaxHP()
+    {
+        return config.hp.GetValue((uint)enemyTemplate.level);
     }
 }

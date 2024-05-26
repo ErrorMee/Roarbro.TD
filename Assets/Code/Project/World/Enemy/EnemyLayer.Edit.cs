@@ -54,7 +54,7 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 {
                     enemyInfoConfig.enemyID = EnemyModel.Instance.crtTemplate.enemyID;
                     enemyInfoConfig.level = EnemyModel.Instance.crtTemplate.level;
-                    EnemyModel.Instance.infos[index.x, index.y].SetEnemyInfoConfig(enemyInfoConfig);
+                    EnemyModel.Instance.infos[index.x, index.y].SetEnemyTemplate(enemyInfoConfig);
 
                     ArmyConfigs.Instance.Save();
                     UpdateEditUnits();

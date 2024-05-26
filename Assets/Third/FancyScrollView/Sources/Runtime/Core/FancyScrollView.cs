@@ -86,7 +86,7 @@ namespace FancyScrollView
         /// 渡されたアイテム一覧に基づいて表示内容を更新します.
         /// </summary>
         /// <param name="itemsSource">アイテム一覧.</param>
-        protected virtual void UpdateContents(IList<TItemData> itemsSource)
+        public virtual void UpdateContents(IList<TItemData> itemsSource)
         {
             ItemsSource = itemsSource;
             Refresh();

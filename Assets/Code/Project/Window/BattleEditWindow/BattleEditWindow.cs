@@ -40,6 +40,9 @@ public class BattleEditWindow : WindowBase
         base.OnDestroy();
         Close(WindowEnum.TerrainEdit);
         Close(WindowEnum.EnemyEdit);
-        BattleModel.Instance.DestroyBattle();
+        if (ProjectConfigs.isQuiting == false)
+        {
+            BattleModel.Instance.DestroyBattle();
+        }
     }
 }

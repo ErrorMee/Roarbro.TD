@@ -43,13 +43,13 @@ public class ScrollFocusList<TInfo, TCell> : FancyScrollView<TInfo, ScrollFocusC
         onSelectionChanged?.Invoke(index);
     }
 
-    public void UpdateData(IList<TInfo> items)
+    public override void UpdateContents(IList<TInfo> items)
     {
-        UpdateContents(items);
+        base.UpdateContents(items);
         scroller.SetTotalCount(items.Count);
     }
 
-    public void OnSelectionChanged(Action<int> callback)
+    public void OnSelected(Action<int> callback)
     {
         onSelectionChanged = callback;
     }

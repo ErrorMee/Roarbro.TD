@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyEditWindow : WindowBase
 {
+    [SerializeField] TextScrollFocus enemyScrollFoucus;
+
     [SerializeField] EnemyScroll enemyScroll;
     [SerializeField] IntSwitch levelSwitch;
 
@@ -15,6 +17,19 @@ public class EnemyEditWindow : WindowBase
     {
         base.Awake();
 
+        List<string> foucusDatas = new()
+        {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        };
+        enemyScrollFoucus.UpdateContents(foucusDatas);
+        enemyScrollFoucus.OnSelected(OnFoucusSelected);
+        enemyScrollFoucus.SelectCell(2);
+
+
         enemyScroll.UpdateContents(EnemyConfigs.All);
         enemyScroll.UpdateSelection(EnemyModel.Instance.crtTemplate.enemyID);
         enemyScroll.OnCellClicked(OnScrollClicked);
@@ -22,6 +37,11 @@ public class EnemyEditWindow : WindowBase
         levelSwitch.prefix = LanguageModel.Get(10039) + ":";
         levelSwitch.Set(1, 99, 1);
         levelSwitch.switchCallBack = OnChangeLevel;
+    }
+
+    private void OnFoucusSelected(int index)
+    {
+        Debug.Log("OnFoucusChanged " + index);
     }
 
     /// <summary>
@@ -44,8 +64,11 @@ public class EnemyEditWindow : WindowBase
 
     protected override void OnDestroy()
     {
-        base.OnDestroy();
-        BattleModel.Instance.DeleteLayer(typeof(EnemyLayer));
+        if (ProjectConfigs.isQuiting == false)
+        {
+            base.OnDestroy();
+            BattleModel.Instance.DeleteLayer(typeof(EnemyLayer));
+        }
     }
 
     private void OnChangeLevel(int value)
