@@ -18,7 +18,7 @@ public class AirModel : Singleton<AirModel>, IDestroy
     {
         callerList.Clear();
         callerCallBack.Clear();
-        GameObject gameObject = new("AirRayCast");
+        GameObject gameObject = new("AirUI");
         air = gameObject.GetOrAddComponent<RectTransform>();
         air.SetParent(WindowModel.Instance.gameObject.transform, false);
         air.anchorMin = Vector2.zero;

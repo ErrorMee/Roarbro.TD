@@ -52,6 +52,7 @@ public class ArchiveWindow : WindowBase
     private void OnClickSure()
     {
         CloseSelf();
+        Close(WindowEnum.Option);
     }
 
     private void OnConfirm()
