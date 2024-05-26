@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScrollFocusCell<TInfo> : FancyCell<TInfo, ScrollFocusContext> where TInfo : class
 {
     [SerializeField] protected SDFBtn btn = default;
-    [SerializeField] SDFImg select = default;
+    [SerializeField] protected SDFImg select = default;
     [SerializeField] Animator animator = default;
 
     static class AnimatorHash

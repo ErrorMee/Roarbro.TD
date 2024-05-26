@@ -12,9 +12,9 @@ public class LanguageWindow : WindowBase
 
         AirModel.Add(transform, AirCallback);
 
-        languageScroll.OnCellClicked((index) =>
+        languageScroll.OnSelected((index) =>
         {
-            languageScroll.UpdateSelection(index);
+            languageScroll.SelectCell(index);
             LanguageModel.Instance.Select(index);
         });
     }
@@ -31,6 +31,6 @@ public class LanguageWindow : WindowBase
 
         languageScroll.UpdateContents(LanguageConfigs.Instance.types.ToList());
 
-        languageScroll.UpdateSelection(LanguageModel.Instance.LanguageCrt);
+        languageScroll.SelectCell(LanguageModel.Instance.LanguageCrt);
     }
 }

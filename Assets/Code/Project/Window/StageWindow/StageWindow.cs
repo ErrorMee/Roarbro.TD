@@ -15,9 +15,9 @@ public class StageWindow : WindowBase
         ClickListener.Add(editBtn.transform).onClick += OnClickEdit;
         ClickListener.Add(startBtn.transform).onClick += OnClickStart;
 
-        battleList.OnCellClicked((index) =>
+        battleList.OnSelected((index) =>
         {
-            battleList.UpdateSelection(index);
+            battleList.SelectCell(index);
             StageModel.Instance.SelectIndex = index;
             startBtn.interactable = StageModel.Instance.IsUnLock(index);
         });
@@ -35,7 +35,7 @@ public class StageWindow : WindowBase
     void ShowBattles()
     {
         battleList.UpdateContents(StageModel.Instance.battles);
-        battleList.UpdateSelection(StageModel.Instance.SelectIndex);
+        battleList.SelectCell(StageModel.Instance.SelectIndex);
     }
 
     void OnClickEdit()

@@ -65,7 +65,7 @@ public class ScrollList<TInfo, TCell> : FancyGridView<TInfo, ScrollContext>
         }
     }
 
-    public void UpdateSelection(int index, bool check = true)
+    public void SelectCell(int index, bool check = true)
     {
         if (Context.SelectedIndex == index && check)
         {
@@ -81,20 +81,20 @@ public class ScrollList<TInfo, TCell> : FancyGridView<TInfo, ScrollContext>
         get { return Context.SelectedIndex; }
     }
 
-    public void OnCellClicked(Action<int> callback)
+    public void OnSelected(Action<int> callback)
     {
         Context.OnCellClicked = callback;
     }
 
     public void ScrollTo(int index, float duration = 0.3f, Ease easing = Ease.Linear, Alignment alignment = Alignment.Middle)
     {
-        UpdateSelection(index);
+        SelectCell(index);
         ScrollTo(index, duration, easing, GetAlignment(alignment));
     }
 
     public void JumpTo(int index, Alignment alignment = Alignment.Middle)
     {
-        UpdateSelection(index);
+        SelectCell(index);
         JumpTo(index, GetAlignment(alignment));
     }
 

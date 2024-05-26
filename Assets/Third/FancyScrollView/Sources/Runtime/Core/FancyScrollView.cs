@@ -20,7 +20,7 @@ namespace FancyScrollView
     public abstract class FancyScrollView<TItemData, TContext> : MonoBehaviour where TContext : class, new()
     {
         /// <summary>
-        /// セル同士の間隔.
+        /// セル同士の間隔.  Cell spacing
         /// </summary>
         [SerializeField, Range(1e-2f, 1f)] protected float cellInterval = 0.2f;
 

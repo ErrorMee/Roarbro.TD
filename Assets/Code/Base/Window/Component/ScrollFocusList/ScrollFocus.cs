@@ -6,7 +6,7 @@ using EasingCore;
 
 [RequireComponent(typeof(Scroller))]
 [DisallowMultipleComponent]
-public class ScrollFocusList<TInfo, TCell> : FancyScrollView<TInfo, ScrollFocusContext>
+public class ScrollFocus<TInfo, TCell> : FancyScrollView<TInfo, ScrollFocusContext>
     where TInfo : class where TCell : ScrollFocusCell<TInfo>
 {
     Scroller scroller = default;

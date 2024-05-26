@@ -16,8 +16,8 @@ public class TerrainEditWindow : WindowBase
             terrains.Add((TerrainEnum)value);
         }
         terrainScroll.UpdateContents(terrains);
-        terrainScroll.UpdateSelection((int)BattleModel.Instance.battle.config.terrainSelect);
-        terrainScroll.OnCellClicked(OnScrollClicked);
+        terrainScroll.SelectCell((int)BattleModel.Instance.battle.config.terrainSelect);
+        terrainScroll.OnSelected(OnScrollClicked);
     }
 
     public override void OnOpen(object obj)
@@ -28,7 +28,7 @@ public class TerrainEditWindow : WindowBase
 
     private void OnScrollClicked(int index)
     {
-        terrainScroll.UpdateSelection(index);
+        terrainScroll.SelectCell(index);
         BattleModel.Instance.battle.config.terrainSelect = (TerrainEnum)index;
         BattleConfigs.Instance.Save();
     }

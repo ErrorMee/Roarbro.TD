@@ -12,10 +12,13 @@ public class SDFBtn : Button
     {
         base.Awake();
         initScale = transform.localScale;
-        ClickListener.Add(gameObject).onDown = OnDown;
-        ClickListener.Add(gameObject).onUp = OnUp;
-        ClickListener.Add(gameObject).onEnter = OnEnter;
-        ClickListener.Add(gameObject).onExit = OnExit;
+        if (Application.isPlaying)
+        {
+            ClickListener.Add(gameObject).onDown = OnDown;
+            ClickListener.Add(gameObject).onUp = OnUp;
+            ClickListener.Add(gameObject).onEnter = OnEnter;
+            ClickListener.Add(gameObject).onExit = OnExit;
+        }
     }
 
     protected virtual void OnDown()

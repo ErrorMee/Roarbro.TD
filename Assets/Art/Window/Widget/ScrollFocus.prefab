@@ -242,7 +242,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 128}
+  m_SizeDelta: {x: 512, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4583026312380260156
 CanvasRenderer:
@@ -401,12 +401,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4312288724584012682}
   - component: {fileID: 1880628006211527720}
-  - component: {fileID: 7219637529634919858}
+  - component: {fileID: 5876839041946850528}
   - component: {fileID: 4765838492118952699}
   - component: {fileID: 2392635915559576711}
-  - component: {fileID: 8636120695941100586}
   m_Layer: 5
-  m_Name: TextFocusCell
+  m_Name: FocusCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +443,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251797504189608698}
   m_CullTransparentMesh: 1
---- !u!114 &7219637529634919858
+--- !u!114 &5876839041946850528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,7 +452,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7251797504189608698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b39b7242306cb24887e377706a2e2c4, type: 3}
+  m_Script: {fileID: 11500000, guid: f54545a708571ec4d9ea49f9a604e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 4765838492118952699}
@@ -525,20 +524,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8636120695941100586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251797504189608698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae767e699d00cbc4595aea79f77b0e6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleEvent: 0
-  clickAudio: Click
 --- !u!1 &8191023796660680711
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,8 +40,8 @@ MonoBehaviour:
       level: 10
     - enemyID: 7
       level: 10
-    - enemyID: 7
-      level: 10
+    - enemyID: 4
+      level: 0
     - enemyID: 6
       level: 10
     - enemyID: 6

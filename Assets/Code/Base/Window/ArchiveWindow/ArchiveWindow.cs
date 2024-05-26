@@ -21,7 +21,7 @@ public class ArchiveWindow : WindowBase
         ClickListener.Add(sureBtn.transform).onClick = OnClickSure;
         sureBtn.gameObject.SetActive(false);
 
-        archiveList.OnCellClicked((index) =>
+        archiveList.OnSelected((index) =>
         {
             if (selectIndex == index)
             {
@@ -29,7 +29,7 @@ public class ArchiveWindow : WindowBase
                 return;
             }
             ArchiveModel.Instance.Select(index);
-            archiveList.UpdateSelection(index, false);
+            archiveList.SelectCell(index, false);
             selectIndex = index;
 
             delBtn.gameObject.SetActive(true);
