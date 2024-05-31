@@ -13,6 +13,7 @@ public partial class BallLayer : WorldLayer<BallUnit>
         if (BallModel.Instance.LeftStep <= 0)
         {
             BattleModel.Instance.CreateLayer(typeof(EnemyLayer));
+            BattleModel.Instance.CreateLayer(typeof(BubbleLayer));
             fsm.ChangeState(BallLayerState.Fight);
         }
     }

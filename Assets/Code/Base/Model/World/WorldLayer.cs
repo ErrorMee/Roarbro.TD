@@ -15,14 +15,14 @@ public class WorldLayer<T> : FrameMono where T: MonoBehaviour
         unitTemplate.gameObject.SetActive(false);
     }
 
-    public T CreateUnit(bool active = true)
+    protected T CreateUnit(bool active = true)
     {
-        T unit = Instantiate(unitTemplate.gameObject, transform).GetComponent<T>();
+        T unit = Instantiate(unitTemplate, transform);
         unit.gameObject.SetActive(active);
         return unit;
     }
 
-    public void CreateSelect()
+    protected void CreateSelect()
     {
         if (select == null)
         {

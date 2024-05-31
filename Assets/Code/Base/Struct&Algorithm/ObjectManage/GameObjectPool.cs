@@ -65,11 +65,11 @@ public class GameObjectPool : Singleton<GameObjectPool>, IDestroy
 
 	static Vector3 far = new(short.MaxValue, 0, 0); 
 	
-	public void Cache(GameObject instance, bool setActive = true)
+	public void Cache(GameObject instance, bool activeFalse = true)
 	{
 		if (instance == null) { return; }
 
-		if (setActive)
+		if (activeFalse)
 		{
 			instance.SetActive(false);
 		}

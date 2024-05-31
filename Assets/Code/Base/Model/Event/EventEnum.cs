@@ -12,6 +12,8 @@ public enum EventEnum
 
     MoveBall,
 
+    BubbleUnit,
+
     ChangeStep,
 
     EnemyDie,

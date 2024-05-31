@@ -23,7 +23,8 @@ public partial class EnemyUnit : MonoBehaviour
 
     public void Attacked(BallInfo ballInfo)
     {
-        info.leftHP -= ballInfo.GetAttackValue();
+        int attackValue = ballInfo.GetAttackValue();
+        info.leftHP -= attackValue;
         if (info.leftHP <= 0)
         {
             fsm.ChangeState(EnemyState.Die);
@@ -32,5 +33,11 @@ public partial class EnemyUnit : MonoBehaviour
         {
             txt.text = Mathf.CeilToInt(info.leftHP).OptStr();
         }
+
+        BubbleInfo bubbleInfo = SharedPool<BubbleInfo>.Get();
+        bubbleInfo.x = transform.localPosition.x;
+        bubbleInfo.z = transform.localPosition.z;
+        bubbleInfo.value = attackValue;
+        EventModel.Send(EventEnum.BubbleUnit, bubbleInfo);
     }
 }
