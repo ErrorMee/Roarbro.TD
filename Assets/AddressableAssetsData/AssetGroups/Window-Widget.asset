@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: 7886b9c9af567764990ae331616411e1
+  m_GUID: 1c152f82eae9bc24197359334fa03f1a
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab
@@ -85,6 +85,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5dc2ae3e45a15c6428e289cfd4d20a6a
     m_Address: Assets/Art/Window/Widget/ScrollVertical.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98b8c4848f0cbea438963ad825a76a71
+    m_Address: Assets/Art/Window/Widget/Txt.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

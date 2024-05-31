@@ -19,7 +19,7 @@ public partial class BallLayer : WorldLayer<BallUnit>
         }
     }
 
-    private void OnAddMoveBall(object obj = null)
+    private void OnMoveBall(object obj = null)
     {
         BallInfo moveInfo = (BallInfo)obj;
         BallUnit moveUnit = GetUnit(moveInfo);

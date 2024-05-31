@@ -15,28 +15,16 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: d3577366d13e4034287be6ce66cb2869
+  m_GUID: 22435098e70a8214ea5e6c15d69d960f
   m_SerializeEntries:
-  - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
-    m_Address: Assets/Art/Unit/EnemyUnit.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
     m_Address: Assets/Art/Unit/BallUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 65ac586788375a641b2b7bf3315206e2
-    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 22b807947ad66a849a9057aeef8741a5
-    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.shader
+  - m_GUID: 70c2778c1d9e98e4ca613a71501b7d99
+    m_Address: Assets/Art/Unit/EnemyUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -49,6 +37,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38a7195c994d0d74981836238336a152
     m_Address: Assets/Art/Unit/SDF_Unit_Ball.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65ac586788375a641b2b7bf3315206e2
+    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22b807947ad66a849a9057aeef8741a5
+    m_Address: Assets/Art/Unit/SDF_Unit_Enemy.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -96,7 +96,13 @@ MonoBehaviour:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
-    m_Address: Assets/Art/Unit/UnitSelect.prefab
+    m_Address: Assets/Art/Unit/SelectUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e64ebca93968ae4984171e92aff199d
+    m_Address: Assets/Art/Unit/BubbleUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

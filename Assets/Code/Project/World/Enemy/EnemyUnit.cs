@@ -2,12 +2,13 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public partial class EnemyUnit : WorldUnit
+public partial class EnemyUnit : MonoBehaviour
 {
     public FSM<EnemyState> fsm;
 
     [ReadOnlyProperty]
     public EnemyInfo info;
+    public MeshRenderer meshRenderer;
     public TextMeshPro txt;
 
     private void Awake()
@@ -18,9 +19,8 @@ public partial class EnemyUnit : WorldUnit
         fsm.AddState(EnemyState.Die, DieEnter, DieUpdate);
     }
 
-    protected override void FixedUpdate()
+    void FixedUpdate()
     {
-        base.FixedUpdate();
         fsm.Update();
     }
 

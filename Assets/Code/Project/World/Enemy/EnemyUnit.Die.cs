@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public partial class EnemyUnit : WorldUnit
+public partial class EnemyUnit : MonoBehaviour
 {
     private void DieEnter()
     {

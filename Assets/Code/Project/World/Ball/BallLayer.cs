@@ -13,7 +13,7 @@ public partial class BallLayer : WorldLayer<BallUnit>
         
         Init();
 
-        AutoListener(EventEnum.MoveBall, OnAddMoveBall);
+        AutoListener(EventEnum.MoveBall, OnMoveBall);
     }
 
     private void Init()

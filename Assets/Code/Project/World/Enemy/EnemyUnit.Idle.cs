@@ -1,5 +1,7 @@
 
-public partial class EnemyUnit : WorldUnit
+using UnityEngine;
+
+public partial class EnemyUnit : MonoBehaviour
 {
     private void IdleEnter()
     {

@@ -1,11 +1,11 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class WorldLayer<T> : FrameMono where T: WorldUnit
+public class WorldLayer<T> : FrameMono where T: MonoBehaviour
 {
     protected T unitTemplate;
 
-    protected UnitSelect select;
+    protected SelectUnit select;
 
     protected override void Awake()
     {
@@ -27,7 +27,7 @@ public class WorldLayer<T> : FrameMono where T: WorldUnit
         if (select == null)
         {
             select = AddressModel.LoadGameObject(
-            Address.UnitPrefab(typeof(UnitSelect).Name), transform).GetComponent<UnitSelect>();
+            Address.UnitPrefab(typeof(SelectUnit).Name), transform).GetComponent<SelectUnit>();
             select.gameObject.SetActive(false);
         }
     }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public partial class BallUnit : WorldUnit
+public partial class BallUnit : MonoBehaviour
 {
     public FSM<BallState> fsm;
 
     [ReadOnlyProperty]
     public BallInfo info;
 
+    public MeshRenderer meshRenderer;
     public TextMeshPro txt;
 
     private void Awake()
@@ -20,9 +21,8 @@ public partial class BallUnit : WorldUnit
         fsm.ChangeState(BallState.Idle);
     }
 
-    protected override void FixedUpdate()
+    void FixedUpdate()
     {
-        base.FixedUpdate();
         fsm.Update();
     }
 

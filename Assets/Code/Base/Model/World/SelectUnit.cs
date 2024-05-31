@@ -1,7 +1,10 @@
 
-public class UnitSelect : WorldUnit
+using UnityEngine;
+
+public class SelectUnit : MonoBehaviour
 {
-    protected override void OnEnable()
+    public MeshRenderer meshRenderer;
+    void Awake()
     {
         meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, QualityConfigs.GetColor(QualityEnum.N), false);
     }

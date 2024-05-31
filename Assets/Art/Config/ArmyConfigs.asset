@@ -142,9 +142,9 @@ MonoBehaviour:
     - enemyID: 0
       level: 0
     - enemyID: 0
-      level: 0
+      level: 1
     - enemyID: 0
-      level: 0
+      level: 1
     - enemyID: 0
       level: 0
     - enemyID: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     - enemyID: 0
       level: 0
     - enemyID: 0
-      level: 0
+      level: 1
     - enemyID: 0
       level: 0
     - enemyID: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
     - enemyID: 0
       level: 0
     - enemyID: 0
-      level: 0
+      level: 1
     - enemyID: 0
       level: 0
     - enemyID: 4

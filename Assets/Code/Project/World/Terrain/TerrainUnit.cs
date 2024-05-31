@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class TerrainUnit : WorldUnit
+public class TerrainUnit : MonoBehaviour
 {
     [ReadOnlyProperty]
     public Vector2Int index;
+    public MeshRenderer meshRenderer;
 
     public void UpdateShow()
     {
