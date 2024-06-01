@@ -35,12 +35,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Window-Widget
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9c59b74db983e4687b77a7482780a45b
-    m_Address: Assets/Art/Window/Widget/Img.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e16d5f75aa4fe540ba7b11cc3766df4
     m_Address: Assets/Art/Window/Widget/IntSwitch.prefab
     m_ReadOnly: 0
@@ -55,12 +49,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a66a42e918b8440ceb8213fab3ea8bc2
     m_Address: Assets/Art/Window/Widget/Language.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89a102cd1cedd99459437708c0029882
-    m_Address: Assets/Art/Window/Widget/ScrollFocus.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

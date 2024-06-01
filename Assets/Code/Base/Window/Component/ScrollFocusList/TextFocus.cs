@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextSFocus : ScrollFocus<string, TextSFocusCell>
+public class TextFocus : ScrollFocus<string, TextFCell>
 {
     private void OnValidate()
     {

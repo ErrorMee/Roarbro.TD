@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyEditWindow : WindowBase
 {
-    [SerializeField] EnemySFocus enemyFoucus;
+    [SerializeField] EnemyFocus enemyFoucus;
 
     [SerializeField] IntSwitch levelSwitch;
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StageWindow : WindowBase
 {
-    [SerializeField] StageList battleList = default;
+    [SerializeField] StageFocus stageFocus = default;
 
     [SerializeField] SDFBtn editBtn;
 
@@ -15,12 +15,12 @@ public class StageWindow : WindowBase
         ClickListener.Add(editBtn.transform).onClick += OnClickEdit;
         ClickListener.Add(startBtn.transform).onClick += OnClickStart;
 
-        battleList.OnSelected((index) =>
+        stageFocus.OnSelected((index) =>
         {
-            battleList.SelectCell(index);
             StageModel.Instance.SelectIndex = index;
             startBtn.interactable = StageModel.Instance.IsUnLock(index);
         });
+
     }
 
     public override void OnOpen(object obj)
@@ -34,8 +34,8 @@ public class StageWindow : WindowBase
 
     void ShowBattles()
     {
-        battleList.UpdateContents(StageModel.Instance.battles);
-        battleList.SelectCell(StageModel.Instance.SelectIndex);
+        stageFocus.UpdateContents(StageModel.Instance.battles);
+        stageFocus.SelectCell(StageModel.Instance.SelectIndex);
     }
 
     void OnClickEdit()

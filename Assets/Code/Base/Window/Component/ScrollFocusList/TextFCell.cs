@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TextSFocusCell : ScrollFocusCell<string>
+public class TextFCell : ScrollFocusCell<string>
 {
     [SerializeField] protected TextMeshProUGUI title = default;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnemySFCell : ScrollFocusCell<EnemyTemplate>
+public class EnemyFCell : ScrollFocusCell<EnemyTemplate>
 {
     [SerializeField] protected TextMeshProUGUI title = default;
 
