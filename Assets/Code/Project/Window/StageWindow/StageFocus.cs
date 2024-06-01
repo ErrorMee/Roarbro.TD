@@ -16,7 +16,7 @@ public class StageFocus : ScrollFocus<BattleInfo, StageFCell>
                 RectTransform cellRectTransform = cellPrefab.transform as RectTransform;
                 float cellSize = cellRectTransform.sizeDelta.x;
 
-                var totalSize = rectTransform.sizeDelta.x + (cellSize + 16) * 2;
+                var totalSize = rectTransform.sizeDelta.x + cellSize;
                 cellInterval = cellSize / totalSize;
                 scrollOffset = 0.5f;
             }

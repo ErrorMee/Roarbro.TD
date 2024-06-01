@@ -15,10 +15,16 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 22435098e70a8214ea5e6c15d69d960f
+  m_GUID: c0779d3a7496da84581e6b31277e795a
   m_SerializeEntries:
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
     m_Address: Assets/Art/Unit/BallUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e64ebca93968ae4984171e92aff199d
+    m_Address: Assets/Art/Unit/BubbleUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -89,20 +95,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bfacaca977a164b4c88c5a8c66f3f850
-    m_Address: Assets/Art/Unit/TerrainUnit.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d28eb2dea20ef9248a4f6119b977fa93
     m_Address: Assets/Art/Unit/SelectUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3e64ebca93968ae4984171e92aff199d
-    m_Address: Assets/Art/Unit/BubbleUnit.prefab
+  - m_GUID: bfacaca977a164b4c88c5a8c66f3f850
+    m_Address: Assets/Art/Unit/TerrainUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
