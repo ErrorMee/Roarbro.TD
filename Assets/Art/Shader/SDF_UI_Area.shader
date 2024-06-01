@@ -63,7 +63,7 @@ Shader "SDF/UI/Area"
 
                 if (id == 6)
                 {
-                    float sd = sdRoundedBox(sdPos, radius, half4(radius, roundness, roundness, roundness));
+                    float sd = sdRoundedBox(sdPos, radius, half4(0.5, roundness, roundness, roundness));
                     return sdClipRect(endWithOnionOutGlow(f.color, sd, f), f.os.zw);
                 }
                 if (id == 7)
@@ -96,6 +96,12 @@ Shader "SDF/UI/Area"
                     float cut = sdCircle(abs(sdPos) - roundness * 1.5, roundness * 0.8);
                     sd = opSubtraction(cut, sd);
                     return endWithOnionOutGlow(f.color, sd, f);
+                }
+
+                if (id == 12)
+                {
+                    float sd = sdRoundedBox(sdPos, radius, roundness);
+                    return sdClipRect(endWithOnionOutGlow(f.color, sd, f), f.os.zw);
                 }
                 return f.color;
             }
