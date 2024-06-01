@@ -17,7 +17,7 @@ public partial class BubbleUnit : MonoBehaviour
     const float EnterTime = 0.15f;
     const float EnterTimeA = 1 / EnterTime;
 
-    const float KeepTime = 0.8f;
+    const float KeepTime = 0.7f;
 
     const float ExitTime = 0.15f;
     const float ExitTimeA = 1 / ExitTime;

@@ -10,6 +10,8 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public BattleInfo battle;
 
+    public bool pause = false;
+
     public void Start(BattleInfo battleInfo, bool edit = false)
     {
         battle = battleInfo;

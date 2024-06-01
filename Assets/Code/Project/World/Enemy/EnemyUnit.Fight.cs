@@ -17,6 +17,7 @@ public partial class EnemyUnit : MonoBehaviour
 
         if (transform.localPosition.z <= GridUtil.FightEndY)
         {
+            BattleModel.Instance.battle.Attacked(info);
             fsm.ChangeState(EnemyState.Die);
         }
     }

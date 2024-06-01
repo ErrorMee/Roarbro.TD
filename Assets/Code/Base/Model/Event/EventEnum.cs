@@ -15,6 +15,6 @@ public enum EventEnum
     BubbleUnit,
 
     ChangeStep,
-
+    ChangeHP,
     EnemyDie,
 }

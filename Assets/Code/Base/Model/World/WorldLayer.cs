@@ -10,9 +10,10 @@ public class WorldLayer<T> : FrameMono where T: MonoBehaviour
     protected override void Awake()
     {
         base.Awake();
-
-        unitTemplate = AddressModel.LoadGameObject(Address.UnitPrefab(typeof(T).Name), transform).GetComponent<T>();
+        string prefabName = typeof(T).Name;
+        unitTemplate = AddressModel.LoadGameObject(Address.UnitPrefab(prefabName), transform).GetComponent<T>();
         unitTemplate.gameObject.SetActive(false);
+        unitTemplate.name = prefabName;
     }
 
     protected T CreateUnit(bool active = true)
@@ -26,8 +27,9 @@ public class WorldLayer<T> : FrameMono where T: MonoBehaviour
     {
         if (select == null)
         {
+            string prefabName = typeof(SelectUnit).Name;
             select = AddressModel.LoadGameObject(
-            Address.UnitPrefab(typeof(SelectUnit).Name), transform).GetComponent<SelectUnit>();
+            Address.UnitPrefab(prefabName), transform).GetComponent<SelectUnit>();
             select.gameObject.SetActive(false);
         }
     }

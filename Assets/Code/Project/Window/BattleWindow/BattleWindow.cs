@@ -1,21 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleWindow : WindowBase
 {
     [SerializeField] SDFBtn pauseBtn;
     [SerializeField] TextMeshProUGUI step;
 
-    private void OnApplicationFocus(bool focus)
-    {
-        if (focus == false)
-        {
-            //if (WindowModel.Get((int)WindowEnum.Pause) == null)
-            //{
-            //    WindowModel.Open(WindowEnum.Pause);
-            //}
-        }
-    }
+    [SerializeField] TextMeshProUGUI hpTxt;
+    [SerializeField] Slider hpSlider;
 
     override protected void Awake()
     {
@@ -25,6 +18,8 @@ public class BattleWindow : WindowBase
 
         AutoListener(EventEnum.ChangeStep, OnChangeStep);
         OnChangeStep();
+        AutoListener(EventEnum.ChangeHP, OnChangeHP);
+        OnChangeHP();
     }
 
     public override void OnOpen(object obj)
@@ -36,6 +31,18 @@ public class BattleWindow : WindowBase
     void OnChangeStep(object obj = null)
     {
         step.text = BallModel.Instance.LeftStep + "/" + BallModel.Instance.MaxStep;
+    }
+
+    void OnChangeHP(object obj = null)
+    {
+        hpSlider.minValue = 0;
+        hpSlider.maxValue = BattleModel.Instance.battle.maxHP;
+        hpSlider.value = BattleModel.Instance.battle.leftHP;
+        if (hpSlider.value < 15)
+        {
+            hpSlider.value = 15;
+        }
+        hpTxt.text = BattleModel.Instance.battle.leftHP + "/" + BattleModel.Instance.battle.maxHP;
     }
 
     void OnClickPause()

@@ -21,7 +21,10 @@ public partial class EnemyUnit : MonoBehaviour
 
     void FixedUpdate()
     {
-        fsm.Update();
+        if (BattleModel.Instance.pause == false)
+        {
+            fsm.Update();
+        }
     }
 
     public void UpdateShow()

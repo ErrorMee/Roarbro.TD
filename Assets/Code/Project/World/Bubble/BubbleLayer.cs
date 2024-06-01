@@ -18,9 +18,9 @@ public class BubbleLayer : WorldLayer<BubbleUnit>
 
         float randomX = UnityEngine.Random.Range(-0.25f, 0.25f);
 
-        bubbleUnit.transform.localPosition = new Vector3(bubbleInfo.x + randomX, 0, bubbleInfo.z + 0.25f);
+        bubbleUnit.transform.localPosition = new Vector3(bubbleInfo.x + randomX, 0, bubbleInfo.z);
         bubbleUnit.txt.text = bubbleInfo.value.OptStr();
-        bubbleUnit.txt.color = Color.yellow;
+        bubbleUnit.txt.color = Color.white;
         SharedPool<BubbleInfo>.Cache(bubbleInfo);
     }
 }

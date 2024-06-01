@@ -62,6 +62,8 @@ MonoBehaviour:
     bg: 0
   pauseBtn: {fileID: 3601920476081947988}
   step: {fileID: 4200501641994471985}
+  hpTxt: {fileID: 6446123330199138061}
+  hpSlider: {fileID: 7097131747117092977}
 --- !u!1 &1502987091356218269
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +75,7 @@ GameObject:
   - component: {fileID: 5519955951678541302}
   - component: {fileID: 7097131747117092977}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,8 +148,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 128
-  m_WholeNumbers: 0
-  m_Value: 71.6
+  m_WholeNumbers: 1
+  m_Value: 16
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -981,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 7304035946070576915, guid: 98b8c4848f0cbea438963ad825a76a71,
         type: 3}
       propertyPath: m_Name
-      value: Txt
+      value: HPTxt
       objectReference: {fileID: 0}
     - target: {fileID: 8019283296944953273, guid: 98b8c4848f0cbea438963ad825a76a71,
         type: 3}
@@ -1094,3 +1096,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5179783493925274879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6446123330199138061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2204356578071129074, guid: 98b8c4848f0cbea438963ad825a76a71,
+    type: 3}
+  m_PrefabInstance: {fileID: 5179783493925274879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
