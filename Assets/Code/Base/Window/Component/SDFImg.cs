@@ -9,7 +9,7 @@ public class SDFImg : MaskableGraphic
     #region prop
     public enum SliceMode : byte
     {
-        One, Three, Nine,
+        One, Three, Nine, Eight
     }
 
     [SerializeField] SliceMode slice = SliceMode.One;
@@ -98,6 +98,7 @@ public class SDFImg : MaskableGraphic
                 }
                 break;
             case SliceMode.Nine:
+            case SliceMode.Eight:
                 float minEdge = Mathf.Min(rectTransform.rect.size.x, rectTransform.rect.size.y);
                 sliceRadius = Mathf.Min(minEdge * 0.5f, sliceRadius);
 
@@ -118,13 +119,25 @@ public class SDFImg : MaskableGraphic
                    new Vector2(-halfSize.x + sliceRadius, halfSize.y - sliceRadius), new Vector2(-halfSize.x + sliceRadius, halfSize.y),
                    Vector2.zero, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 1));
 
-                AddY3Rect(vh, 1, sliceRadius, new Vector2(-halfSize.x + sliceRadius, -halfSize.y), new Vector2(halfSize.x - sliceRadius, -halfSize.y + sliceRadius),
-                   new Vector2(halfSize.x - sliceRadius, halfSize.y - sliceRadius), new Vector2(halfSize.x - sliceRadius, halfSize.y),
-                   new Vector2(0.5f, 0), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 1));
+                if (slice == SliceMode.Eight)
+                {
+                    AddY3_2Rect(vh, 3, sliceRadius, new Vector2(-halfSize.x + sliceRadius, -halfSize.y), new Vector2(halfSize.x - sliceRadius, -halfSize.y + sliceRadius),
+                        new Vector2(halfSize.x - sliceRadius, halfSize.y - sliceRadius), new Vector2(halfSize.x - sliceRadius, halfSize.y),
+                        new Vector2(0.5f, 0), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 1));
 
-                AddY3Rect(vh, 2, sliceRadius, new Vector2(halfSize.x - sliceRadius, -halfSize.y), new Vector2(halfSize.x, -halfSize.y + sliceRadius),
-                   new Vector2(halfSize.x, halfSize.y - sliceRadius), new Vector2(halfSize.x, halfSize.y),
-                   new Vector2(0.5f, 0), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 1));
+                    AddY3Rect(vh, 5, sliceRadius, new Vector2(halfSize.x - sliceRadius, -halfSize.y), new Vector2(halfSize.x, -halfSize.y + sliceRadius),
+                        new Vector2(halfSize.x, halfSize.y - sliceRadius), new Vector2(halfSize.x, halfSize.y),
+                        new Vector2(0.5f, 0), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 1));
+                }
+                else
+                {
+                    AddY3Rect(vh, 3, sliceRadius, new Vector2(-halfSize.x + sliceRadius, -halfSize.y), new Vector2(halfSize.x - sliceRadius, -halfSize.y + sliceRadius),
+                        new Vector2(halfSize.x - sliceRadius, halfSize.y - sliceRadius), new Vector2(halfSize.x - sliceRadius, halfSize.y),
+                        new Vector2(0.5f, 0), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 1));
+                    AddY3Rect(vh, 6, sliceRadius, new Vector2(halfSize.x - sliceRadius, -halfSize.y), new Vector2(halfSize.x, -halfSize.y + sliceRadius),
+                       new Vector2(halfSize.x, halfSize.y - sliceRadius), new Vector2(halfSize.x, halfSize.y),
+                       new Vector2(0.5f, 0), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 1));
+                }
             }
             else
             {
@@ -153,11 +166,10 @@ public class SDFImg : MaskableGraphic
         Vector2 leftDownPos1, Vector2 rightUpPos1, Vector2 rightUpPos2, Vector2 rightUpPos3,
         Vector2 leftDownUV1, Vector2 rightUpUV1, Vector2 rightUpUV2, Vector2 rightUpUV3)
     {
-        int indexOffset = index * 3;
-        AddRect(vh, 0 + indexOffset, rightUpPos1.y, leftDownPos1, rightUpPos1, leftDownUV1, rightUpUV1);
-        AddRect(vh, 1 + indexOffset, rightUpPos1.y, new(rightUpPos1.x, leftDownPos1.y), rightUpPos2,
+        AddRect(vh, 0 + index, rightUpPos1.y, leftDownPos1, rightUpPos1, leftDownUV1, rightUpUV1);
+        AddRect(vh, 1 + index, rightUpPos1.y, new(rightUpPos1.x, leftDownPos1.y), rightUpPos2,
             new(rightUpUV1.x, leftDownUV1.y), rightUpUV2);
-        AddRect(vh, 2 + indexOffset, rightUpPos1.y, new(rightUpPos2.x, leftDownPos1.y), rightUpPos3,
+        AddRect(vh, 2 + index, rightUpPos1.y, new(rightUpPos2.x, leftDownPos1.y), rightUpPos3,
             new(rightUpUV2.x, leftDownUV1.y), rightUpUV3);
     }
 
@@ -165,11 +177,19 @@ public class SDFImg : MaskableGraphic
         Vector2 leftDownPos1, Vector2 rightUpPos1, Vector2 rightUpPos2, Vector2 rightUpPos3,
         Vector2 leftDownUV1, Vector2 rightUpUV1, Vector2 rightUpUV2, Vector2 rightUpUV3)
     {
-        int indexOffset = index * 3;
-        AddRect(vh, 0 + indexOffset, slicedRadius, leftDownPos1, rightUpPos1, leftDownUV1, rightUpUV1);
-        AddRect(vh, 1 + indexOffset, slicedRadius, new(leftDownPos1.x, rightUpPos1.y), rightUpPos2,
+        AddRect(vh, 0 + index, slicedRadius, leftDownPos1, rightUpPos1, leftDownUV1, rightUpUV1);
+        AddRect(vh, 1 + index, slicedRadius, new(leftDownPos1.x, rightUpPos1.y), rightUpPos2,
             new(leftDownUV1.x, rightUpUV1.y), rightUpUV2);
-        AddRect(vh, 2 + indexOffset, slicedRadius, new(leftDownPos1.x, rightUpPos2.y), rightUpPos3,
+        AddRect(vh, 2 + index, slicedRadius, new(leftDownPos1.x, rightUpPos2.y), rightUpPos3,
+            new(leftDownUV1.x, rightUpUV2.y), rightUpUV3);
+    }
+
+    private void AddY3_2Rect(VertexHelper vh, int index, float slicedRadius,
+        Vector2 leftDownPos1, Vector2 rightUpPos1, Vector2 rightUpPos2, Vector2 rightUpPos3,
+        Vector2 leftDownUV1, Vector2 rightUpUV1, Vector2 rightUpUV2, Vector2 rightUpUV3)
+    {
+        AddRect(vh, 0 + index, slicedRadius, leftDownPos1, rightUpPos1, leftDownUV1, rightUpUV1);
+        AddRect(vh, 1 + index, slicedRadius, new(leftDownPos1.x, rightUpPos2.y), rightUpPos3,
             new(leftDownUV1.x, rightUpUV2.y), rightUpUV3);
     }
 

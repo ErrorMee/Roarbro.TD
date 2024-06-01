@@ -42,7 +42,7 @@ public class SDFImgEditor : GraphicEditor
         Target.Slice = (SDFImg.SliceMode)EditorGUILayout.EnumPopup("Slice", Target.Slice);
         slice.intValue = (int)Target.Slice;
 
-        if (Target.Slice == SDFImg.SliceMode.Nine)
+        if (Target.Slice == SDFImg.SliceMode.Nine || Target.Slice == SDFImg.SliceMode.Eight)
         {
             float minEdge = Mathf.Min(Target.rectTransform.rect.size.x, Target.rectTransform.rect.size.y);
             int maxRadius = Mathf.CeilToInt(minEdge * 0.5f) - 1;

@@ -14,12 +14,12 @@ public partial class BubbleUnit : MonoBehaviour
         Exit,
     }
 
-    const float EnterTime = 0.2f;
+    const float EnterTime = 0.15f;
     const float EnterTimeA = 1 / EnterTime;
 
-    const float KeepTime = 1.5f;
+    const float KeepTime = 0.8f;
 
-    const float ExitTime = 0.2f;
+    const float ExitTime = 0.15f;
     const float ExitTimeA = 1 / ExitTime;
 
     BubbleState bubbleState = BubbleState.Enter;

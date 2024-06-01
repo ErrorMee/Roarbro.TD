@@ -20,7 +20,7 @@ public class BubbleLayer : WorldLayer<BubbleUnit>
 
         bubbleUnit.transform.localPosition = new Vector3(bubbleInfo.x + randomX, 0, bubbleInfo.z + 0.25f);
         bubbleUnit.txt.text = bubbleInfo.value.OptStr();
-        bubbleUnit.txt.color = QualityConfigs.GetColor(QualityEnum.SR);
+        bubbleUnit.txt.color = Color.yellow;
         SharedPool<BubbleInfo>.Cache(bubbleInfo);
     }
 }

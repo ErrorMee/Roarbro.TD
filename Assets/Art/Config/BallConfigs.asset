@@ -35,33 +35,33 @@ MonoBehaviour:
     name: 0
     sortUp: 1
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 1
   - use: 1
     id: 2
     name: 0
     sortUp: 1
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 1
   - use: 1
     id: 3
     name: 0
     sortUp: 1
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 1
   - use: 1
     id: 4
     name: 0
     sortUp: 1
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 1
   - use: 1
     id: 5
     name: 0
     sortUp: 1
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 1
