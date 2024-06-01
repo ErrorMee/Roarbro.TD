@@ -6,7 +6,7 @@ public class StageFCell : ScrollFocusCell<BattleInfo>
 {
     [SerializeField] TextMeshProUGUI title = default;
     [SerializeField] Graphic diffuse = default;
-
+    [SerializeField] SDFImg bg = default;
     [SerializeField] SDFImg terrainTemp = default;
     SDFImg[,] terrains;
 
@@ -24,7 +24,8 @@ public class StageFCell : ScrollFocusCell<BattleInfo>
                     SDFImg item = Instantiate(terrainTemp, terrainTemp.transform.parent);
                     terrains[x, y] = item;
                     item.ID = 12;
-                    item.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, y - GridUtil.YRadiusCount, 0) * 42;
+                    item.transform.localPosition = 
+                        new Vector3(x - GridUtil.XRadiusCount, y - GridUtil.YRadiusCount, 0) * item.rectTransform.sizeDelta.x;
                 }
             }
 
@@ -42,6 +43,7 @@ public class StageFCell : ScrollFocusCell<BattleInfo>
     public override void UpdateContent(BattleInfo info)
     {
         base.UpdateContent(info);
+        TerrainConfig terrainConfig = info.terrain;
 
         InitTerrains();
 
@@ -50,6 +52,7 @@ public class StageFCell : ScrollFocusCell<BattleInfo>
 
         bool isUnlock = StageModel.Instance.IsUnLock(Index);
 
+        //bg.color = terrainConfig.GetColor(TerrainEnum.Water);
         btn.interactable = isUnlock;
 
         if (isUnlock == false)
@@ -61,7 +64,6 @@ public class StageFCell : ScrollFocusCell<BattleInfo>
             title.color = QualityConfigs.GetColor(QualityEnum.N);
         }
 
-        TerrainConfig terrainConfig = info.terrain;
         for (int y = 0; y < GridUtil.YCount; y++)
         {
             for (int x = 0; x < GridUtil.XCount; x++)
