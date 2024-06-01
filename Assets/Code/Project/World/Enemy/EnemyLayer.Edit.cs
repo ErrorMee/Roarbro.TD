@@ -24,7 +24,7 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 {
                     unit = CreateUnit();
                     units[x, y] = unit;
-                    unit.info = EnemyModel.Instance.infos[x, y]; ;
+                    unit.info = EnemyModel.Instance.infos[x, y];
                 }
                 unit.UpdateShow();
                 unit.transform.localPosition = new Vector3(x - GridUtil.XRadiusCount, 0, y - GridUtil.YRadiusCount);
@@ -54,7 +54,10 @@ public partial class EnemyLayer : WorldLayer<EnemyUnit>
                 {
                     enemyInfoConfig.enemyID = EnemyModel.Instance.crtTemplate.enemyID;
                     enemyInfoConfig.level = EnemyModel.Instance.crtTemplate.level;
-                    EnemyModel.Instance.infos[index.x, index.y].SetEnemyTemplate(enemyInfoConfig);
+                    EnemyInfo enemyInfo = EnemyModel.Instance.infos[index.x, index.y];
+
+                    enemyInfo.SetEnemyTemplate(enemyInfoConfig);
+                    enemyInfo.leftHP = enemyInfo.GetMaxHP();
 
                     ArmyConfigs.Instance.Save();
                     UpdateEditUnits();

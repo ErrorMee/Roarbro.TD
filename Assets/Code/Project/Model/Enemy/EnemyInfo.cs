@@ -24,6 +24,6 @@ public class EnemyInfo : ConfigInfo<EnemyConfig>
 
     public float GetMaxHP()
     {
-        return config.hp.GetValue((uint)enemyTemplate.level);
+        return config.hp * enemyTemplate.level;
     }
 }

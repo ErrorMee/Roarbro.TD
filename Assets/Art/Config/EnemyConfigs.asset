@@ -30,9 +30,7 @@ MonoBehaviour:
     avatar: 0
     color: {r: 1, g: 1, b: 1, a: 1}
     speed: 0
-    hp:
-      basic: 0
-      growth: 0
+    hp: 0
   - use: 1
     id: 1
     name: 0
@@ -40,9 +38,7 @@ MonoBehaviour:
     avatar: 1
     color: {r: 1, g: 0.756069, b: 0.7019608, a: 1}
     speed: 1
-    hp:
-      basic: 1
-      growth: 1
+    hp: 10
   - use: 1
     id: 2
     name: 0
@@ -50,9 +46,7 @@ MonoBehaviour:
     avatar: 2
     color: {r: 0.6839622, g: 0.7977614, b: 1, a: 1}
     speed: 1
-    hp:
-      basic: 2
-      growth: 1
+    hp: 10
   - use: 1
     id: 3
     name: 0
@@ -60,9 +54,7 @@ MonoBehaviour:
     avatar: 3
     color: {r: 0.7877665, g: 1, b: 0.6367924, a: 1}
     speed: 1
-    hp:
-      basic: 3
-      growth: 1
+    hp: 10
   - use: 1
     id: 4
     name: 0
@@ -70,9 +62,7 @@ MonoBehaviour:
     avatar: 4
     color: {r: 1, g: 0.7019608, b: 0.7019608, a: 1}
     speed: 1
-    hp:
-      basic: 4
-      growth: 1
+    hp: 10
   - use: 1
     id: 5
     name: 0
@@ -80,9 +70,7 @@ MonoBehaviour:
     avatar: 5
     color: {r: 1, g: 0.9499803, b: 0.7019608, a: 1}
     speed: 1
-    hp:
-      basic: 5
-      growth: 1
+    hp: 10
   - use: 1
     id: 6
     name: 0
@@ -90,9 +78,7 @@ MonoBehaviour:
     avatar: 6
     color: {r: 0.68235296, g: 0.9631654, b: 1, a: 1}
     speed: 1
-    hp:
-      basic: 6
-      growth: 1
+    hp: 10
   - use: 1
     id: 7
     name: 0
@@ -100,6 +86,4 @@ MonoBehaviour:
     avatar: 7
     color: {r: 0.8162331, g: 0.68235296, b: 1, a: 1}
     speed: 1
-    hp:
-      basic: 7
-      growth: 1
+    hp: 10
