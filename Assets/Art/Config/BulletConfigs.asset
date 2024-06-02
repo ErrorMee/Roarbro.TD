@@ -28,40 +28,34 @@ MonoBehaviour:
     name: 0
     sortUp: 1
     size: 0.2
-    color: {r: 1, g: 0.5518868, b: 0.5518868, a: 1}
     speed: 1
   - use: 1
     id: 1
     name: 0
     sortUp: 1
     size: 0.2
-    color: {r: 0.6084906, g: 0.8675291, b: 1, a: 1}
-    speed: 1
+    speed: 1.62
   - use: 1
     id: 2
     name: 0
     sortUp: 1
-    size: 0.3
-    color: {r: 0.60784316, g: 0.8666667, b: 1, a: 1}
-    speed: 0.8
+    size: 0.4
+    speed: 1.2
   - use: 1
     id: 3
     name: 0
     sortUp: 1
-    size: 0.2
-    color: {r: 0.60784316, g: 0.8666667, b: 1, a: 1}
+    size: 0.5
     speed: 1
   - use: 1
     id: 4
     name: 0
     sortUp: 1
-    size: 0.2
-    color: {r: 0.60784316, g: 0.8666667, b: 1, a: 1}
-    speed: 1
+    size: 1.62
+    speed: 0.62
   - use: 1
     id: 5
     name: 0
     sortUp: 1
-    size: 0.2
-    color: {r: 0.55998576, g: 0.8301887, b: 0.76258814, a: 1}
+    size: 1
     speed: 1

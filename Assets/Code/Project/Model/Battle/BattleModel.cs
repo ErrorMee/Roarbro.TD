@@ -14,6 +14,7 @@ public class BattleModel : Singleton<BattleModel>, IDestroy
 
     public void Start(BattleInfo battleInfo, bool edit = false)
     {
+        pause = false;
         battle = battleInfo;
         battle.edit = edit;
         models.Clear();

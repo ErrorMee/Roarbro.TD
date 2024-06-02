@@ -29,21 +29,21 @@ MonoBehaviour:
     sortUp: 1
     terrain: 1
     terrainSelect: 1
-    steps: 3
+    steps: 6
   - use: 1
     id: 2
     name: 0
     sortUp: 1
     terrain: 2
     terrainSelect: 1
-    steps: 6
+    steps: 12
   - use: 1
     id: 3
     name: 0
     sortUp: 1
     terrain: 3
     terrainSelect: 1
-    steps: 12
+    steps: 18
   - use: 1
     id: 4
     name: 0
@@ -57,4 +57,4 @@ MonoBehaviour:
     sortUp: 1
     terrain: 5
     terrainSelect: 1
-    steps: 36
+    steps: 32

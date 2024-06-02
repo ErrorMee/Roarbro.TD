@@ -25,7 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Index: 4
+    - _Index: 1
     m_Colors:
     - _AddColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 0.38039216, b: 0, a: 1}

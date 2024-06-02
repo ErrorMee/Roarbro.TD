@@ -4,7 +4,7 @@
     {
         _BaseColor("_BaseColor", Color) = (1, 1, 1, 1)
         _AddColor("_AddColor", Color) = (1, 1, 1, 1)
-        [IntRange] _Index("_Index", Range(0, 8)) = 0
+        [IntRange] _Index("_Index", Range(0, 5)) = 0
     }
 
         SubShader
@@ -20,12 +20,22 @@
             #pragma fragment frag
             #pragma multi_compile_instancing
             #include "../SDFLib/SDFUnit.hlsl"
+            #include "../SDFLib/Noise.hlsl"
 
             float4 end(v2f f, float sketch)
             {
-                sketch = opUnion(sketch, (0.48 - length(f.uv.xy)) * 64);
-                f.color = paintIn(f.color, -sketch - 2);
+                f.color = paintIn(f.color, -sketch - 2.62, f.color * 0.1);
                 return endSimple(f.color, sketch);
+            }
+
+            float inCirc(float t) { return 1 - sqrt(1 - (t * t)); }
+            float4 sdGlowColor(float sd, float4 top, float sharp = 16, float brightness = 2)
+            {
+                float alpha = saturate(-(sd - 1.0 / sharp) * sharp);
+                alpha = inCirc(alpha);
+                top.a *= alpha;
+                top.rgb *= max(1 - sd * brightness, 1);
+                return top;
             }
 
             half4 frag(v2f f) : SV_Target
@@ -69,14 +79,30 @@
 
                 if (id == 4)
                 {
-                    float sketch = sdCircle(sdPos, 0.48) * sharp;
-                    return end(f, sketch);
+                    float rotRadian = fmod(_Time.y, TWO_PI) * 4;
+                    sdPos.xy = rotate(sdPos.xy, rotRadian);
+                    sdPos = rotate(sdPos.xy, -PI * length(sdPos.xy));
+                    float sketch = opOnion(sdStar(sdPos, 0.35, 6, 3.2), 0.01) - 0.1;
+                    return end(f, sketch * sharp);
                 }
 
                 if (id == 5)
                 {
-                    float sketch = sdCircle(sdPos, 0.48) * sharp;
-                    return end(f, sketch);
+                    f.uv.y = -f.uv.y;
+                    float2 sdPos = f.uv.xy;
+                    float sag = max(f.uv.y, 0);
+                    sdPos.y += sag;
+                    float sd = sdCircle(sdPos, 0.4);
+
+                    float noiseV = noiseWave(f.uv.xy * 6 - float2(0, _Time.y * 4)) * 0.5 + 0.5;//0-1
+                    float len = length(f.uv.xy);
+                    float dist = noiseV * max(0.5 - len, 0);
+                    dist *= 1 + sag * 24;
+                    sd -= dist;
+                    half4 addColor = half4(f.color.rgb * 2, 1);
+                    f.color = lerp(f.color, half4(addColor.rgb, f.color.a), smoothstep(0.5, 0.55, dist));
+                    half4 color = sdGlowColor(sd, f.color, 12 * (1 - sag));
+                    return color;
                 }
 
                 return f.color;

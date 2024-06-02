@@ -11,6 +11,5 @@ public class BulletConfigs : Configs<BulletConfigs, BulletConfig>
 public class BulletConfig : Config
 {
     public float size;
-    public Color color;
     public float speed;
 }

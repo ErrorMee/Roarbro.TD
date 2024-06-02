@@ -18,6 +18,9 @@ public class BulletUnit : MonoBehaviour
 
         transform.localPosition = info.ballUnit.transform.localPosition;
 
+        meshRenderer.SetMPBInt(MatPropUtil.IndexKey, info.ballUnit.info.bulletConfig.id, false);
+
+        meshRenderer.SetMPBColor(MatPropUtil.BaseColorKey, info.ballUnit.info.config.color);
     }    
 
     void FixedUpdate()
