@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-BattleEditWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 7de2714886fdd8e41925565a23b49c20
+  m_GUID: 1029ae1f041bb5e4b8187180980c8103
   m_SerializeEntries:
   - m_GUID: 19555bd14f0c0514f9f9ee645ae11ae0
     m_Address: Assets/Art/Window/BattleEditWindow/BattleEditWindow.prefab

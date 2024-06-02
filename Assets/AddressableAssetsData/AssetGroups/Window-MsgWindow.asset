@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-MsgWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 76d6e6265ed511b4ba80ba0a6c153fd1
+  m_GUID: b56a569c718f3a642a1c1c3a1e2b99f3
   m_SerializeEntries:
   - m_GUID: 8d6811a9f41947146ba690ccfb1b996d
     m_Address: Assets/Art/Window/MsgWindow/MsgWindow.prefab

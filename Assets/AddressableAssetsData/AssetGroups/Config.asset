@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Config
   m_Data:
     m_SerializedData: []
-  m_GUID: 63221effb31195c4084681ca42fb53be
+  m_GUID: 4b276c839d95047438bc56a3b9d79d85
   m_SerializeEntries:
   - m_GUID: e65013a9f6c1ea74e8aa192ee7f3995b
     m_Address: Assets/Art/Config/ArmyConfigs.asset
@@ -31,6 +31,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c69564e9ff3ae4c5387249da32384621
     m_Address: Assets/Art/Config/BattleConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd8859f72416ffd4e9df3662a248129d
+    m_Address: Assets/Art/Config/BulletConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config
@@ -67,12 +73,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4df071baa84f21a438fee9a7a71864e5
     m_Address: Assets/Art/Config/WindowConfigs.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Config
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cd8859f72416ffd4e9df3662a248129d
-    m_Address: Assets/Art/Config/BulletConfigs.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Config

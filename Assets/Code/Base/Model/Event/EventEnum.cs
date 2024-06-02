@@ -13,7 +13,7 @@ public enum EventEnum
     MoveBall,
 
     BubbleUnit,
-
+    BulletUnit,
     ChangeStep,
     ChangeHP,
     EnemyDie,

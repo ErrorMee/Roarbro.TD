@@ -43,7 +43,7 @@ public partial class BallUnit : MonoBehaviour
                         float dis = enemyDir.magnitude;
                         if (dis < info.config.attRadius)
                         {
-                            Fight(item as EnemyUnit);
+                            Emit(item as EnemyUnit);
                             return;
                         }
                     }
@@ -52,8 +52,13 @@ public partial class BallUnit : MonoBehaviour
         }
     }
 
-    private void Fight(EnemyUnit enemyUnit)
+    private void Emit(EnemyUnit enemyUnit)
     {
-        enemyUnit.Attacked(info);
+        BulletInfo bulletInfo = SharedPool<BulletInfo>.Get();
+        bulletInfo.ballUnit = this;
+        bulletInfo.enemyUnit = enemyUnit;
+        EventModel.Send(EventEnum.BulletUnit, bulletInfo);
+
+        //enemyUnit.Attacked(info);
     }
 }
