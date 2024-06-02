@@ -5,8 +5,6 @@ using UnityEngine;
 
 public partial class BallUnit : MonoBehaviour
 {
-    static int[] xSearchs = new int[] { 0, -1, 1, 2, -2, -3, 3, 4, -4, -5, 5, 6, -6, -7, 7, 8, -8, -9, 9 };
-
     private void FightEnter()
     {
     }
@@ -30,7 +28,7 @@ public partial class BallUnit : MonoBehaviour
         {
             for (int x = 0; x <= attRadiusInt * 2; x++)
             {
-                int xSearch = xSearchs[x];
+                int xSearch = GridModel.XSearchs[x];
 
                 Vector2Int coord = center + new Vector2Int(xSearch, z);
 
@@ -58,7 +56,5 @@ public partial class BallUnit : MonoBehaviour
         bulletInfo.ballUnit = this;
         bulletInfo.enemyUnit = enemyUnit;
         EventModel.Send(EventEnum.BulletUnit, bulletInfo);
-
-        //enemyUnit.Attacked(info);
     }
 }

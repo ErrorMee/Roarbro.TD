@@ -27,35 +27,41 @@ MonoBehaviour:
     id: 0
     name: 0
     sortUp: 1
-    size: 0.2
-    speed: 1
+    radius: 0
+    speed: 0
+    life: 0
   - use: 1
     id: 1
     name: 0
     sortUp: 1
-    size: 0.2
+    radius: 0.25
     speed: 1.62
+    life: 3
   - use: 1
     id: 2
     name: 0
     sortUp: 1
-    size: 0.4
+    radius: 0.25
     speed: 1.2
+    life: 3
   - use: 1
     id: 3
     name: 0
     sortUp: 1
-    size: 0.5
+    radius: 0.25
     speed: 1
+    life: 3
   - use: 1
     id: 4
     name: 0
     sortUp: 1
-    size: 1.62
+    radius: 0.25
     speed: 0.62
+    life: 3
   - use: 1
     id: 5
     name: 0
     sortUp: 1
-    size: 1
+    radius: 0.25
     speed: 1
+    life: 3

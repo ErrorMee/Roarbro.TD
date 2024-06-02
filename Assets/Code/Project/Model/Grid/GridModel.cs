@@ -4,6 +4,8 @@ using UnityEngine;
 
 public partial class GridModel : Singleton<GridModel>, IDestroy
 {
+    public static int[] XSearchs = new int[] { 0, -1, 1, 2, -2, -3, 3, 4, -4, -5, 5, 6, -6, -7, 7, 8, -8, -9, 9 };
+
     private readonly Dictionary<Type, Dictionary<Vector2Int, HashSet<MonoBehaviour>>> gridDic = new();
 
     public Dictionary<Vector2Int, HashSet<MonoBehaviour>> GetGrid<T>() where T : MonoBehaviour

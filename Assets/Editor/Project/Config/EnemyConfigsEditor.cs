@@ -16,7 +16,8 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
         EditorGUILayout.LabelField("avatar", GUILayout.Width(40));
         EditorGUILayout.LabelField("color", GUILayout.Width(40));
         EditorGUILayout.LabelField("speed", GUILayout.Width(40));
-        EditorGUILayout.LabelField("hp", GUILayout.Width(100));
+        EditorGUILayout.LabelField("hp", GUILayout.Width(40));
+        EditorGUILayout.LabelField("radius", GUILayout.Width(40));
     }
 
     protected override void DrawMenuAdd()
@@ -33,8 +34,8 @@ public class EnemyConfigsEditor : ConfigsEditor<EnemyConfig, EnemyConfigs>
         config.color = EditorGUILayout.ColorField(config.color, GUILayout.Width(40));
         config.speed = EditorGUILayout.FloatField(config.speed, GUILayout.Width(40));
 
+        config.hp = EditorGUILayout.IntField(config.hp, GUILayout.Width(40));
 
-
-        config.hp = EditorGUILayout.IntField(config.hp, GUILayout.Width(48));
+        config.radius = EditorGUILayout.FloatField(config.radius, GUILayout.Width(40));
     }
 }

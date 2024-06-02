@@ -14,7 +14,7 @@ public class BallInfo : ConfigInfo<BallConfig>
     {
         config = _config;
         attCDLeft = config.attCD;
-        bulletConfig = BulletConfigs.Instance.GetConfigByID(config.id);
+        bulletConfig = BulletConfigs.Instance.GetConfigByID(2);
     }
 
     public float GetViewX()

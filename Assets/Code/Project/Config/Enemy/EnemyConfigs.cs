@@ -16,4 +16,6 @@ public class EnemyConfig : Config
     public float speed = 1;
 
     public int hp;
+
+    public float radius;
 }

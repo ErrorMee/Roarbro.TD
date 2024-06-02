@@ -1,6 +1,4 @@
-
 using System;
-using UnityEngine;
 
 public class BulletConfigs : Configs<BulletConfigs, BulletConfig>
 {
@@ -10,6 +8,7 @@ public class BulletConfigs : Configs<BulletConfigs, BulletConfig>
 [Serializable]
 public class BulletConfig : Config
 {
-    public float size;
+    public float radius;
     public float speed;
+    public float life;
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Unit
   m_Data:
     m_SerializedData: []
-  m_GUID: 5aeb8b9d6fd65cd488d6509a477ff36c
+  m_GUID: af15d315265d81e40b35c274fec7ea41
   m_SerializeEntries:
   - m_GUID: e3e48ae3a6079e14a9d1344533e6e372
     m_Address: Assets/Art/Unit/BallUnit.prefab
@@ -25,6 +25,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3e64ebca93968ae4984171e92aff199d
     m_Address: Assets/Art/Unit/BubbleUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25c47f5ffae6f60448e42f513ab8be80
+    m_Address: Assets/Art/Unit/BulletUnit.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -43,6 +49,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38a7195c994d0d74981836238336a152
     m_Address: Assets/Art/Unit/SDF_Unit_Ball.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed66a65bafd49434c9171124f5a69a42
+    m_Address: Assets/Art/Unit/SDF_Unit_Bullet.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e965e1b93f317f54a84155e6065a469a
+    m_Address: Assets/Art/Unit/SDF_Unit_Bullet.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -103,24 +121,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfacaca977a164b4c88c5a8c66f3f850
     m_Address: Assets/Art/Unit/TerrainUnit.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 25c47f5ffae6f60448e42f513ab8be80
-    m_Address: Assets/Art/Unit/BulletUnit.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed66a65bafd49434c9171124f5a69a42
-    m_Address: Assets/Art/Unit/SDF_Unit_Bullet.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Unit
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e965e1b93f317f54a84155e6065a469a
-    m_Address: Assets/Art/Unit/SDF_Unit_Bullet.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
