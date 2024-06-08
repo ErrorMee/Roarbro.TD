@@ -10,9 +10,15 @@ public partial class BallLayer : WorldLayer<BallUnit>
             {
                 BallUnit unit = units[x, y];
 
-                if (unit.info.level > 1 && unit.info.config.id > 0)
+                TerrainEnum terrain = BattleModel.Instance.battle.terrain.GetTerrain(unit.info.index.x, unit.info.index.y);
+                if (terrain == TerrainEnum.Land && unit.info.config.id > 0)
+                //if (unit.info.level > 1 && unit.info.config.id > 0)
                 {
                     unit.fsm.ChangeState(BallState.Fight);
+                }
+                else
+                {
+                    unit.fsm.ChangeState(BallState.Hide);
                 }
             }
         }

@@ -39,10 +39,13 @@ public class BallInfo : ConfigInfo<BallConfig>
 
     public int GetMergePriority(BallInfo start)
     {
-        // level distance random
+        //terrain>level>distance>random
         Vector2Int offsetIndex = index - start.index;
         int distance = Mathf.Max(Mathf.Abs(offsetIndex.x), Mathf.Abs(offsetIndex.y));
-        return level * 1000 + (20 - distance) * 10 + Random.Range(0, 10);
+
+        TerrainEnum terrain = BattleModel.Instance.battle.terrain.GetTerrain(index.x, index.y);
+
+        return (int)terrain * 1000000 + level * 1000 + (20 - distance) * 10 + Random.Range(0, 10);
     }
 
     public int GetAttackValue()

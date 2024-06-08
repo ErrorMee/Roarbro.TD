@@ -6,4 +6,5 @@ public enum BallState : byte
 {
     Idle = 100,
     Fight,
+    Hide,
 }

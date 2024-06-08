@@ -18,6 +18,7 @@ public partial class BallUnit : MonoBehaviour
         fsm = new FSM<BallState>();
         fsm.AddState(BallState.Idle, null, null);
         fsm.AddState(BallState.Fight, FightEnter, FightUpdate);
+        fsm.AddState(BallState.Hide, HideEnter, HideUpdate);
         fsm.ChangeState(BallState.Idle);
     }
 
