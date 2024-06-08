@@ -62,7 +62,16 @@ public partial class BallLayer : WorldLayer<BallUnit>
                 removeBall.transform.localScale -= removeSpeed;
 
                 Vector3 crtPos = removeBall.transform.localPosition;
-                Vector3 dir = upgradeBalls[upIndex].transform.localPosition - crtPos;
+                Vector3 toPos;
+                if (upgradeBalls.Count > upIndex)
+                {
+                    toPos = upgradeBalls[upIndex].transform.localPosition;
+                }
+                else
+                {
+                    toPos = crtPos;
+                }
+                Vector3 dir = toPos - crtPos;
                 upIndex++;
                 if (upIndex >= upgradeBalls.Count)
                 {

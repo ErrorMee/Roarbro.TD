@@ -37,7 +37,14 @@ public partial class BallModel : Singleton<BallModel>, IDestroy
                 if (leftLevel <= BallMaxLV)
                 {
                     ballInfo.level = leftLevel;
-                    upgradeBalls.Add(ballInfo);
+                    if (ballInfo.config.id == 0)
+                    {
+                        removeBalls.Add(ballInfo);
+                    }
+                    else
+                    {
+                        upgradeBalls.Add(ballInfo);
+                    }
                 }
                 else 
                 {

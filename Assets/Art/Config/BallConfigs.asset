@@ -37,7 +37,7 @@ MonoBehaviour:
     sortUp: 1
     color: {r: 0.9137255, g: 0.46666667, b: 0.24705882, a: 1}
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 2
   - use: 1
     id: 2
@@ -45,7 +45,7 @@ MonoBehaviour:
     sortUp: 1
     color: {r: 0.9137255, g: 0.78431374, b: 0.24705878, a: 1}
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 2
   - use: 1
     id: 3
@@ -53,7 +53,7 @@ MonoBehaviour:
     sortUp: 1
     color: {r: 0.48295808, g: 0.9137255, b: 0.24705878, a: 1}
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 2
   - use: 1
     id: 4
@@ -61,7 +61,7 @@ MonoBehaviour:
     sortUp: 1
     color: {r: 0.24705878, g: 0.6201035, b: 0.9137255, a: 1}
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 2
   - use: 1
     id: 5
@@ -69,5 +69,5 @@ MonoBehaviour:
     sortUp: 1
     color: {r: 0.6645552, g: 0.24705878, b: 0.9137255, a: 1}
     attack: 1
-    attCD: 1
+    attCD: 0.5
     attRadius: 2
