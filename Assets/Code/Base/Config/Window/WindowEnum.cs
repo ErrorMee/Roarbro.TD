@@ -16,9 +16,10 @@ public enum WindowEnum : ushort
     Stage = 17,
     
     Battle = 31,
-    BattleEdit,
-    TerrainEdit,
-    Win,
-    Lose,
-    EnemyEdit,
+    BattleEdit = 32,
+    TerrainEdit = 33,
+    Win = 34,
+    Lose = 35,
+    EnemyEdit = 36,
+    Pause = 37,
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Window-Widget
   m_Data:
     m_SerializedData: []
-  m_GUID: 8caac900661746c40976ee4720bc32b3
+  m_GUID: 645aad56cc0e6354a98bde4f2cbd124f
   m_SerializeEntries:
   - m_GUID: d08b46278b5526846b2f99517f6141d6
     m_Address: Assets/Art/Window/Widget/Attr.prefab
@@ -25,12 +25,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3341b4b1a95cb0a4180bbaba397a4efb
     m_Address: Assets/Art/Window/Widget/Btn.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Window-Widget
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
-    m_Address: Assets/Art/Window/Widget/Frame.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget
@@ -97,6 +91,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1c47cbbb14a9964d8e807d5de71fabc
     m_Address: Assets/Art/Window/Widget/TxtBtn.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Window-Widget
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7edc7d83e96574d4c90dd084f07f2495
+    m_Address: Assets/Art/Window/Widget/Frame.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Window-Widget

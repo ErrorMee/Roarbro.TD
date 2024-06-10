@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Window-WinWindow
+  m_Name: Window-PauseWindow
   m_EditorClassIdentifier: 
-  m_GroupName: Window-WinWindow
+  m_GroupName: Window-PauseWindow
   m_Data:
     m_SerializedData: []
-  m_GUID: 8ab37cfa3d70e3f4b8d5e0c25d2fefb1
+  m_GUID: cfbe43aa91d060f47a72eff1051997eb
   m_SerializeEntries:
-  - m_GUID: 66dcc7dd86d3b4b6aa4a8c03ea5e82f1
-    m_Address: Assets/Art/Window/WinWindow/WinWindow.prefab
+  - m_GUID: 04e92c1ac69e5fd40a2cd0b600be549a
+    m_Address: Assets/Art/Window/PauseWindow/PauseWindow.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Window-WinWindow
+    - Window-PauseWindow
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b73ee2eb5251dce4d9dfc12846b183f4, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: a9b7e3861b74d47f08d00991c6811f90, type: 2}
-    - {fileID: 11400000, guid: 9ea917a2fceeb490a90adc70c99878c0, type: 2}
+    - {fileID: 11400000, guid: 16a2bb37279735e4ebbb5a85f0f4dcc3, type: 2}
+    - {fileID: 11400000, guid: 5a0a36b4f935e5f4494f5bbf13a8f627, type: 2}

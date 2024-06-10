@@ -47,7 +47,7 @@ public class BattleWindow : WindowBase
 
     void OnClickPause()
     {
-        CloseSelf();
+        Open(WindowEnum.Pause);
     }
 
     protected override void OnDestroy()

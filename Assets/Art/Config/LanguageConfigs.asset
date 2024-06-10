@@ -279,10 +279,10 @@ MonoBehaviour:
     sortUp: 1
     desc: 
     values:
-    - "\u8DEF\u7EBF\u957F\u5EA6"
-    - "\u8DEF\u7DDA\u9577\u5EA6"
-    - Route length
-    - "\u305B\u3093\u308D\u3061\u3087\u3046"
+    - "\u6682\u505C"
+    - "\u66AB\u505C"
+    - Pause
+    - "\u4E00\u6642\u505C\u6B62"
   - use: 1
     id: 10041
     name: 0

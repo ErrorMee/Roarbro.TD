@@ -144,9 +144,12 @@ public class CreateWindow : EditorWindow
         streamReader.Close();
         streamReader.Dispose();
 
+        WindowEnum[] enumValues = (WindowEnum[])Enum.GetValues(typeof(WindowEnum));
+        WindowEnum maxValue = enumValues[enumValues.Length - 1];
+
         StreamWriter streamWriter = new(enumPath, false, new UTF8Encoding(false));
         streamWriter.Write(dataSplit[0]);
-        streamWriter.WriteLine($"    {typeName},");
+        streamWriter.WriteLine($"    {typeName} = {maxValue + 1},");
         streamWriter.Write('}');
         streamWriter.Close();
         streamWriter.Dispose();
@@ -168,7 +171,6 @@ public class CreateWindow : EditorWindow
         }
 
         newConfig.id = maxV;
-        Debug.LogError("id " + newConfig.id);
 
         newConfig.layer = layer;
         newConfig.show = show;
